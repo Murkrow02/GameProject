@@ -5,7 +5,8 @@
 #include <vector>
 #include <iostream>
 #include "headers/room.h"
-#include "headers/utils.h"
+#include "headers/utils.hpp"
+#include "headers/savedata.hpp"
 
 using namespace std;
 
@@ -49,15 +50,22 @@ WINDOW* initial_setup(){
 
 int main(){
 
-    
-
-
-
-
     //Configure Ncurses and init game window
     WINDOW* win = initial_setup();
 
-    wait_key(KEY_ENTER); //Prevent program from closing
+    //Init savedata
+    savedata save;
+
+    //Test by saving mock data
+    save.savefile["funge"] = true;
+    save.save_changes();
+
+    //Retreive mock data
+    bool funge = save.savefile["funge"];
+
+    printw("%d",funge);
+
+    wait_key(custom_keys::Enter); //Prevent program from closing
 
     endwin();
     return 0;

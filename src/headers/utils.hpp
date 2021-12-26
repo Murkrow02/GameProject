@@ -1,9 +1,10 @@
+#ifndef UTILS_H
+#define UTILS_H
+
 #include <string>
 using namespace std;
 
-#define KEY_ENTER 10
-
-enum custom_keys: unsigned int {  }; //Save custom keys here for easier access
+enum custom_keys: unsigned int { Enter = 10 }; //Save custom keys here for easier access
 
 const int room_width = 80; 
 const int room_height = 40;
@@ -19,3 +20,6 @@ pair<int,int> check_win_size();
 
 //Show error message to user and close application (TODO, better GUI)
 void fatal_error(string message);
+
+
+#endif
