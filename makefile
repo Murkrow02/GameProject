@@ -7,11 +7,11 @@ room.o: src/room.cpp src/room.h
 savedata.o: src/Tools/savedata.cpp src/Tools/savedata.hpp src/Tools/utils.hpp
 	g++ -c src/Tools/savedata.cpp
 
-utils.o: src/Tools/utils.cpp src/Tools/utils.hpp
-	g++ -c -lncurses src/Tools/utils.cpp
-
 dialog.o: src/UI/dialog.cpp src/UI/dialog.hpp src/Tools/utils.hpp
 	g++ -c -lncurses -lpanel src/UI/dialog.cpp
+
+utils.o: src/Tools/utils.cpp src/Tools/utils.hpp src/UI/dialog.hpp
+	g++ -c -lncurses -lpanel src/Tools/utils.cpp
 
 clean: 
 	rm src/*.o src/*/*.o

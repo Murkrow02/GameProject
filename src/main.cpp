@@ -3,61 +3,95 @@
 #include <string>
 #include <fstream>
 #include <iostream>
+#include <future>
 #include "room.hpp"
 #include "Tools/utils.hpp"
+#include "UI/dialog.hpp"
 #include "Tools/savedata.hpp"
 #include "panel.h"
-#include "UI/dialog.hpp"
 
 using namespace std;
 
-WINDOW* game_window;
 
-WINDOW* initial_setup(){
+void initial_setup(){
 
-    //Configure Ncurses
-    WINDOW* win = initscr();
+    //Ncurses setup
+    initscr();
     noecho(); // doesn't echo user input on screen
     keypad(stdscr,TRUE); // allows keypad input
     curs_set(0); // disables cursor
 
-    //Detect if window is too small and return screen dimensions if accepted size
-    pair<int,int> dimensions = check_win_size(); //Shows the user an hint to resize window correctly
+    //Check if terminal size is acceptable, guide the user to correct if not
+    pair<int,int> dimensions;
+    int offset = 5; //some padding
+    getmaxyx(stdscr,dimensions.first,dimensions.second);
 
-    //PRIMA DI INIZIARE A DISEGNARE IL GIOCO PRINTA UN MESSAGGIO CHE DICE TUTTO PRONTO, PREMI INVIO PER INIZIARE
-   // dialog initial_message("Attenzione!");
-   // initial_message.show();
+    while(dimensions.first < room_height + offset || dimensions.second < room_width + offset){
+        
+        //Calculate how much the user has to widen terminal size
+        int height_left = room_height-dimensions.first+offset;
+        int width_left = room_width-dimensions.second+offset;
 
-    //Center the game box
-    clear();
-    int window_x = (dimensions.second-room_width)/2;
-    int window_y = (dimensions.first-room_height)/2;
+        //Help user resizing the window
+        char message[300] = "La finestra corrente è troppo piccola per il gioco, allarga ancora ";
+        if(height_left > 0)
+                sprintf(message + strlen(message), "%d in altezza e",height_left);
+            if(width_left > 0)
+                sprintf(message + strlen(message), " %d in larghezza",width_left);
+            else
+                message[strlen(message)-1] = ' ';
+
+        //Print message to screen and wait for next resizement
+        mvwprintw(stdscr,0,0, message);
+        wait_key(KEY_RESIZE);
+        getmaxyx(stdscr,dimensions.first,dimensions.second);
+        clear();
+    }
     
-    //Create game window
-    WINDOW * player_window;
-    player_window = newwin(room_height, room_width, window_y, window_x);
+    //Correct terminal size
+    mvwprintw(stdscr,0,0, "La finestra è della dimensione giusta, premi Invio per avviare il gioco!");
+    getmaxyx(stdscr,dimensions.first,dimensions.second); //Update another time, if the user resized again during the final message
+    wait_key(custom_keys::Enter);
+    clear();
+
+    //Center the box
+    int window_y = (dimensions.first-room_height)/2;
+    int window_x = (dimensions.second-room_width)/2;
+
+    //Window setup
+    WINDOW* start_window = newwin(room_height, room_width, window_y, window_x);
+    
     //mvwaddch(player_window, room_width / 2 + window_x, window_y / 2 + room_height, 'c');
-    box(player_window,0,0);
-    wrefresh(player_window);
+    refresh();
+    box(start_window,0,0);
+    wrefresh(start_window);
 
     //Add window as a panel to use stacked windows
-    new_panel(player_window);
+    new_panel(start_window);
     update_panels();
     doupdate();
 
-    return win;
+    //Save created window
+    game_window = start_window;
 }
 
 
 int main(){
 
     //Configure Ncurses and init game window
-    game_window = initial_setup();
+    initial_setup();
 
     //Retreitve savedata
     savedata save;
 
-    wait_key(custom_keys::Enter); //Prevent program from closing
+    //TEST
+    mvwprintw(game_window,0,0, "Premi invio per mostrare un popup");
+    wrefresh(game_window);
+    wait_key(custom_keys::Enter); 
+    char msg[] = "ildioghane";
+    dialog test = dialog(msg);
+    test.show.wait();
+
     endwin();
     return 0;
 }
