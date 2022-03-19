@@ -1,6 +1,6 @@
-#include "headers/savedata.hpp";
+#include "savedata.hpp";
 
-//Constructor
+
 savedata::savedata(){
     reload_json();
 }
@@ -10,7 +10,7 @@ void savedata::reload_json(){
     //Open savefile
     input_file.open(savefile_name);
 
-    //Check if savefile is valid
+    //Check if not found
     if(input_file.fail()){ 
 
         //Create new savefile

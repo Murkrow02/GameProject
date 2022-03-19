@@ -1,11 +1,12 @@
 #include <string>
 #include <vector>
 #include <utility>
-
+#include "ncurses.h"
 
 using namespace std;
 
 class Room{
+    
     public:
         Room(int _id, string _roomtype, pair<int, int> room_coords, int room_w, int room_h);
         pair<int,int> room_coords;

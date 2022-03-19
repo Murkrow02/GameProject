@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 #include <ncurses.h>
-#include "headers/room.h"
+#include "room.hpp"
 
 using namespace std;
 

@@ -1,14 +1,17 @@
-main: src/main.o src/room.o src/savedata.o src/utils.o
-	g++ -lncurses -o Test src/main.o src/room.o src/utils.o src/savedata.o
+main: src/main.o src/room.o src/Tools/savedata.o src/Tools/utils.o  src/UI/dialog.o
+	g++ -lncurses -lpanel  -o Test src/main.o src/room.o src/Tools/utils.o src/Tools/savedata.o src/UI/dialog.o
 
-room.o: src/room.cpp src/headers/room.h
+room.o: src/room.cpp src/room.h
 	g++ -c -lncurses src/room.cpp
 
-savedata.o: src/savedata.cpp src/headers/savedata.hpp src/utils.hpp
-	g++ -c src/savedata.cpp
+savedata.o: src/Tools/savedata.cpp src/Tools/savedata.hpp src/Tools/utils.hpp
+	g++ -c src/Tools/savedata.cpp
 
-utils.o: src/utils.cpp src/utils.hpp
-	g++ -c -lncurses src/utils.cpp
+utils.o: src/Tools/utils.cpp src/Tools/utils.hpp
+	g++ -c -lncurses src/Tools/utils.cpp
+
+dialog.o: src/UI/dialog.cpp src/UI/dialog.hpp src/Tools/utils.hpp
+	g++ -c -lncurses -lpanel src/UI/dialog.cpp
 
 clean: 
-	rm src/*.o
+	rm src/*.o src/*/*.o
