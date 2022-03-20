@@ -24,35 +24,43 @@ void initial_setup(){
     //Check if terminal size is acceptable, guide the user to correct if not
     pair<int,int> dimensions;
     int offset = 5; //some padding
-    getmaxyx(stdscr,dimensions.first,dimensions.second);
-
-    while(dimensions.first < room_height + offset || dimensions.second < room_width + offset){
+    int ended_resizing = 0;
+    do{
         
-        //Calculate how much the user has to widen terminal size
-        int height_left = room_height-dimensions.first+offset;
-        int width_left = room_width-dimensions.second+offset;
-
-        //Help user resizing the window
-        char message[300] = "La finestra corrente è troppo piccola per il gioco, allarga ancora ";
-        if(height_left > 0)
-                sprintf(message + strlen(message), "%d in altezza e",height_left);
-            if(width_left > 0)
-                sprintf(message + strlen(message), " %d in larghezza",width_left);
-            else
-                message[strlen(message)-1] = ' ';
-
-        //Print message to screen and wait for next resizement
-        mvwprintw(stdscr,0,0, message);
-        wait_key(KEY_RESIZE);
+        //Get current dimensions
         getmaxyx(stdscr,dimensions.first,dimensions.second);
+
+        if(dimensions.first < room_height + offset || dimensions.second < room_width + offset){ //Terminal size not acceptable
+
+            //Calculate how much the user has to widen terminal size
+            int height_left = room_height-dimensions.first+offset;
+            int width_left = room_width-dimensions.second+offset;
+
+            //Help user resizing the window
+            char message[300] = "La finestra corrente è troppo piccola per il gioco, allarga ancora ";
+            if(height_left > 0)
+                    sprintf(message + strlen(message), "%d in altezza e",height_left);
+                if(width_left > 0)
+                    sprintf(message + strlen(message), " %d in larghezza",width_left);
+                else
+                    message[strlen(message)-1] = ' ';
+
+            //Print message to screen and wait for next resizement
+            mvwprintw(stdscr,0,0, message);
+            wait_key(KEY_RESIZE);
+        }else {
+
+            //Correct terminal size
+            mvwprintw(stdscr,0,0, "La finestra è della dimensione giusta, premi Invio per avviare il gioco!");
+            int entered_char = getch();
+            if(entered_char == custom_keys::Enter)
+                ended_resizing = 1;
+        }
+
         clear();
     }
+    while(ended_resizing != 1);
     
-    //Correct terminal size
-    mvwprintw(stdscr,0,0, "La finestra è della dimensione giusta, premi Invio per avviare il gioco!");
-    getmaxyx(stdscr,dimensions.first,dimensions.second); //Update another time, if the user resized again during the final message
-    wait_key(custom_keys::Enter);
-    clear();
 
     //Center the box
     int window_y = (dimensions.first-room_height)/2;
