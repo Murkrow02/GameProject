@@ -3,29 +3,45 @@
 
 #include <future>
 #include "../Tools/utils.hpp"
+#include "ncurses.h"
+#include "panel.h"
 
 
 using namespace std;
 
 class dialog {
 
-protected: 
+    private:
 
-    //First and main line of the dialog
-    char title[50];
+        //Set "q" as default key to close dialog
+        int close_key = 113;
 
-    //Dialog size and position
-    int y,x,h=10,w;
+        //First and main line of the dialog
+        char title[50];
 
-    //Padding from game window borders
-    int padding = 10;
+        //Padding from game window borders
+        int padding = 10;
 
-public:
+    protected: 
 
-    dialog(char title[], int custom_key = 113, int custom_y = -1, int custom_x = -1); //By default the dialog is centered based on the game box position
+        //Dialog size and position
+        int y,x,h=5,w;
 
-    //Show current dialog
-    std::future<void> show;
+        WINDOW* dialog_window;
+        PANEL* dialog_panel;
+
+        //Draw title and boxes
+        void draw();
+
+    public:
+
+        dialog(char title[]);
+
+        //Wait for current dialog close
+        std::future<void> wait_close;
+
+        //Custom close_key
+        void set_close_key(int new_key);
 
 };
 

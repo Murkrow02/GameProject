@@ -6,6 +6,7 @@
 #include <future>
 #include "room.hpp"
 #include "Tools/utils.hpp"
+#include "UI/message.hpp"
 #include "UI/dialog.hpp"
 #include "Tools/savedata.hpp"
 #include "panel.h"
@@ -97,8 +98,9 @@ int main(){
     wrefresh(game_window);
     wait_key(custom_keys::Enter); 
     char msg[] = "ildioghane";
+    //dialog test = dialog(msg,"il dio ghane il dio ghane il dio ghane il dio ghane il dio ghane il dio ghane il dio ghane il dio ghane il dio ghane il dio ghane il dio ghane il dio ghane il dio ghane il dio ghane il dio ghane il dio ghane il dio ghane ");
     dialog test = dialog(msg);
-    test.show.wait();
+    test.wait_close.wait();
 
     endwin();
     return 0;
