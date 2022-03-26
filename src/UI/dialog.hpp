@@ -33,6 +33,9 @@ class dialog {
         //Draw title and boxes
         void draw();
 
+        //Show "press x to close" message
+        void show_close_message();
+
     public:
 
         dialog(char title[]);

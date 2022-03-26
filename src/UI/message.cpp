@@ -10,7 +10,6 @@
 
 */
 
-
 message::message(char title[], char text[]):dialog(title){
     strcpy(this->text, text);
 
@@ -23,38 +22,49 @@ message::message(char title[], char text[]):dialog(title){
         int msg_len = strlen(text);
 
         int current_row_len = 0;
-        int current_row_selected = 2;
-        char current_line_txt[max_line_len];
-        char** lines; //!!!
+        int current_row_selected = 0;
+        char current_line_txt[max_line_len+1];
+        std::string lines[20];
         for (size_t i = 0; i < msg_len; i++)
-        {
+        { 
             //Char position exceeded maximum row size
             if(current_row_len >= max_line_len){
-                current_row_selected++;
-                current_row_len = 0;
 
-                //Update dialog size and position
-                h=h+1;
+                //Update dialog size and position (+2 otherwise is not centered)
+                h++;
                 dialog::draw();
 
-                //Insert previous lines !!!!
+                //Insert previous lines
+                lines[current_row_selected] = current_line_txt;
+                for (int j = 0; j < current_row_selected+1; j++)
+                {
+                    char tmp_line_text[max_line_len+1];
+                    strcpy(tmp_line_text, lines[j].c_str());
+                    mvwprintw(dialog_window, j+2, padding, tmp_line_text);
+                }
+                
+                //Reset current line content
+                strcpy(current_line_txt,"");
+                current_row_selected++;
+                current_row_len = 0;
             }
         
             //Update text content in window
-            mvwaddch(dialog_window, current_row_selected, current_row_len+padding , text[i]);
+            mvwaddch(dialog_window, current_row_selected+2, current_row_len+padding , text[i]);
             wrefresh(dialog_window);
 
             //Copy current char in current line string
             current_line_txt[current_row_len] = text[i];
                 
             //Wait until next char add
-            std::this_thread::sleep_for(std::chrono::milliseconds(30));
+            std::this_thread::sleep_for(std::chrono::milliseconds(speed));
 
             //Increment row position
             current_row_len++;
         }
 
         //Wait for user to press escape key
+        dialog::show_close_message();
         dialog::wait_close.wait();
 
     });

@@ -98,10 +98,10 @@ int main(){
     wrefresh(game_window);
     wait_key(custom_keys::Enter); 
     char msg[] = "ildioghane";
-    //dialog test = dialog(msg,"il dio ghane il dio ghane il dio ghane il dio ghane il dio ghane il dio ghane il dio ghane il dio ghane il dio ghane il dio ghane il dio ghane il dio ghane il dio ghane il dio ghane il dio ghane il dio ghane il dio ghane ");
-    dialog test = dialog(msg);
+    message test = message(msg,"il dio ghane il dio ghane il dio ghane il dio ghane il dio ghane il dio ghane il dio ghane il dio ghane il dio ghane il dio ghane il dio ghane il dio ghane il dio ghane il dio ghane il dio ghane il dio ghane il dio ghane ");
     test.wait_close.wait();
 
+    getch();
     endwin();
     return 0;
 }

@@ -11,6 +11,9 @@ class message : public dialog {
         //How much space to leave from borders
         int padding = 3;
 
+        //Ms delay between chars
+        int speed = 25;
+
     public:
 
         message(char title[], char message[]);

@@ -48,12 +48,6 @@ void dialog::draw(){
     int title_len = strlen(title);
     int start_text_title = w/2-(title_len/2);
     mvwprintw(dialog_window, 0, start_text_title, title);
-
-    //Insert bottom text to close
-    char bottom_msg[] = "Premi q per chiudere questa schermata";
-    int bottom_msg_len = strlen(bottom_msg);
-    int start_text_bottom_msg = w/2-(bottom_msg_len/2);
-    mvwprintw(dialog_window, h-1, start_text_bottom_msg, bottom_msg);
     
     //Update text content
     wrefresh(dialog_window);  
@@ -61,4 +55,14 @@ void dialog::draw(){
 
 void dialog::set_close_key(int new_key){
         close_key = new_key;
+}
+
+void dialog::show_close_message(){
+
+    //Insert bottom text to close
+    char bottom_msg[] = "Premi q per chiudere questa schermata";
+    int bottom_msg_len = strlen(bottom_msg);
+    int start_text_bottom_msg = w/2-(bottom_msg_len/2);
+    mvwprintw(dialog_window, h-1, start_text_bottom_msg, bottom_msg);
+    wrefresh(dialog_window);  
 }
