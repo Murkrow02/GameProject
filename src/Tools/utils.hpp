@@ -22,5 +22,7 @@ void wait_key(int key = -1);
 //Show error message to user and close application (TODO, better GUI)
 void fatal_error(string message);
 
+//Configure NCurses and guide user to resize terminal window
+void initial_setup();
 
 #endif

@@ -18,4 +18,7 @@ class message : public dialog {
 
         message(char title[], char message[]);
 
+        //Wait for current dialog close
+        std::future<void> wait_close;
+
 };

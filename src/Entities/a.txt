@@ -1,1 +1,0 @@
-//Include entities like player, enemies, npcs... using inheritance
