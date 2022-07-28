@@ -6,7 +6,6 @@
 #include "ncurses.h"
 #include "panel.h"
 
-
 using namespace std;
 
 class dialog {

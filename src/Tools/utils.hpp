@@ -3,12 +3,14 @@
 
 #include <string>
 #include "ncurses.h"
-
+#include "../UI/stats.hpp"
 using namespace std;
 
 enum custom_keys: unsigned int { Enter = 10 }; //Save custom keys here for easier access
 
-extern WINDOW* game_window; //Save game window for easier access from other classes
+ //Save game stuff for easier access from other classes
+extern WINDOW* game_window;
+extern stats* game_stats; 
 
 const int room_width = 80; 
 const int room_height = 40;

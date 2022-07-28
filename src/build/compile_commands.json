@@ -1,0 +1,52 @@
+[
+{
+  "directory": "/home/murkrow/Repos/GameProject/src/build",
+  "command": "/usr/bin/g++   -g -std=gnu++14 -o CMakeFiles/GameProject2.dir/main.cpp.o -c /home/murkrow/Repos/GameProject/src/main.cpp",
+  "file": "/home/murkrow/Repos/GameProject/src/main.cpp"
+},
+{
+  "directory": "/home/murkrow/Repos/GameProject/src/build",
+  "command": "/usr/bin/g++   -g -std=gnu++14 -o CMakeFiles/GameProject2.dir/Tools/utils.cpp.o -c /home/murkrow/Repos/GameProject/src/Tools/utils.cpp",
+  "file": "/home/murkrow/Repos/GameProject/src/Tools/utils.cpp"
+},
+{
+  "directory": "/home/murkrow/Repos/GameProject/src/build",
+  "command": "/usr/bin/g++   -g -std=gnu++14 -o CMakeFiles/GameProject2.dir/Tools/savedata.cpp.o -c /home/murkrow/Repos/GameProject/src/Tools/savedata.cpp",
+  "file": "/home/murkrow/Repos/GameProject/src/Tools/savedata.cpp"
+},
+{
+  "directory": "/home/murkrow/Repos/GameProject/src/build",
+  "command": "/usr/bin/g++   -g -std=gnu++14 -o CMakeFiles/GameProject2.dir/Entities/player.cpp.o -c /home/murkrow/Repos/GameProject/src/Entities/player.cpp",
+  "file": "/home/murkrow/Repos/GameProject/src/Entities/player.cpp"
+},
+{
+  "directory": "/home/murkrow/Repos/GameProject/src/build",
+  "command": "/usr/bin/g++   -g -std=gnu++14 -o CMakeFiles/GameProject2.dir/UI/alert.cpp.o -c /home/murkrow/Repos/GameProject/src/UI/alert.cpp",
+  "file": "/home/murkrow/Repos/GameProject/src/UI/alert.cpp"
+},
+{
+  "directory": "/home/murkrow/Repos/GameProject/src/build",
+  "command": "/usr/bin/g++   -g -std=gnu++14 -o CMakeFiles/GameProject2.dir/UI/dialog.cpp.o -c /home/murkrow/Repos/GameProject/src/UI/dialog.cpp",
+  "file": "/home/murkrow/Repos/GameProject/src/UI/dialog.cpp"
+},
+{
+  "directory": "/home/murkrow/Repos/GameProject/src/build",
+  "command": "/usr/bin/g++   -g -std=gnu++14 -o CMakeFiles/GameProject2.dir/UI/menu.cpp.o -c /home/murkrow/Repos/GameProject/src/UI/menu.cpp",
+  "file": "/home/murkrow/Repos/GameProject/src/UI/menu.cpp"
+},
+{
+  "directory": "/home/murkrow/Repos/GameProject/src/build",
+  "command": "/usr/bin/g++   -g -std=gnu++14 -o CMakeFiles/GameProject2.dir/UI/message.cpp.o -c /home/murkrow/Repos/GameProject/src/UI/message.cpp",
+  "file": "/home/murkrow/Repos/GameProject/src/UI/message.cpp"
+},
+{
+  "directory": "/home/murkrow/Repos/GameProject/src/build",
+  "command": "/usr/bin/g++   -g -std=gnu++14 -o CMakeFiles/GameProject2.dir/UI/puzzle.cpp.o -c /home/murkrow/Repos/GameProject/src/UI/puzzle.cpp",
+  "file": "/home/murkrow/Repos/GameProject/src/UI/puzzle.cpp"
+},
+{
+  "directory": "/home/murkrow/Repos/GameProject/src/build",
+  "command": "/usr/bin/g++   -g -std=gnu++14 -o CMakeFiles/GameProject2.dir/UI/stats.cpp.o -c /home/murkrow/Repos/GameProject/src/UI/stats.cpp",
+  "file": "/home/murkrow/Repos/GameProject/src/UI/stats.cpp"
+}
+]

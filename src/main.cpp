@@ -12,7 +12,7 @@
 #include "panel.h"
 #include "Entities/entity.hpp"
 #include "Entities/player.hpp"
-
+#include "UI/stats.hpp"
 using namespace std;
 
 int main()
@@ -24,14 +24,25 @@ int main()
     // Retreitve savedata
     savedata save;
 
+    getch();
+    game_stats->lost_life();
+    getch();
+    game_stats->gained_life();
+    getch();
+    game_stats->lost_life();
+    getch();
+    getch();
+    return 0;
+
+    // Test stuff
+
     int ch;
     Position start_pos = {10, 20};
-
     initscr();
     noecho();
     curs_set(0);
 
-    Entity* player = create_player(start_pos);
+    Entity *player = create_player(start_pos);
     mvaddch(player->pos.y, player->pos.x, player->ch);
 
     while (ch = getch())
