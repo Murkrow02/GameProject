@@ -5,6 +5,9 @@
 #include "player.h"
 #include "map.h"
 #include "minimap.h"
+#include "../UI/stats.hpp"
+#include "../UI/message.hpp"
+#include "../Tools/utils.hpp"
 
 using namespace std;
 
@@ -19,47 +22,40 @@ void debugInfo(Player player, Map map){
 
 int main(){
 
-    // basic setup
-    initscr();
-    noecho(); // doesn't echo user input on screen
-    keypad(stdscr,TRUE); // allows keypad input
-    curs_set(0); // disables cursor
-    int width,height;
-    getmaxyx(stdscr, height, width);
-
-
     // SETUP
-    int windowW = 80, windowH = 40, windowX = 4, windowY = 10;
-    WINDOW * player_window;
-    player_window = newwin(windowH, windowW, windowY, windowX);
+    int room_width = 80, room_height = 40, room_x, room_y;
 
-
-   
-
+    // ncurses set up, terminal resizing and window creation at center
+    initial_setup(room_width, room_height, &room_x, &room_y);
 
     // player setup
-    mvwaddch(player_window, windowW / 2 + windowX, windowY / 2 + windowH, 'c');
+    mvwaddch(game_window, room_width / 2 + room_x, room_y / 2 + room_height, 'c');
     refresh();
-    box(player_window,0,0);
-    wrefresh(player_window);
-    Player player((windowH / 2), (windowW / 2), player_window); // player creation
+    box(game_window,0,0);
+    wrefresh(game_window);
+    Player player((room_height / 2), (room_width / 2), game_window); // player creation
 
     // map - minimap setup
     Map map; 
-    Minimap minimap(4, 2,(width - 20), 5);
-    vector<vector<int>> floor = map.generateMap(player_window);
+    Minimap minimap(4, 2,(room_width - 20), 5);
+    vector<vector<int>> floor = map.generateMap(game_window);
     minimap.drawMinimap(map);
-    map.createRoom(0, player_window);
+    map.createRoom(0, game_window);
 
-    wrefresh(player_window);
-    
-    
+
+    // stats setup
+    int x_stat = room_x + room_width + 2;
+    int y_stat = room_y + 1;
+    stats game_stats(x_stat, y_stat);
+
+    wrefresh(game_window);
+
     // main loop
     while (true){
-        debugInfo(player, map);
+        //debugInfo(player, map);
         int c = getch();
         player.getmv(c, map);
-        wrefresh(player_window);
+        wrefresh(game_window);
     }
 
 	getch(); // waits user input
@@ -68,3 +64,21 @@ int main(){
     
     return 0;
 }
+
+
+   
+
+/*
+    // TEST messaggi
+    message test = message("titolo", "messaggio);
+    test.wait_close.wait();
+
+    //Test by saving mock data
+    save.savefile["funge"] = true;
+    save.save_changes();
+
+    //Retreive mock data
+    bool funge = save.savefile["funge"];
+
+    printw("%d",funge);
+*/

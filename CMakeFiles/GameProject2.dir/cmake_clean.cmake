@@ -1,4 +1,14 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/GameProject2.dir/Engine/main.cpp.o"
+  "CMakeFiles/GameProject2.dir/Engine/main.cpp.o.d"
+  "CMakeFiles/GameProject2.dir/Engine/map.cpp.o"
+  "CMakeFiles/GameProject2.dir/Engine/map.cpp.o.d"
+  "CMakeFiles/GameProject2.dir/Engine/minimap.cpp.o"
+  "CMakeFiles/GameProject2.dir/Engine/minimap.cpp.o.d"
+  "CMakeFiles/GameProject2.dir/Engine/player.cpp.o"
+  "CMakeFiles/GameProject2.dir/Engine/player.cpp.o.d"
+  "CMakeFiles/GameProject2.dir/Engine/room.cpp.o"
+  "CMakeFiles/GameProject2.dir/Engine/room.cpp.o.d"
   "CMakeFiles/GameProject2.dir/Entities/player.cpp.o"
   "CMakeFiles/GameProject2.dir/Entities/player.cpp.o.d"
   "CMakeFiles/GameProject2.dir/Tools/savedata.cpp.o"
@@ -17,8 +27,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/GameProject2.dir/UI/puzzle.cpp.o.d"
   "CMakeFiles/GameProject2.dir/UI/stats.cpp.o"
   "CMakeFiles/GameProject2.dir/UI/stats.cpp.o.d"
-  "CMakeFiles/GameProject2.dir/main.cpp.o"
-  "CMakeFiles/GameProject2.dir/main.cpp.o.d"
   "GameProject2"
   "GameProject2.pdb"
 )

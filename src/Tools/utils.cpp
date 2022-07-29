@@ -9,7 +9,7 @@
 using namespace std;
 
 //Save stuff for easy access on other classes
-WINDOW* game_window; stats* game_stats;
+WINDOW* game_window;
 
 void log(string msg){
     printw(msg.data());
@@ -33,7 +33,7 @@ void fatal_error(string message){
     exit(0);
 }
 
-void initial_setup(){
+void initial_setup(int room_width, int room_height, int *room_x, int *room_y){
 
     //Ncurses setup
     initscr();
@@ -91,7 +91,6 @@ void initial_setup(){
     //Window setup
     game_window = newwin(room_height, room_width, window_y, window_x);
     
-    //mvwaddch(player_window, room_width / 2 + window_x, window_y / 2 + room_height, 'c');
     refresh();
     box(game_window,0,0);
     wrefresh(game_window);
@@ -101,12 +100,7 @@ void initial_setup(){
     update_panels();
     doupdate();
 
-    //Init stat screen
-    int x_stat = window_x + room_width + 2;
-    int y_stat = window_y + 1;
-    stats new_stats;
-    game_stats = new_stats.init_stats(x_stat,y_stat); 
-
+    //Return room x and y position
+    *room_x = window_x;
+    *room_y = window_y;
 }
-
-

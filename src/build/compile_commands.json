@@ -1,11 +1,6 @@
 [
 {
   "directory": "/home/murkrow/Repos/GameProject/src/build",
-  "command": "/usr/bin/g++   -g -std=gnu++14 -o CMakeFiles/GameProject2.dir/main.cpp.o -c /home/murkrow/Repos/GameProject/src/main.cpp",
-  "file": "/home/murkrow/Repos/GameProject/src/main.cpp"
-},
-{
-  "directory": "/home/murkrow/Repos/GameProject/src/build",
   "command": "/usr/bin/g++   -g -std=gnu++14 -o CMakeFiles/GameProject2.dir/Tools/utils.cpp.o -c /home/murkrow/Repos/GameProject/src/Tools/utils.cpp",
   "file": "/home/murkrow/Repos/GameProject/src/Tools/utils.cpp"
 },
@@ -48,5 +43,30 @@
   "directory": "/home/murkrow/Repos/GameProject/src/build",
   "command": "/usr/bin/g++   -g -std=gnu++14 -o CMakeFiles/GameProject2.dir/UI/stats.cpp.o -c /home/murkrow/Repos/GameProject/src/UI/stats.cpp",
   "file": "/home/murkrow/Repos/GameProject/src/UI/stats.cpp"
+},
+{
+  "directory": "/home/murkrow/Repos/GameProject/src/build",
+  "command": "/usr/bin/g++   -g -std=gnu++14 -o CMakeFiles/GameProject2.dir/Engine/main.cpp.o -c /home/murkrow/Repos/GameProject/src/Engine/main.cpp",
+  "file": "/home/murkrow/Repos/GameProject/src/Engine/main.cpp"
+},
+{
+  "directory": "/home/murkrow/Repos/GameProject/src/build",
+  "command": "/usr/bin/g++   -g -std=gnu++14 -o CMakeFiles/GameProject2.dir/Engine/map.cpp.o -c /home/murkrow/Repos/GameProject/src/Engine/map.cpp",
+  "file": "/home/murkrow/Repos/GameProject/src/Engine/map.cpp"
+},
+{
+  "directory": "/home/murkrow/Repos/GameProject/src/build",
+  "command": "/usr/bin/g++   -g -std=gnu++14 -o CMakeFiles/GameProject2.dir/Engine/minimap.cpp.o -c /home/murkrow/Repos/GameProject/src/Engine/minimap.cpp",
+  "file": "/home/murkrow/Repos/GameProject/src/Engine/minimap.cpp"
+},
+{
+  "directory": "/home/murkrow/Repos/GameProject/src/build",
+  "command": "/usr/bin/g++   -g -std=gnu++14 -o CMakeFiles/GameProject2.dir/Engine/player.cpp.o -c /home/murkrow/Repos/GameProject/src/Engine/player.cpp",
+  "file": "/home/murkrow/Repos/GameProject/src/Engine/player.cpp"
+},
+{
+  "directory": "/home/murkrow/Repos/GameProject/src/build",
+  "command": "/usr/bin/g++   -g -std=gnu++14 -o CMakeFiles/GameProject2.dir/Engine/room.cpp.o -c /home/murkrow/Repos/GameProject/src/Engine/room.cpp",
+  "file": "/home/murkrow/Repos/GameProject/src/Engine/room.cpp"
 }
 ]
