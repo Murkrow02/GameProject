@@ -6,11 +6,16 @@ using namespace std;
 
 
 Player::Player(int _y, int _x, WINDOW * player_win){
+
+    // set attributes
     y = _y;
     x = _x;
     roomId = 0;
     playerWin = player_win;
     getmaxyx(playerWin, yMax, xMax);
+
+    // spawn player
+    mvwaddch(player_win, y, x, 'c');
     
 }
 
@@ -19,30 +24,49 @@ void Player::checkCollision(int nextX, int nextY, Map map){
     Room cRoom = map.rooms[roomId];
     pair<int, int> roomCords = cRoom.coords;
     printw("\n %c", cRoom.room[nextY][nextX]);
+
+    // player entered next room
     if (cRoom.room[nextY][nextX] == '*'){
+
         printw("\nTrue");
+
+        // clear player old position
+        mvwaddch(playerWin, y, x, ' ');
+
         // left
         if (x <= 1) {
             roomId = map.floor[roomCords.first][roomCords.second - 1];
+            
+            // spawn right
+            x = xMax-2;
+            y = yMax/2;
         }
         // right
-        if (x >= xMax - 2){
+        else if (x >= xMax - 2){
             roomId = map.floor[roomCords.first][roomCords.second + 1];
+
+            // spawn left
+            x = 2;
+            y = yMax/2;
         }
         // up
-        if (y <= 1){
+        else if (y <= 1){
             roomId = map.floor[roomCords.first - 1][roomCords.second];
+
+            // spawn down
+            x = xMax/2;
+            y = yMax-2;
         }
         // down
-        if (y >= yMax-2){
+        else if (y >= yMax-2){
             roomId = map.floor[roomCords.first + 1][roomCords.second];
-        }
 
+            // spawn up
+            x = xMax/2;
+            y = 2;
+        } 
 
-        
-        mvwaddch(playerWin, y, x, ' ');
-        x = 40;
-        y = 20;
+        // create new room
         map.createRoom(roomId, playerWin);
         
         
@@ -53,7 +77,6 @@ void Player::checkCollision(int nextX, int nextY, Map map){
 
 void Player::getmv(int c, Map map){
 
-    c = getch();
     switch(c) {
     case KEY_UP:
         checkCollision(x, y-1, map);

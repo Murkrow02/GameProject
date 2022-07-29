@@ -29,10 +29,7 @@ int main(){
     initial_setup(room_width, room_height, &room_x, &room_y);
 
     // player setup
-    mvwaddch(game_window, room_width / 2 + room_x, room_y / 2 + room_height, 'c');
-    refresh();
     box(game_window,0,0);
-    wrefresh(game_window);
     Player player((room_height / 2), (room_width / 2), game_window); // player creation
 
     // map - minimap setup
@@ -52,7 +49,7 @@ int main(){
 
     // main loop
     while (true){
-        //debugInfo(player, map);
+        debugInfo(player, map);
         int c = getch();
         player.getmv(c, map);
         wrefresh(game_window);
