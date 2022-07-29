@@ -21,14 +21,18 @@ Player::Player(int _y, int _x, WINDOW * player_win){
 
 void Player::checkCollision(int nextX, int nextY, Map map){
 
+    
+
     Room cRoom = map.rooms[roomId];
+
+    //mvwprintw(playerWin, 0,0, std::to_string(map.rooms.size()).c_str());
+
     pair<int, int> roomCords = cRoom.coords;
     printw("\n %c", cRoom.room[nextY][nextX]);
 
-    // player entered next room
-    if (cRoom.room[nextY][nextX] == '*'){
 
-        printw("\nTrue");
+    // player entered next room
+    if (mvwinch(playerWin, nextY, nextX) == '*'){
 
         // clear player old position
         mvwaddch(playerWin, y, x, ' ');
@@ -71,7 +75,9 @@ void Player::checkCollision(int nextX, int nextY, Map map){
         
         
     }
-    else printw("\nFalse");
+    else{
+
+    }
 
 }
 

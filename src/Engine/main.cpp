@@ -39,7 +39,6 @@ int main(){
     minimap.drawMinimap(map);
     map.createRoom(0, game_window);
 
-
     // stats setup
     int x_stat = room_x + room_width + 2;
     int y_stat = room_y + 1;
