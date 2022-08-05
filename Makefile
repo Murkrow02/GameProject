@@ -201,30 +201,6 @@ Engine/minimap.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/Engine/minimap.cpp.s
 .PHONY : Engine/minimap.cpp.s
 
-Engine/player.o: Engine/player.cpp.o
-.PHONY : Engine/player.o
-
-# target to build an object file
-Engine/player.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/Engine/player.cpp.o
-.PHONY : Engine/player.cpp.o
-
-Engine/player.i: Engine/player.cpp.i
-.PHONY : Engine/player.i
-
-# target to preprocess a source file
-Engine/player.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/Engine/player.cpp.i
-.PHONY : Engine/player.cpp.i
-
-Engine/player.s: Engine/player.cpp.s
-.PHONY : Engine/player.s
-
-# target to generate assembly for a file
-Engine/player.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/Engine/player.cpp.s
-.PHONY : Engine/player.cpp.s
-
 Engine/room.o: Engine/room.cpp.o
 .PHONY : Engine/room.o
 
@@ -248,6 +224,54 @@ Engine/room.s: Engine/room.cpp.s
 Engine/room.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/Engine/room.cpp.s
 .PHONY : Engine/room.cpp.s
+
+Entities/dummy.o: Entities/dummy.cpp.o
+.PHONY : Entities/dummy.o
+
+# target to build an object file
+Entities/dummy.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/Entities/dummy.cpp.o
+.PHONY : Entities/dummy.cpp.o
+
+Entities/dummy.i: Entities/dummy.cpp.i
+.PHONY : Entities/dummy.i
+
+# target to preprocess a source file
+Entities/dummy.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/Entities/dummy.cpp.i
+.PHONY : Entities/dummy.cpp.i
+
+Entities/dummy.s: Entities/dummy.cpp.s
+.PHONY : Entities/dummy.s
+
+# target to generate assembly for a file
+Entities/dummy.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/Entities/dummy.cpp.s
+.PHONY : Entities/dummy.cpp.s
+
+Entities/entity.o: Entities/entity.cpp.o
+.PHONY : Entities/entity.o
+
+# target to build an object file
+Entities/entity.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/Entities/entity.cpp.o
+.PHONY : Entities/entity.cpp.o
+
+Entities/entity.i: Entities/entity.cpp.i
+.PHONY : Entities/entity.i
+
+# target to preprocess a source file
+Entities/entity.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/Entities/entity.cpp.i
+.PHONY : Entities/entity.cpp.i
+
+Entities/entity.s: Entities/entity.cpp.s
+.PHONY : Entities/entity.s
+
+# target to generate assembly for a file
+Entities/entity.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/Entities/entity.cpp.s
+.PHONY : Entities/entity.cpp.s
 
 Entities/player.o: Entities/player.cpp.o
 .PHONY : Entities/player.o
@@ -483,12 +507,15 @@ help:
 	@echo "... Engine/minimap.o"
 	@echo "... Engine/minimap.i"
 	@echo "... Engine/minimap.s"
-	@echo "... Engine/player.o"
-	@echo "... Engine/player.i"
-	@echo "... Engine/player.s"
 	@echo "... Engine/room.o"
 	@echo "... Engine/room.i"
 	@echo "... Engine/room.s"
+	@echo "... Entities/dummy.o"
+	@echo "... Entities/dummy.i"
+	@echo "... Entities/dummy.s"
+	@echo "... Entities/entity.o"
+	@echo "... Entities/entity.i"
+	@echo "... Entities/entity.s"
 	@echo "... Entities/player.o"
 	@echo "... Entities/player.i"
 	@echo "... Entities/player.s"

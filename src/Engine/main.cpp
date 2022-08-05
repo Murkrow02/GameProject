@@ -2,7 +2,8 @@
 #include <thread>
 #include <chrono>
 #include <ncurses.h>
-#include "player.h"
+#include "../Entities/player.hpp"
+#include "../Entities/dummy.cpp"
 #include "map.h"
 #include "minimap.h"
 #include "../UI/stats.hpp"
@@ -14,10 +15,10 @@ using namespace std;
 void debugInfo(Player player, Map map){
     move(0, 0);
     clrtoeol();
-    printw("%d", player.x);
-    printw("  %d", player.y);
-    printw("\nroomID : %d", player.roomId);
-    printw("\n%c", map.rooms[player.roomId].room[player.y][player.x]);
+    //printw("%d", player.x);
+    //printw("  %d", player.y);
+    //printw("\nroomID : %d", player.roomId);
+    //printw("\n%c", map.rooms[player.roomId].room[player.y][player.x]);
 }
 
 int main(){
@@ -31,6 +32,9 @@ int main(){
     // player setup
     box(game_window,0,0);
     Player player((room_height / 2), (room_width / 2), game_window); // player creation
+
+    // dummy spawn
+    Dummy dummy((room_height / 2) + 10, (room_width / 2)- 10, game_window);
 
     // map - minimap setup
     Map map; 

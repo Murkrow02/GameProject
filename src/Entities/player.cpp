@@ -1,38 +1,34 @@
-#include "entity.hpp"
+#include <iostream>
+#include <ncurses.h>
 #include "player.hpp"
+#include "entity.hpp"
 
-Entity* create_player(Position start_pos)
+using namespace std;
+
+Player::Player(int _y, int _x, WINDOW * player_win) : Entity{ _y,  _x, player_win, 'c'} // 'c' is the char being displayed
 {
-  Entity* newPlayer;
-
-  newPlayer->pos.y = start_pos.y;
-  newPlayer->pos.x = start_pos.x;
-  newPlayer->ch = '@';
-
-  return newPlayer;
 }
 
-void move_player(int input, Entity* player)
-{
-  switch(input)
-  {
-    //move up
-    case 'w':
-      player->pos.y--;
-      break;
-    //move down
-    case 's':
-      player->pos.y++;
-      break;
-    //move left
-    case 'a':
-      player->pos.x--;
-      break;
-    //move right
-    case 'd':
-      player->pos.x++;
-      break;
+void Player::getmv(int c, Map map){
+
+    switch(c) {
+    case KEY_UP:
+        checkCollision(x, y-1, map);
+        mvup();
+        break;
+    case KEY_DOWN:
+        checkCollision(x, y+1, map);
+        mvdown();
+        break;
+    case KEY_LEFT:
+        checkCollision(x-1, y, map);
+        mvleft();
+        break;
+    case KEY_RIGHT:
+        checkCollision(x+1, y, map);
+        mvright();
+        break;
     default:
-      break;
-  }
+        break;
+    }
 }

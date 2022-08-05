@@ -1,12 +1,14 @@
-#ifndef PLAYER_H
-#define PLAYER_H
-
+#pragma once
+#include "../Engine/map.h"
+#include <ncurses.h>
 #include "entity.hpp"
 
-//Returns the player entity placed at desired position
-Entity* create_player(Position start_pos);
+using namespace std;
 
-//Move player to new position based ok key press
-void move_player(int input, Entity* player);
-
-#endif
+class Player : Entity
+{
+    public:
+        Player(int _y, int _x, WINDOW * player_win);
+        void getmv(int c, Map map);
+    private:
+};
