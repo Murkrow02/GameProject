@@ -14,6 +14,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/murkrow/Repos/GameProject/src/Engine/room.cpp" "CMakeFiles/GameProject2.dir/Engine/room.cpp.o" "gcc" "CMakeFiles/GameProject2.dir/Engine/room.cpp.o.d"
   "/home/murkrow/Repos/GameProject/src/Entities/dummy.cpp" "CMakeFiles/GameProject2.dir/Entities/dummy.cpp.o" "gcc" "CMakeFiles/GameProject2.dir/Entities/dummy.cpp.o.d"
   "/home/murkrow/Repos/GameProject/src/Entities/entity.cpp" "CMakeFiles/GameProject2.dir/Entities/entity.cpp.o" "gcc" "CMakeFiles/GameProject2.dir/Entities/entity.cpp.o.d"
+  "/home/murkrow/Repos/GameProject/src/Entities/foe.cpp" "CMakeFiles/GameProject2.dir/Entities/foe.cpp.o" "gcc" "CMakeFiles/GameProject2.dir/Entities/foe.cpp.o.d"
   "/home/murkrow/Repos/GameProject/src/Entities/player.cpp" "CMakeFiles/GameProject2.dir/Entities/player.cpp.o" "gcc" "CMakeFiles/GameProject2.dir/Entities/player.cpp.o.d"
   "/home/murkrow/Repos/GameProject/src/Tools/savedata.cpp" "CMakeFiles/GameProject2.dir/Tools/savedata.cpp.o" "gcc" "CMakeFiles/GameProject2.dir/Tools/savedata.cpp.o.d"
   "/home/murkrow/Repos/GameProject/src/Tools/utils.cpp" "CMakeFiles/GameProject2.dir/Tools/utils.cpp.o" "gcc" "CMakeFiles/GameProject2.dir/Tools/utils.cpp.o.d"

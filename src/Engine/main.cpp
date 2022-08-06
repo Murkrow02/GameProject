@@ -9,6 +9,8 @@
 #include "../UI/stats.hpp"
 #include "../UI/message.hpp"
 #include "../Tools/utils.hpp"
+#include "gameobject.cpp"
+#include <list>
 
 using namespace std;
 
@@ -30,11 +32,10 @@ int main(){
     initial_setup(room_width, room_height, &room_x, &room_y);
 
     // player setup
-    box(game_window,0,0);
     Player player((room_height / 2), (room_width / 2), game_window); // player creation
 
     // dummy spawn
-    Dummy dummy((room_height / 2) + 10, (room_width / 2)- 10, game_window);
+    Dummy dummy((room_height / 2) + 10, (room_width / 2)- 10, game_window, &player);
 
     // map - minimap setup
     Map map; 
@@ -50,12 +51,43 @@ int main(){
 
     wrefresh(game_window);
 
+    // populate initial game objects
+    ////////TODO: converti in lista di puntatori come richiesto nel PDF
+    std::list<GameObject*>  gameObjects; 
+    gameObjects.push_back( &player );
+    gameObjects.push_back( &dummy );
+
+    // do not wait for getch() (otherwhise the following loop will stop)
+    nodelay(stdscr, TRUE);
+
     // main loop
     while (true){
+
+        // https://cplusplus.com/forum/general/65250/
+
+        // debug purposes
         debugInfo(player, map);
-        int c = getch();
-        player.getmv(c, map);
+
+        // player next move
+        player.getmv(map);
+
+        // move and animate objects:
+        for(auto i = gameObjects.begin(); i != gameObjects.end(); ++i)
+        {
+            (*i)->DoFrame();  // update the objects
+        }
+
+        // loop again to draw everything
+        for(auto i = gameObjects.begin(); i != gameObjects.end(); ++i)
+        {
+            (*i)->Draw();
+        }
+
+        // refresh game window
         wrefresh(game_window);
+
+        ///////////TODO: ENHANCE THIS BECAUSE IS NOT ALWAYS 16 MS AS DRAWING CAN TAKE LONGER
+        std::this_thread::sleep_for(std::chrono::milliseconds(16));
     }
 
 	getch(); // waits user input

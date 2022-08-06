@@ -11,6 +11,9 @@ enum custom_keys: unsigned int { Enter = 10 }; //Save custom keys here for easie
  //Save game stuff for easier access from other classes
 extern WINDOW* game_window;
 
+//Different type of speed for foes
+enum Speed { SPEED_SLOWER = 35, SPEED_SLOW = 30, SPEED_NORMAL = 18, SPEED_FAST = 10, SPEED_FASTER = 5 };
+
 //Simply print something to the screen with ncurses
 void log(string msg);
 

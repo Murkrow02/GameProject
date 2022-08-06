@@ -13,9 +13,6 @@ Entity::Entity(int _y, int _x, WINDOW * game_win, char display_char)
     gameWin = game_win;
     displayChar = display_char;
     getmaxyx(gameWin, yMax, xMax);
-
-    // spawn entity
-    showEntity();
 }
 
 void Entity::checkCollision(int nextX, int nextY, Map map){
@@ -77,7 +74,8 @@ void Entity::checkCollision(int nextX, int nextY, Map map){
     }
 }
 
-void Entity::showEntity(){
+void Entity::Draw()
+{
     mvwaddch(gameWin, y, x, displayChar);
 }
 
@@ -86,26 +84,22 @@ void Entity::mvdown(){
     y++;
     if (y > yMax-2)
         y = yMax-2;
-    showEntity();
 }
 void Entity::mvup(){
     mvwaddch(gameWin, y, x, ' ');
     y--;
     if (y < 1)
         y = 1;
-    showEntity();
 }
 void Entity::mvleft(){
     mvwaddch(gameWin, y, x, ' ');
     x--;
     if (x < 1)
         x = 1;
-    showEntity();
 }
 void Entity::mvright(){
     mvwaddch(gameWin, y, x, ' ');
     x++;
     if (x > xMax - 2)
         x = xMax - 2;
-    showEntity();
 }
