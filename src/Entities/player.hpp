@@ -23,6 +23,6 @@ class Player : public Entity
         int invincibilityLeft = 0;
         Map* map;
 
-        // enter next room
-        void doorCollided(); 
+        // override check collision to enter doors
+        char checkCollision(int next_y, int next_x) override; 
 };

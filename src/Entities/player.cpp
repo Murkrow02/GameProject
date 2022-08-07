@@ -52,12 +52,16 @@ Player::Player(int _y, int _x, WINDOW * player_win, Stats *game_stats, Map* _map
       
   }
 
-  void Player::doorCollided()
+  char Player::checkCollision(int nextY, int nextX)
   {
+
+    
     Room cRoom = map->rooms[roomId];
 
     pair<int, int> roomCords = cRoom.coords;
 
+    char collidedChar = mvwinch(gameWin, nextY, nextX);
+    if (collidedChar == '*'){
     // clear player old position
     mvwaddch(gameWin, y, x, ' ');
 
@@ -100,6 +104,9 @@ Player::Player(int _y, int _x, WINDOW * player_win, Stats *game_stats, Map* _map
 
     // create new room
     map->createRoom(roomId, gameWin);
+    }
+    
+    return collidedChar;
   }
 
 void Player::getmv()
@@ -108,32 +115,25 @@ void Player::getmv()
     // read user input
     int c = getch();
 
-    // the char user encountered in this move
-    char charHit = ' ';
 
     switch(c) {
     case KEY_UP:
-        charHit = checkCollision(x, y-1);
+        checkCollision(x, y-1);
         mvup();
         break;
     case KEY_DOWN:
-        charHit = checkCollision(x, y+1);
+        checkCollision(x, y+1);
         mvdown();
         break;
     case KEY_LEFT:
-        charHit = checkCollision(x-1, y);
+        checkCollision(x-1, y);
         mvleft();
         break;
     case KEY_RIGHT:
-    exit(1);
-        charHit = checkCollision(x+1, y);
+        checkCollision(x+1, y);
         mvright();
         break;
     default:
         break;
     }
-
-    // detect door hit
-    if(charHit == GAME_DOOR)
-      doorCollided();
 }

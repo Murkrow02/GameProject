@@ -23,7 +23,7 @@ class Entity : public GameObject
         void mvright();
 
         // returns the char encountered in next move
-        char checkCollision(int next_y, int next_x);
+        virtual char checkCollision(int next_y, int next_x);
 
         // update entity status
         virtual void DoFrame();
