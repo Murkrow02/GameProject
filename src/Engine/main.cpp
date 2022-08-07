@@ -10,7 +10,7 @@
 #include "../UI/message.hpp"
 #include "../Tools/utils.hpp"
 #include "gameobject.cpp"
-#include <list>
+#include "../Tools/list.hpp"
 
 using namespace std;
 
@@ -31,12 +31,14 @@ int main(){
     // ncurses set up, terminal resizing and window creation at center
     initial_setup(room_width, room_height, &room_x, &room_y);
 
-    // player setup
-    Player player((room_height / 2), (room_width / 2), game_window); // player creation
+    // main list of all gameobjects
+    GameObjectList gameObjects = GameObjectList();
 
-    // dummy spawn
-    Dummy dummy((room_height / 2) + 10, (room_width / 2)- 10, game_window, &player);
-
+    // stats setup
+    int x_stat = room_x + room_width + 2;
+    int y_stat = room_y + 1;
+    Stats game_stats(x_stat, y_stat);
+    
     // map - minimap setup
     Map map; 
     Minimap minimap(4, 2,(room_width - 20), 5);
@@ -44,18 +46,19 @@ int main(){
     minimap.drawMinimap(map);
     map.createRoom(0, game_window);
 
-    // stats setup
-    int x_stat = room_x + room_width + 2;
-    int y_stat = room_y + 1;
-    stats game_stats(x_stat, y_stat);
+    // player setup
+    Player player((room_height / 2), (room_width / 2), game_window, &game_stats, &map); // player creation
+
+    // dummy spawn
+    Dummy dummy((room_height / 2) + 10, (room_width / 2)- 10, game_window, &gameObjects);
+
+    
 
     wrefresh(game_window);
 
     // populate initial game objects
-    ////////TODO: converti in lista di puntatori come richiesto nel PDF
-    std::list<GameObject*>  gameObjects; 
-    gameObjects.push_back( &player );
-    gameObjects.push_back( &dummy );
+    gameObjects.player = &player;
+    gameObjects.insert( &dummy );
 
     // do not wait for getch() (otherwhise the following loop will stop)
     nodelay(stdscr, TRUE);
@@ -69,19 +72,13 @@ int main(){
         debugInfo(player, map);
 
         // player next move
-        player.getmv(map);
+        player.getmv();
 
         // move and animate objects:
-        for(auto i = gameObjects.begin(); i != gameObjects.end(); ++i)
-        {
-            (*i)->DoFrame();  // update the objects
-        }
+        gameObjects.doFrames();
 
         // loop again to draw everything
-        for(auto i = gameObjects.begin(); i != gameObjects.end(); ++i)
-        {
-            (*i)->Draw();
-        }
+        gameObjects.draw();
 
         // refresh game window
         wrefresh(game_window);
@@ -89,6 +86,8 @@ int main(){
         ///////////TODO: ENHANCE THIS BECAUSE IS NOT ALWAYS 16 MS AS DRAWING CAN TAKE LONGER
         std::this_thread::sleep_for(std::chrono::milliseconds(16));
     }
+
+    
 
 	getch(); // waits user input
 	endwin();	

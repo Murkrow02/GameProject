@@ -6,7 +6,7 @@
 int start_life = 5;
 int max_life = 5;
 
-stats::stats(int x, int y){
+Stats::Stats(int x, int y){
 
     //Create window for informations
     stats_window = newwin(20, 20, y, x);
@@ -22,7 +22,7 @@ stats::stats(int x, int y){
 
 }
 
-void stats::lost_life(){
+void Stats::lost_life(){
 
     if(life == 0){
         //GAMEOVER
@@ -33,7 +33,7 @@ void stats::lost_life(){
     update_stats();
 }
 
-void stats::gained_life(){
+void Stats::gained_life(){
 
     //Check if reached maximum life
     if(life < max_life)
@@ -42,26 +42,30 @@ void stats::gained_life(){
     update_stats();
 }
 
-void stats::update_stats(){
+void Stats::update_stats(){
 
     //Clear old stats
     wclear(stats_window);
 
     //LIFE
-    attron(A_BOLD);
+    wattron(stats_window,A_BOLD);
     mvwprintw(stats_window, 0, 0, "LIFE:");
-    attroff(A_BOLD);
-
+    wattroff(stats_window,A_BOLD);
+    
+    wattron(stats_window,COLOR_PAIR(1));
     for (int i = 0; i < life; i++)
     {
         wprintw(stats_window, "X"); //heart emoji is not working idk
     }
+    wattroff(stats_window,COLOR_PAIR(1));
 
     //POINTS
-    attron(A_BOLD);
+    wattron(stats_window,A_BOLD);
     mvwprintw(stats_window,1,0,"POINTS:");
-    attroff(A_BOLD);
+    wattron(stats_window,A_BOLD);
+    wattron(stats_window,COLOR_PAIR(2));
     wprintw(stats_window, std::to_string(points).c_str());
+    wattroff(stats_window,COLOR_PAIR(2));
 
     //Update on screen
     wrefresh(stats_window);

@@ -5,6 +5,7 @@
 #include <ctime>
 #include <iostream>
 #include "../Tools/utils.hpp"
+#include "../Tools/list.hpp"
 
 class Dummy : public Foe
 {
@@ -12,14 +13,14 @@ class Dummy : public Foe
 
     public:
 
-        Dummy(int _y, int _x, WINDOW *player_win, Player *player) : Foe{_y, _x, player_win, player, 'd', SPEED_NORMAL}
+        Dummy(int _y, int _x, WINDOW *player_win, GameObjectList *game_objects) : Foe{_y, _x, player_win, FOE_DUMMY, SPEED_NORMAL, game_objects}
         {
         }
 
         virtual void DoFrame()
         {
             // used to detect if can update frame
-            if(!Foe::CanUpdateFrame())
+            if(!Foe::CanMove())
                 return;
 
             srand(time(NULL));

@@ -71,12 +71,12 @@
 			},
 			"sourceIndexes" : 
 			[
-				0,
+				1,
 				2,
-				5,
-				6,
+				4,
+				7,
 				8,
-				9,
+				10,
 				11,
 				13,
 				15,
@@ -84,9 +84,10 @@
 				19,
 				21,
 				23,
-				24,
+				25,
 				26,
-				28
+				28,
+				30
 			]
 		}
 	],
@@ -131,15 +132,36 @@
 	"sourceGroups" : 
 	[
 		{
-			"name" : "Source Files",
+			"name" : "Header Files",
 			"sourceIndexes" : 
 			[
 				0,
-				2,
+				3,
 				5,
 				6,
-				8,
 				9,
+				12,
+				14,
+				16,
+				18,
+				20,
+				22,
+				24,
+				27,
+				29,
+				31
+			]
+		},
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				1,
+				2,
+				4,
+				7,
+				8,
+				10,
 				11,
 				13,
 				15,
@@ -147,29 +169,10 @@
 				19,
 				21,
 				23,
-				24,
-				26,
-				28
-			]
-		},
-		{
-			"name" : "Header Files",
-			"sourceIndexes" : 
-			[
-				1,
-				3,
-				4,
-				7,
-				10,
-				12,
-				14,
-				16,
-				18,
-				20,
-				22,
 				25,
-				27,
-				29
+				26,
+				28,
+				30
 			]
 		}
 	],
@@ -177,169 +180,180 @@
 	[
 		{
 			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "Tools/utils.cpp",
+			"path" : "Tools/list.hpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "Tools/utils.hpp",
+			"compileGroupIndex" : 0,
+			"path" : "Tools/list.cpp",
 			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Tools/utils.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Tools/utils.hpp",
+			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "Tools/savedata.cpp",
-			"sourceGroupIndex" : 0
+			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
 			"path" : "Tools/savedata.hpp",
-			"sourceGroupIndex" : 1
+			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"path" : "libraries/json.hpp",
-			"sourceGroupIndex" : 1
+			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "Entities/foe.cpp",
-			"sourceGroupIndex" : 0
+			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "Entities/dummy.cpp",
-			"sourceGroupIndex" : 0
+			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
 			"path" : "Entities/entity.hpp",
-			"sourceGroupIndex" : 1
+			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "Entities/entity.cpp",
-			"sourceGroupIndex" : 0
+			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "Entities/player.cpp",
-			"sourceGroupIndex" : 0
+			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
 			"path" : "Entities/player.hpp",
-			"sourceGroupIndex" : 1
+			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "UI/alert.cpp",
-			"sourceGroupIndex" : 0
+			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
 			"path" : "UI/alert.hpp",
-			"sourceGroupIndex" : 1
+			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "UI/dialog.cpp",
-			"sourceGroupIndex" : 0
+			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
 			"path" : "UI/dialog.hpp",
-			"sourceGroupIndex" : 1
+			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "UI/menu.cpp",
-			"sourceGroupIndex" : 0
+			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
 			"path" : "UI/menu.hpp",
-			"sourceGroupIndex" : 1
+			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "UI/message.cpp",
-			"sourceGroupIndex" : 0
+			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
 			"path" : "UI/message.hpp",
-			"sourceGroupIndex" : 1
+			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "UI/puzzle.cpp",
-			"sourceGroupIndex" : 0
+			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
 			"path" : "UI/puzzle.hpp",
-			"sourceGroupIndex" : 1
+			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "UI/stats.cpp",
-			"sourceGroupIndex" : 0
+			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
 			"path" : "UI/stats.hpp",
-			"sourceGroupIndex" : 1
+			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "Engine/main.cpp",
-			"sourceGroupIndex" : 0
+			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "Engine/map.cpp",
-			"sourceGroupIndex" : 0
+			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
 			"path" : "Engine/map.h",
-			"sourceGroupIndex" : 1
+			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "Engine/minimap.cpp",
-			"sourceGroupIndex" : 0
+			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
 			"path" : "Engine/minimap.h",
-			"sourceGroupIndex" : 1
+			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "Engine/room.cpp",
-			"sourceGroupIndex" : 0
+			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
 			"path" : "Engine/room.h",
-			"sourceGroupIndex" : 1
+			"sourceGroupIndex" : 0
 		}
 	],
 	"type" : "EXECUTABLE"

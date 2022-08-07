@@ -5,7 +5,6 @@
 #include <cstring>
 #include "../UI/dialog.hpp"
 #include "../UI/stats.hpp"
-
 using namespace std;
 
 //Save stuff for easy access on other classes
@@ -40,6 +39,20 @@ void initial_setup(int room_width, int room_height, int *room_x, int *room_y){
     noecho(); // doesn't echo user input on screen
     keypad(stdscr,TRUE); // allows keypad input
     curs_set(0); // disables cursor
+
+    // init colors
+    if(has_colors() == FALSE)
+	{	endwin();
+		printf("Il tuo terminale non supporta i colori, non è possibile avviare il gioco \n");
+		exit(1);
+	}
+	start_color();
+
+    // color pairs
+    init_pair(1, COLOR_RED, COLOR_BLACK); // red
+    init_pair(2, COLOR_GREEN, COLOR_BLACK); // green
+	init_pair(3, COLOR_BLUE, COLOR_BLACK); // blue
+
 
     //Check if terminal size is acceptable, guide the user to correct if not
     pair<int,int> dimensions;

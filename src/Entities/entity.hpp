@@ -21,11 +21,14 @@ class Entity : public GameObject
         void mvdown();
         void mvleft();
         void mvright();
-        void checkCollision(int x, int y, Map map);
+
+        // returns the char encountered in next move
+        char checkCollision(int next_y, int next_x);
 
         // update entity status
         virtual void DoFrame();
         virtual void Draw();
+        void Destroy(); // delete entity from game window
 
         //game stats
         int life;

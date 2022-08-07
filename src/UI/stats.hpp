@@ -3,7 +3,7 @@
 
 using namespace std;
 
-class stats {
+class Stats {
 
     private:
 
@@ -18,7 +18,7 @@ class stats {
 
     public:
         WINDOW* stats_window;
-        stats (int x, int y);
+        Stats (int x, int y);
         void lost_life();
         void gained_life();
         void set_life();

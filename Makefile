@@ -321,6 +321,30 @@ Entities/player.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/Entities/player.cpp.s
 .PHONY : Entities/player.cpp.s
 
+Tools/list.o: Tools/list.cpp.o
+.PHONY : Tools/list.o
+
+# target to build an object file
+Tools/list.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/Tools/list.cpp.o
+.PHONY : Tools/list.cpp.o
+
+Tools/list.i: Tools/list.cpp.i
+.PHONY : Tools/list.i
+
+# target to preprocess a source file
+Tools/list.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/Tools/list.cpp.i
+.PHONY : Tools/list.cpp.i
+
+Tools/list.s: Tools/list.cpp.s
+.PHONY : Tools/list.s
+
+# target to generate assembly for a file
+Tools/list.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/Tools/list.cpp.s
+.PHONY : Tools/list.cpp.s
+
 Tools/savedata.o: Tools/savedata.cpp.o
 .PHONY : Tools/savedata.o
 
@@ -546,6 +570,9 @@ help:
 	@echo "... Entities/player.o"
 	@echo "... Entities/player.i"
 	@echo "... Entities/player.s"
+	@echo "... Tools/list.o"
+	@echo "... Tools/list.i"
+	@echo "... Tools/list.s"
 	@echo "... Tools/savedata.o"
 	@echo "... Tools/savedata.i"
 	@echo "... Tools/savedata.s"

@@ -6,6 +6,10 @@
 #include "../UI/stats.hpp"
 using namespace std;
 
+// for color pairs (defined below in function initial_setup)
+#define COLOR_DAMAGE 1
+#define COLOR_POINTS 2
+
 enum custom_keys: unsigned int { Enter = 10 }; //Save custom keys here for easier access
 
  //Save game stuff for easier access from other classes

@@ -2,6 +2,7 @@
 #include <string>
 #include <ncurses.h>
 #include "room.h"
+#include "gameobject.cpp"
 
 using namespace std;
 
@@ -20,20 +21,20 @@ void Room::generate_room(vector<vector<int>> floor){
 void Room::generate_doors(vector<vector<int>> floor){
     
     if (floor[coords.first-1][coords.second] != -1){ // top
-        room[0][roomW/2 - 1] = '*';
-        room[0][roomW/2] = '*';
+        room[0][roomW/2 - 1] = GAME_DOOR;
+        room[0][roomW/2] = GAME_DOOR;
     }
     if (floor[coords.first+1][coords.second] != -1){ // bottom
-        room[roomH - 1][roomW/2 - 1] = '*';
-        room[roomH - 1][roomW/2] = '*';
+        room[roomH - 1][roomW/2 - 1] = GAME_DOOR;
+        room[roomH - 1][roomW/2] = GAME_DOOR;
     }
     if (floor[coords.first][coords.second-1] != -1){ // left
-        room[roomH/2 - 1][0] = '*';
-        room[roomH/2][0] = '*';
+        room[roomH/2 - 1][0] = GAME_DOOR;
+        room[roomH/2][0] = GAME_DOOR;
     }
     if (floor[coords.first][coords.second+1] != -1){ // right
-        room[roomH/2 - 1][roomW - 1] = '*';
-        room[roomH/2][roomW - 1] = '*';
+        room[roomH/2 - 1][roomW - 1] = GAME_DOOR;
+        room[roomH/2][roomW - 1] = GAME_DOOR;
     }
 }
 
@@ -46,24 +47,24 @@ void Room::draw_room(WINDOW * playerwindow){
 void Room::draw_doors(WINDOW * playerwindow){
 
     // draws door based on their position in the two dimensional array
-    if (room[0][roomW/2] == '*'){ // top
+    if (room[0][roomW/2] == GAME_DOOR){ // top
         for (int i = (roomW/2) - 1; i < (roomW/2) + 1; i++){
-            mvwaddch(playerwindow, 0, i, '*');
+            mvwaddch(playerwindow, 0, i, GAME_DOOR);
         }
     }
-    if (room[roomH - 1][roomW/2] == '*'){ // bottom
+    if (room[roomH - 1][roomW/2] == GAME_DOOR){ // bottom
         for (int i = (roomW/2) - 1; i < (roomW/2) + 1; i++){
-            mvwaddch(playerwindow, roomH - 1, i, '*');
+            mvwaddch(playerwindow, roomH - 1, i, GAME_DOOR);
         }
     }
-    if (room[roomH / 2][0] == '*'){ // left
+    if (room[roomH / 2][0] == GAME_DOOR){ // left
         for (int i = (roomH/2) - 1; i < (roomH/2) + 1; i++){
-            mvwaddch(playerwindow, i, 0, '*');
+            mvwaddch(playerwindow, i, 0, GAME_DOOR);
         }
     }
-    if (room[roomH / 2][roomW - 1] == '*'){ //right
+    if (room[roomH / 2][roomW - 1] == GAME_DOOR){ //right
         for (int i = (roomH/2) - 1; i < (roomH/2) + 1; i++){
-            mvwaddch(playerwindow, i, roomW - 1, '*');
+            mvwaddch(playerwindow, i, roomW - 1, GAME_DOOR);
         }
     }
 

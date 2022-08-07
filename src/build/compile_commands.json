@@ -1,6 +1,11 @@
 [
 {
   "directory": "/home/murkrow/Repos/GameProject/src/build",
+  "command": "/usr/bin/g++   -g -std=gnu++14 -o CMakeFiles/GameProject2.dir/Tools/list.cpp.o -c /home/murkrow/Repos/GameProject/src/Tools/list.cpp",
+  "file": "/home/murkrow/Repos/GameProject/src/Tools/list.cpp"
+},
+{
+  "directory": "/home/murkrow/Repos/GameProject/src/build",
   "command": "/usr/bin/g++   -g -std=gnu++14 -o CMakeFiles/GameProject2.dir/Tools/utils.cpp.o -c /home/murkrow/Repos/GameProject/src/Tools/utils.cpp",
   "file": "/home/murkrow/Repos/GameProject/src/Tools/utils.cpp"
 },
