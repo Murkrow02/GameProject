@@ -117,3 +117,11 @@ void initial_setup(int room_width, int room_height, int *room_x, int *room_y){
     *room_x = window_x;
     *room_y = window_y;
 }
+
+bool is_in_range(int x1, int y1, int x2, int y2, int r) {
+
+   int dx = x1 - x2;
+   int dy = y1 - y2;
+
+   return (dx * dx + dy * dy) < (r * r);
+}

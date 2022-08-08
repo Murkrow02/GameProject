@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/GameProject2.dir/Engine/minimap.cpp.o.d"
   "CMakeFiles/GameProject2.dir/Engine/room.cpp.o"
   "CMakeFiles/GameProject2.dir/Engine/room.cpp.o.d"
+  "CMakeFiles/GameProject2.dir/Entities/bullet.cpp.o"
+  "CMakeFiles/GameProject2.dir/Entities/bullet.cpp.o.d"
   "CMakeFiles/GameProject2.dir/Entities/dummy.cpp.o"
   "CMakeFiles/GameProject2.dir/Entities/dummy.cpp.o.d"
   "CMakeFiles/GameProject2.dir/Entities/entity.cpp.o"

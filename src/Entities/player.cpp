@@ -25,7 +25,7 @@ Player::Player(int _y, int _x, WINDOW * player_win, Stats *game_stats, Map* _map
 
     // blink by hiding player each x frames
     if(invincibilityLeft > 0){
-      int skipFrames = 20; //higher value = slower blink speed
+      int skipFrames = 2; //higher value = slower blink speed
 
       if(invincibilityLeft%skipFrames == 0)
         mvwaddch(gameWin, y, x, displayChar); //blink on

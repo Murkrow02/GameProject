@@ -30,4 +30,7 @@ void fatal_error(string message);
 //Configure NCurses and guide user to resize terminal window
 void initial_setup(int room_width, int room_height, int *room_x, int *room_y);
 
+// check if the first point is inside the circle with center of second point and radius r
+bool is_in_range(int x1, int y1, int x2, int y2, int r);
+
 #endif

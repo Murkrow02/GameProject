@@ -225,6 +225,30 @@ Engine/room.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/Engine/room.cpp.s
 .PHONY : Engine/room.cpp.s
 
+Entities/bullet.o: Entities/bullet.cpp.o
+.PHONY : Entities/bullet.o
+
+# target to build an object file
+Entities/bullet.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/Entities/bullet.cpp.o
+.PHONY : Entities/bullet.cpp.o
+
+Entities/bullet.i: Entities/bullet.cpp.i
+.PHONY : Entities/bullet.i
+
+# target to preprocess a source file
+Entities/bullet.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/Entities/bullet.cpp.i
+.PHONY : Entities/bullet.cpp.i
+
+Entities/bullet.s: Entities/bullet.cpp.s
+.PHONY : Entities/bullet.s
+
+# target to generate assembly for a file
+Entities/bullet.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/Entities/bullet.cpp.s
+.PHONY : Entities/bullet.cpp.s
+
 Entities/dummy.o: Entities/dummy.cpp.o
 .PHONY : Entities/dummy.o
 
@@ -558,6 +582,9 @@ help:
 	@echo "... Engine/room.o"
 	@echo "... Engine/room.i"
 	@echo "... Engine/room.s"
+	@echo "... Entities/bullet.o"
+	@echo "... Entities/bullet.i"
+	@echo "... Entities/bullet.s"
 	@echo "... Entities/dummy.o"
 	@echo "... Entities/dummy.i"
 	@echo "... Entities/dummy.s"

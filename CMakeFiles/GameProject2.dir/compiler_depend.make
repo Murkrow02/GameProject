@@ -830,6 +830,10 @@ CMakeFiles/GameProject2.dir/Engine/room.cpp.o: src/Engine/room.cpp \
   /usr/include/c++/12/bits/stl_relops.h \
   src/Engine/gameobject.cpp
 
+CMakeFiles/GameProject2.dir/Entities/bullet.cpp.o: src/Entities/bullet.cpp \
+  /usr/include/stdc-predef.h \
+  src/Engine/gameobject.cpp
+
 CMakeFiles/GameProject2.dir/Entities/dummy.cpp.o: src/Entities/dummy.cpp \
   /usr/include/stdc-predef.h \
   src/Entities/entity.hpp \
@@ -2920,6 +2924,8 @@ src/UI/dialog.cpp:
 
 /usr/include/c++/12/bit:
 
+/usr/include/c++/12/bits/align.h:
+
 /usr/include/c++/12/ext/type_traits.h:
 
 /usr/include/c++/12/bits/range_access.h:
@@ -3105,8 +3111,6 @@ src/Entities/entity.hpp:
 /usr/include/bits/timex.h:
 
 /usr/include/unctrl.h:
-
-/usr/include/c++/12/bits/align.h:
 
 /usr/include/c++/12/bits/valarray_before.h:
 
@@ -3319,6 +3323,8 @@ src/Engine/room.cpp:
 /usr/include/bits/wordsize.h:
 
 /usr/include/stdio.h:
+
+src/Entities/bullet.cpp:
 
 /usr/include/bits/types/struct_FILE.h:
 

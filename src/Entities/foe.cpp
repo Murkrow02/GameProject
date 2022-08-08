@@ -1,7 +1,7 @@
 #include "entity.hpp"
 #include "player.hpp"
 #include "../Tools/list.hpp"
-
+#include "../Tools/utils.hpp"
 class Foe : public Entity
 {
 
@@ -20,7 +20,7 @@ class Foe : public Entity
         FrameSkipped++;
 
       // check if landed on player
-      if(x == gameItems->player->x && y == gameItems->player->y)
+      if(is_in_range(x,y, gameItems->player->x, gameItems->player->y, 2))
       {
         // player lost life because touched foe
         gameItems->player->damage();
