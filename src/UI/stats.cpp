@@ -1,10 +1,8 @@
 #include "ncurses.h"
 #include "stats.hpp"
 #include <string> 
+#include "../Engine/gameobject.cpp"
 
-//Configuration
-int start_life = 5;
-int max_life = 5;
 
 Stats::Stats(int x, int y){
 
@@ -12,7 +10,7 @@ Stats::Stats(int x, int y){
     stats_window = newwin(20, 20, y, x);
 
     //Set configuration attributes
-    life = start_life;
+    life = LIFE_PLAYER;
     points = 0;
     win_x = x;
     win_y = y;
@@ -36,7 +34,7 @@ void Stats::lost_life(){
 void Stats::gained_life(){
 
     //Check if reached maximum life
-    if(life < max_life)
+    if(life < LIFE_PLAYER)
         life++;
 
     update_stats();

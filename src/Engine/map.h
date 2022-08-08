@@ -16,5 +16,9 @@ class Map{
         // variables
         vector<vector<int>> floor; // stores two dimensional vector with rooms
         vector<Room> rooms;
+
+    private:
+        //Stats *gameStats;
+        //GameObjectList *gameObjects;
         
 };

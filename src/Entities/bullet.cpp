@@ -4,13 +4,14 @@ class Bullet : public GameObject
 {
 
     public:
+    
         virtual void DoFrame()
         {
             
         }
         
         Bullet(){
-
+            
         }
 
     private:

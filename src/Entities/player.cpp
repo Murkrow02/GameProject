@@ -5,7 +5,7 @@
 
 using namespace std;
 
-Player::Player(int _y, int _x, WINDOW * player_win, Stats *game_stats, Map* _map) : Entity{ _y,  _x, player_win, PLAYER_CHAR} 
+Player::Player(int _y, int _x, WINDOW * player_win, Map* _map, GameObjectList *game_objects, Stats *game_stats) : Entity{ _y,  _x, player_win, CHAR_PLAYER, LIFE_PLAYER , game_objects, game_stats} 
 {
   gameStats = game_stats;
   map = _map;
@@ -20,7 +20,32 @@ Player::Player(int _y, int _x, WINDOW * player_win, Stats *game_stats, Map* _map
         invincibilityLeft--;
     }
   }
-// override draw function
+
+  void Player::Damage(){
+
+    //check if is invincible
+    if(invincibilityLeft == 0)
+    {
+      // set player as invincible for a short period of time
+      invincibilityLeft = INVINCIBILITY_DURATION;
+
+      // update stats
+      gameStats->lost_life();
+
+      // run default damage function
+      Entity::Damage();
+
+      // check game over
+      if(life <= 0)
+        /// TODO: change
+        exit(1); 
+        
+    }
+
+  }
+
+
+  // override draw function
   void Player::Draw(){
 
     // blink by hiding player each x frames
@@ -37,21 +62,6 @@ Player::Player(int _y, int _x, WINDOW * player_win, Stats *game_stats, Map* _map
       mvwaddch(gameWin, y, x, displayChar);
     }
   }
-
-  void Player::damage(){
-
-    // check if is invincible
-    if(invincibilityLeft == 0)
-    {
-      // set player as invincible for a short period of time
-      invincibilityLeft = INVINCIBILITY_DURATION;
-
-      // update stats
-      gameStats->lost_life();
-    }
-      
-  }
-
   char Player::checkCollision(int nextY, int nextX)
   {
 
@@ -114,7 +124,6 @@ void Player::getmv()
 
     // read user input
     int c = getch();
-
 
     switch(c) {
     case KEY_UP:

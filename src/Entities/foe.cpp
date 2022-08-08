@@ -23,7 +23,7 @@ class Foe : public Entity
       if(is_in_range(x,y, gameItems->player->x, gameItems->player->y, 2))
       {
         // player lost life because touched foe
-        gameItems->player->damage();
+        gameItems->player->Damage();
 
         // cannot move on player
         return false;
@@ -43,7 +43,7 @@ class Foe : public Entity
 
   public:
 
-    Foe(int _y, int _x, WINDOW *game_win, char display_char, int speed, GameObjectList* game_items) : Entity{_y, _x, game_win, display_char}
+    Foe(int _y, int _x, WINDOW *game_win, char display_char, int speed, int life, GameObjectList* game_items, Stats *game_stats) : Entity{_y, _x, game_win, display_char, life, game_items, game_stats}
     {
       Speed = speed;
       gameItems = game_items;

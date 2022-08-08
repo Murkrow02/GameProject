@@ -1,8 +1,14 @@
 #pragma once
 
-#define PLAYER_CHAR 'p'
-#define GAME_DOOR '*'
-#define FOE_DUMMY 'd'
+// CHAR
+#define CHAR_PLAYER 'p'
+#define CHAR_DOOR '*'
+#define CHAR_DUMMY 'd'
+
+// LIFE
+#define LIFE_PLAYER 5
+#define LIFE_DUMMY 3
+
 
 class GameObject
 {

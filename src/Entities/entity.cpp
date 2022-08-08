@@ -1,10 +1,11 @@
 #include <iostream>
 #include <ncurses.h>
 #include "entity.hpp"
+#include "../Tools/list.hpp"
 
 using namespace std;
 
-Entity::Entity(int _y, int _x, WINDOW * game_win, char display_char)
+Entity::Entity(int _y, int _x, WINDOW * game_win, char display_char,  int _life, GameObjectList *_gameItems, Stats *game_stats)
 {
     // set attributes
     y = _y;
@@ -12,6 +13,9 @@ Entity::Entity(int _y, int _x, WINDOW * game_win, char display_char)
     roomId = 0;
     gameWin = game_win;
     displayChar = display_char;
+    life = _life;
+    gameItems = _gameItems;
+    gameStats = game_stats;
     getmaxyx(gameWin, yMax, xMax);
 }
 
@@ -28,6 +32,18 @@ void Entity::Destroy()
 {
     mvwaddch(gameWin, y, x, ' ');
 }
+
+void Entity::Damage(){
+
+    life--;
+    if(life<=0){
+
+        // rip
+        Destroy();
+        gameItems->remove(this);
+    }
+      
+ }
 
 char Entity::checkCollision(int next_y, int next_x){
     return mvwinch(gameWin, next_y, next_x);

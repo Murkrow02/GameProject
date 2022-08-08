@@ -12,12 +12,14 @@ using namespace std;
 class Player : public Entity
 {
     public:
-        Player(int _y, int _x, WINDOW * player_win, Stats *game_stats, Map* _map);
-        void damage(); // player has been attacked
+        Player(int _y, int _x, WINDOW * player_win, Map* _map, GameObjectList *game_objects, Stats *game_stats);
+
         void getmv();
-        Stats* gameStats;
+
+        // override
         virtual void DoFrame();
         virtual void Draw();
+        void Damage();
         
     private:
         int invincibilityLeft = 0;

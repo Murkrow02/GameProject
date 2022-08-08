@@ -2,14 +2,19 @@
 #include <ncurses.h>
 #include <stdlib.h>
 #include "../Engine/map.h"
+#include "../UI/stats.hpp"
 #include "../Engine/gameobject.cpp"
+
+class GameObjectList; //this instead of header because of circular dependency compile error
 
 class Entity : public GameObject
 {
     public:
-        Entity(int _y, int _x, WINDOW * player_win, char display_char);
+        Entity(int _y, int _x, WINDOW * player_win, char display_char, int _life, GameObjectList *_gameItems, Stats *game_stats);
         int x,y;
         char displayChar;
+        void Damage(); // life--
+
     protected:
 
         int xMax,yMax; // player position and player's window size
@@ -29,8 +34,11 @@ class Entity : public GameObject
         virtual void DoFrame();
         virtual void Draw();
         void Destroy(); // delete entity from game window
+        
 
         //game stats
         int life;
-        bool dead;
+        Stats* gameStats;
+        GameObjectList *gameItems;
+
 };

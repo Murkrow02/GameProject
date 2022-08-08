@@ -47,10 +47,10 @@ int main(){
     map.createRoom(0, game_window);
 
     // player setup
-    Player player((room_height / 2), (room_width / 2), game_window, &game_stats, &map); // player creation
+    Player player((room_height / 2), (room_width / 2), game_window, &map, &gameObjects, &game_stats); // player creation
 
     // dummy spawn
-    Dummy dummy((room_height / 2) + 10, (room_width / 2)- 10, game_window, &gameObjects);
+    Dummy dummy((room_height / 2) + 10, (room_width / 2)- 10, game_window, &gameObjects, &game_stats);
 
     
 
