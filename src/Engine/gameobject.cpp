@@ -4,6 +4,7 @@
 #define CHAR_PLAYER 'p'
 #define CHAR_DOOR '*'
 #define CHAR_DUMMY 'd'
+#define CHAR_BULLET '#'
 
 // LIFE
 #define LIFE_PLAYER 5
@@ -15,4 +16,6 @@ class GameObject
 public:
     virtual void DoFrame() = 0;
     virtual void Draw() = 0;
+    int x;
+    int y;
 };

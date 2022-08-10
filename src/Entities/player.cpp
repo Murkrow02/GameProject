@@ -2,6 +2,8 @@
 #include <ncurses.h>
 #include "player.hpp"
 #include "entity.hpp"
+#include "../Tools/list.hpp"
+#include "../Entities/bullet.cpp"
 
 using namespace std;
 
@@ -64,8 +66,6 @@ Player::Player(int _y, int _x, WINDOW * player_win, Map* _map, GameObjectList *g
   }
   char Player::checkCollision(int nextY, int nextX)
   {
-
-    
     Room cRoom = map->rooms[roomId];
 
     pair<int, int> roomCords = cRoom.coords;
@@ -125,24 +125,41 @@ void Player::getmv()
     // read user input
     int c = getch();
 
+    Bullet* bullet = new Bullet(true, 0, -1, 10, y-1, x, gameWin, gameItems, gameStats);
+        
+    
     switch(c) {
-    case KEY_UP:
+
+      // shoot
+      case KEY_UP:
+       gameItems->insert(bullet);
+        break;
+      // case KEY_DOWN:
+      //   break;
+      // case KEY_LEFT:
+      //   break;
+      // case KEY_RIGHT:
+      //   break;
+
+      // movement
+      case 119: //W
         checkCollision(x, y-1);
         mvup();
         break;
-    case KEY_DOWN:
-        checkCollision(x, y+1);
-        mvdown();
-        break;
-    case KEY_LEFT:
+      case 97: //A
         checkCollision(x-1, y);
         mvleft();
         break;
-    case KEY_RIGHT:
+      case 115: //S
+        checkCollision(x, y+1);
+        mvdown();
+        break;
+      case 100: //D
         checkCollision(x+1, y);
         mvright();
         break;
-    default:
-        break;
+      
+      default:
+          break;
     }
 }

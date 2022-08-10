@@ -23,6 +23,7 @@ class Dummy : public Foe
             if(!Foe::CanMove())
                 return;
 
+            return;
             srand(time(NULL));
 
             int i = rand() % 4;

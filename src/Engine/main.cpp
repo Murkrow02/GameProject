@@ -50,9 +50,7 @@ int main(){
     Player player((room_height / 2), (room_width / 2), game_window, &map, &gameObjects, &game_stats); // player creation
 
     // dummy spawn
-    Dummy dummy((room_height / 2) + 10, (room_width / 2)- 10, game_window, &gameObjects, &game_stats);
-
-    
+    Dummy dummy(1,1, game_window, &gameObjects, &game_stats);
 
     wrefresh(game_window);
 
@@ -62,6 +60,8 @@ int main(){
 
     // do not wait for getch() (otherwhise the following loop will stop)
     nodelay(stdscr, TRUE);
+
+    gameObjects.findEntityAtPos(1,1)->displayChar = 'f';
 
     // main loop
     while (true){

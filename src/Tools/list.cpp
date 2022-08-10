@@ -32,12 +32,12 @@ void GameObjectList::remove(GameObject *item){
             if(current == head)
             {
                 head = current->next;
-                delete(current);
+                //delete(current);
             }
             // element is not head, update prev element pointer to next of current
             else{
                 prev->next = current->next;
-                delete(current);
+                //delete(current);
             }
 
             break; // no need to go further
@@ -84,4 +84,35 @@ void GameObjectList::draw(){
         // next one
         current = current->next;
     }
+}
+
+Entity* GameObjectList::findEntityAtPos(int x, int y, GameObject* excluded){
+
+    Node* current = head;
+
+    // scan through all objects
+    while(current != NULL){
+
+        // item is found
+        if(current->data->x == x && current->data->y == y && current->data != excluded)
+        {
+            // check that is entity type
+            try{
+                Entity *result = (Entity *)current->data;
+                return result; // no need to go further
+            }
+            catch(int e)
+            {
+                continue; // failed to cast, no entity
+            }
+            
+            break; 
+        }
+
+        // next one
+        current = current->next;
+    }
+
+    // if reached this point then no match occourred
+    return NULL;
 }

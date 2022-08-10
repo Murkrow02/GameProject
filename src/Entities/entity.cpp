@@ -31,6 +31,7 @@ void Entity::DoFrame(){
 void Entity::Destroy()
 {
     mvwaddch(gameWin, y, x, ' ');
+    gameItems->remove(this);
 }
 
 void Entity::Damage(){
@@ -40,7 +41,6 @@ void Entity::Damage(){
 
         // rip
         Destroy();
-        gameItems->remove(this);
     }
       
  }
