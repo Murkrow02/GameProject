@@ -16,6 +16,11 @@
 },
 {
   "directory": "/home/murkrow/Repos/GameProject/src/build",
+  "command": "/usr/bin/g++   -g -std=gnu++14 -o CMakeFiles/GameProject2.dir/Entities/weapon.cpp.o -c /home/murkrow/Repos/GameProject/src/Entities/weapon.cpp",
+  "file": "/home/murkrow/Repos/GameProject/src/Entities/weapon.cpp"
+},
+{
+  "directory": "/home/murkrow/Repos/GameProject/src/build",
   "command": "/usr/bin/g++   -g -std=gnu++14 -o CMakeFiles/GameProject2.dir/Entities/bullet.cpp.o -c /home/murkrow/Repos/GameProject/src/Entities/bullet.cpp",
   "file": "/home/murkrow/Repos/GameProject/src/Entities/bullet.cpp"
 },

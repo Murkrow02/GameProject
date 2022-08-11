@@ -345,6 +345,30 @@ Entities/player.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/Entities/player.cpp.s
 .PHONY : Entities/player.cpp.s
 
+Entities/weapon.o: Entities/weapon.cpp.o
+.PHONY : Entities/weapon.o
+
+# target to build an object file
+Entities/weapon.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/Entities/weapon.cpp.o
+.PHONY : Entities/weapon.cpp.o
+
+Entities/weapon.i: Entities/weapon.cpp.i
+.PHONY : Entities/weapon.i
+
+# target to preprocess a source file
+Entities/weapon.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/Entities/weapon.cpp.i
+.PHONY : Entities/weapon.cpp.i
+
+Entities/weapon.s: Entities/weapon.cpp.s
+.PHONY : Entities/weapon.s
+
+# target to generate assembly for a file
+Entities/weapon.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/Entities/weapon.cpp.s
+.PHONY : Entities/weapon.cpp.s
+
 Tools/list.o: Tools/list.cpp.o
 .PHONY : Tools/list.o
 
@@ -597,6 +621,9 @@ help:
 	@echo "... Entities/player.o"
 	@echo "... Entities/player.i"
 	@echo "... Entities/player.s"
+	@echo "... Entities/weapon.o"
+	@echo "... Entities/weapon.i"
+	@echo "... Entities/weapon.s"
 	@echo "... Tools/list.o"
 	@echo "... Tools/list.i"
 	@echo "... Tools/list.s"

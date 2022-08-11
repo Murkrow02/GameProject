@@ -4,16 +4,29 @@
 #include "entity.hpp"
 #include "../Tools/list.hpp"
 #include "../Entities/bullet.cpp"
-
+#include "weapon.cpp"
 using namespace std;
 
 Player::Player(int _y, int _x, WINDOW * player_win, Map* _map, GameObjectList *game_objects, Stats *game_stats) : Entity{ _y,  _x, player_win, CHAR_PLAYER, LIFE_PLAYER , game_objects, game_stats} 
 {
   gameStats = game_stats;
   map = _map;
+
+  // set default weapon
+  Weapon *testWeapon = new Weapon("ARMA SCARSA", 10, 4, 20, 30, 0);
+  setWeapon(testWeapon);
+
   Draw();
 }
   
+  void Player::setWeapon(Weapon *_weapon){
+    weapon = _weapon;
+
+    // update stats
+    gameStats->set_max_ammo(weapon->Ammo);
+    gameStats->reset_ammo();
+    gameStats->set_weapon_name(weapon->Name);
+  }
 
   void Player::DoFrame()
   {
@@ -21,6 +34,10 @@ Player::Player(int _y, int _x, WINDOW * player_win, Map* _map, GameObjectList *g
     if(invincibilityLeft > 0){
         invincibilityLeft--;
     }
+    if (reload_delay > 0)
+      reload_delay--;
+    if (next_bullet_delay > 0)
+      next_bullet_delay--;
   }
 
   void Player::Damage(){
@@ -29,7 +46,7 @@ Player::Player(int _y, int _x, WINDOW * player_win, Map* _map, GameObjectList *g
     if(invincibilityLeft == 0)
     {
       // set player as invincible for a short period of time
-      invincibilityLeft = INVINCIBILITY_DURATION;
+      invincibilityLeft = DURATION_INVINCIBILITY;
 
       // update stats
       gameStats->lost_life();
@@ -41,9 +58,7 @@ Player::Player(int _y, int _x, WINDOW * player_win, Map* _map, GameObjectList *g
       if(life <= 0)
         /// TODO: change
         exit(1); 
-        
     }
-
   }
 
 
@@ -64,6 +79,7 @@ Player::Player(int _y, int _x, WINDOW * player_win, Map* _map, GameObjectList *g
       mvwaddch(gameWin, y, x, displayChar);
     }
   }
+  
   char Player::checkCollision(int nextY, int nextX)
   {
     Room cRoom = map->rooms[roomId];
@@ -119,27 +135,45 @@ Player::Player(int _y, int _x, WINDOW * player_win, Map* _map, GameObjectList *g
     return collidedChar;
   }
 
+void Player::Shoot(int dirX, int dirY, int spawnX, int spawnY){
+
+  if(gameStats->ammo > 0 && reload_delay == 0 && next_bullet_delay == 0){
+
+    // spawn bullet
+    Bullet *bullet = new Bullet(true, dirX, dirY, weapon->Range, spawnY, spawnX, gameWin, gameItems, gameStats);
+    gameItems->insert(bullet);
+
+    // remove bullet from stats
+    gameStats->lost_ammo();
+    next_bullet_delay = weapon->FireRate;
+  }
+}
+
+void Player::Reload(){
+  gameStats->reset_ammo();
+}
+
 void Player::getmv()
 {
 
     // read user input
     int c = getch();
-
-    Bullet* bullet = new Bullet(true, 0, -1, 10, y-1, x, gameWin, gameItems, gameStats);
-        
     
     switch(c) {
 
       // shoot
       case KEY_UP:
-       gameItems->insert(bullet);
+        Shoot(0,-1, x, y-1);
         break;
-      // case KEY_DOWN:
-      //   break;
-      // case KEY_LEFT:
-      //   break;
-      // case KEY_RIGHT:
-      //   break;
+      case KEY_DOWN:
+        Shoot(0, 1, x, y+1);
+        break;
+      case KEY_LEFT:
+        Shoot(-1, 0, x-1, y);
+        break;
+      case KEY_RIGHT:
+        Shoot(1, 0, x+1, y);
+        break;
 
       // movement
       case 119: //W
@@ -158,6 +192,10 @@ void Player::getmv()
         checkCollision(x+1, y);
         mvright();
         break;
+      
+      case 114: //R
+      Reload();
+      break;
       
       default:
           break;

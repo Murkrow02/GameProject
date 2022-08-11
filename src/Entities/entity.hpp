@@ -12,7 +12,7 @@ class Entity : public GameObject
     public:
         Entity(int _y, int _x, WINDOW * player_win, char display_char, int _life, GameObjectList *_gameItems, Stats *game_stats);
         char displayChar;
-        void Damage(); // life--
+        virtual void Damage(); // life--
 
     protected:
 

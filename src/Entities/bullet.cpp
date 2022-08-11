@@ -47,6 +47,13 @@ class Bullet : public Foe
                 }
             }
 
+            // check if bullet reached room walls
+            if(nextX == 0 || nextX >= xMax || nextY == 0 || nextY == yMax)
+            {
+                Destroy();
+                return;
+            }
+
             // update how much the bullet did travel
             x = nextX; y = nextY;
             travelledDistance++;
@@ -54,11 +61,11 @@ class Bullet : public Foe
 
         virtual void Draw(){
 
-                Foe::Draw();
+            Foe::Draw();
 
-                // new position next frame
-                nextY = y-1; 
-                nextX = x;
+            // new position next frame
+            nextY = y + incY; 
+            nextX = x + incX;
         }
 
             
@@ -67,7 +74,7 @@ class Bullet : public Foe
         {
             range = _range;
             incX = inc_x;
-            inc_y = inc_y;
+            incY = inc_y;
             damageFoe = damage_foe;
             nextX = x; nextY = y;
         }

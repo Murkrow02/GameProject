@@ -3,7 +3,6 @@
 #include <string> 
 #include "../Engine/gameobject.cpp"
 
-
 Stats::Stats(int x, int y){
 
     //Create window for informations
@@ -40,6 +39,30 @@ void Stats::gained_life(){
     update_stats();
 }
 
+void Stats::add_points(int amount){
+    points+=amount;
+    update_stats();
+}
+
+void Stats::reset_ammo(){
+    ammo = maxAmmo;
+    update_stats();
+}
+void Stats::lost_ammo(){
+    if(ammo > 0)
+        ammo--;
+    update_stats();
+}
+
+void Stats::set_max_ammo(int max){
+    maxAmmo = max;
+}
+
+void Stats::set_weapon_name(string name){
+    weapon_name = name;
+    update_stats();
+}
+
 void Stats::update_stats(){
 
     //Clear old stats
@@ -64,6 +87,22 @@ void Stats::update_stats(){
     wattron(stats_window,COLOR_PAIR(2));
     wprintw(stats_window, std::to_string(points).c_str());
     wattroff(stats_window,COLOR_PAIR(2));
+
+    //WEAPON
+    if(!weapon_name.empty()){
+
+        mvwprintw(stats_window,3,0, weapon_name.c_str());
+        wattron(stats_window,A_BOLD);
+        mvwprintw(stats_window,4,0,"AMMO:");
+        wattron(stats_window,A_BOLD);
+        wattron(stats_window,COLOR_PAIR(3));
+        for (int i = 0; i < ammo; i++)
+        {
+            wprintw(stats_window, "X");
+        }
+        wattroff(stats_window,COLOR_PAIR(3));
+    }
+   
 
     //Update on screen
     wrefresh(stats_window);

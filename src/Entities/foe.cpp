@@ -9,6 +9,7 @@ class Foe : public Entity
 
     int FrameSkipped = 0;
     int Speed;
+    int DamageBlinkLeft = 0;
 
   protected:
     
@@ -47,12 +48,38 @@ class Foe : public Entity
       Speed = speed;
     }
 
+    // override damage
+    void Damage() 
+    {
+        // set player as invincible for a short period of time
+        DamageBlinkLeft = DURATION_BLINK_ANIMATION;
+
+        // run default damage function
+        Entity::Damage();
+    }
+
     //override draw
     virtual void Draw()
     {
-      // red color
-      wattron(gameWin,COLOR_PAIR(1));
-      mvwaddch(gameWin, y, x, displayChar);
-      wattroff(gameWin,COLOR_PAIR(1));
+
+      // blink by hiding entity each x frames
+      int skipFrames = 2; // higher value = slower blink speed
+      if (DamageBlinkLeft > 0 && DamageBlinkLeft % skipFrames != 0)
+      {
+        mvwaddch(gameWin, y, x, ' '); // blink off
+      }
+      else
+      {
+        // red color
+        wattron(gameWin, COLOR_PAIR(1));
+        mvwaddch(gameWin, y, x, displayChar);
+        wattroff(gameWin, COLOR_PAIR(1));
+      }
+
+      if(DamageBlinkLeft > 0)
+        DamageBlinkLeft--;
+      
     }
+
+
 };

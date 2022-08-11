@@ -10,6 +10,9 @@
 #define LIFE_PLAYER 5
 #define LIFE_DUMMY 3
 
+// STUFF in frames
+#define DURATION_INVINCIBILITY 120 // in frames, how much to wait before player can take more damage
+#define DURATION_BLINK_ANIMATION 60 
 
 class GameObject
 {
