@@ -8,6 +8,7 @@
 #include "minimap.h"
 #include "../UI/stats.hpp"
 #include "../UI/message.hpp"
+#include "../UI/shop.hpp"
 #include "../Tools/utils.hpp"
 #include "gameobject.cpp"
 #include "../Tools/list.hpp"
@@ -61,7 +62,13 @@ int main(){
     // do not wait for getch() (otherwhise the following loop will stop)
     nodelay(stdscr, TRUE);
 
-    gameObjects.findEntityAtPos(1,1)->displayChar = 'f';
+    shop a = shop();
+    //a.wait_close.wait();
+
+    // welcome message
+    message test = message("BENVENUTO!","Puoi muoverti usando i tasti WASD e sparare usando le frecce");
+    test.wait_close.wait();
+
 
     // main loop
     while (true){

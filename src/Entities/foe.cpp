@@ -2,6 +2,8 @@
 #include "player.hpp"
 #include "../Tools/list.hpp"
 #include "../Tools/utils.hpp"
+#include <stdlib.h> 
+
 class Foe : public Entity
 {
 
@@ -10,6 +12,8 @@ class Foe : public Entity
     int FrameSkipped = 0;
     int Speed;
     int DamageBlinkLeft = 0;
+    int PointsValue;
+    int ViewRange = 0;
 
   protected:
     
@@ -43,9 +47,11 @@ class Foe : public Entity
 
   public:
 
-    Foe(int _y, int _x, WINDOW *game_win, char display_char, int speed, int life, GameObjectList* game_items, Stats *game_stats) : Entity{_y, _x, game_win, display_char, life, game_items, game_stats}
+    Foe(int _y, int _x, WINDOW *game_win, char display_char, int speed, int life, int points_value, int view_range, GameObjectList* game_items, Stats *game_stats) : Entity{_y, _x, game_win, display_char, life, game_items, game_stats}
     {
       Speed = speed;
+      PointsValue = points_value;
+      ViewRange = view_range;
     }
 
     // override damage
@@ -54,8 +60,95 @@ class Foe : public Entity
         // set player as invincible for a short period of time
         DamageBlinkLeft = DURATION_BLINK_ANIMATION;
 
-        // run default damage function
+        // minus life
         Entity::Damage();
+
+        // check if dead
+        if (life <= 0)
+        {
+          // add points to user
+          gameStats->add_points(PointsValue);
+
+          // rip
+          Destroy();
+        }
+    }
+
+    void MoveRandom(){
+      srand(time(NULL));
+
+      int i = rand() % 4;
+      switch (i)
+      {
+      case 0:
+          Foe::Entity::mvup();
+          break;
+      case 2:
+          Foe::Entity::mvdown();
+          break;
+      case 1:
+          Foe::Entity::mvleft();
+          break;
+      case 3:
+          Foe::Entity::mvright();
+          break;
+
+      default:
+          break;
+      }
+    }
+
+    // foe movement
+    virtual void DoFrame()
+    {
+      // used to detect if can update frame
+      if (!Foe::CanMove())
+        return;
+
+      // check distance from player
+      if(distance_two_points(x, y, gameItems->player->x, gameItems->player->y) > ViewRange)
+      {
+        // can't see player :(
+        MoveRandom();
+      }else{
+
+        // player in range :0
+
+        // find distance foe to player in x and y axis
+        int dX = abs(gameItems->player->x - x);
+        int dY = abs(gameItems->player->y - y);
+
+        // need to walk on x axis
+        if(dX > dY){
+          if (gameItems->player->x > x)
+          {
+            mvright();
+            return;
+          }
+          else
+          {
+            mvleft();
+            return;
+          }
+        }
+        else // need to walk on y axis
+        {
+          if (gameItems->player->y > y)
+          {
+            mvdown();
+            return;
+          }
+          else
+          {
+            mvup();
+            return;
+          }
+        }
+        
+        
+        
+
+      }
     }
 
     //override draw

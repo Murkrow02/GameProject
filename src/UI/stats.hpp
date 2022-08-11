@@ -9,7 +9,8 @@ class Stats {
     private:
 
         //Params
-        int life, points, maxAmmo , room;
+        int life, maxAmmo , room;
+        bool isReloading;
         string weapon_name;
         
         //Stats window coordinates
@@ -29,12 +30,15 @@ class Stats {
 
         // points
         void add_points(int amount);
+        int points;
 
         // weapon
         void set_weapon_name(string name);
         void reset_ammo();
         void lost_ammo();
+        void add_ammo();
         void set_max_ammo(int max);
+        void reloading(bool status);
         int ammo;
 };
 

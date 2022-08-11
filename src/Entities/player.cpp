@@ -5,6 +5,7 @@
 #include "../Tools/list.hpp"
 #include "../Entities/bullet.cpp"
 #include "weapon.cpp"
+#include "../UI/shop.hpp"
 using namespace std;
 
 Player::Player(int _y, int _x, WINDOW * player_win, Map* _map, GameObjectList *game_objects, Stats *game_stats) : Entity{ _y,  _x, player_win, CHAR_PLAYER, LIFE_PLAYER , game_objects, game_stats} 
@@ -13,7 +14,7 @@ Player::Player(int _y, int _x, WINDOW * player_win, Map* _map, GameObjectList *g
   map = _map;
 
   // set default weapon
-  Weapon *testWeapon = new Weapon("ARMA SCARSA", 10, 4, 20, 30, 0);
+  Weapon *testWeapon = new Weapon("ARMA SCARSA", 10, 4, 60, 30, 0);
   setWeapon(testWeapon);
 
   Draw();
@@ -31,12 +32,21 @@ Player::Player(int _y, int _x, WINDOW * player_win, Map* _map, GameObjectList *g
   void Player::DoFrame()
   {
     // check if has to lower
-    if(invincibilityLeft > 0){
-        invincibilityLeft--;
-    }
-    if (reload_delay > 0)
+    if (invincibilityLeft > 0) // invincibility
+      invincibilityLeft--;
+
+    // reloading ammo
+    if (reload_delay > 1) 
       reload_delay--;
-    if (next_bullet_delay > 0)
+    else if(reload_delay == 1) // not 0 otherwhise is always falling in next condition causing glitches
+    {
+      // finished reloading
+      gameStats->reloading(false); 
+      reload_delay = 0;
+    }
+      
+    // delay between bullets
+    if (next_bullet_delay > 0) 
       next_bullet_delay--;
   }
 
@@ -150,7 +160,15 @@ void Player::Shoot(int dirX, int dirY, int spawnX, int spawnY){
 }
 
 void Player::Reload(){
+
+  //return if already full
+  if(weapon->Ammo == gameStats->ammo)
+    return;
+
+  gameStats->reloading(true);
+  reload_delay = weapon->ReloadTime;
   gameStats->reset_ammo();
+
 }
 
 void Player::getmv()
@@ -193,9 +211,15 @@ void Player::getmv()
         mvright();
         break;
       
+      // reload
       case 114: //R
-      Reload();
-      break;
+       Reload();
+       break;
+
+      // // SHOP (debug only)
+      // case 109: //M
+        
+      //   break;
       
       default:
           break;

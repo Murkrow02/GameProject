@@ -5,6 +5,8 @@
 #include <cstring>
 #include "../UI/dialog.hpp"
 #include "../UI/stats.hpp"
+#include <math.h>
+
 using namespace std;
 
 //Save stuff for easy access on other classes
@@ -125,3 +127,11 @@ bool is_in_range(int x1, int y1, int x2, int y2, int r) {
 
    return (dx * dx + dy * dy) < (r * r);
 }
+
+// Function to calculate distance
+int distance_two_points(int x1, int y1, int x2, int y2)
+{
+    // Calculating distance
+    return sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2) * 1.0);
+}
+ 

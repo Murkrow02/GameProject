@@ -56,18 +56,13 @@
 },
 {
   "directory": "/home/murkrow/Repos/GameProject/src/build",
-  "command": "/usr/bin/g++   -g -std=gnu++14 -o CMakeFiles/GameProject2.dir/UI/menu.cpp.o -c /home/murkrow/Repos/GameProject/src/UI/menu.cpp",
-  "file": "/home/murkrow/Repos/GameProject/src/UI/menu.cpp"
+  "command": "/usr/bin/g++   -g -std=gnu++14 -o CMakeFiles/GameProject2.dir/UI/shop.cpp.o -c /home/murkrow/Repos/GameProject/src/UI/shop.cpp",
+  "file": "/home/murkrow/Repos/GameProject/src/UI/shop.cpp"
 },
 {
   "directory": "/home/murkrow/Repos/GameProject/src/build",
   "command": "/usr/bin/g++   -g -std=gnu++14 -o CMakeFiles/GameProject2.dir/UI/message.cpp.o -c /home/murkrow/Repos/GameProject/src/UI/message.cpp",
   "file": "/home/murkrow/Repos/GameProject/src/UI/message.cpp"
-},
-{
-  "directory": "/home/murkrow/Repos/GameProject/src/build",
-  "command": "/usr/bin/g++   -g -std=gnu++14 -o CMakeFiles/GameProject2.dir/UI/puzzle.cpp.o -c /home/murkrow/Repos/GameProject/src/UI/puzzle.cpp",
-  "file": "/home/murkrow/Repos/GameProject/src/UI/puzzle.cpp"
 },
 {
   "directory": "/home/murkrow/Repos/GameProject/src/build",

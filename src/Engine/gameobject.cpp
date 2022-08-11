@@ -14,6 +14,12 @@
 #define DURATION_INVINCIBILITY 120 // in frames, how much to wait before player can take more damage
 #define DURATION_BLINK_ANIMATION 60 
 
+// POINTS
+#define POINTS_DUMMY 100
+
+// VIEW RANGE
+#define VIEWRANGE_DUMMY 20
+
 class GameObject
 {
 public:

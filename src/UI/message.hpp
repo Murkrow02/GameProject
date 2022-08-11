@@ -1,3 +1,4 @@
+#pragma once
 #include "dialog.hpp"
 
 
@@ -12,7 +13,7 @@ class message : public dialog {
         int padding = 3;
 
         //Ms delay between chars
-        int speed = 25;
+        int speed = 30;
 
     public:
 

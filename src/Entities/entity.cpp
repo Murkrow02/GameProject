@@ -36,12 +36,7 @@ void Entity::Destroy()
 
 void Entity::Damage(){
     life--;
-    if(life<=0){
-
-        // rip
-        Destroy();
-    }
- }
+}
 
 char Entity::checkCollision(int next_y, int next_x){
     return mvwinch(gameWin, next_y, next_x);

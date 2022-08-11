@@ -70,7 +70,7 @@ class Bullet : public Foe
 
             
         
-        Bullet(bool damage_foe, int inc_x, int inc_y, int _range, int _y, int _x, WINDOW * player_win, GameObjectList *game_objects, Stats *game_stats) : Foe{ _y,  _x, player_win, CHAR_BULLET, SPEED_FASTER, 1, game_objects, game_stats} 
+        Bullet(bool damage_foe, int inc_x, int inc_y, int _range, int _y, int _x, WINDOW * player_win, GameObjectList *game_objects, Stats *game_stats) : Foe{ _y,  _x, player_win, CHAR_BULLET, SPEED_FASTER, 1, 0, 0, game_objects, game_stats} 
         {
             range = _range;
             incX = inc_x;

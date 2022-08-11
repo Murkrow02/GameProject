@@ -23,9 +23,8 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/murkrow/Repos/GameProject/src/Tools/utils.cpp" "CMakeFiles/GameProject2.dir/Tools/utils.cpp.o" "gcc" "CMakeFiles/GameProject2.dir/Tools/utils.cpp.o.d"
   "/home/murkrow/Repos/GameProject/src/UI/alert.cpp" "CMakeFiles/GameProject2.dir/UI/alert.cpp.o" "gcc" "CMakeFiles/GameProject2.dir/UI/alert.cpp.o.d"
   "/home/murkrow/Repos/GameProject/src/UI/dialog.cpp" "CMakeFiles/GameProject2.dir/UI/dialog.cpp.o" "gcc" "CMakeFiles/GameProject2.dir/UI/dialog.cpp.o.d"
-  "/home/murkrow/Repos/GameProject/src/UI/menu.cpp" "CMakeFiles/GameProject2.dir/UI/menu.cpp.o" "gcc" "CMakeFiles/GameProject2.dir/UI/menu.cpp.o.d"
   "/home/murkrow/Repos/GameProject/src/UI/message.cpp" "CMakeFiles/GameProject2.dir/UI/message.cpp.o" "gcc" "CMakeFiles/GameProject2.dir/UI/message.cpp.o.d"
-  "/home/murkrow/Repos/GameProject/src/UI/puzzle.cpp" "CMakeFiles/GameProject2.dir/UI/puzzle.cpp.o" "gcc" "CMakeFiles/GameProject2.dir/UI/puzzle.cpp.o.d"
+  "/home/murkrow/Repos/GameProject/src/UI/shop.cpp" "CMakeFiles/GameProject2.dir/UI/shop.cpp.o" "gcc" "CMakeFiles/GameProject2.dir/UI/shop.cpp.o.d"
   "/home/murkrow/Repos/GameProject/src/UI/stats.cpp" "CMakeFiles/GameProject2.dir/UI/stats.cpp.o" "gcc" "CMakeFiles/GameProject2.dir/UI/stats.cpp.o.d"
   )
 

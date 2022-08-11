@@ -48,9 +48,16 @@ void Stats::reset_ammo(){
     ammo = maxAmmo;
     update_stats();
 }
+
 void Stats::lost_ammo(){
     if(ammo > 0)
         ammo--;
+    update_stats();
+}
+
+void Stats::add_ammo(){
+    if(ammo < maxAmmo)
+        ammo++;
     update_stats();
 }
 
@@ -60,6 +67,11 @@ void Stats::set_max_ammo(int max){
 
 void Stats::set_weapon_name(string name){
     weapon_name = name;
+    update_stats();
+}
+
+void Stats::reloading(bool status){
+    isReloading = status;
     update_stats();
 }
 
@@ -92,15 +104,25 @@ void Stats::update_stats(){
     if(!weapon_name.empty()){
 
         mvwprintw(stats_window,3,0, weapon_name.c_str());
-        wattron(stats_window,A_BOLD);
-        mvwprintw(stats_window,4,0,"AMMO:");
-        wattron(stats_window,A_BOLD);
-        wattron(stats_window,COLOR_PAIR(3));
-        for (int i = 0; i < ammo; i++)
-        {
-            wprintw(stats_window, "X");
+        
+        // show ammo
+        if(!isReloading){
+            wattron(stats_window,A_BOLD);
+            mvwprintw(stats_window, 4, 0, "AMMO:");
+            wattron(stats_window, A_BOLD);
+            wattron(stats_window, COLOR_PAIR(3));
+            for (int i = 0; i < ammo; i++)
+            {
+                wprintw(stats_window, "X");
+            }
+            wattroff(stats_window, COLOR_PAIR(3));
+        }else{
+            // show reloading
+            wattron(stats_window,COLOR_PAIR(1));
+            mvwprintw(stats_window, 4, 0, "RELOADING");
+            wattroff(stats_window,COLOR_PAIR(1));
         }
-        wattroff(stats_window,COLOR_PAIR(3));
+        
     }
    
 

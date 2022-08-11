@@ -489,30 +489,6 @@ UI/dialog.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/UI/dialog.cpp.s
 .PHONY : UI/dialog.cpp.s
 
-UI/menu.o: UI/menu.cpp.o
-.PHONY : UI/menu.o
-
-# target to build an object file
-UI/menu.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/UI/menu.cpp.o
-.PHONY : UI/menu.cpp.o
-
-UI/menu.i: UI/menu.cpp.i
-.PHONY : UI/menu.i
-
-# target to preprocess a source file
-UI/menu.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/UI/menu.cpp.i
-.PHONY : UI/menu.cpp.i
-
-UI/menu.s: UI/menu.cpp.s
-.PHONY : UI/menu.s
-
-# target to generate assembly for a file
-UI/menu.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/UI/menu.cpp.s
-.PHONY : UI/menu.cpp.s
-
 UI/message.o: UI/message.cpp.o
 .PHONY : UI/message.o
 
@@ -537,29 +513,29 @@ UI/message.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/UI/message.cpp.s
 .PHONY : UI/message.cpp.s
 
-UI/puzzle.o: UI/puzzle.cpp.o
-.PHONY : UI/puzzle.o
+UI/shop.o: UI/shop.cpp.o
+.PHONY : UI/shop.o
 
 # target to build an object file
-UI/puzzle.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/UI/puzzle.cpp.o
-.PHONY : UI/puzzle.cpp.o
+UI/shop.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/UI/shop.cpp.o
+.PHONY : UI/shop.cpp.o
 
-UI/puzzle.i: UI/puzzle.cpp.i
-.PHONY : UI/puzzle.i
+UI/shop.i: UI/shop.cpp.i
+.PHONY : UI/shop.i
 
 # target to preprocess a source file
-UI/puzzle.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/UI/puzzle.cpp.i
-.PHONY : UI/puzzle.cpp.i
+UI/shop.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/UI/shop.cpp.i
+.PHONY : UI/shop.cpp.i
 
-UI/puzzle.s: UI/puzzle.cpp.s
-.PHONY : UI/puzzle.s
+UI/shop.s: UI/shop.cpp.s
+.PHONY : UI/shop.s
 
 # target to generate assembly for a file
-UI/puzzle.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/UI/puzzle.cpp.s
-.PHONY : UI/puzzle.cpp.s
+UI/shop.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/UI/shop.cpp.s
+.PHONY : UI/shop.cpp.s
 
 UI/stats.o: UI/stats.cpp.o
 .PHONY : UI/stats.o
@@ -639,15 +615,12 @@ help:
 	@echo "... UI/dialog.o"
 	@echo "... UI/dialog.i"
 	@echo "... UI/dialog.s"
-	@echo "... UI/menu.o"
-	@echo "... UI/menu.i"
-	@echo "... UI/menu.s"
 	@echo "... UI/message.o"
 	@echo "... UI/message.i"
 	@echo "... UI/message.s"
-	@echo "... UI/puzzle.o"
-	@echo "... UI/puzzle.i"
-	@echo "... UI/puzzle.s"
+	@echo "... UI/shop.o"
+	@echo "... UI/shop.i"
+	@echo "... UI/shop.s"
 	@echo "... UI/stats.o"
 	@echo "... UI/stats.i"
 	@echo "... UI/stats.s"
