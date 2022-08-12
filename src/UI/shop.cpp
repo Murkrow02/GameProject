@@ -28,11 +28,12 @@ shop::shop():dialog("SHOP"){
 
         nodelay(stdscr, FALSE);
         // get the input
-        while ((ch = wgetch(w)) != 'q')
+        while (ch = getch() != 'q')
         {
             // right pad with spaces to make the items appear with even width.
             sprintf(item, "%-7s", list[i]);
             mvwprintw(w, i + 1, 2, "%s", item);
+
             // use a variable to increment or decrement the value based on the input.
             switch (ch)
             {
@@ -45,6 +46,7 @@ shop::shop():dialog("SHOP"){
                 i = (i > 4) ? 0 : i;
                 break;
             }
+
             // now highlight the next item in the list.
             wattron(w, A_STANDOUT);
             sprintf(item, "%-7s", list[i]);

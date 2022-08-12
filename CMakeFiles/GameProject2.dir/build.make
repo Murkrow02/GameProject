@@ -69,19 +69,19 @@ include CMakeFiles/GameProject2.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/GameProject2.dir/flags.make
 
-CMakeFiles/GameProject2.dir/Tools/list.cpp.o: CMakeFiles/GameProject2.dir/flags.make
-CMakeFiles/GameProject2.dir/Tools/list.cpp.o: src/Tools/list.cpp
-CMakeFiles/GameProject2.dir/Tools/list.cpp.o: CMakeFiles/GameProject2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/murkrow/Repos/GameProject/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/GameProject2.dir/Tools/list.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameProject2.dir/Tools/list.cpp.o -MF CMakeFiles/GameProject2.dir/Tools/list.cpp.o.d -o CMakeFiles/GameProject2.dir/Tools/list.cpp.o -c /home/murkrow/Repos/GameProject/src/Tools/list.cpp
+CMakeFiles/GameProject2.dir/Tools/GameObjectList.cpp.o: CMakeFiles/GameProject2.dir/flags.make
+CMakeFiles/GameProject2.dir/Tools/GameObjectList.cpp.o: src/Tools/GameObjectList.cpp
+CMakeFiles/GameProject2.dir/Tools/GameObjectList.cpp.o: CMakeFiles/GameProject2.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/murkrow/Repos/GameProject/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/GameProject2.dir/Tools/GameObjectList.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameProject2.dir/Tools/GameObjectList.cpp.o -MF CMakeFiles/GameProject2.dir/Tools/GameObjectList.cpp.o.d -o CMakeFiles/GameProject2.dir/Tools/GameObjectList.cpp.o -c /home/murkrow/Repos/GameProject/src/Tools/GameObjectList.cpp
 
-CMakeFiles/GameProject2.dir/Tools/list.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GameProject2.dir/Tools/list.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/murkrow/Repos/GameProject/src/Tools/list.cpp > CMakeFiles/GameProject2.dir/Tools/list.cpp.i
+CMakeFiles/GameProject2.dir/Tools/GameObjectList.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GameProject2.dir/Tools/GameObjectList.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/murkrow/Repos/GameProject/src/Tools/GameObjectList.cpp > CMakeFiles/GameProject2.dir/Tools/GameObjectList.cpp.i
 
-CMakeFiles/GameProject2.dir/Tools/list.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GameProject2.dir/Tools/list.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/murkrow/Repos/GameProject/src/Tools/list.cpp -o CMakeFiles/GameProject2.dir/Tools/list.cpp.s
+CMakeFiles/GameProject2.dir/Tools/GameObjectList.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GameProject2.dir/Tools/GameObjectList.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/murkrow/Repos/GameProject/src/Tools/GameObjectList.cpp -o CMakeFiles/GameProject2.dir/Tools/GameObjectList.cpp.s
 
 CMakeFiles/GameProject2.dir/Tools/utils.cpp.o: CMakeFiles/GameProject2.dir/flags.make
 CMakeFiles/GameProject2.dir/Tools/utils.cpp.o: src/Tools/utils.cpp
@@ -323,7 +323,7 @@ CMakeFiles/GameProject2.dir/Engine/room.cpp.s: cmake_force
 
 # Object files for target GameProject2
 GameProject2_OBJECTS = \
-"CMakeFiles/GameProject2.dir/Tools/list.cpp.o" \
+"CMakeFiles/GameProject2.dir/Tools/GameObjectList.cpp.o" \
 "CMakeFiles/GameProject2.dir/Tools/utils.cpp.o" \
 "CMakeFiles/GameProject2.dir/Tools/savedata.cpp.o" \
 "CMakeFiles/GameProject2.dir/Entities/weapon.cpp.o" \
@@ -345,7 +345,7 @@ GameProject2_OBJECTS = \
 # External object files for target GameProject2
 GameProject2_EXTERNAL_OBJECTS =
 
-GameProject2: CMakeFiles/GameProject2.dir/Tools/list.cpp.o
+GameProject2: CMakeFiles/GameProject2.dir/Tools/GameObjectList.cpp.o
 GameProject2: CMakeFiles/GameProject2.dir/Tools/utils.cpp.o
 GameProject2: CMakeFiles/GameProject2.dir/Tools/savedata.cpp.o
 GameProject2: CMakeFiles/GameProject2.dir/Entities/weapon.cpp.o

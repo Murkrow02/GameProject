@@ -10,14 +10,13 @@ class GameObjectList; //this instead of header because of circular dependency co
 class Entity : public GameObject
 {
     public:
-        Entity(int _y, int _x, WINDOW * player_win, char display_char, int _life, GameObjectList *_gameItems, Stats *game_stats);
+        Entity(int _y, int _x, char display_char, int _life, GameObjectList *_gameItems);
         char displayChar;
         virtual void Damage(); // life--
 
     protected:
 
         int xMax,yMax; // player position and player's window size
-        WINDOW * gameWin;
         int roomId;
 
         // movement
@@ -37,7 +36,6 @@ class Entity : public GameObject
 
         //game stats
         int life;
-        Stats* gameStats;
         GameObjectList *gameItems;
 
 };

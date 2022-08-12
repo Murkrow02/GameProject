@@ -1,27 +1,25 @@
 #include <iostream>
 #include <ncurses.h>
 #include "entity.hpp"
-#include "../Tools/list.hpp"
+#include "../Tools/GameObjectList.hpp"
 
 using namespace std;
 
-Entity::Entity(int _y, int _x, WINDOW * game_win, char display_char,  int _life, GameObjectList *_gameItems, Stats *game_stats)
+Entity::Entity(int _y, int _x, char display_char,  int _life, GameObjectList *_gameItems)
 {
     // set attributes
     y = _y;
     x = _x;
     roomId = 0;
-    gameWin = game_win;
     displayChar = display_char;
     life = _life;
     gameItems = _gameItems;
-    gameStats = game_stats;
-    getmaxyx(gameWin, yMax, xMax);
+    getmaxyx(gameItems->gameWindow, yMax, xMax);
 }
 
 void Entity::Draw()
 {
-    mvwaddch(gameWin, y, x, displayChar);
+    mvwaddch(gameItems->gameWindow, y, x, displayChar);
 }
 
 void Entity::DoFrame(){
@@ -30,7 +28,7 @@ void Entity::DoFrame(){
 
 void Entity::Destroy()
 {
-    mvwaddch(gameWin, y, x, ' ');
+    mvwaddch(gameItems->gameWindow, y, x, ' ');
     gameItems->remove(this);
 }
 
@@ -39,7 +37,7 @@ void Entity::Damage(){
 }
 
 char Entity::checkCollision(int next_y, int next_x){
-    return mvwinch(gameWin, next_y, next_x);
+    return mvwinch(gameItems->gameWindow, next_y, next_x);
 }
 
 void Entity::mvdown(){
@@ -50,7 +48,7 @@ void Entity::mvdown(){
     // can move
     if(nextSpot == ' ')
     {
-        mvwaddch(gameWin, y, x, ' ');
+        mvwaddch(gameItems->gameWindow, y, x, ' ');
         y = nextY;
     }
         
@@ -63,7 +61,7 @@ void Entity::mvup(){
     // can move
     if(nextSpot == ' ')
     {
-        mvwaddch(gameWin, y, x, ' ');
+        mvwaddch(gameItems->gameWindow, y, x, ' ');
         y = nextY;
     }
 }
@@ -75,7 +73,7 @@ void Entity::mvleft(){
     // can move
     if(nextSpot == ' ')
     {
-        mvwaddch(gameWin, y, x, ' ');
+        mvwaddch(gameItems->gameWindow, y, x, ' ');
         x = nextX;
     }
 }
@@ -87,7 +85,7 @@ void Entity::mvright(){
     // can move
     if(nextSpot == ' ')
     {
-        mvwaddch(gameWin, y, x, ' ');
+        mvwaddch(gameItems->gameWindow, y, x, ' ');
         x = nextX;
     }
 }

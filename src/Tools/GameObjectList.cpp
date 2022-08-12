@@ -1,4 +1,4 @@
-#include "list.hpp"
+#include "GameObjectList.hpp"
 #include "../Engine/gameobject.cpp"
 #include <iostream>
 

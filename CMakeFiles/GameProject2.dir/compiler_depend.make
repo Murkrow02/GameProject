@@ -214,7 +214,7 @@ CMakeFiles/GameProject2.dir/Engine/main.cpp.o: src/Engine/main.cpp \
   src/Entities/weapon.cpp \
   src/Entities/dummy.cpp \
   src/Entities/foe.cpp \
-  src/Tools/list.hpp \
+  src/Tools/GameObjectList.hpp \
   src/Tools/utils.hpp \
   src/UI/stats.hpp \
   src/Engine/minimap.h \
@@ -1003,7 +1003,7 @@ CMakeFiles/GameProject2.dir/Entities/bullet.cpp.o: src/Entities/bullet.cpp \
   src/Entities/foe.cpp \
   src/Entities/player.hpp \
   src/Entities/weapon.cpp \
-  src/Tools/list.hpp \
+  src/Tools/GameObjectList.hpp \
   src/Tools/utils.hpp \
   src/UI/stats.hpp
 
@@ -1178,7 +1178,7 @@ CMakeFiles/GameProject2.dir/Entities/dummy.cpp.o: src/Entities/dummy.cpp \
   src/Entities/foe.cpp \
   src/Entities/player.hpp \
   src/Entities/weapon.cpp \
-  src/Tools/list.hpp \
+  src/Tools/GameObjectList.hpp \
   src/Tools/utils.hpp \
   src/UI/stats.hpp \
   /usr/include/c++/12/ctime \
@@ -1409,7 +1409,7 @@ CMakeFiles/GameProject2.dir/Entities/entity.cpp.o: src/Entities/entity.cpp \
   src/Engine/room.h \
   src/UI/stats.hpp \
   src/Engine/gameobject.cpp \
-  src/Tools/list.hpp \
+  src/Tools/GameObjectList.hpp \
   src/Entities/player.hpp \
   src/UI/stats.hpp \
   src/Entities/weapon.cpp
@@ -1584,7 +1584,7 @@ CMakeFiles/GameProject2.dir/Entities/foe.cpp.o: src/Entities/foe.cpp \
   src/Engine/gameobject.cpp \
   src/Entities/player.hpp \
   src/Entities/weapon.cpp \
-  src/Tools/list.hpp \
+  src/Tools/GameObjectList.hpp \
   src/Tools/utils.hpp \
   src/UI/stats.hpp
 
@@ -1787,7 +1787,7 @@ CMakeFiles/GameProject2.dir/Entities/player.cpp.o: src/Entities/player.cpp \
   src/UI/stats.hpp \
   src/Engine/gameobject.cpp \
   src/Entities/weapon.cpp \
-  src/Tools/list.hpp \
+  src/Tools/GameObjectList.hpp \
   src/Entities/bullet.cpp \
   src/Entities/foe.cpp \
   src/Tools/utils.hpp \
@@ -1973,9 +1973,9 @@ CMakeFiles/GameProject2.dir/Entities/weapon.cpp.o: src/Entities/weapon.cpp \
   /usr/include/c++/12/bits/hash_bytes.h \
   /usr/include/c++/12/bits/basic_string.tcc
 
-CMakeFiles/GameProject2.dir/Tools/list.cpp.o: src/Tools/list.cpp \
+CMakeFiles/GameProject2.dir/Tools/GameObjectList.cpp.o: src/Tools/GameObjectList.cpp \
   /usr/include/stdc-predef.h \
-  src/Tools/list.hpp \
+  src/Tools/GameObjectList.hpp \
   src/Engine/gameobject.cpp \
   src/Entities/player.hpp \
   src/Engine/map.h \
@@ -3444,6 +3444,8 @@ src/UI/dialog.cpp:
 
 /usr/include/c++/12/cassert:
 
+/usr/include/c++/12/bits/indirect_array.h:
+
 /usr/include/c++/12/bits/mask_array.h:
 
 /usr/include/c++/12/bits/valarray_after.h:
@@ -3541,6 +3543,8 @@ src/UI/dialog.hpp:
 /usr/include/c++/12/bits/cxxabi_forced.h:
 
 /usr/include/bits/struct_mutex.h:
+
+src/Tools/GameObjectList.cpp:
 
 /usr/include/bits/thread-shared-types.h:
 
@@ -3784,8 +3788,6 @@ src/UI/alert.cpp:
 
 /usr/include/c++/12/bits/nested_exception.h:
 
-src/Tools/list.cpp:
-
 /usr/include/bits/types/__fpos_t.h:
 
 /usr/include/c++/12/cstdint:
@@ -3988,13 +3990,7 @@ src/Entities/dummy.cpp:
 
 src/Entities/foe.cpp:
 
-/usr/include/c++/12/bits/indirect_array.h:
-
-src/Tools/list.hpp:
-
-/usr/include/c++/12/bits/unique_ptr.h:
-
-/usr/include/c++/12/iterator:
+src/Tools/GameObjectList.hpp:
 
 src/UI/message.hpp:
 
@@ -4051,6 +4047,10 @@ src/Tools/savedata.hpp:
 /usr/include/c++/12/bits/stl_tempbuf.h:
 
 /usr/include/c++/12/functional:
+
+/usr/include/c++/12/bits/unique_ptr.h:
+
+/usr/include/c++/12/iterator:
 
 /usr/include/c++/12/ios:
 

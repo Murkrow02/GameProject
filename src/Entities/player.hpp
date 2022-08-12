@@ -11,7 +11,7 @@ using namespace std;
 class Player : public Entity
 {
     public:
-        Player(int _y, int _x, WINDOW * player_win, Map* _map, GameObjectList *game_objects, Stats *game_stats);
+        Player(int _y, int _x, GameObjectList *game_objects);
 
         // convert user input into player move
         void getmv();
@@ -24,8 +24,8 @@ class Player : public Entity
         void setWeapon(Weapon *_weapon);
         
     private:
+    
         int invincibilityLeft = 0;
-        Map* map;
 
         // player weapon
         Weapon *weapon;

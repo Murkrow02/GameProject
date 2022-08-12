@@ -1,6 +1,6 @@
 #include "entity.hpp"
 #include "player.hpp"
-#include "../Tools/list.hpp"
+#include "../Tools/GameObjectList.hpp"
 #include "../Tools/utils.hpp"
 #include <stdlib.h> 
 
@@ -47,7 +47,7 @@ class Foe : public Entity
 
   public:
 
-    Foe(int _y, int _x, WINDOW *game_win, char display_char, int speed, int life, int points_value, int view_range, GameObjectList* game_items, Stats *game_stats) : Entity{_y, _x, game_win, display_char, life, game_items, game_stats}
+    Foe(int _y, int _x, char display_char, int speed, int life, int points_value, int view_range, GameObjectList* game_items) : Entity{_y, _x, display_char, life, game_items}
     {
       Speed = speed;
       PointsValue = points_value;
@@ -67,7 +67,7 @@ class Foe : public Entity
         if (life <= 0)
         {
           // add points to user
-          gameStats->add_points(PointsValue);
+          gameItems->gameStats->add_points(PointsValue);
 
           // rip
           Destroy();
@@ -159,14 +159,14 @@ class Foe : public Entity
       int skipFrames = 2; // higher value = slower blink speed
       if (DamageBlinkLeft > 0 && DamageBlinkLeft % skipFrames != 0)
       {
-        mvwaddch(gameWin, y, x, ' '); // blink off
+        mvwaddch(gameItems->gameWindow, y, x, ' '); // blink off
       }
       else
       {
         // red color
-        wattron(gameWin, COLOR_PAIR(1));
-        mvwaddch(gameWin, y, x, displayChar);
-        wattroff(gameWin, COLOR_PAIR(1));
+        wattron(gameItems->gameWindow, COLOR_PAIR(1));
+        mvwaddch(gameItems->gameWindow, y, x, displayChar);
+        wattroff(gameItems->gameWindow, COLOR_PAIR(1));
       }
 
       if(DamageBlinkLeft > 0)

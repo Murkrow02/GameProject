@@ -11,7 +11,7 @@
 #include "../UI/shop.hpp"
 #include "../Tools/utils.hpp"
 #include "gameobject.cpp"
-#include "../Tools/list.hpp"
+#include "../Tools/GameObjectList.hpp"
 
 using namespace std;
 
@@ -47,11 +47,17 @@ int main(){
     minimap.drawMinimap(map);
     map.createRoom(0, game_window);
 
+
+    // fill all game stuff
+    gameObjects.gameStats = &game_stats;
+    gameObjects.gameWindow = game_window;
+    gameObjects.gameMap = &map;
+
     // player setup
-    Player player((room_height / 2), (room_width / 2), game_window, &map, &gameObjects, &game_stats); // player creation
+    Player player((room_height / 2), (room_width / 2), &gameObjects); // player creation
 
     // dummy spawn
-    Dummy dummy(1,1, game_window, &gameObjects, &game_stats);
+    Dummy dummy(1,1, &gameObjects);
 
     wrefresh(game_window);
 
@@ -62,7 +68,7 @@ int main(){
     // do not wait for getch() (otherwhise the following loop will stop)
     nodelay(stdscr, TRUE);
 
-    shop a = shop();
+    //shop a = shop();
     //a.wait_close.wait();
 
     // welcome message

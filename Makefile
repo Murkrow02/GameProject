@@ -369,29 +369,29 @@ Entities/weapon.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/Entities/weapon.cpp.s
 .PHONY : Entities/weapon.cpp.s
 
-Tools/list.o: Tools/list.cpp.o
-.PHONY : Tools/list.o
+Tools/GameObjectList.o: Tools/GameObjectList.cpp.o
+.PHONY : Tools/GameObjectList.o
 
 # target to build an object file
-Tools/list.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/Tools/list.cpp.o
-.PHONY : Tools/list.cpp.o
+Tools/GameObjectList.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/Tools/GameObjectList.cpp.o
+.PHONY : Tools/GameObjectList.cpp.o
 
-Tools/list.i: Tools/list.cpp.i
-.PHONY : Tools/list.i
+Tools/GameObjectList.i: Tools/GameObjectList.cpp.i
+.PHONY : Tools/GameObjectList.i
 
 # target to preprocess a source file
-Tools/list.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/Tools/list.cpp.i
-.PHONY : Tools/list.cpp.i
+Tools/GameObjectList.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/Tools/GameObjectList.cpp.i
+.PHONY : Tools/GameObjectList.cpp.i
 
-Tools/list.s: Tools/list.cpp.s
-.PHONY : Tools/list.s
+Tools/GameObjectList.s: Tools/GameObjectList.cpp.s
+.PHONY : Tools/GameObjectList.s
 
 # target to generate assembly for a file
-Tools/list.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/Tools/list.cpp.s
-.PHONY : Tools/list.cpp.s
+Tools/GameObjectList.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/Tools/GameObjectList.cpp.s
+.PHONY : Tools/GameObjectList.cpp.s
 
 Tools/savedata.o: Tools/savedata.cpp.o
 .PHONY : Tools/savedata.o
@@ -600,9 +600,9 @@ help:
 	@echo "... Entities/weapon.o"
 	@echo "... Entities/weapon.i"
 	@echo "... Entities/weapon.s"
-	@echo "... Tools/list.o"
-	@echo "... Tools/list.i"
-	@echo "... Tools/list.s"
+	@echo "... Tools/GameObjectList.o"
+	@echo "... Tools/GameObjectList.i"
+	@echo "... Tools/GameObjectList.s"
 	@echo "... Tools/savedata.o"
 	@echo "... Tools/savedata.i"
 	@echo "... Tools/savedata.s"

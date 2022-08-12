@@ -215,7 +215,7 @@ CMakeFiles/GameProject2.dir/Engine/main.cpp.o
  /home/murkrow/Repos/GameProject/src/Entities/weapon.cpp
  /home/murkrow/Repos/GameProject/src/Entities/dummy.cpp
  /home/murkrow/Repos/GameProject/src/Entities/foe.cpp
- /home/murkrow/Repos/GameProject/src/Tools/list.hpp
+ /home/murkrow/Repos/GameProject/src/Tools/GameObjectList.hpp
  /home/murkrow/Repos/GameProject/src/Tools/utils.hpp
  /home/murkrow/Repos/GameProject/src/UI/stats.hpp
  /home/murkrow/Repos/GameProject/src/Engine/minimap.h
@@ -1008,7 +1008,7 @@ CMakeFiles/GameProject2.dir/Entities/bullet.cpp.o
  /home/murkrow/Repos/GameProject/src/Entities/foe.cpp
  /home/murkrow/Repos/GameProject/src/Entities/player.hpp
  /home/murkrow/Repos/GameProject/src/Entities/weapon.cpp
- /home/murkrow/Repos/GameProject/src/Tools/list.hpp
+ /home/murkrow/Repos/GameProject/src/Tools/GameObjectList.hpp
  /home/murkrow/Repos/GameProject/src/Tools/utils.hpp
  /home/murkrow/Repos/GameProject/src/UI/stats.hpp
 
@@ -1184,7 +1184,7 @@ CMakeFiles/GameProject2.dir/Entities/dummy.cpp.o
  /home/murkrow/Repos/GameProject/src/Entities/foe.cpp
  /home/murkrow/Repos/GameProject/src/Entities/player.hpp
  /home/murkrow/Repos/GameProject/src/Entities/weapon.cpp
- /home/murkrow/Repos/GameProject/src/Tools/list.hpp
+ /home/murkrow/Repos/GameProject/src/Tools/GameObjectList.hpp
  /home/murkrow/Repos/GameProject/src/Tools/utils.hpp
  /home/murkrow/Repos/GameProject/src/UI/stats.hpp
  /usr/include/c++/12/ctime
@@ -1416,7 +1416,7 @@ CMakeFiles/GameProject2.dir/Entities/entity.cpp.o
  /home/murkrow/Repos/GameProject/src/Engine/room.h
  /home/murkrow/Repos/GameProject/src/UI/stats.hpp
  /home/murkrow/Repos/GameProject/src/Engine/gameobject.cpp
- /home/murkrow/Repos/GameProject/src/Tools/list.hpp
+ /home/murkrow/Repos/GameProject/src/Tools/GameObjectList.hpp
  /home/murkrow/Repos/GameProject/src/Entities/player.hpp
  /home/murkrow/Repos/GameProject/src/UI/stats.hpp
  /home/murkrow/Repos/GameProject/src/Entities/weapon.cpp
@@ -1592,7 +1592,7 @@ CMakeFiles/GameProject2.dir/Entities/foe.cpp.o
  /home/murkrow/Repos/GameProject/src/Engine/gameobject.cpp
  /home/murkrow/Repos/GameProject/src/Entities/player.hpp
  /home/murkrow/Repos/GameProject/src/Entities/weapon.cpp
- /home/murkrow/Repos/GameProject/src/Tools/list.hpp
+ /home/murkrow/Repos/GameProject/src/Tools/GameObjectList.hpp
  /home/murkrow/Repos/GameProject/src/Tools/utils.hpp
  /home/murkrow/Repos/GameProject/src/UI/stats.hpp
 
@@ -1796,7 +1796,7 @@ CMakeFiles/GameProject2.dir/Entities/player.cpp.o
  /home/murkrow/Repos/GameProject/src/UI/stats.hpp
  /home/murkrow/Repos/GameProject/src/Engine/gameobject.cpp
  /home/murkrow/Repos/GameProject/src/Entities/weapon.cpp
- /home/murkrow/Repos/GameProject/src/Tools/list.hpp
+ /home/murkrow/Repos/GameProject/src/Tools/GameObjectList.hpp
  /home/murkrow/Repos/GameProject/src/Entities/bullet.cpp
  /home/murkrow/Repos/GameProject/src/Entities/foe.cpp
  /home/murkrow/Repos/GameProject/src/Tools/utils.hpp
@@ -1983,10 +1983,10 @@ CMakeFiles/GameProject2.dir/Entities/weapon.cpp.o
  /usr/include/c++/12/bits/hash_bytes.h
  /usr/include/c++/12/bits/basic_string.tcc
 
-CMakeFiles/GameProject2.dir/Tools/list.cpp.o
- /home/murkrow/Repos/GameProject/src/Tools/list.cpp
+CMakeFiles/GameProject2.dir/Tools/GameObjectList.cpp.o
+ /home/murkrow/Repos/GameProject/src/Tools/GameObjectList.cpp
  /usr/include/stdc-predef.h
- /home/murkrow/Repos/GameProject/src/Tools/list.hpp
+ /home/murkrow/Repos/GameProject/src/Tools/GameObjectList.hpp
  /home/murkrow/Repos/GameProject/src/Engine/gameobject.cpp
  /home/murkrow/Repos/GameProject/src/Entities/player.hpp
  /home/murkrow/Repos/GameProject/src/Engine/map.h

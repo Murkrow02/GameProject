@@ -1,7 +1,7 @@
 #include "../Engine/gameobject.cpp"
 #include "entity.hpp"
 #include "foe.cpp"
-#include "../Tools/list.hpp"
+#include "../Tools/GameObjectList.hpp"
 
 class Bullet : public Foe
 {
@@ -15,7 +15,7 @@ class Bullet : public Foe
                 return;
 
             // clear old position
-            mvwaddch(gameWin, y, x, ' ');
+            mvwaddch(gameItems->gameWindow, y, x, ' ');
             
             // check if reached end of life
             if(travelledDistance >= range)
@@ -70,7 +70,7 @@ class Bullet : public Foe
 
             
         
-        Bullet(bool damage_foe, int inc_x, int inc_y, int _range, int _y, int _x, WINDOW * player_win, GameObjectList *game_objects, Stats *game_stats) : Foe{ _y,  _x, player_win, CHAR_BULLET, SPEED_FASTER, 1, 0, 0, game_objects, game_stats} 
+        Bullet(bool damage_foe, int inc_x, int inc_y, int _range, int _y, int _x, GameObjectList *game_objects) : Foe{ _y,  _x, CHAR_BULLET, SPEED_FASTER, 1, 0, 0, game_objects} 
         {
             range = _range;
             incX = inc_x;
