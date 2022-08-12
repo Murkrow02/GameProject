@@ -46,6 +46,16 @@
 },
 {
   "directory": "/home/murkrow/Repos/GameProject/src/build",
+  "command": "/usr/bin/g++   -g -std=gnu++14 -o CMakeFiles/GameProject2.dir/Entities/food.cpp.o -c /home/murkrow/Repos/GameProject/src/Entities/food.cpp",
+  "file": "/home/murkrow/Repos/GameProject/src/Entities/food.cpp"
+},
+{
+  "directory": "/home/murkrow/Repos/GameProject/src/build",
+  "command": "/usr/bin/g++   -g -std=gnu++14 -o CMakeFiles/GameProject2.dir/UI/itemselector.cpp.o -c /home/murkrow/Repos/GameProject/src/UI/itemselector.cpp",
+  "file": "/home/murkrow/Repos/GameProject/src/UI/itemselector.cpp"
+},
+{
+  "directory": "/home/murkrow/Repos/GameProject/src/build",
   "command": "/usr/bin/g++   -g -std=gnu++14 -o CMakeFiles/GameProject2.dir/UI/alert.cpp.o -c /home/murkrow/Repos/GameProject/src/UI/alert.cpp",
   "file": "/home/murkrow/Repos/GameProject/src/UI/alert.cpp"
 },

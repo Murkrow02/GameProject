@@ -68,13 +68,8 @@ message::message(char title[], char text[]):dialog(title){
     { 
         //Wait for user to press escape key
         dialog::show_close_message();
-        dialog::wait_close.wait();
+        wait_key(close_key);
+        Destroy();
     });
    
 }
-
-/*message::show(){
-
-
-       
-}*/

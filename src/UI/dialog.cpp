@@ -13,14 +13,6 @@ dialog::dialog(char title[]){
 
     //Draw alert
     draw();
-
-    //This functions awaits until the desidered key is pressed
-    wait_close = std::async(std::launch::async, [this,title]
-    {
-        //Wait for dismissal
-        wait_key(close_key);
-        del_panel(dialog_panel);
-    });
 }
 
 void dialog::draw(){
@@ -65,4 +57,8 @@ void dialog::show_close_message(){
     int start_text_bottom_msg = w/2-(bottom_msg_len/2);
     mvwprintw(dialog_window, h-1, start_text_bottom_msg, bottom_msg);
     wrefresh(dialog_window);  
+}
+
+void dialog::Destroy(){
+    del_panel(dialog_panel);
 }

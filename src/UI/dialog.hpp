@@ -10,7 +10,7 @@ using namespace std;
 
 class dialog {
 
-    private:
+    protected:
 
         //Set "q" as default key to close dialog
         int close_key = 113;
@@ -44,6 +44,9 @@ class dialog {
 
         //Custom close_key
         void set_close_key(int new_key);
+
+        //Destroy
+        void Destroy();
 
 };
 

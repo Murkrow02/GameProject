@@ -321,6 +321,30 @@ Entities/foe.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/Entities/foe.cpp.s
 .PHONY : Entities/foe.cpp.s
 
+Entities/food.o: Entities/food.cpp.o
+.PHONY : Entities/food.o
+
+# target to build an object file
+Entities/food.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/Entities/food.cpp.o
+.PHONY : Entities/food.cpp.o
+
+Entities/food.i: Entities/food.cpp.i
+.PHONY : Entities/food.i
+
+# target to preprocess a source file
+Entities/food.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/Entities/food.cpp.i
+.PHONY : Entities/food.cpp.i
+
+Entities/food.s: Entities/food.cpp.s
+.PHONY : Entities/food.s
+
+# target to generate assembly for a file
+Entities/food.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/Entities/food.cpp.s
+.PHONY : Entities/food.cpp.s
+
 Entities/player.o: Entities/player.cpp.o
 .PHONY : Entities/player.o
 
@@ -489,6 +513,30 @@ UI/dialog.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/UI/dialog.cpp.s
 .PHONY : UI/dialog.cpp.s
 
+UI/itemselector.o: UI/itemselector.cpp.o
+.PHONY : UI/itemselector.o
+
+# target to build an object file
+UI/itemselector.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/UI/itemselector.cpp.o
+.PHONY : UI/itemselector.cpp.o
+
+UI/itemselector.i: UI/itemselector.cpp.i
+.PHONY : UI/itemselector.i
+
+# target to preprocess a source file
+UI/itemselector.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/UI/itemselector.cpp.i
+.PHONY : UI/itemselector.cpp.i
+
+UI/itemselector.s: UI/itemselector.cpp.s
+.PHONY : UI/itemselector.s
+
+# target to generate assembly for a file
+UI/itemselector.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/UI/itemselector.cpp.s
+.PHONY : UI/itemselector.cpp.s
+
 UI/message.o: UI/message.cpp.o
 .PHONY : UI/message.o
 
@@ -594,6 +642,9 @@ help:
 	@echo "... Entities/foe.o"
 	@echo "... Entities/foe.i"
 	@echo "... Entities/foe.s"
+	@echo "... Entities/food.o"
+	@echo "... Entities/food.i"
+	@echo "... Entities/food.s"
 	@echo "... Entities/player.o"
 	@echo "... Entities/player.i"
 	@echo "... Entities/player.s"
@@ -615,6 +666,9 @@ help:
 	@echo "... UI/dialog.o"
 	@echo "... UI/dialog.i"
 	@echo "... UI/dialog.s"
+	@echo "... UI/itemselector.o"
+	@echo "... UI/itemselector.i"
+	@echo "... UI/itemselector.s"
 	@echo "... UI/message.o"
 	@echo "... UI/message.i"
 	@echo "... UI/message.s"

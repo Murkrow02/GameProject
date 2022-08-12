@@ -21,6 +21,8 @@ class Player : public Entity
         virtual void Draw();
         void Damage();
 
+        // weapons
+        vector<Weapon> weapons;
         void setWeapon(Weapon *_weapon);
         
     private:

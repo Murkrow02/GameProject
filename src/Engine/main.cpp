@@ -66,15 +66,17 @@ int main(){
     gameObjects.insert( &dummy );
 
     // do not wait for getch() (otherwhise the following loop will stop)
-    nodelay(stdscr, TRUE);
+    
 
-    //shop a = shop();
+    shop a = shop();
+    a.show();
     //a.wait_close.wait();
 
     // welcome message
     message test = message("BENVENUTO!","Puoi muoverti usando i tasti WASD e sparare usando le frecce");
     test.wait_close.wait();
 
+    nodelay(stdscr, TRUE);
 
     // main loop
     while (true){
