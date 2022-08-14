@@ -129,6 +129,30 @@ GameProject2/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/build
 .PHONY : GameProject2/fast
 
+Engine/gameobject.o: Engine/gameobject.cpp.o
+.PHONY : Engine/gameobject.o
+
+# target to build an object file
+Engine/gameobject.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/Engine/gameobject.cpp.o
+.PHONY : Engine/gameobject.cpp.o
+
+Engine/gameobject.i: Engine/gameobject.cpp.i
+.PHONY : Engine/gameobject.i
+
+# target to preprocess a source file
+Engine/gameobject.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/Engine/gameobject.cpp.i
+.PHONY : Engine/gameobject.cpp.i
+
+Engine/gameobject.s: Engine/gameobject.cpp.s
+.PHONY : Engine/gameobject.s
+
+# target to generate assembly for a file
+Engine/gameobject.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/Engine/gameobject.cpp.s
+.PHONY : Engine/gameobject.cpp.s
+
 Engine/main.o: Engine/main.cpp.o
 .PHONY : Engine/main.o
 
@@ -225,6 +249,30 @@ Engine/room.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/Engine/room.cpp.s
 .PHONY : Engine/room.cpp.s
 
+Entities/artifact.o: Entities/artifact.cpp.o
+.PHONY : Entities/artifact.o
+
+# target to build an object file
+Entities/artifact.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/Entities/artifact.cpp.o
+.PHONY : Entities/artifact.cpp.o
+
+Entities/artifact.i: Entities/artifact.cpp.i
+.PHONY : Entities/artifact.i
+
+# target to preprocess a source file
+Entities/artifact.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/Entities/artifact.cpp.i
+.PHONY : Entities/artifact.cpp.i
+
+Entities/artifact.s: Entities/artifact.cpp.s
+.PHONY : Entities/artifact.s
+
+# target to generate assembly for a file
+Entities/artifact.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/Entities/artifact.cpp.s
+.PHONY : Entities/artifact.cpp.s
+
 Entities/bullet.o: Entities/bullet.cpp.o
 .PHONY : Entities/bullet.o
 
@@ -248,30 +296,6 @@ Entities/bullet.s: Entities/bullet.cpp.s
 Entities/bullet.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/Entities/bullet.cpp.s
 .PHONY : Entities/bullet.cpp.s
-
-Entities/dummy.o: Entities/dummy.cpp.o
-.PHONY : Entities/dummy.o
-
-# target to build an object file
-Entities/dummy.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/Entities/dummy.cpp.o
-.PHONY : Entities/dummy.cpp.o
-
-Entities/dummy.i: Entities/dummy.cpp.i
-.PHONY : Entities/dummy.i
-
-# target to preprocess a source file
-Entities/dummy.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/Entities/dummy.cpp.i
-.PHONY : Entities/dummy.cpp.i
-
-Entities/dummy.s: Entities/dummy.cpp.s
-.PHONY : Entities/dummy.s
-
-# target to generate assembly for a file
-Entities/dummy.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/Entities/dummy.cpp.s
-.PHONY : Entities/dummy.cpp.s
 
 Entities/entity.o: Entities/entity.cpp.o
 .PHONY : Entities/entity.o
@@ -369,6 +393,30 @@ Entities/player.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/Entities/player.cpp.s
 .PHONY : Entities/player.cpp.s
 
+Entities/vendor.o: Entities/vendor.cpp.o
+.PHONY : Entities/vendor.o
+
+# target to build an object file
+Entities/vendor.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/Entities/vendor.cpp.o
+.PHONY : Entities/vendor.cpp.o
+
+Entities/vendor.i: Entities/vendor.cpp.i
+.PHONY : Entities/vendor.i
+
+# target to preprocess a source file
+Entities/vendor.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/Entities/vendor.cpp.i
+.PHONY : Entities/vendor.cpp.i
+
+Entities/vendor.s: Entities/vendor.cpp.s
+.PHONY : Entities/vendor.s
+
+# target to generate assembly for a file
+Entities/vendor.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/Entities/vendor.cpp.s
+.PHONY : Entities/vendor.cpp.s
+
 Entities/weapon.o: Entities/weapon.cpp.o
 .PHONY : Entities/weapon.o
 
@@ -465,30 +513,6 @@ Tools/utils.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/Tools/utils.cpp.s
 .PHONY : Tools/utils.cpp.s
 
-UI/alert.o: UI/alert.cpp.o
-.PHONY : UI/alert.o
-
-# target to build an object file
-UI/alert.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/UI/alert.cpp.o
-.PHONY : UI/alert.cpp.o
-
-UI/alert.i: UI/alert.cpp.i
-.PHONY : UI/alert.i
-
-# target to preprocess a source file
-UI/alert.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/UI/alert.cpp.i
-.PHONY : UI/alert.cpp.i
-
-UI/alert.s: UI/alert.cpp.s
-.PHONY : UI/alert.s
-
-# target to generate assembly for a file
-UI/alert.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/UI/alert.cpp.s
-.PHONY : UI/alert.cpp.s
-
 UI/dialog.o: UI/dialog.cpp.o
 .PHONY : UI/dialog.o
 
@@ -512,6 +536,30 @@ UI/dialog.s: UI/dialog.cpp.s
 UI/dialog.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/UI/dialog.cpp.s
 .PHONY : UI/dialog.cpp.s
+
+UI/inventory.o: UI/inventory.cpp.o
+.PHONY : UI/inventory.o
+
+# target to build an object file
+UI/inventory.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/UI/inventory.cpp.o
+.PHONY : UI/inventory.cpp.o
+
+UI/inventory.i: UI/inventory.cpp.i
+.PHONY : UI/inventory.i
+
+# target to preprocess a source file
+UI/inventory.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/UI/inventory.cpp.i
+.PHONY : UI/inventory.cpp.i
+
+UI/inventory.s: UI/inventory.cpp.s
+.PHONY : UI/inventory.s
+
+# target to generate assembly for a file
+UI/inventory.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/UI/inventory.cpp.s
+.PHONY : UI/inventory.cpp.s
 
 UI/itemselector.o: UI/itemselector.cpp.o
 .PHONY : UI/itemselector.o
@@ -618,6 +666,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... GameProject2"
+	@echo "... Engine/gameobject.o"
+	@echo "... Engine/gameobject.i"
+	@echo "... Engine/gameobject.s"
 	@echo "... Engine/main.o"
 	@echo "... Engine/main.i"
 	@echo "... Engine/main.s"
@@ -630,12 +681,12 @@ help:
 	@echo "... Engine/room.o"
 	@echo "... Engine/room.i"
 	@echo "... Engine/room.s"
+	@echo "... Entities/artifact.o"
+	@echo "... Entities/artifact.i"
+	@echo "... Entities/artifact.s"
 	@echo "... Entities/bullet.o"
 	@echo "... Entities/bullet.i"
 	@echo "... Entities/bullet.s"
-	@echo "... Entities/dummy.o"
-	@echo "... Entities/dummy.i"
-	@echo "... Entities/dummy.s"
 	@echo "... Entities/entity.o"
 	@echo "... Entities/entity.i"
 	@echo "... Entities/entity.s"
@@ -648,6 +699,9 @@ help:
 	@echo "... Entities/player.o"
 	@echo "... Entities/player.i"
 	@echo "... Entities/player.s"
+	@echo "... Entities/vendor.o"
+	@echo "... Entities/vendor.i"
+	@echo "... Entities/vendor.s"
 	@echo "... Entities/weapon.o"
 	@echo "... Entities/weapon.i"
 	@echo "... Entities/weapon.s"
@@ -660,12 +714,12 @@ help:
 	@echo "... Tools/utils.o"
 	@echo "... Tools/utils.i"
 	@echo "... Tools/utils.s"
-	@echo "... UI/alert.o"
-	@echo "... UI/alert.i"
-	@echo "... UI/alert.s"
 	@echo "... UI/dialog.o"
 	@echo "... UI/dialog.i"
 	@echo "... UI/dialog.s"
+	@echo "... UI/inventory.o"
+	@echo "... UI/inventory.i"
+	@echo "... UI/inventory.s"
 	@echo "... UI/itemselector.o"
 	@echo "... UI/itemselector.i"
 	@echo "... UI/itemselector.s"

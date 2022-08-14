@@ -5,7 +5,7 @@
 #include "../Tools/GameObjectList.hpp"
 #include "../Entities/bullet.cpp"
 #include "weapon.cpp"
-#include "../UI/shop.hpp"
+#include "../UI/inventory.hpp"
 
 
 using namespace std;
@@ -14,16 +14,18 @@ Player::Player(int _y, int _x, GameObjectList *game_objects) : Entity{ _y,  _x, 
 {
 
   // set default weapon
-  Weapon *testWeapon = new Weapon("ARMA SCARSA", 10, 4, 60, 30, 0);
-  setWeapon(testWeapon);
+  Weapon testWeapon("ARMA SCARSA", 10, 4, 60, 30, 0);
+  weapons.push_back(testWeapon);
+  setWeapon(&weapons.back());
 
   Draw();
 }
   
   void Player::setWeapon(Weapon *_weapon){
+    
     weapon = _weapon;
 
-    // update statsù
+    // update stats
     gameItems->gameStats->set_max_ammo(weapon->Ammo);
     gameItems->gameStats->reset_ammo();
     gameItems->gameStats->set_weapon_name(weapon->Name);
@@ -171,13 +173,19 @@ void Player::Reload(){
 
 }
 
+void Player::showInventory()
+{
+  inventory inv = inventory(gameItems);
+  inv.show();
+}
+
 void Player::getmv()
 {
 
     // read user input
-    int c = getch();
+    keyPressed = getch();
     
-    switch(c) {
+    switch(keyPressed) {
 
       // shoot
       case KEY_UP:
@@ -216,11 +224,11 @@ void Player::getmv()
        Reload();
        break;
 
-      // // SHOP (debug only)
-      // case 109: //M
-        
-      //   break;
-      
+      // inventory
+      case 109: //M
+        showInventory();
+        break;
+
       default:
           break;
     }

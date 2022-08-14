@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include "../Engine/map.h"
 #include "../UI/stats.hpp"
-#include "../Engine/gameobject.cpp"
+#include "../Engine/gameobject.hpp"
 
 class GameObjectList; //this instead of header because of circular dependency compile error
 
@@ -11,8 +11,8 @@ class Entity : public GameObject
 {
     public:
         Entity(int _y, int _x, char display_char, int _life, GameObjectList *_gameItems);
-        char displayChar;
         virtual void Damage(); // life--
+        
 
     protected:
 
@@ -36,6 +36,5 @@ class Entity : public GameObject
 
         //game stats
         int life;
-        GameObjectList *gameItems;
 
 };

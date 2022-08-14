@@ -26,14 +26,14 @@ void Entity::DoFrame(){
 
 }
 
+void Entity::Damage(){
+    life--;
+}
+
 void Entity::Destroy()
 {
     mvwaddch(gameItems->gameWindow, y, x, ' ');
     gameItems->remove(this);
-}
-
-void Entity::Damage(){
-    life--;
 }
 
 char Entity::checkCollision(int next_y, int next_x){

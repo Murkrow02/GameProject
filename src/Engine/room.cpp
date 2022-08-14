@@ -2,7 +2,7 @@
 #include <string>
 #include <ncurses.h>
 #include "room.h"
-#include "gameobject.cpp"
+#include "gameobject.hpp"
 
 using namespace std;
 

@@ -5,7 +5,7 @@
 #include "../Tools/utils.hpp"
 #include "ncurses.h"
 #include "panel.h"
-
+#include <string>
 using namespace std;
 
 class dialog {
@@ -16,7 +16,7 @@ class dialog {
         int close_key = 113;
 
         //First and main line of the dialog
-        char title[50];
+        string title;
 
         //Padding from game window borders
         int padding = 10;
@@ -37,7 +37,7 @@ class dialog {
 
     public:
 
-        dialog(char title[]);
+        dialog(string title);
 
         //Wait for current dialog close
         std::future<void> wait_close;

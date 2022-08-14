@@ -2,14 +2,14 @@
 #include "ncurses.h"
 #include "panel.h"
 #include "../Tools/utils.hpp"
-#include <string.h>
+#include <string>
 #include <future>
 
 using namespace std;
 
-dialog::dialog(char title[]){
+dialog::dialog(string title){
 
-    strcpy(this->title, title);
+    this->title = title;
 
     //Draw alert
     draw();
@@ -37,9 +37,9 @@ void dialog::draw(){
     doupdate();
 
     //Insert title
-    int title_len = strlen(title);
+    int title_len = title.length();
     int start_text_title = w/2-(title_len/2);
-    mvwprintw(dialog_window, 0, start_text_title, title);
+    mvwprintw(dialog_window, 0, start_text_title, title.c_str());
     
     //Update text content
     wrefresh(dialog_window);  
@@ -52,10 +52,10 @@ void dialog::set_close_key(int new_key){
 void dialog::show_close_message(){
 
     //Insert bottom text to close
-    char bottom_msg[] = "Premi q per chiudere questa schermata";
-    int bottom_msg_len = strlen(bottom_msg);
+    string bottom_msg = "Premi q per chiudere questa schermata";
+    int bottom_msg_len = bottom_msg.length();
     int start_text_bottom_msg = w/2-(bottom_msg_len/2);
-    mvwprintw(dialog_window, h-1, start_text_bottom_msg, bottom_msg);
+    mvwprintw(dialog_window, h-1, start_text_bottom_msg, bottom_msg.c_str());
     wrefresh(dialog_window);  
 }
 

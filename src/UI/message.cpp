@@ -10,14 +10,14 @@
 
 */
 
-message::message(char title[], char text[]):dialog(title){
+message::message(string title, string message, bool autoClose):dialog(title){
 
 
-    strcpy(this->text, text);
+    this->text = message;
 
     //Calculate how much lines of height to use
     int max_line_len = this->w-(2*padding);
-    int msg_len = strlen(text);
+    int msg_len = text.length();
    
     //Start showing message char by char
     int current_row_len = 0;
@@ -63,13 +63,18 @@ message::message(char title[], char text[]):dialog(title){
         current_row_len++;
     }
 
-    //Async function to create and destroy alert MOVE DOWN
-    wait_close = std::async(std::launch::async, [this,text]
-    { 
+    //Async function to create and destroy alert
+    if(autoClose){
+        std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+        Destroy();
+    }
+    else
+    {
+        wait_close = std::async(std::launch::async, [this]
+                                { 
         //Wait for user to press escape key
         dialog::show_close_message();
         wait_key(close_key);
-        Destroy();
-    });
-   
+        Destroy(); });
+    }
 }

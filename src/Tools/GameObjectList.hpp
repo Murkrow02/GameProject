@@ -1,7 +1,8 @@
 #pragma once
-#include "../Engine/gameobject.cpp"
 #include "../Entities/player.hpp"
 
+
+class GameObject;
 class GameObjectList{
 
     private:

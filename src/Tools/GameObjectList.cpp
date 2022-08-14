@@ -1,5 +1,5 @@
 #include "GameObjectList.hpp"
-#include "../Engine/gameobject.cpp"
+#include "../Engine/gameobject.hpp"
 #include <iostream>
 
 GameObjectList::GameObjectList(){

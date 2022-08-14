@@ -5,12 +5,14 @@
 #include <ncurses.h>
 #include <vector>
 #include "../Tools/ShopItem.hpp"
+#include "../Tools/GameObjectList.hpp"
 
 using namespace std;
 
-itemselector::itemselector(char title[], bool show_price) : dialog(title){
+itemselector::itemselector(char title[], bool show_price, GameObjectList *game_items) : dialog(title){
 
     showPrice = show_price;
+    gameItems = game_items;
 }
 
 int padding = 2;
@@ -46,36 +48,48 @@ void itemselector::printItem(int index){
 
 void itemselector::show(){
 
+    wclear(dialog_window);
+
     // resize window based on items count
-    int itemsCount = static_cast<int>(shopItems.size());
-    dialog::h = itemsCount+2; // boh
+    itemsCount = static_cast<int>(shopItems.size());
+    dialog::h = itemsCount + 2; // boh
     dialog::draw();
+
+    // no elements, no need to show shop
+    if(itemsCount < 1)
+    {
+        Destroy();
+        return;
+    }
 
     // Print all elements
     for (int i = 0; i < itemsCount; i++)
     {
-        // highlights the first item
+        // highlights the first item if first render
         if (i == 0)
-            wattron(dialog_window, A_STANDOUT); 
+            wattron(dialog_window, A_STANDOUT);
         else
             wattroff(dialog_window, A_STANDOUT);
 
         // insert item in menu
         printItem(i);
+        wattroff(dialog_window, A_STANDOUT);
     }
 
     // update the terminal screen
-    wrefresh(dialog_window); 
+    wrefresh(dialog_window);
     // enable keypad input for the window.
-    keypad(dialog_window, TRUE); 
+    keypad(dialog_window, TRUE);
     // hide the default screen cursor.
-    curs_set(0);     
+    curs_set(0);
+
+    dialog::show_close_message();
 
     // get the input
     int index = 0;
     int ch = 0;
 
-    while (ch != 'q')
+    while (ch != 'q' && ch != custom_keys::Enter)
     {
         // get input from user
         ch = wgetch(dialog_window);
@@ -96,7 +110,7 @@ void itemselector::show(){
             break;
 
         case custom_keys::Enter:
-            //itemSelected(index);
+            itemSelected(index);
             break;
         }
        
@@ -106,8 +120,11 @@ void itemselector::show(){
         wattroff(dialog_window, A_STANDOUT);
     }
 
-    // do stuff on player
 
-    Destroy();
+    // exit
+    if(ch == 'q')
+        Destroy();
+    else if (ch == custom_keys::Enter)
+        show(); // repeat
 }
 

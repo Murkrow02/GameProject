@@ -1,6 +1,11 @@
 [
 {
   "directory": "/home/murkrow/Repos/GameProject/src/build",
+  "command": "/usr/bin/g++   -g -std=gnu++14 -o CMakeFiles/GameProject2.dir/Engine/gameobject.cpp.o -c /home/murkrow/Repos/GameProject/src/Engine/gameobject.cpp",
+  "file": "/home/murkrow/Repos/GameProject/src/Engine/gameobject.cpp"
+},
+{
+  "directory": "/home/murkrow/Repos/GameProject/src/build",
   "command": "/usr/bin/g++   -g -std=gnu++14 -o CMakeFiles/GameProject2.dir/Tools/GameObjectList.cpp.o -c /home/murkrow/Repos/GameProject/src/Tools/GameObjectList.cpp",
   "file": "/home/murkrow/Repos/GameProject/src/Tools/GameObjectList.cpp"
 },
@@ -31,8 +36,8 @@
 },
 {
   "directory": "/home/murkrow/Repos/GameProject/src/build",
-  "command": "/usr/bin/g++   -g -std=gnu++14 -o CMakeFiles/GameProject2.dir/Entities/dummy.cpp.o -c /home/murkrow/Repos/GameProject/src/Entities/dummy.cpp",
-  "file": "/home/murkrow/Repos/GameProject/src/Entities/dummy.cpp"
+  "command": "/usr/bin/g++   -g -std=gnu++14 -o CMakeFiles/GameProject2.dir/Entities/vendor.cpp.o -c /home/murkrow/Repos/GameProject/src/Entities/vendor.cpp",
+  "file": "/home/murkrow/Repos/GameProject/src/Entities/vendor.cpp"
 },
 {
   "directory": "/home/murkrow/Repos/GameProject/src/build",
@@ -46,6 +51,11 @@
 },
 {
   "directory": "/home/murkrow/Repos/GameProject/src/build",
+  "command": "/usr/bin/g++   -g -std=gnu++14 -o CMakeFiles/GameProject2.dir/Entities/artifact.cpp.o -c /home/murkrow/Repos/GameProject/src/Entities/artifact.cpp",
+  "file": "/home/murkrow/Repos/GameProject/src/Entities/artifact.cpp"
+},
+{
+  "directory": "/home/murkrow/Repos/GameProject/src/build",
   "command": "/usr/bin/g++   -g -std=gnu++14 -o CMakeFiles/GameProject2.dir/Entities/food.cpp.o -c /home/murkrow/Repos/GameProject/src/Entities/food.cpp",
   "file": "/home/murkrow/Repos/GameProject/src/Entities/food.cpp"
 },
@@ -56,13 +66,13 @@
 },
 {
   "directory": "/home/murkrow/Repos/GameProject/src/build",
-  "command": "/usr/bin/g++   -g -std=gnu++14 -o CMakeFiles/GameProject2.dir/UI/alert.cpp.o -c /home/murkrow/Repos/GameProject/src/UI/alert.cpp",
-  "file": "/home/murkrow/Repos/GameProject/src/UI/alert.cpp"
+  "command": "/usr/bin/g++   -g -std=gnu++14 -o CMakeFiles/GameProject2.dir/UI/dialog.cpp.o -c /home/murkrow/Repos/GameProject/src/UI/dialog.cpp",
+  "file": "/home/murkrow/Repos/GameProject/src/UI/dialog.cpp"
 },
 {
   "directory": "/home/murkrow/Repos/GameProject/src/build",
-  "command": "/usr/bin/g++   -g -std=gnu++14 -o CMakeFiles/GameProject2.dir/UI/dialog.cpp.o -c /home/murkrow/Repos/GameProject/src/UI/dialog.cpp",
-  "file": "/home/murkrow/Repos/GameProject/src/UI/dialog.cpp"
+  "command": "/usr/bin/g++   -g -std=gnu++14 -o CMakeFiles/GameProject2.dir/UI/inventory.cpp.o -c /home/murkrow/Repos/GameProject/src/UI/inventory.cpp",
+  "file": "/home/murkrow/Repos/GameProject/src/UI/inventory.cpp"
 },
 {
   "directory": "/home/murkrow/Repos/GameProject/src/build",

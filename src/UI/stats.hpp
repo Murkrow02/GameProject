@@ -40,6 +40,7 @@ class Stats {
         void set_max_ammo(int max);
         void reloading(bool status);
         int ammo;
+
 };
 
 

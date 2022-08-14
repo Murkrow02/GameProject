@@ -1,7 +1,7 @@
 #include "ncurses.h"
 #include "stats.hpp"
 #include <string> 
-#include "../Engine/gameobject.cpp"
+#include "../Engine/gameobject.hpp"
 
 Stats::Stats(int x, int y){
 

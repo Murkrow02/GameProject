@@ -10,8 +10,10 @@
 #include "../UI/message.hpp"
 #include "../UI/shop.hpp"
 #include "../Tools/utils.hpp"
-#include "gameobject.cpp"
+#include "gameobject.hpp"
 #include "../Tools/GameObjectList.hpp"
+#include "../Entities/vendor.cpp"
+#include "../Entities/artifact.hpp"
 
 using namespace std;
 
@@ -59,21 +61,24 @@ int main(){
     // dummy spawn
     Dummy dummy(1,1, &gameObjects);
 
+    // shop spawn
+    Vendor vendor(1,10, &gameObjects);
+
     wrefresh(game_window);
 
     // populate initial game objects
     gameObjects.player = &player;
     gameObjects.insert( &dummy );
+    gameObjects.insert( &vendor );
 
     // do not wait for getch() (otherwhise the following loop will stop)
     
-
-    shop a = shop();
-    a.show();
-    //a.wait_close.wait();
+    // SHOP
+    //shop a = shop(&gameObjects);
+    //a.show();
 
     // welcome message
-    message test = message("BENVENUTO!","Puoi muoverti usando i tasti WASD e sparare usando le frecce");
+    message test = message("BENVENUTO!","Puoi muoverti usando i tasti WASD e sparare usando le frecce, premi R per ricaricare, il tasto M per aprire l'inventario e premi E vicino ad un oggetto di colore verde per interagire");
     test.wait_close.wait();
 
     nodelay(stdscr, TRUE);

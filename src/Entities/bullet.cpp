@@ -1,4 +1,4 @@
-#include "../Engine/gameobject.cpp"
+#include "../Engine/gameobject.hpp"
 #include "entity.hpp"
 #include "foe.cpp"
 #include "../Tools/GameObjectList.hpp"

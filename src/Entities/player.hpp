@@ -2,7 +2,7 @@
 #include "../Engine/map.h"
 #include <ncurses.h>
 #include "entity.hpp"
-#include "../Engine/gameobject.cpp"
+#include "../Engine/gameobject.hpp"
 #include "../UI/stats.hpp"
 #include "weapon.cpp"
 
@@ -21,9 +21,11 @@ class Player : public Entity
         virtual void Draw();
         void Damage();
 
+        int keyPressed = 0; // last key pressed by user
+        
         // weapons
-        vector<Weapon> weapons;
         void setWeapon(Weapon *_weapon);
+        vector<Weapon> weapons;
         
     private:
     
@@ -39,4 +41,6 @@ class Player : public Entity
 
         // delay stuff
         int next_bullet_delay = 0, reload_delay = 0;
+
+        void showInventory();
 };
