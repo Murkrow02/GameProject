@@ -14,6 +14,7 @@
 #include "../Tools/GameObjectList.hpp"
 #include "../Entities/vendor.cpp"
 #include "../Entities/artifact.hpp"
+#include "../Entities/fruit.cpp"
 
 using namespace std;
 
@@ -64,23 +65,22 @@ int main(){
     // shop spawn
     Vendor vendor(1,10, &gameObjects);
 
+    // apple spawn
+    Apple apple(30,30,&gameObjects);
+
     wrefresh(game_window);
 
     // populate initial game objects
     gameObjects.player = &player;
     gameObjects.insert( &dummy );
     gameObjects.insert( &vendor );
-
-    // do not wait for getch() (otherwhise the following loop will stop)
-    
-    // SHOP
-    //shop a = shop(&gameObjects);
-    //a.show();
+    gameObjects.insert( &apple );
 
     // welcome message
     message test = message("BENVENUTO!","Puoi muoverti usando i tasti WASD e sparare usando le frecce, premi R per ricaricare, il tasto M per aprire l'inventario e premi E vicino ad un oggetto di colore verde per interagire");
     test.wait_close.wait();
 
+    // do not wait for getch() (otherwhise the following loop will stop)
     nodelay(stdscr, TRUE);
 
     // main loop

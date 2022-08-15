@@ -19,6 +19,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/GameProject2.dir/Entities/foe.cpp.o.d"
   "CMakeFiles/GameProject2.dir/Entities/food.cpp.o"
   "CMakeFiles/GameProject2.dir/Entities/food.cpp.o.d"
+  "CMakeFiles/GameProject2.dir/Entities/fruit.cpp.o"
+  "CMakeFiles/GameProject2.dir/Entities/fruit.cpp.o.d"
   "CMakeFiles/GameProject2.dir/Entities/player.cpp.o"
   "CMakeFiles/GameProject2.dir/Entities/player.cpp.o.d"
   "CMakeFiles/GameProject2.dir/Entities/vendor.cpp.o"

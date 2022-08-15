@@ -18,6 +18,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/murkrow/Repos/GameProject/src/Entities/entity.cpp" "CMakeFiles/GameProject2.dir/Entities/entity.cpp.o" "gcc" "CMakeFiles/GameProject2.dir/Entities/entity.cpp.o.d"
   "/home/murkrow/Repos/GameProject/src/Entities/foe.cpp" "CMakeFiles/GameProject2.dir/Entities/foe.cpp.o" "gcc" "CMakeFiles/GameProject2.dir/Entities/foe.cpp.o.d"
   "/home/murkrow/Repos/GameProject/src/Entities/food.cpp" "CMakeFiles/GameProject2.dir/Entities/food.cpp.o" "gcc" "CMakeFiles/GameProject2.dir/Entities/food.cpp.o.d"
+  "/home/murkrow/Repos/GameProject/src/Entities/fruit.cpp" "CMakeFiles/GameProject2.dir/Entities/fruit.cpp.o" "gcc" "CMakeFiles/GameProject2.dir/Entities/fruit.cpp.o.d"
   "/home/murkrow/Repos/GameProject/src/Entities/player.cpp" "CMakeFiles/GameProject2.dir/Entities/player.cpp.o" "gcc" "CMakeFiles/GameProject2.dir/Entities/player.cpp.o.d"
   "/home/murkrow/Repos/GameProject/src/Entities/vendor.cpp" "CMakeFiles/GameProject2.dir/Entities/vendor.cpp.o" "gcc" "CMakeFiles/GameProject2.dir/Entities/vendor.cpp.o.d"
   "/home/murkrow/Repos/GameProject/src/Entities/weapon.cpp" "CMakeFiles/GameProject2.dir/Entities/weapon.cpp.o" "gcc" "CMakeFiles/GameProject2.dir/Entities/weapon.cpp.o.d"

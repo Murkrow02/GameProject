@@ -8,6 +8,7 @@
 #define CHAR_DUMMY 'd'
 #define CHAR_BULLET '#'
 #define CHAR_SHOP '@'
+#define CHAR_APPLE 'A'
 
 // LIFE
 #define LIFE_PLAYER 5

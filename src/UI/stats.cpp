@@ -39,6 +39,22 @@ void Stats::gained_life(){
     update_stats();
 }
 
+void Stats::add_life(int amount){
+
+    //Check if reached maximum life
+    if(life+amount > LIFE_PLAYER)
+        life = LIFE_PLAYER; // maximum life
+    else
+        life += amount;
+
+    update_stats();
+}
+
+bool Stats::maxed_life(){
+    return life >= LIFE_PLAYER;
+}
+
+
 void Stats::add_points(int amount){
     points+=amount;
     update_stats();

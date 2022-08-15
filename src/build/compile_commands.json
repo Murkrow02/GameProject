@@ -46,6 +46,11 @@
 },
 {
   "directory": "/home/murkrow/Repos/GameProject/src/build",
+  "command": "/usr/bin/g++   -g -std=gnu++14 -o CMakeFiles/GameProject2.dir/Entities/fruit.cpp.o -c /home/murkrow/Repos/GameProject/src/Entities/fruit.cpp",
+  "file": "/home/murkrow/Repos/GameProject/src/Entities/fruit.cpp"
+},
+{
+  "directory": "/home/murkrow/Repos/GameProject/src/build",
   "command": "/usr/bin/g++   -g -std=gnu++14 -o CMakeFiles/GameProject2.dir/Entities/player.cpp.o -c /home/murkrow/Repos/GameProject/src/Entities/player.cpp",
   "file": "/home/murkrow/Repos/GameProject/src/Entities/player.cpp"
 },

@@ -9,7 +9,7 @@ class Stats {
     private:
 
         //Params
-        int life, maxAmmo , room;
+        int maxAmmo , room;
         bool isReloading;
         string weapon_name;
         
@@ -24,9 +24,11 @@ class Stats {
         Stats (int x, int y);
 
         // life 
+        int life;
         void lost_life();
         void gained_life();
-        void set_life();
+        void add_life(int amount);
+        bool maxed_life();
 
         // points
         void add_points(int amount);

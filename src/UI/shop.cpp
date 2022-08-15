@@ -8,6 +8,7 @@
 #include "../Entities/weapon.cpp"
 #include "../Tools/ShopItem.hpp"
 #include "../Tools/GameObjectList.hpp"
+#include "../Entities/fruit.cpp"
 #include "message.hpp"
 using namespace std;
 
@@ -22,52 +23,61 @@ shop::shop(GameObjectList *game_items) : itemselector("SHOP", true, game_items)
     weapons.push_back(Weapon("Arma forte 5", 20, 10, 2, 1, 300, "Moltissimo forte"));
 
     // HEALING STUFF
+    food.push_back(Apple());
 
     // PUT ALL TOGETHER
-    shopItems.push_back(weapons[0]);
-    shopItems.push_back(weapons[1]);
-    shopItems.push_back(weapons[2]);
-    shopItems.push_back(weapons[3]);
-    shopItems.push_back(weapons[4]);
+    copy(weapons.begin(), weapons.end(), back_inserter(shopItems)); // copy weapons in shopitems
+    copy(food.begin(), food.end(), back_inserter(shopItems)); // copy food in shopitems
+    
 }
 
 // override item selected
 void shop::itemSelected(int index)
 {
+    // check if can buy
+    if (gameItems->gameStats->points < shopItems[index].Price)
+    {
+        // cannot buy
+        string msg = ("Non hai abbastanza punti per comprare " + shopItems[index].Name);
+        message test = message("ATTENZIONE!", msg, true);
+        return;
+    }
 
     // detect if weapon or healing
     int weaponLastIndex = static_cast<int>(weapons.size()) - 1;
     int foodLastIndex = static_cast<int>(food.size()) - 1;
 
+    // user selected a weapon
     if (index <= weaponLastIndex)
     {
+        // add weapon to player's weapons
+        gameItems->player->weapons.push_back(weapons[index]);
 
-        // check if can buy
-        if (gameItems->gameStats->points < weapons[index].Price)
-        {
+        // equip weapon
+        gameItems->player->setWeapon(&gameItems->player->weapons.back());
+
+        // remove from shop
+        weapons.erase(weapons.begin() + index);
+        shopItems.erase(shopItems.begin() + index);
+    }
+    // user selected food
+    else
+    {
+        // check if already max life
+        if(gameItems->gameStats->maxed_life()){
+
             // cannot buy
-            string msg = ("Non hai abbastanza punti per comprare " + weapons[index].Name);
+            string msg = ("La tua vita e' gia' al massimo");
             message test = message("ATTENZIONE!", msg, true);
             return;
         }
-        else
-        {
-            // can buy
-            gameItems->gameStats->add_points(-(weapons[index].Price)); // subtract points
 
-            // add weapon to player's weapons
-            gameItems->player->weapons.push_back(weapons[index]);
+        int foodIndex = index-weaponLastIndex-1;
 
-            // equip weapon
-            gameItems->player->setWeapon(&gameItems->player->weapons.back());
-
-            // remove from shop
-            weapons.erase(weapons.begin() + index);
-            shopItems.erase(shopItems.begin() + index);
-        }
+        // add life to user
+        gameItems->gameStats->add_life(food[foodIndex].HealingAmount);
     }
-    else
-    {
-        // select food
-    }
+
+    // subtract points
+    gameItems->gameStats->add_points(-(shopItems[index].Price)); // subtract points
 }
