@@ -1,5 +1,6 @@
 #pragma once
 #include "../Entities/player.hpp"
+#include "../Engine/minimap.h"
 
 
 class GameObject;
@@ -21,6 +22,7 @@ class GameObjectList{
         Stats* gameStats;
         WINDOW* gameWindow;
         Map* gameMap;
+        Minimap* gameMinimap;
 
         void insert(GameObject* item); // add new item
         void remove (GameObject* item); // remove item

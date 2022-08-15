@@ -11,7 +11,7 @@ class Minimap{
         // function
         Minimap(int _roomW, int _roomH, int _posX, int _posY);
         void drawRoom(int startX, int startY, int character);
-        void drawMinimap(Map map);
+        void drawMinimap(Map map, int highId);
         void highRoom(int id, Map map);
         void createRoom(int room_id, WINDOW * playerwindow);
         // variables

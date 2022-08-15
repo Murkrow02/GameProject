@@ -90,7 +90,7 @@ vector<vector<int>> Map::generateMap(WINDOW * playerwindow){
             x = (rand()%options) + 1;
             x--;
             // updates two-dimensional array with new room
-            floor[possibleCoords[x].first][possibleCoords[x].second] = nRooms+1;
+            floor[possibleCoords[x].first][possibleCoords[x].second] = nRooms;
             // updates room coordinates with new room
             rooms.push_back(Room(nRooms, "default", possibleCoords[x], width, height));
             nRooms++; 

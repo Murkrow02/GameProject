@@ -69,6 +69,10 @@ Player::Player(int _y, int _x, GameObjectList *game_objects) : Entity{ _y,  _x, 
       // check game over
       if(life <= 0)
         /// TODO: change
+        initscr();
+        mvaddstr(10, 10, "Hello, world");
+        refresh();
+        endwin();
         exit(1); 
     }
   }
@@ -107,6 +111,7 @@ Player::Player(int _y, int _x, GameObjectList *game_objects) : Entity{ _y,  _x, 
     if (x <= 1)
     {
       roomId = gameItems->gameMap->floor[roomCords.first][roomCords.second - 1];
+      
 
       // spawn right
       x = xMax - 2;
@@ -142,6 +147,7 @@ Player::Player(int _y, int _x, GameObjectList *game_objects) : Entity{ _y,  _x, 
 
     // create new room
     gameItems->gameMap->createRoom(roomId, gameItems->gameWindow);
+    gameItems->gameMinimap->drawMinimap(*(gameItems->gameMap), roomId);
     }
     
     return collidedChar;
