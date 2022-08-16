@@ -10,6 +10,8 @@ Entity::Entity(int _y, int _x, char display_char,  int _life, GameObjectList *_g
     // set attributes
     y = _y;
     x = _x;
+    oldX = _x;
+    oldY = _y;
     roomId = 0;
     displayChar = display_char;
     life = _life;
@@ -49,6 +51,8 @@ void Entity::mvdown(){
     if(nextSpot == ' ')
     {
         mvwaddch(gameItems->gameWindow, y, x, ' ');
+        oldY = y;
+        direction = 'd';
         y = nextY;
     }
         
@@ -62,6 +66,8 @@ void Entity::mvup(){
     if(nextSpot == ' ')
     {
         mvwaddch(gameItems->gameWindow, y, x, ' ');
+        oldY = y;
+        direction = 'u';
         y = nextY;
     }
 }
@@ -74,6 +80,8 @@ void Entity::mvleft(){
     if(nextSpot == ' ')
     {
         mvwaddch(gameItems->gameWindow, y, x, ' ');
+        oldX = x;
+        direction = 'l';
         x = nextX;
     }
 }
@@ -86,6 +94,8 @@ void Entity::mvright(){
     if(nextSpot == ' ')
     {
         mvwaddch(gameItems->gameWindow, y, x, ' ');
+        oldX = x;
+        direction = 'r';
         x = nextX;
     }
 }

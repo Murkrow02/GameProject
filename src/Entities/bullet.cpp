@@ -2,6 +2,7 @@
 #include "entity.hpp"
 #include "foe.cpp"
 #include "../Tools/GameObjectList.hpp"
+#include "string"
 
 class Bullet : public Foe
 {
@@ -24,14 +25,18 @@ class Bullet : public Foe
                 return;
             }
             // check if contact with player
-            else if(x == gameItems->player->x && y == gameItems->player->y)
+            else if(!damageFoe)
             {
-                // damage player
-                gameItems->player->Damage();
+                // check contact with player or passed through player
+                if((gameItems->player->x == x && gameItems->player->y == y) || EntityPassedThroughBullet(gameItems->player))
+                {
+                    // damage player
+                    gameItems->player->Damage();
 
-                // bullet died
-                Destroy();
-                return;
+                    // bullet died
+                    Destroy();
+                    return;
+                }
             }
             // check if this bullet should damage foe
             else if(damageFoe){
@@ -45,6 +50,16 @@ class Bullet : public Foe
                     Destroy();
                     return;
                 }
+                else
+                {
+                    // check if bullet passed through enemy
+                    Entity *passedThrough = gameItems->findEntityAtPos(oldX, oldY, this);
+                    if(passedThrough != NULL && EntityPassedThroughBullet(passedThrough)){
+                        passedThrough->Damage();
+                        Destroy();
+                        return;
+                    }
+                }
             }
 
             // check if bullet reached room walls
@@ -55,6 +70,7 @@ class Bullet : public Foe
             }
 
             // update how much the bullet did travel
+            oldX = x; oldY = y;
             x = nextX; y = nextY;
             travelledDistance++;
         }
@@ -77,9 +93,28 @@ class Bullet : public Foe
             incY = inc_y;
             damageFoe = damage_foe;
             nextX = x; nextY = y;
+
+            // detect bullet hit direction
+            if(inc_x>0 && inc_y==0)
+                hitDirection = 'l';
+            else if(inc_x < 0 && inc_y==0)
+                hitDirection = 'r';
+            else if(inc_y > 0 && inc_x==0)
+                hitDirection = 'u';
+            else if(inc_y < 0 && inc_x==0)
+                hitDirection = 'd';
+            else hitDirection = 'n';
+        }
+
+        // this is used because if entity moves a step forward to the bullet it gets no damage because never lands on bullet spot        
+        bool EntityPassedThroughBullet(Entity* entity){
+
+            // check if player new direction is equal to the bullet hit direction (passed through bullet)
+            return entity->direction == hitDirection;
         }
 
     private:
+        char hitDirection; // if player is coming from right, is hit by bullet coming from left etc.
         int range;
         int incX, incY;
         int nextX, nextY;

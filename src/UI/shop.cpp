@@ -15,12 +15,23 @@ using namespace std;
 shop::shop(GameObjectList *game_items) : itemselector("SHOP", true, game_items)
 {
 
-    // WEAPONS TODO: check if already bought
+    // WEAPONS
     weapons.push_back(Weapon("Arma forte", 10, 10, 5, 10, 0, "Molto forte"));
     weapons.push_back(Weapon("Arma forte 2", 20, 10, 2, 1, 300, "Moltissimo forte"));
     weapons.push_back(Weapon("Arma forte 3", 20, 10, 2, 1, 300, "Moltissimo forte"));
     weapons.push_back(Weapon("Arma forte 4", 20, 10, 2, 1, 100, "Moltissimo forte"));
     weapons.push_back(Weapon("Arma forte 5", 20, 10, 2, 1, 300, "Moltissimo forte"));
+
+    // REMOVE WEAPONS THAT USER ALREADY HAVE
+    for (int i = 0; i < weapons.size(); i++) 
+    {
+        for (int j = 0; j < gameItems->player->weapons.size(); j++) 
+        {
+            // player already have that weapon, no need to display in shop
+            if(weapons[i].Name == gameItems->player->weapons[j].Name)
+                weapons.erase(weapons.begin() + i);
+        }
+    }
 
     // HEALING STUFF
     food.push_back(Apple());
@@ -47,6 +58,9 @@ void shop::itemSelected(int index)
     int weaponLastIndex = static_cast<int>(weapons.size()) - 1;
     int foodLastIndex = static_cast<int>(food.size()) - 1;
 
+    // subtract points
+    gameItems->gameStats->add_points(-(shopItems[index].Price));
+    
     // user selected a weapon
     if (index <= weaponLastIndex)
     {
@@ -77,7 +91,4 @@ void shop::itemSelected(int index)
         // add life to user
         gameItems->gameStats->add_life(food[foodIndex].HealingAmount);
     }
-
-    // subtract points
-    gameItems->gameStats->add_points(-(shopItems[index].Price)); // subtract points
 }

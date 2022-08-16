@@ -12,7 +12,8 @@ class Entity : public GameObject
     public:
         Entity(int _y, int _x, char display_char, int _life, GameObjectList *_gameItems);
         virtual void Damage(); // life--
-        
+        char direction = ' '; // last direction taken by this entity
+        int oldX, oldY;
 
     protected:
 
