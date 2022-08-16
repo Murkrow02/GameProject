@@ -19,8 +19,8 @@
 using namespace std;
 
 void debugInfo(Player player, Map map){
-    move(0, 0);
-    clrtoeol();
+    //move(0, 0);
+    // clrtoeol();
     //printw("%d", player.x);
     //printw("  %d", player.y);
     //printw("\nroomID : %d", player.roomId);
@@ -45,9 +45,9 @@ int main(){
     
     // map - minimap setup
     Map map; 
-    Minimap minimap(4, 2,(room_width - 20), 5);
+    Minimap minimap(4, 2,(room_width - 40), 5);
     vector<vector<int>> floor = map.generateMap(game_window);
-    minimap.drawMinimap(map);
+    minimap.drawMinimap(map, 0);
     map.createRoom(0, game_window);
 
 
@@ -55,6 +55,7 @@ int main(){
     gameObjects.gameStats = &game_stats;
     gameObjects.gameWindow = game_window;
     gameObjects.gameMap = &map;
+    gameObjects.gameMinimap = &minimap;
 
     // player setup
     Player player((room_height / 2), (room_width / 2), &gameObjects); // player creation
@@ -77,8 +78,8 @@ int main(){
     gameObjects.insert( &apple );
 
     // welcome message
-    message test = message("BENVENUTO!","Puoi muoverti usando i tasti WASD e sparare usando le frecce, premi R per ricaricare, il tasto M per aprire l'inventario e premi E vicino ad un oggetto di colore verde per interagire");
-    test.wait_close.wait();
+    //message test = message("BENVENUTO!","Puoi muoverti usando i tasti WASD e sparare usando le frecce, premi R per ricaricare, il tasto M per aprire l'inventario e premi E vicino ad un oggetto di colore verde per interagire");
+    //test.wait_close.wait();
 
     // do not wait for getch() (otherwhise the following loop will stop)
     nodelay(stdscr, TRUE);

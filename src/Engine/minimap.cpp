@@ -37,7 +37,7 @@ void Minimap::highRoom(int id, Map map){
     drawRoom((posX + ((x - 4) * roomW)), (posY + ((y - 4) * roomH)), 42); 
 }
 
-void Minimap::drawMinimap(Map map){
+void Minimap::drawMinimap(Map map, int highId){
     
     // central room
     drawRoom(posX, posY, 0); 
@@ -59,6 +59,6 @@ void Minimap::drawMinimap(Map map){
     }
 
     // highlights starting room
-    highRoom(0, map);
+    highRoom(highId, map);
     
 }
