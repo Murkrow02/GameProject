@@ -14,8 +14,13 @@
 #include "../Tools/GameObjectList.hpp"
 #include "../Entities/vendor.cpp"
 #include "../Entities/artifact.hpp"
+#include "../Tools/EntitiesList.hpp"
 #include "../Entities/fruit.cpp"
+#include <fstream>
+#include "../libraries/json.hpp"
 
+
+using json = nlohmann::json;
 using namespace std;
 
 void debugInfo(Player player, Map map){
@@ -37,6 +42,8 @@ int main(){
 
     // main list of all gameobjects
     GameObjectList gameObjects = GameObjectList();
+    EntitiesList entities = EntitiesList();
+    gameObjects.entities = &entities;
 
     // stats setup
     int x_stat = room_x + room_width + 2;
@@ -48,7 +55,7 @@ int main(){
     Minimap minimap(4, 2,(room_width - 40), 5);
     vector<vector<int>> floor = map.generateMap(game_window);
     minimap.drawMinimap(map, 0);
-    map.createRoom(0, game_window);
+    map.createRoom(0, &gameObjects);
 
 
     // fill all game stuff
@@ -60,8 +67,6 @@ int main(){
     // player setup
     Player player((room_height / 2), (room_width / 2), &gameObjects); // player creation
 
-    // dummy spawn
-    Dummy dummy(1,1, &gameObjects);
 
     // shop spawn
     Vendor vendor(1,10, &gameObjects);
@@ -72,8 +77,7 @@ int main(){
     wrefresh(game_window);
 
     // populate initial game objects
-    gameObjects.player = &player;
-    gameObjects.insert( &dummy );
+    gameObjects.player = &player;   
     gameObjects.insert( &vendor );
     gameObjects.insert( &apple );
 
@@ -97,9 +101,11 @@ int main(){
 
         // move and animate objects:
         gameObjects.doFrames();
+        gameObjects.entities->doFrames();
 
         // loop again to draw everything
         gameObjects.draw();
+        gameObjects.entities->draw();
 
         // refresh game window
         wrefresh(game_window);

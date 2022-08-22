@@ -3,6 +3,7 @@
 #include <ncurses.h>
 #include "room.h"
 #include "gameobject.hpp"
+#include "../Entities/dummy.cpp"
 
 using namespace std;
 
@@ -14,8 +15,9 @@ Room::Room(int _id, string _roomType, pair<int, int> _coords, int _roomW, int _r
     roomH = _roomH;
 }
 
-void Room::generate_room(vector<vector<int>> floor){
+void Room::generate_room(vector<vector<int>> floor, GameObjectList *gameObjects){
     generate_doors(floor);
+    spawn_entities(gameObjects);
 }
 
 void Room::generate_doors(vector<vector<int>> floor){
@@ -68,6 +70,28 @@ void Room::draw_doors(WINDOW * playerwindow){
         }
     }
 
+}
 
+
+void Room::spawn_entities(GameObjectList *gameObjects){
+    /*
+    vector<Dummy> dummies;
+    ifstream f("Layouts/layout1.json");
+    json data = json::parse(f);
+    for(int i = 0; i < data.size(); i++){
+        if (data[i]["type"] == "foe"){
+            printw("%d%d", int(data[i]["posY"]), int(data[i]["posX"]));
+            dummies.push_back(Dummy(int(data[i]["posY"]), int(data[i]["posX"]), gameObjects));
+        }   
+    }
+    for (int i = 0; i < dummies.size(); i++){
+        entities->insert( &dummies[i] );
+    }
+    */
+    Dummy *temp = new Dummy(1,1, gameObjects);
+    entities->insert(temp);
+    gameObjects->entities->copy_list(entities);   
+    
+     
 
 }

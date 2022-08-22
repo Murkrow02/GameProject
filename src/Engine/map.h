@@ -2,15 +2,16 @@
 #include <vector>
 #include <utility>
 #include "room.h"
-
+                     
 using namespace std;
 
+class GameObjectList;
 class Map{
     public:
         // functions
         Map();
         vector<vector<int>> generateMap(WINDOW * playerwindows);
-        void createRoom(int room_id, WINDOW * playerwindow);
+        void createRoom(int room_id, GameObjectList* gameObjects);
         pair<int, int> getCoords(int room_id); // simplifies getting coords of a room
 
         // variables

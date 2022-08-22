@@ -1,11 +1,11 @@
 #pragma once
 #include "../Entities/player.hpp"
-#include "../Engine/minimap.h"
-#include "EntitiesList.hpp"
+#include "../Entities/entity.hpp"
 
 
+class Minimap;
 class GameObject;
-class GameObjectList{
+class EntitiesList{
 
     private:
         struct Node {
@@ -13,24 +13,17 @@ class GameObjectList{
             Node * next;
         };
 
-        Node * head; // head is null by default
         
     
     public:
 
-        // save game stuff for easier access
-        Player* player; 
-        Stats* gameStats;
-        WINDOW* gameWindow;
-        Map* gameMap;
-        Minimap* gameMinimap;
-        EntitiesList* entities;
-
+        Node * head;
         void insert(GameObject* item); // add new item
         void remove (GameObject* item); // remove item
         void doFrames(); // update all objects positions etc
         void draw(); // draw everything
+        void copy_list(EntitiesList* toCopy);            
 
         Entity* findEntityAtPos(int x, int y, GameObject* excluded = NULL); // find if there is an entity at desired position
-        GameObjectList();
+        EntitiesList();
 };

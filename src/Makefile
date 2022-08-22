@@ -48,10 +48,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/cmake/1147/bin/cmake
+CMAKE_COMMAND = /snap/cmake/1153/bin/cmake
 
 # The command to remove a file.
-RM = /snap/cmake/1147/bin/cmake -E rm -f
+RM = /snap/cmake/1153/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -68,7 +68,7 @@ CMAKE_BINARY_DIR = /home/goodguysans/Documents/project/GameProject/src
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/snap/cmake/1132/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/snap/cmake/1153/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -78,7 +78,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/snap/cmake/1147/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/snap/cmake/1153/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -465,6 +465,30 @@ Entities/weapon.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/Entities/weapon.cpp.s
 .PHONY : Entities/weapon.cpp.s
 
+Tools/EntitiesList.o: Tools/EntitiesList.cpp.o
+.PHONY : Tools/EntitiesList.o
+
+# target to build an object file
+Tools/EntitiesList.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/Tools/EntitiesList.cpp.o
+.PHONY : Tools/EntitiesList.cpp.o
+
+Tools/EntitiesList.i: Tools/EntitiesList.cpp.i
+.PHONY : Tools/EntitiesList.i
+
+# target to preprocess a source file
+Tools/EntitiesList.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/Tools/EntitiesList.cpp.i
+.PHONY : Tools/EntitiesList.cpp.i
+
+Tools/EntitiesList.s: Tools/EntitiesList.cpp.s
+.PHONY : Tools/EntitiesList.s
+
+# target to generate assembly for a file
+Tools/EntitiesList.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/Tools/EntitiesList.cpp.s
+.PHONY : Tools/EntitiesList.cpp.s
+
 Tools/GameObjectList.o: Tools/GameObjectList.cpp.o
 .PHONY : Tools/GameObjectList.o
 
@@ -732,6 +756,9 @@ help:
 	@echo "... Entities/weapon.o"
 	@echo "... Entities/weapon.i"
 	@echo "... Entities/weapon.s"
+	@echo "... Tools/EntitiesList.o"
+	@echo "... Tools/EntitiesList.i"
+	@echo "... Tools/EntitiesList.s"
 	@echo "... Tools/GameObjectList.o"
 	@echo "... Tools/GameObjectList.i"
 	@echo "... Tools/GameObjectList.s"

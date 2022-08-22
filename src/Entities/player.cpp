@@ -67,13 +67,14 @@ Player::Player(int _y, int _x, GameObjectList *game_objects) : Entity{ _y,  _x, 
       Entity::Damage();
 
       // check game over
-      if(life <= 0)
+      if(life <= 0){
         /// TODO: change
         initscr();
         mvaddstr(10, 10, "Hello, world");
         refresh();
         endwin();
-        exit(1); 
+        exit(1);
+      }
     }
   }
 
@@ -146,7 +147,7 @@ Player::Player(int _y, int _x, GameObjectList *game_objects) : Entity{ _y,  _x, 
     }
 
     // create new room
-    gameItems->gameMap->createRoom(roomId, gameItems->gameWindow);
+    gameItems->gameMap->createRoom(roomId, gameItems);
     gameItems->gameMinimap->drawMinimap(*(gameItems->gameMap), roomId);
     }
     
