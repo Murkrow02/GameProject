@@ -2,10 +2,9 @@
 #include <vector>
 #include <utility>
 #include "room.h"
-                     
+
 using namespace std;
 
-class GameObjectList;
 class Map{
     public:
         // functions
@@ -19,7 +18,5 @@ class Map{
         vector<Room> rooms;
 
     private:
-        //Stats *gameStats;
-        //GameObjectList *gameObjects;
         
 };

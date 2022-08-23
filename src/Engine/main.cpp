@@ -14,18 +14,13 @@
 #include "../Tools/GameObjectList.hpp"
 #include "../Entities/vendor.cpp"
 #include "../Entities/artifact.hpp"
-#include "../Tools/EntitiesList.hpp"
 #include "../Entities/fruit.cpp"
-#include <fstream>
-#include "../libraries/json.hpp"
 
-
-using json = nlohmann::json;
 using namespace std;
 
 void debugInfo(Player player, Map map){
-    //move(0, 0);
-    // clrtoeol();
+    move(0, 0);
+    clrtoeol();
     //printw("%d", player.x);
     //printw("  %d", player.y);
     //printw("\nroomID : %d", player.roomId);
@@ -40,46 +35,46 @@ int main(){
     // ncurses set up, terminal resizing and window creation at center
     initial_setup(room_width, room_height, &room_x, &room_y);
 
-    // main list of all gameobjects 
+    // main list of all gameobjects
     GameObjectList gameObjects = GameObjectList();
-    EntitiesList entities = EntitiesList();
-    gameObjects.entities = &entities;
 
     // stats setup
     int x_stat = room_x + room_width + 2;
     int y_stat = room_y + 1;
     Stats game_stats(x_stat, y_stat);
     
-    // map - minimap setup
+    // fill all game stuff
     Map map; 
     Minimap minimap(4, 2,(room_width - 40), 5);
-    vector<vector<int>> floor = map.generateMap(game_window);
-    minimap.drawMinimap(map, 0);
-    map.createRoom(0, &gameObjects);
-
-
-    // fill all game stuff
     gameObjects.gameStats = &game_stats;
     gameObjects.gameWindow = game_window;
     gameObjects.gameMap = &map;
     gameObjects.gameMinimap = &minimap;
 
+    // map - minimap setup
+    vector<vector<int>> floor = map.generateMap(game_window);
+    minimap.drawMinimap(map, 0);
+    map.createRoom(0, &gameObjects);
+
     // player setup
     Player player((room_height / 2), (room_width / 2), &gameObjects); // player creation
 
+    // dummy spawn
+    Dummy* dummy = new Dummy(1,1, &gameObjects);
 
     // shop spawn
-    Vendor vendor(1,10, &gameObjects);
+    Vendor* vendor = new Vendor(1,10, &gameObjects);
 
     // apple spawn
-    Apple apple(30,30,&gameObjects);
+    Apple* apple = new Apple(30,30,&gameObjects);
 
     wrefresh(game_window);
 
     // populate initial game objects
-    gameObjects.player = &player;   
-    gameObjects.insert( &vendor );
-    gameObjects.insert( &apple );
+    gameObjects.player = &player;
+    gameObjects.insert( dummy );
+    gameObjects.insert( vendor );
+    gameObjects.insert( apple );
 
     // welcome message
     //message test = message("BENVENUTO!","Puoi muoverti usando i tasti WASD e sparare usando le frecce, premi R per ricaricare, il tasto M per aprire l'inventario e premi E vicino ad un oggetto di colore verde per interagire");
@@ -101,11 +96,9 @@ int main(){
 
         // move and animate objects:
         gameObjects.doFrames();
-        gameObjects.entities->doFrames();
 
         // loop again to draw everything
         gameObjects.draw();
-        gameObjects.entities->draw();
 
         // refresh game window
         wrefresh(game_window);
@@ -122,8 +115,6 @@ int main(){
     
     return 0;
 }
-
-
    
 
 /*

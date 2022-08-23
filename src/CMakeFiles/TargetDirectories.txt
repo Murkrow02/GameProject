@@ -1,3 +1,0 @@
-/home/goodguysans/Documents/project/GameProject/src/CMakeFiles/GameProject2.dir
-/home/goodguysans/Documents/project/GameProject/src/CMakeFiles/edit_cache.dir
-/home/goodguysans/Documents/project/GameProject/src/CMakeFiles/rebuild_cache.dir

@@ -58,7 +58,7 @@ void Minimap::drawMinimap(Map map, int highId){
         drawRoom((posX + ((x - 4) * roomW)), (posY + ((y - 4) * roomH)), 0);
     }
 
-    // highlights starting room
+    // highlights room
     highRoom(highId, map);
     
 }

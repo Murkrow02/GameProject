@@ -489,6 +489,30 @@ Tools/GameObjectList.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/Tools/GameObjectList.cpp.s
 .PHONY : Tools/GameObjectList.cpp.s
 
+Tools/GameObjectNode.o: Tools/GameObjectNode.cpp.o
+.PHONY : Tools/GameObjectNode.o
+
+# target to build an object file
+Tools/GameObjectNode.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/Tools/GameObjectNode.cpp.o
+.PHONY : Tools/GameObjectNode.cpp.o
+
+Tools/GameObjectNode.i: Tools/GameObjectNode.cpp.i
+.PHONY : Tools/GameObjectNode.i
+
+# target to preprocess a source file
+Tools/GameObjectNode.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/Tools/GameObjectNode.cpp.i
+.PHONY : Tools/GameObjectNode.cpp.i
+
+Tools/GameObjectNode.s: Tools/GameObjectNode.cpp.s
+.PHONY : Tools/GameObjectNode.s
+
+# target to generate assembly for a file
+Tools/GameObjectNode.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/Tools/GameObjectNode.cpp.s
+.PHONY : Tools/GameObjectNode.cpp.s
+
 Tools/savedata.o: Tools/savedata.cpp.o
 .PHONY : Tools/savedata.o
 
@@ -735,6 +759,9 @@ help:
 	@echo "... Tools/GameObjectList.o"
 	@echo "... Tools/GameObjectList.i"
 	@echo "... Tools/GameObjectList.s"
+	@echo "... Tools/GameObjectNode.o"
+	@echo "... Tools/GameObjectNode.i"
+	@echo "... Tools/GameObjectNode.s"
 	@echo "... Tools/savedata.o"
 	@echo "... Tools/savedata.i"
 	@echo "... Tools/savedata.s"

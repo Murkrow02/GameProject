@@ -1,7 +1,6 @@
 #pragma once
 #include <ncurses.h>
 #include <stdlib.h>
-#include "../Engine/map.h"
 #include "../UI/stats.hpp"
 #include "../Engine/gameobject.hpp"
 
@@ -14,6 +13,7 @@ class Entity : public GameObject
         virtual void Damage(); // life--
         char direction = ' '; // last direction taken by this entity
         int oldX, oldY;
+        
 
     protected:
 

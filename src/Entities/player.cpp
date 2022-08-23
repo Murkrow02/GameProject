@@ -67,14 +67,12 @@ Player::Player(int _y, int _x, GameObjectList *game_objects) : Entity{ _y,  _x, 
       Entity::Damage();
 
       // check game over
-      if(life <= 0){
+      if(life <= 0)
         /// TODO: change
         initscr();
         mvaddstr(10, 10, "Hello, world");
         refresh();
         endwin();
-        exit(1);
-      }
     }
   }
 
@@ -112,7 +110,6 @@ Player::Player(int _y, int _x, GameObjectList *game_objects) : Entity{ _y,  _x, 
     if (x <= 1)
     {
       roomId = gameItems->gameMap->floor[roomCords.first][roomCords.second - 1];
-      
 
       // spawn right
       x = xMax - 2;

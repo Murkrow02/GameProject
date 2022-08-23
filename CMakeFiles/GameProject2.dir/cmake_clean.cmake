@@ -29,6 +29,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/GameProject2.dir/Entities/weapon.cpp.o.d"
   "CMakeFiles/GameProject2.dir/Tools/GameObjectList.cpp.o"
   "CMakeFiles/GameProject2.dir/Tools/GameObjectList.cpp.o.d"
+  "CMakeFiles/GameProject2.dir/Tools/GameObjectNode.cpp.o"
+  "CMakeFiles/GameProject2.dir/Tools/GameObjectNode.cpp.o.d"
   "CMakeFiles/GameProject2.dir/Tools/savedata.cpp.o"
   "CMakeFiles/GameProject2.dir/Tools/savedata.cpp.o.d"
   "CMakeFiles/GameProject2.dir/Tools/utils.cpp.o"

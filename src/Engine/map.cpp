@@ -7,7 +7,6 @@
 #include "map.h"
 #include "../Tools/GameObjectList.hpp"
 
-
 using namespace std;
 
 
@@ -101,7 +100,7 @@ vector<vector<int>> Map::generateMap(WINDOW * playerwindow){
     
 }
 
-void Map::createRoom(int roomId, GameObjectList *gameObjects){
-    rooms[roomId].generate_room(floor, gameObjects);
+void Map::createRoom(int roomId, GameObjectList* gameObjects){
+    rooms[roomId].generate_room(floor,gameObjects);
     rooms[roomId].draw_room(gameObjects->gameWindow);
 }
