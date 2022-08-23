@@ -19,7 +19,7 @@ pair<int, int> Map::getCoords(int roomId){
     return(rooms[roomId].coords);
 }
 
-vector<vector<int>> Map::generateMap(WINDOW * playerwindow){
+vector<vector<int>> Map::generateMap(WINDOW * playerwindow, GameObjectList* game_objects){
 
     int width,height;
     getmaxyx(playerwindow, height, width);
@@ -28,23 +28,23 @@ vector<vector<int>> Map::generateMap(WINDOW * playerwindow){
 
     // center
     floor[4][4] = 0;
-    rooms.push_back(Room(0, "default", pair<int, int>(4,4), width, height));
+    rooms.push_back(Room(0, "default", pair<int, int>(4,4), width, height, game_objects));
 
     // right
     floor[4][5] = 1;
-    rooms.push_back(Room(1, "default", pair<int, int>(4,5), width, height));
+    rooms.push_back(Room(1, "default", pair<int, int>(4,5), width, height, game_objects));
 
     // left
     floor[4][3] = 2;
-    rooms.push_back(Room(2, "default", pair<int, int>(4,3), width, height));
+    rooms.push_back(Room(2, "default", pair<int, int>(4,3), width, height, game_objects));
 
     // bottom 
     floor[5][4] = 3;
-    rooms.push_back(Room(3, "default", pair<int, int>(5,4), width, height));
+    rooms.push_back(Room(3, "default", pair<int, int>(5,4), width, height, game_objects));
 
     // top
     floor[3][4] = 4;
-    rooms.push_back(Room(4, "default", pair<int, int>(3,4), width, height));
+    rooms.push_back(Room(4, "default", pair<int, int>(3,4), width, height, game_objects));
 
     
 
@@ -92,7 +92,7 @@ vector<vector<int>> Map::generateMap(WINDOW * playerwindow){
             // updates two-dimensional array with new room
             floor[possibleCoords[x].first][possibleCoords[x].second] = nRooms;
             // updates room coordinates with new room
-            rooms.push_back(Room(nRooms, "default", possibleCoords[x], width, height));
+            rooms.push_back(Room(nRooms, "default", possibleCoords[x], width, height, game_objects));
             nRooms++; 
             }
         }
@@ -100,7 +100,11 @@ vector<vector<int>> Map::generateMap(WINDOW * playerwindow){
     
 }
 
-void Map::createRoom(int roomId, GameObjectList* gameObjects){
-    rooms[roomId].generate_room(floor,gameObjects);
-    rooms[roomId].draw_room(gameObjects->gameWindow);
+void Map::createRoom(int roomId){
+    rooms[roomId].generate_room(floor);
+    rooms[roomId].draw_room();
+}
+
+void Map::freezeRoom(int roomId){
+    //rooms[roomId].freeze_room(roomId);
 }

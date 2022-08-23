@@ -7,21 +7,44 @@
 
 using namespace std;
 
-Room::Room(int _id, string _roomType, pair<int, int> _coords, int _roomW, int _roomH){
+Room::Room(int _id, string _roomType, pair<int, int> _coords, int _roomW, int _roomH, GameObjectList* game_objects){
+
     id = _id;
     roomType = _roomType;
     coords = _coords;
     roomW = _roomW;
     roomH = _roomH;
+    gameObjects = game_objects;
+
+    //Create entities and objects by reading from json
+    //Dummy* dummy = new Dummy(1,1, gameObjects);
+    //roomObjects.insert(dummy);
+
 }
 
-void Room::generate_room(vector<vector<int>> floor, GameObjectList* GameObjects){
+void Room::generate_room(vector<vector<int>> floor){
     generate_doors(floor);
-    generate_entities(GameObjects);
+    generate_entities();
 }
 
-void Room::generate_entities(GameObjectList* GameObjects){
- 
+void Room::generate_entities(){
+
+    //Remove previous entities from game window
+    // gameObjects->reset();
+    // wclear(gameObjects->gameWindow);
+
+
+    
+
+    // shop spawn
+    // Vendor* vendor = new Vendor(1,10, &gameObjects);
+
+    // // apple spawn
+    // Apple* apple = new Apple(30,30,&gameObjects);
+
+
+    // populate initial game objects
+    
 }
 
 void Room::generate_doors(vector<vector<int>> floor){
@@ -44,10 +67,10 @@ void Room::generate_doors(vector<vector<int>> floor){
     }
 }
 
-void Room::draw_room(WINDOW * playerwindow){
-    box(playerwindow,0,0);
-    draw_doors(playerwindow);
-    wrefresh(playerwindow);
+void Room::draw_room(){
+    box(gameObjects->gameWindow,0,0);
+    draw_doors(gameObjects->gameWindow);
+    wrefresh(gameObjects->gameWindow);
 }
 
 void Room::draw_doors(WINDOW * playerwindow){

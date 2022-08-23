@@ -225,8 +225,10 @@ CMakeFiles/GameProject2.dir/Engine/main.cpp.o: src/Engine/main.cpp \
   /usr/include/c++/12/bits/atomic_lockfree_defines.h \
   /usr/include/c++/12/backward/auto_ptr.h \
   src/Engine/gameobject.hpp \
+  src/Tools/GameObjectNode.hpp \
   src/Entities/entity.hpp \
   /usr/include/c++/12/stdlib.h \
+  src/UI/stats.hpp \
   src/UI/stats.hpp \
   src/Entities/weapon.cpp \
   src/Tools/ShopItem.hpp \
@@ -234,7 +236,6 @@ CMakeFiles/GameProject2.dir/Engine/main.cpp.o: src/Engine/main.cpp \
   src/Entities/foe.cpp \
   src/Tools/GameObjectList.hpp \
   src/Engine/minimap.h \
-  src/Tools/GameObjectNode.cpp \
   src/Tools/utils.hpp \
   src/UI/stats.hpp \
   src/UI/stats.hpp \
@@ -474,15 +475,15 @@ CMakeFiles/GameProject2.dir/Engine/map.cpp.o: src/Engine/map.cpp \
   /usr/include/c++/12/bits/atomic_lockfree_defines.h \
   /usr/include/c++/12/backward/auto_ptr.h \
   src/Engine/gameobject.hpp \
-  src/Tools/GameObjectList.hpp \
-  src/Entities/player.hpp \
+  src/Tools/GameObjectNode.hpp \
   src/Entities/entity.hpp \
   /usr/include/c++/12/stdlib.h \
   src/UI/stats.hpp \
+  src/Tools/GameObjectList.hpp \
+  src/Entities/player.hpp \
   src/Entities/weapon.cpp \
   src/Tools/ShopItem.hpp \
-  src/Engine/minimap.h \
-  src/Tools/GameObjectNode.cpp
+  src/Engine/minimap.h
 
 CMakeFiles/GameProject2.dir/Engine/minimap.cpp.o: src/Engine/minimap.cpp \
   /usr/include/stdc-predef.h \
@@ -681,30 +682,14 @@ CMakeFiles/GameProject2.dir/Engine/minimap.cpp.o: src/Engine/minimap.cpp \
   /usr/include/c++/12/utility \
   /usr/include/c++/12/bits/stl_relops.h \
   src/Engine/room.h \
-  /usr/include/c++/12/fstream \
-  /usr/include/c++/12/bits/codecvt.h \
-  /usr/include/c++/12/x86_64-redhat-linux/bits/basic_file.h \
-  /usr/include/c++/12/x86_64-redhat-linux/bits/c++io.h \
-  /usr/include/c++/12/bits/fstream.tcc \
-  src/libraries/json.hpp \
-  /usr/include/c++/12/algorithm \
-  /usr/include/c++/12/bits/stl_algo.h \
-  /usr/include/c++/12/bits/algorithmfwd.h \
-  /usr/include/c++/12/bits/stl_heap.h \
-  /usr/include/c++/12/bits/stl_tempbuf.h \
-  /usr/include/c++/12/bits/uniform_int_dist.h \
-  /usr/include/c++/12/cstddef \
-  /usr/include/c++/12/functional \
-  /usr/include/c++/12/tuple \
-  /usr/include/c++/12/bits/uses_allocator.h \
-  /usr/include/c++/12/bits/std_function.h \
-  /usr/include/c++/12/iterator \
-  /usr/include/c++/12/bits/stream_iterator.h \
   /usr/include/c++/12/memory \
+  /usr/include/c++/12/bits/stl_tempbuf.h \
   /usr/include/c++/12/bits/stl_raw_storage_iter.h \
   /usr/include/c++/12/bits/align.h \
   /usr/include/c++/12/bit \
+  /usr/include/c++/12/bits/uses_allocator.h \
   /usr/include/c++/12/bits/unique_ptr.h \
+  /usr/include/c++/12/tuple \
   /usr/include/c++/12/bits/shared_ptr.h \
   /usr/include/c++/12/bits/shared_ptr_base.h \
   /usr/include/c++/12/bits/allocated_ptr.h \
@@ -714,47 +699,11 @@ CMakeFiles/GameProject2.dir/Engine/minimap.cpp.o: src/Engine/minimap.cpp \
   /usr/include/c++/12/bits/atomic_base.h \
   /usr/include/c++/12/bits/atomic_lockfree_defines.h \
   /usr/include/c++/12/backward/auto_ptr.h \
-  /usr/include/c++/12/numeric \
-  /usr/include/c++/12/bits/stl_numeric.h \
-  /usr/include/c++/12/array \
-  /usr/include/c++/12/compare \
-  /usr/include/c++/12/forward_list \
-  /usr/include/c++/12/bits/forward_list.h \
-  /usr/include/c++/12/bits/forward_list.tcc \
-  /usr/include/c++/12/map \
-  /usr/include/c++/12/bits/stl_tree.h \
-  /usr/include/c++/12/bits/stl_map.h \
-  /usr/include/c++/12/bits/stl_multimap.h \
-  /usr/include/c++/12/bits/erase_if.h \
-  /usr/include/c++/12/unordered_map \
-  /usr/include/c++/12/bits/hashtable.h \
-  /usr/include/c++/12/bits/hashtable_policy.h \
-  /usr/include/c++/12/bits/enable_special_members.h \
-  /usr/include/c++/12/bits/unordered_map.h \
-  /usr/include/c++/12/valarray \
-  /usr/include/c++/12/cmath \
-  /usr/include/math.h \
-  /usr/include/bits/math-vector.h \
-  /usr/include/bits/libm-simd-decl-stubs.h \
-  /usr/include/bits/flt-eval-method.h \
-  /usr/include/bits/fp-logb.h \
-  /usr/include/bits/fp-fast.h \
-  /usr/include/bits/mathcalls-helper-functions.h \
-  /usr/include/bits/mathcalls.h \
-  /usr/include/bits/mathcalls-narrow.h \
-  /usr/include/bits/iscanonical.h \
-  /usr/include/c++/12/bits/valarray_array.h \
-  /usr/include/c++/12/bits/valarray_array.tcc \
-  /usr/include/c++/12/bits/valarray_before.h \
-  /usr/include/c++/12/bits/slice_array.h \
-  /usr/include/c++/12/bits/valarray_after.h \
-  /usr/include/c++/12/bits/gslice.h \
-  /usr/include/c++/12/bits/gslice_array.h \
-  /usr/include/c++/12/bits/mask_array.h \
-  /usr/include/c++/12/bits/indirect_array.h \
-  /usr/include/c++/12/cassert \
-  /usr/include/assert.h \
-  /usr/include/c++/12/limits \
+  src/Engine/gameobject.hpp \
+  src/Tools/GameObjectNode.hpp \
+  src/Entities/entity.hpp \
+  /usr/include/c++/12/stdlib.h \
+  src/UI/stats.hpp \
   src/Engine/map.h
 
 CMakeFiles/GameProject2.dir/Engine/room.cpp.o: src/Engine/room.cpp \
@@ -967,18 +916,19 @@ CMakeFiles/GameProject2.dir/Engine/room.cpp.o: src/Engine/room.cpp \
   /usr/include/c++/12/bits/atomic_lockfree_defines.h \
   /usr/include/c++/12/backward/auto_ptr.h \
   src/Engine/gameobject.hpp \
-  src/Entities/dummy.cpp \
+  src/Tools/GameObjectNode.hpp \
   src/Entities/entity.hpp \
   /usr/include/c++/12/stdlib.h \
   src/UI/stats.hpp \
+  src/Entities/dummy.cpp \
   src/Entities/foe.cpp \
   src/Entities/player.hpp \
   src/Engine/map.h \
+  src/UI/stats.hpp \
   src/Entities/weapon.cpp \
   src/Tools/ShopItem.hpp \
   src/Tools/GameObjectList.hpp \
   src/Engine/minimap.h \
-  src/Tools/GameObjectNode.cpp \
   src/Tools/utils.hpp \
   src/UI/stats.hpp \
   /usr/include/c++/12/ctime
@@ -1196,15 +1146,16 @@ CMakeFiles/GameProject2.dir/Entities/artifact.cpp.o: src/Entities/artifact.cpp \
   /usr/include/c++/12/bits/atomic_lockfree_defines.h \
   /usr/include/c++/12/backward/auto_ptr.h \
   src/Engine/gameobject.hpp \
+  src/Tools/GameObjectNode.hpp \
+  src/Entities/entity.hpp \
+  src/UI/stats.hpp \
   src/UI/stats.hpp \
   src/Tools/GameObjectList.hpp \
   src/Entities/player.hpp \
-  src/Entities/entity.hpp \
   src/UI/stats.hpp \
   src/Entities/weapon.cpp \
   src/Tools/ShopItem.hpp \
   src/Engine/minimap.h \
-  src/Tools/GameObjectNode.cpp \
   src/Tools/utils.hpp \
   src/UI/stats.hpp \
   src/UI/shop.hpp \
@@ -1444,11 +1395,11 @@ CMakeFiles/GameProject2.dir/Entities/bullet.cpp.o: src/Entities/bullet.cpp \
   /usr/include/c++/12/bits/atomic_base.h \
   /usr/include/c++/12/bits/atomic_lockfree_defines.h \
   /usr/include/c++/12/backward/auto_ptr.h \
+  src/Tools/GameObjectNode.hpp \
   src/Entities/weapon.cpp \
   src/Tools/ShopItem.hpp \
   src/Tools/GameObjectList.hpp \
   src/Engine/minimap.h \
-  src/Tools/GameObjectNode.cpp \
   src/Tools/utils.hpp \
   src/UI/stats.hpp
 
@@ -1668,11 +1619,11 @@ CMakeFiles/GameProject2.dir/Entities/entity.cpp.o: src/Entities/entity.cpp \
   /usr/include/c++/12/bits/atomic_base.h \
   /usr/include/c++/12/bits/atomic_lockfree_defines.h \
   /usr/include/c++/12/backward/auto_ptr.h \
+  src/Tools/GameObjectNode.hpp \
   src/UI/stats.hpp \
   src/Entities/weapon.cpp \
   src/Tools/ShopItem.hpp \
-  src/Engine/minimap.h \
-  src/Tools/GameObjectNode.cpp
+  src/Engine/minimap.h
 
 CMakeFiles/GameProject2.dir/Entities/foe.cpp.o: src/Entities/foe.cpp \
   /usr/include/stdc-predef.h \
@@ -1889,11 +1840,11 @@ CMakeFiles/GameProject2.dir/Entities/foe.cpp.o: src/Entities/foe.cpp \
   /usr/include/c++/12/bits/atomic_base.h \
   /usr/include/c++/12/bits/atomic_lockfree_defines.h \
   /usr/include/c++/12/backward/auto_ptr.h \
+  src/Tools/GameObjectNode.hpp \
   src/Entities/weapon.cpp \
   src/Tools/ShopItem.hpp \
   src/Tools/GameObjectList.hpp \
   src/Engine/minimap.h \
-  src/Tools/GameObjectNode.cpp \
   src/Tools/utils.hpp \
   src/UI/stats.hpp
 
@@ -2111,14 +2062,15 @@ CMakeFiles/GameProject2.dir/Entities/food.cpp.o: src/Entities/food.cpp \
   /usr/include/c++/12/bits/atomic_lockfree_defines.h \
   /usr/include/c++/12/backward/auto_ptr.h \
   src/Engine/gameobject.hpp \
+  src/Tools/GameObjectNode.hpp \
+  src/Entities/entity.hpp \
+  src/UI/stats.hpp \
   src/UI/stats.hpp \
   src/Tools/GameObjectList.hpp \
   src/Entities/player.hpp \
-  src/Entities/entity.hpp \
   src/UI/stats.hpp \
   src/Entities/weapon.cpp \
-  src/Engine/minimap.h \
-  src/Tools/GameObjectNode.cpp
+  src/Engine/minimap.h
 
 CMakeFiles/GameProject2.dir/Entities/fruit.cpp.o: src/Entities/fruit.cpp \
   /usr/include/stdc-predef.h \
@@ -2333,15 +2285,16 @@ CMakeFiles/GameProject2.dir/Entities/fruit.cpp.o: src/Entities/fruit.cpp \
   /usr/include/c++/12/bits/atomic_lockfree_defines.h \
   /usr/include/c++/12/backward/auto_ptr.h \
   src/Engine/gameobject.hpp \
+  src/Tools/GameObjectNode.hpp \
+  src/Entities/entity.hpp \
+  src/UI/stats.hpp \
   src/UI/stats.hpp \
   src/Tools/GameObjectList.hpp \
   src/Entities/player.hpp \
-  src/Entities/entity.hpp \
   src/UI/stats.hpp \
   src/Entities/weapon.cpp \
   src/Tools/ShopItem.hpp \
   src/Engine/minimap.h \
-  src/Tools/GameObjectNode.cpp \
   src/UI/shop.hpp \
   src/UI/dialog.hpp \
   /usr/include/c++/12/future \
@@ -2576,14 +2529,15 @@ CMakeFiles/GameProject2.dir/Entities/player.cpp.o: src/Entities/player.cpp \
   /usr/include/c++/12/bits/atomic_lockfree_defines.h \
   /usr/include/c++/12/backward/auto_ptr.h \
   src/Engine/gameobject.hpp \
+  src/Tools/GameObjectNode.hpp \
   src/Entities/entity.hpp \
   /usr/include/c++/12/stdlib.h \
+  src/UI/stats.hpp \
   src/UI/stats.hpp \
   src/Entities/weapon.cpp \
   src/Tools/ShopItem.hpp \
   src/Tools/GameObjectList.hpp \
   src/Engine/minimap.h \
-  src/Tools/GameObjectNode.cpp \
   src/Entities/bullet.cpp \
   src/Entities/foe.cpp \
   src/Tools/utils.hpp \
@@ -2824,15 +2778,16 @@ CMakeFiles/GameProject2.dir/Entities/vendor.cpp.o: src/Entities/vendor.cpp \
   /usr/include/c++/12/bits/atomic_lockfree_defines.h \
   /usr/include/c++/12/backward/auto_ptr.h \
   src/Engine/gameobject.hpp \
+  src/Tools/GameObjectNode.hpp \
+  src/Entities/entity.hpp \
+  src/UI/stats.hpp \
   src/UI/stats.hpp \
   src/Tools/GameObjectList.hpp \
   src/Entities/player.hpp \
-  src/Entities/entity.hpp \
   src/UI/stats.hpp \
   src/Entities/weapon.cpp \
   src/Tools/ShopItem.hpp \
   src/Engine/minimap.h \
-  src/Tools/GameObjectNode.cpp \
   src/UI/shop.hpp \
   src/UI/dialog.hpp \
   /usr/include/c++/12/future \
@@ -3221,16 +3176,18 @@ CMakeFiles/GameProject2.dir/Tools/GameObjectList.cpp.o: src/Tools/GameObjectList
   /usr/include/unctrl.h \
   /usr/include/curses.h \
   src/Engine/gameobject.hpp \
+  src/Tools/GameObjectNode.hpp \
   src/Entities/entity.hpp \
   /usr/include/c++/12/stdlib.h \
   src/UI/stats.hpp \
+  src/UI/stats.hpp \
   src/Entities/weapon.cpp \
   src/Tools/ShopItem.hpp \
-  src/Engine/minimap.h \
-  src/Tools/GameObjectNode.cpp
+  src/Engine/minimap.h
 
 CMakeFiles/GameProject2.dir/Tools/GameObjectNode.cpp.o: src/Tools/GameObjectNode.cpp \
   /usr/include/stdc-predef.h \
+  src/Tools/GameObjectNode.hpp \
   src/Entities/entity.hpp \
   /usr/include/curses.h \
   /usr/include/ncurses_dll.h \
@@ -4316,11 +4273,12 @@ CMakeFiles/GameProject2.dir/UI/inventory.cpp.o: src/UI/inventory.cpp \
   /usr/include/c++/12/bits/shared_ptr_atomic.h \
   /usr/include/c++/12/backward/auto_ptr.h \
   src/Engine/gameobject.hpp \
+  src/Tools/GameObjectNode.hpp \
   src/Entities/entity.hpp \
   /usr/include/c++/12/stdlib.h \
   src/UI/stats.hpp \
+  src/UI/stats.hpp \
   src/Engine/minimap.h \
-  src/Tools/GameObjectNode.cpp \
   src/Entities/food.cpp \
   src/Entities/artifact.hpp \
   src/UI/stats.hpp \
@@ -4563,11 +4521,12 @@ CMakeFiles/GameProject2.dir/UI/itemselector.cpp.o: src/UI/itemselector.cpp \
   /usr/include/c++/12/bits/shared_ptr_atomic.h \
   /usr/include/c++/12/backward/auto_ptr.h \
   src/Engine/gameobject.hpp \
+  src/Tools/GameObjectNode.hpp \
   src/Entities/entity.hpp \
   /usr/include/c++/12/stdlib.h \
   src/UI/stats.hpp \
+  src/UI/stats.hpp \
   src/Engine/minimap.h \
-  src/Tools/GameObjectNode.cpp \
   /usr/include/c++/12/chrono \
   /usr/include/c++/12/thread \
   /usr/include/c++/12/bits/this_thread_sleep.h
@@ -5005,11 +4964,12 @@ CMakeFiles/GameProject2.dir/UI/shop.cpp.o: src/UI/shop.cpp \
   /usr/include/c++/12/bits/shared_ptr_atomic.h \
   /usr/include/c++/12/backward/auto_ptr.h \
   src/Engine/gameobject.hpp \
+  src/Tools/GameObjectNode.hpp \
   src/Entities/entity.hpp \
   /usr/include/c++/12/stdlib.h \
   src/UI/stats.hpp \
+  src/UI/stats.hpp \
   src/Engine/minimap.h \
-  src/Tools/GameObjectNode.cpp \
   src/Entities/food.cpp \
   src/Entities/artifact.hpp \
   src/UI/stats.hpp \
@@ -5186,13 +5146,13 @@ src/UI/itemselector.cpp:
 
 src/UI/dialog.cpp:
 
-src/Tools/GameObjectList.cpp:
+/usr/include/c++/12/bits/fstream.tcc:
 
-src/UI/inventory.hpp:
+/usr/include/c++/12/x86_64-redhat-linux/bits/c++io.h:
 
-src/Entities/entity.cpp:
+/usr/include/c++/12/x86_64-redhat-linux/bits/basic_file.h:
 
-src/Entities/artifact.cpp:
+/usr/include/c++/12/fstream:
 
 /usr/include/assert.h:
 
@@ -5258,9 +5218,13 @@ src/UI/inventory.cpp:
 
 /usr/include/c++/12/algorithm:
 
-/usr/include/c++/12/bits/fstream.tcc:
+src/Tools/GameObjectNode.cpp:
 
-/usr/include/c++/12/x86_64-redhat-linux/bits/c++io.h:
+src/Tools/GameObjectList.cpp:
+
+src/UI/inventory.hpp:
+
+src/Entities/entity.cpp:
 
 /usr/include/c++/12/ext/type_traits.h:
 
@@ -5391,10 +5355,6 @@ src/UI/itemselector.hpp:
 /usr/include/c++/12/bits/invoke.h:
 
 /usr/include/c++/12/bits/utility.h:
-
-src/Engine/room.cpp:
-
-/usr/include/c++/12/bits/stl_iterator.h:
 
 /usr/include/c++/12/bits/stl_function.h:
 
@@ -5598,8 +5558,6 @@ src/libraries/json.hpp:
 
 /usr/include/c++/12/vector:
 
-src/Tools/GameObjectNode.cpp:
-
 /usr/include/c++/12/bits/gslice.h:
 
 /usr/include/c++/12/bits/localefwd.h:
@@ -5660,11 +5618,25 @@ src/Tools/utils.cpp:
 
 /usr/include/sys/select.h:
 
+/usr/include/c++/12/bits/codecvt.h:
+
+/usr/include/c++/12/bits/cpp_type_traits.h:
+
+/usr/include/c++/12/thread:
+
+/usr/include/bits/select.h:
+
 /usr/include/bits/types/sigset_t.h:
+
+/usr/include/c++/12/bits/stl_iterator.h:
+
+src/Engine/room.cpp:
 
 /usr/include/alloca.h:
 
 /usr/include/c++/12/cstdio:
+
+src/Entities/artifact.cpp:
 
 /usr/include/bits/wordsize.h:
 
@@ -5776,6 +5748,8 @@ src/Engine/room.h:
 
 /usr/include/c++/12/bits/atomic_lockfree_defines.h:
 
+src/Tools/GameObjectNode.hpp:
+
 src/UI/shop.cpp:
 
 /usr/include/c++/12/string:
@@ -5810,8 +5784,6 @@ src/Entities/food.cpp:
 
 src/Entities/artifact.hpp:
 
-/usr/include/c++/12/fstream:
-
 src/Engine/map.cpp:
 
 src/Tools/savedata.cpp:
@@ -5819,13 +5791,3 @@ src/Tools/savedata.cpp:
 /usr/include/ctype.h:
 
 /usr/include/c++/12/cstring:
-
-/usr/include/c++/12/bits/cpp_type_traits.h:
-
-/usr/include/c++/12/thread:
-
-/usr/include/bits/select.h:
-
-/usr/include/c++/12/bits/codecvt.h:
-
-/usr/include/c++/12/x86_64-redhat-linux/bits/basic_file.h:

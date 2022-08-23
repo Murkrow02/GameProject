@@ -6,6 +6,11 @@
 },
 {
   "directory": "/home/murkrow/Repos/GameProject/src/build",
+  "command": "/usr/bin/g++   -g -std=gnu++14 -o CMakeFiles/GameProject2.dir/Tools/GameObjectNode.cpp.o -c /home/murkrow/Repos/GameProject/src/Tools/GameObjectNode.cpp",
+  "file": "/home/murkrow/Repos/GameProject/src/Tools/GameObjectNode.cpp"
+},
+{
+  "directory": "/home/murkrow/Repos/GameProject/src/build",
   "command": "/usr/bin/g++   -g -std=gnu++14 -o CMakeFiles/GameProject2.dir/Tools/GameObjectList.cpp.o -c /home/murkrow/Repos/GameProject/src/Tools/GameObjectList.cpp",
   "file": "/home/murkrow/Repos/GameProject/src/Tools/GameObjectList.cpp"
 },

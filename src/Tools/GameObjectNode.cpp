@@ -1,21 +1,6 @@
-#pragma once
-#include "../Entities/entity.hpp"
+#include "GameObjectNode.hpp"
 
-class GameObject;
-class GameObjectNode
-{
-
-protected:
-    struct Node
-    {
-        GameObject *data;
-        Node *next;
-    };
-
-    Node *head; // head is null by default
-
-public:
-    void insert(GameObject *item)
+void GameObjectNode::insert(GameObject *item)
     {
 
         // create new list item
@@ -27,7 +12,7 @@ public:
         head = newNode;
     }
 
-    void remove(GameObject *item)
+    void GameObjectNode::remove(GameObject *item)
     {
 
         Node *current = head;
@@ -62,7 +47,7 @@ public:
         }
     }
 
-    Entity *findEntityAtPos(int x, int y, GameObject *excluded)
+    Entity* GameObjectNode::findEntityAtPos(int x, int y, GameObject *excluded)
     {
 
         Node *current = head;
@@ -95,4 +80,7 @@ public:
         // if reached this point then no match occourred
         return NULL;
     }
-};
+
+    void GameObjectNode::reset(){
+        head = NULL;
+    }

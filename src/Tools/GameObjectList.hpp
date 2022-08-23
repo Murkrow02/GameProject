@@ -1,7 +1,7 @@
 #pragma once
 #include "../Entities/player.hpp"
 #include "../Engine/minimap.h"
-#include "GameObjectNode.cpp"
+#include "GameObjectNode.hpp"
 
 class GameObject;
 class GameObjectList : public GameObjectNode{

@@ -5,12 +5,14 @@
 
 using namespace std;
 
+class GameObjectList;
 class Map{
     public:
         // functions
         Map();
-        vector<vector<int>> generateMap(WINDOW * playerwindows);
-        void createRoom(int room_id, GameObjectList* gameObjects);
+        vector<vector<int>> generateMap(WINDOW * playerwindows, GameObjectList* game_objects);
+        void createRoom(int room_id);
+        void freezeRoom(int room_id);
         pair<int, int> getCoords(int room_id); // simplifies getting coords of a room
 
         // variables

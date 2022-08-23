@@ -52,29 +52,13 @@ int main(){
     gameObjects.gameMinimap = &minimap;
 
     // map - minimap setup
-    vector<vector<int>> floor = map.generateMap(game_window);
+    vector<vector<int>> floor = map.generateMap(game_window, &gameObjects);
     minimap.drawMinimap(map, 0);
-    map.createRoom(0, &gameObjects);
-
+    map.createRoom(0);
+    
     // player setup
     Player player((room_height / 2), (room_width / 2), &gameObjects); // player creation
-
-    // dummy spawn
-    Dummy* dummy = new Dummy(1,1, &gameObjects);
-
-    // shop spawn
-    Vendor* vendor = new Vendor(1,10, &gameObjects);
-
-    // apple spawn
-    Apple* apple = new Apple(30,30,&gameObjects);
-
-    wrefresh(game_window);
-
-    // populate initial game objects
     gameObjects.player = &player;
-    gameObjects.insert( dummy );
-    gameObjects.insert( vendor );
-    gameObjects.insert( apple );
 
     // welcome message
     //message test = message("BENVENUTO!","Puoi muoverti usando i tasti WASD e sparare usando le frecce, premi R per ricaricare, il tasto M per aprire l'inventario e premi E vicino ad un oggetto di colore verde per interagire");
