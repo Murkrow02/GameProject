@@ -1,0 +1,17 @@
+[
+    {
+        "type" : "foe", 
+        "posX" : 45,
+        "posY" : 35
+    },
+    {
+        "type" : "foe",
+        "posX" : 20,
+        "posY" : 3
+    },
+    {
+        "type" : "shop",
+        "posX" : 1,
+        "posY" : 1
+    }
+]

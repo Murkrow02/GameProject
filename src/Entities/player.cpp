@@ -70,7 +70,6 @@ Player::Player(int _y, int _x, GameObjectList *game_objects) : Entity{ _y,  _x, 
       if(life <= 0)
         /// TODO: change
         initscr();
-        mvaddstr(10, 10, "Hello, world");
         refresh();
         endwin();
     }

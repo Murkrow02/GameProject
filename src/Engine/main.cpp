@@ -19,8 +19,6 @@
 using namespace std;
 
 void debugInfo(Player player, Map map){
-    move(0, 0);
-    clrtoeol();
     //printw("%d", player.x);
     //printw("  %d", player.y);
     //printw("\nroomID : %d", player.roomId);
@@ -55,7 +53,7 @@ int main(){
     vector<vector<int>> floor = map.generateMap(game_window, &gameObjects);
     minimap.drawMinimap(map, 0);
     map.createRoom(0);
-    
+
     // player setup
     Player player((room_height / 2), (room_width / 2), &gameObjects); // player creation
     gameObjects.player = &player;
@@ -73,7 +71,7 @@ int main(){
         // https://cplusplus.com/forum/general/65250/
 
         // debug purposes
-        debugInfo(player, map);
+        //debugInfo(player, map);
 
         // player next move
         player.getmv();

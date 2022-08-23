@@ -4,8 +4,14 @@
 #include "room.h"
 #include "gameobject.hpp"
 #include "../Entities/dummy.cpp"
+#include "../Entities/fruit.cpp"
+#include "../Entities/vendor.cpp"
+#include "../Tools/GameObjectNode.hpp"
+#include "../libraries/json.hpp"
+#include <fstream>
 
 using namespace std;
+using json = nlohmann::json;
 
 Room::Room(int _id, string _roomType, pair<int, int> _coords, int _roomW, int _roomH, GameObjectList* game_objects){
 
@@ -16,10 +22,47 @@ Room::Room(int _id, string _roomType, pair<int, int> _coords, int _roomW, int _r
     roomH = _roomH;
     gameObjects = game_objects;
 
-    //Create entities and objects by reading from json
-    //Dummy* dummy = new Dummy(1,1, gameObjects);
-    //roomObjects.insert(dummy);
+    //Create filename
+    string fileName = "Layouts/";
+    fileName += std::to_string(id);
+    fileName += ".json";
 
+    //Create entities and objects by reading from json
+    try{
+        std::ifstream f(fileName);
+        json data = json::parse(f);
+
+        for (int i = 0; i < data.size(); i++)
+        {
+            if (data[i]["type"] == "foe")
+                roomObjects.insert(new Dummy(int(data[i]["posY"]), int(data[i]["posX"]), gameObjects));
+            else if(data[i]["type"] == "apple")
+                 roomObjects.insert(new Apple(int(data[i]["posY"]), int(data[i]["posX"]), game_objects));
+            else if(data[i]["type"] == "shop")
+                roomObjects.insert(new Vendor(int(data[i]["posY"]), int(data[i]["posX"]), game_objects));
+        }
+
+    }catch(const std::exception& e){
+        //MISSING JSON FOR LEVELS
+    }
+   
+}
+
+
+void Room::freeze_room(){
+
+    //Remove previous entities from local list
+    roomObjects.reset();
+
+    //Populate room objects with gameobjects from main
+    Node* current = gameObjects->head;
+    while(current != NULL){
+        
+        if(current->data != NULL)
+            roomObjects.insert(current->data);
+        current = current->next;
+    }
+    
 }
 
 void Room::generate_room(vector<vector<int>> floor){
@@ -27,23 +70,21 @@ void Room::generate_room(vector<vector<int>> floor){
     generate_entities();
 }
 
+
 void Room::generate_entities(){
 
     //Remove previous entities from game window
-    // gameObjects->reset();
-    // wclear(gameObjects->gameWindow);
+    gameObjects->reset();
+    wclear(gameObjects->gameWindow);
 
+    //Populate game objects with room objects
+    Node* current = roomObjects.head;
+    while(current != NULL){
 
-    
-
-    // shop spawn
-    // Vendor* vendor = new Vendor(1,10, &gameObjects);
-
-    // // apple spawn
-    // Apple* apple = new Apple(30,30,&gameObjects);
-
-
-    // populate initial game objects
+        if(current->data != NULL)
+            gameObjects->insert(current->data);
+        current = current->next;
+    }
     
 }
 

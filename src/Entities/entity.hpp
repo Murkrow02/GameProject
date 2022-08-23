@@ -13,12 +13,12 @@ class Entity : public GameObject
         virtual void Damage(); // life--
         char direction = ' '; // last direction taken by this entity
         int oldX, oldY;
-        
+        int roomId;
+
 
     protected:
 
         int xMax,yMax; // player position and player's window size
-        int roomId;
 
         // movement
         void mvup();

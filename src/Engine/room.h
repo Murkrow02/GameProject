@@ -17,7 +17,7 @@ class Room{
         pair<int,int> coords;
         void draw_room(); // calls every draw function
         void generate_room(vector<vector<int>> floor); // generates room (doors, items, enemies...) and saves it into a two dimensional array
-        void freeze_room(vector<vector<int>> floor); // save room objects state copying from main list all stuff
+        void freeze_room(); // save room objects state copying from main list all stuff
         char room[40][80] {'a'};
         int id;
 

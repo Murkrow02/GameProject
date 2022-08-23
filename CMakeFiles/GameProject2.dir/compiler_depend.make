@@ -931,7 +931,86 @@ CMakeFiles/GameProject2.dir/Engine/room.cpp.o: src/Engine/room.cpp \
   src/Engine/minimap.h \
   src/Tools/utils.hpp \
   src/UI/stats.hpp \
-  /usr/include/c++/12/ctime
+  /usr/include/c++/12/ctime \
+  src/Entities/fruit.cpp \
+  src/Entities/artifact.hpp \
+  src/UI/shop.hpp \
+  src/UI/dialog.hpp \
+  /usr/include/c++/12/future \
+  /usr/include/c++/12/mutex \
+  /usr/include/c++/12/bits/chrono.h \
+  /usr/include/c++/12/ratio \
+  /usr/include/c++/12/limits \
+  /usr/include/c++/12/bits/parse_numbers.h \
+  /usr/include/c++/12/bits/std_mutex.h \
+  /usr/include/c++/12/bits/unique_lock.h \
+  /usr/include/c++/12/condition_variable \
+  /usr/include/c++/12/bits/atomic_futex.h \
+  /usr/include/c++/12/atomic \
+  /usr/include/c++/12/bits/std_function.h \
+  /usr/include/c++/12/bits/std_thread.h \
+  src/Tools/utils.hpp \
+  /usr/include/panel.h \
+  src/UI/itemselector.hpp \
+  src/Entities/food.cpp \
+  src/libraries/json.hpp \
+  /usr/include/c++/12/algorithm \
+  /usr/include/c++/12/bits/stl_algo.h \
+  /usr/include/c++/12/bits/algorithmfwd.h \
+  /usr/include/c++/12/bits/stl_heap.h \
+  /usr/include/c++/12/bits/uniform_int_dist.h \
+  /usr/include/c++/12/cstddef \
+  /usr/include/c++/12/functional \
+  /usr/include/c++/12/iterator \
+  /usr/include/c++/12/bits/stream_iterator.h \
+  /usr/include/c++/12/numeric \
+  /usr/include/c++/12/bits/stl_numeric.h \
+  /usr/include/c++/12/array \
+  /usr/include/c++/12/compare \
+  /usr/include/c++/12/forward_list \
+  /usr/include/c++/12/bits/forward_list.h \
+  /usr/include/c++/12/bits/forward_list.tcc \
+  /usr/include/c++/12/map \
+  /usr/include/c++/12/bits/stl_tree.h \
+  /usr/include/c++/12/bits/stl_map.h \
+  /usr/include/c++/12/bits/stl_multimap.h \
+  /usr/include/c++/12/bits/erase_if.h \
+  /usr/include/c++/12/unordered_map \
+  /usr/include/c++/12/bits/hashtable.h \
+  /usr/include/c++/12/bits/hashtable_policy.h \
+  /usr/include/c++/12/bits/enable_special_members.h \
+  /usr/include/c++/12/bits/unordered_map.h \
+  /usr/include/c++/12/valarray \
+  /usr/include/c++/12/cmath \
+  /usr/include/math.h \
+  /usr/include/bits/math-vector.h \
+  /usr/include/bits/libm-simd-decl-stubs.h \
+  /usr/include/bits/flt-eval-method.h \
+  /usr/include/bits/fp-logb.h \
+  /usr/include/bits/fp-fast.h \
+  /usr/include/bits/mathcalls-helper-functions.h \
+  /usr/include/bits/mathcalls.h \
+  /usr/include/bits/mathcalls-narrow.h \
+  /usr/include/bits/iscanonical.h \
+  /usr/include/c++/12/bits/valarray_array.h \
+  /usr/include/c++/12/bits/valarray_array.tcc \
+  /usr/include/c++/12/bits/valarray_before.h \
+  /usr/include/c++/12/bits/slice_array.h \
+  /usr/include/c++/12/bits/valarray_after.h \
+  /usr/include/c++/12/bits/gslice.h \
+  /usr/include/c++/12/bits/gslice_array.h \
+  /usr/include/c++/12/bits/mask_array.h \
+  /usr/include/c++/12/bits/indirect_array.h \
+  /usr/include/c++/12/cassert \
+  /usr/include/assert.h \
+  /usr/include/c++/12/cstring \
+  /usr/include/string.h \
+  /usr/include/strings.h \
+  /usr/include/c++/12/fstream \
+  /usr/include/c++/12/bits/codecvt.h \
+  /usr/include/c++/12/x86_64-redhat-linux/bits/basic_file.h \
+  /usr/include/c++/12/x86_64-redhat-linux/bits/c++io.h \
+  /usr/include/c++/12/bits/fstream.tcc
 
 CMakeFiles/GameProject2.dir/Entities/artifact.cpp.o: src/Entities/artifact.cpp \
   /usr/include/stdc-predef.h \
@@ -5146,6 +5225,16 @@ src/UI/itemselector.cpp:
 
 src/UI/dialog.cpp:
 
+src/Tools/GameObjectNode.cpp:
+
+src/Tools/GameObjectList.cpp:
+
+src/UI/inventory.hpp:
+
+src/Entities/entity.cpp:
+
+src/Entities/artifact.cpp:
+
 /usr/include/c++/12/bits/fstream.tcc:
 
 /usr/include/c++/12/x86_64-redhat-linux/bits/c++io.h:
@@ -5215,16 +5304,6 @@ src/UI/inventory.cpp:
 /usr/include/c++/12/bits/algorithmfwd.h:
 
 /usr/include/c++/12/bits/stl_algo.h:
-
-/usr/include/c++/12/algorithm:
-
-src/Tools/GameObjectNode.cpp:
-
-src/Tools/GameObjectList.cpp:
-
-src/UI/inventory.hpp:
-
-src/Entities/entity.cpp:
 
 /usr/include/c++/12/ext/type_traits.h:
 
@@ -5532,12 +5611,6 @@ src/Entities/vendor.cpp:
 
 /usr/include/c++/12/bits/char_traits.h:
 
-/usr/include/c++/12/bits/unordered_map.h:
-
-src/libraries/json.hpp:
-
-/usr/include/bits/types.h:
-
 /usr/include/bits/time64.h:
 
 /usr/include/c++/12/bits/slice_array.h:
@@ -5635,8 +5708,6 @@ src/Engine/room.cpp:
 /usr/include/alloca.h:
 
 /usr/include/c++/12/cstdio:
-
-src/Entities/artifact.cpp:
 
 /usr/include/bits/wordsize.h:
 
@@ -5778,6 +5849,12 @@ src/Tools/ShopItem.hpp:
 
 src/UI/shop.hpp:
 
+/usr/include/c++/12/bits/unordered_map.h:
+
+/usr/include/bits/types.h:
+
+src/libraries/json.hpp:
+
 /usr/include/c++/12/bits/cxxabi_forced.h:
 
 src/Entities/food.cpp:
@@ -5791,3 +5868,5 @@ src/Tools/savedata.cpp:
 /usr/include/ctype.h:
 
 /usr/include/c++/12/cstring:
+
+/usr/include/c++/12/algorithm:

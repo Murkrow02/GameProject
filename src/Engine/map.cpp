@@ -106,5 +106,5 @@ void Map::createRoom(int roomId){
 }
 
 void Map::freezeRoom(int roomId){
-    //rooms[roomId].freeze_room(roomId);
+    rooms[roomId].freeze_room();
 }

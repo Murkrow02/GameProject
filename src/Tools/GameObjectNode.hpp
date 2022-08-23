@@ -2,20 +2,15 @@
 #include "../Entities/entity.hpp"
 
 class GameObject;
-
-class GameObjectNode{
-
-protected:
-    struct Node
-    {
-        GameObject *data;
-        Node *next;
-    };
-
-    Node *head; // head is null by default
-
+struct Node
+{
+    GameObject *data;
+    Node *next;
+};
+class GameObjectNode{   
 
 public:
+    Node *head; // head is null by default
 
     Entity* findEntityAtPos(int x, int y, GameObject *excluded);
     void insert(GameObject *item);
