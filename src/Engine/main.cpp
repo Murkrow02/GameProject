@@ -40,7 +40,7 @@ int main(){
     // ncurses set up, terminal resizing and window creation at center
     initial_setup(room_width, room_height, &room_x, &room_y);
 
-    // main list of all gameobjects
+    // main list of all gameobjects 
     GameObjectList gameObjects = GameObjectList();
     EntitiesList entities = EntitiesList();
     gameObjects.entities = &entities;
