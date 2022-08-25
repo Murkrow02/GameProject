@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/murkrow/Repos/GameProject/src
+CMAKE_SOURCE_DIR = /home/murkrow/Coding/Repos/GameProject/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/murkrow/Repos/GameProject
+CMAKE_BINARY_DIR = /home/murkrow/Coding/Repos/GameProject
 
 # Include any dependencies generated for this target.
 include CMakeFiles/GameProject2.dir/depend.make
@@ -72,338 +72,338 @@ include CMakeFiles/GameProject2.dir/flags.make
 CMakeFiles/GameProject2.dir/Engine/gameobject.cpp.o: CMakeFiles/GameProject2.dir/flags.make
 CMakeFiles/GameProject2.dir/Engine/gameobject.cpp.o: src/Engine/gameobject.cpp
 CMakeFiles/GameProject2.dir/Engine/gameobject.cpp.o: CMakeFiles/GameProject2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/murkrow/Repos/GameProject/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/GameProject2.dir/Engine/gameobject.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameProject2.dir/Engine/gameobject.cpp.o -MF CMakeFiles/GameProject2.dir/Engine/gameobject.cpp.o.d -o CMakeFiles/GameProject2.dir/Engine/gameobject.cpp.o -c /home/murkrow/Repos/GameProject/src/Engine/gameobject.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/murkrow/Coding/Repos/GameProject/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/GameProject2.dir/Engine/gameobject.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameProject2.dir/Engine/gameobject.cpp.o -MF CMakeFiles/GameProject2.dir/Engine/gameobject.cpp.o.d -o CMakeFiles/GameProject2.dir/Engine/gameobject.cpp.o -c /home/murkrow/Coding/Repos/GameProject/src/Engine/gameobject.cpp
 
 CMakeFiles/GameProject2.dir/Engine/gameobject.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GameProject2.dir/Engine/gameobject.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/murkrow/Repos/GameProject/src/Engine/gameobject.cpp > CMakeFiles/GameProject2.dir/Engine/gameobject.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/murkrow/Coding/Repos/GameProject/src/Engine/gameobject.cpp > CMakeFiles/GameProject2.dir/Engine/gameobject.cpp.i
 
 CMakeFiles/GameProject2.dir/Engine/gameobject.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GameProject2.dir/Engine/gameobject.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/murkrow/Repos/GameProject/src/Engine/gameobject.cpp -o CMakeFiles/GameProject2.dir/Engine/gameobject.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/murkrow/Coding/Repos/GameProject/src/Engine/gameobject.cpp -o CMakeFiles/GameProject2.dir/Engine/gameobject.cpp.s
 
 CMakeFiles/GameProject2.dir/Tools/GameObjectNode.cpp.o: CMakeFiles/GameProject2.dir/flags.make
 CMakeFiles/GameProject2.dir/Tools/GameObjectNode.cpp.o: src/Tools/GameObjectNode.cpp
 CMakeFiles/GameProject2.dir/Tools/GameObjectNode.cpp.o: CMakeFiles/GameProject2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/murkrow/Repos/GameProject/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/GameProject2.dir/Tools/GameObjectNode.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameProject2.dir/Tools/GameObjectNode.cpp.o -MF CMakeFiles/GameProject2.dir/Tools/GameObjectNode.cpp.o.d -o CMakeFiles/GameProject2.dir/Tools/GameObjectNode.cpp.o -c /home/murkrow/Repos/GameProject/src/Tools/GameObjectNode.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/murkrow/Coding/Repos/GameProject/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/GameProject2.dir/Tools/GameObjectNode.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameProject2.dir/Tools/GameObjectNode.cpp.o -MF CMakeFiles/GameProject2.dir/Tools/GameObjectNode.cpp.o.d -o CMakeFiles/GameProject2.dir/Tools/GameObjectNode.cpp.o -c /home/murkrow/Coding/Repos/GameProject/src/Tools/GameObjectNode.cpp
 
 CMakeFiles/GameProject2.dir/Tools/GameObjectNode.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GameProject2.dir/Tools/GameObjectNode.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/murkrow/Repos/GameProject/src/Tools/GameObjectNode.cpp > CMakeFiles/GameProject2.dir/Tools/GameObjectNode.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/murkrow/Coding/Repos/GameProject/src/Tools/GameObjectNode.cpp > CMakeFiles/GameProject2.dir/Tools/GameObjectNode.cpp.i
 
 CMakeFiles/GameProject2.dir/Tools/GameObjectNode.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GameProject2.dir/Tools/GameObjectNode.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/murkrow/Repos/GameProject/src/Tools/GameObjectNode.cpp -o CMakeFiles/GameProject2.dir/Tools/GameObjectNode.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/murkrow/Coding/Repos/GameProject/src/Tools/GameObjectNode.cpp -o CMakeFiles/GameProject2.dir/Tools/GameObjectNode.cpp.s
 
 CMakeFiles/GameProject2.dir/Tools/GameObjectList.cpp.o: CMakeFiles/GameProject2.dir/flags.make
 CMakeFiles/GameProject2.dir/Tools/GameObjectList.cpp.o: src/Tools/GameObjectList.cpp
 CMakeFiles/GameProject2.dir/Tools/GameObjectList.cpp.o: CMakeFiles/GameProject2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/murkrow/Repos/GameProject/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/GameProject2.dir/Tools/GameObjectList.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameProject2.dir/Tools/GameObjectList.cpp.o -MF CMakeFiles/GameProject2.dir/Tools/GameObjectList.cpp.o.d -o CMakeFiles/GameProject2.dir/Tools/GameObjectList.cpp.o -c /home/murkrow/Repos/GameProject/src/Tools/GameObjectList.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/murkrow/Coding/Repos/GameProject/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/GameProject2.dir/Tools/GameObjectList.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameProject2.dir/Tools/GameObjectList.cpp.o -MF CMakeFiles/GameProject2.dir/Tools/GameObjectList.cpp.o.d -o CMakeFiles/GameProject2.dir/Tools/GameObjectList.cpp.o -c /home/murkrow/Coding/Repos/GameProject/src/Tools/GameObjectList.cpp
 
 CMakeFiles/GameProject2.dir/Tools/GameObjectList.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GameProject2.dir/Tools/GameObjectList.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/murkrow/Repos/GameProject/src/Tools/GameObjectList.cpp > CMakeFiles/GameProject2.dir/Tools/GameObjectList.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/murkrow/Coding/Repos/GameProject/src/Tools/GameObjectList.cpp > CMakeFiles/GameProject2.dir/Tools/GameObjectList.cpp.i
 
 CMakeFiles/GameProject2.dir/Tools/GameObjectList.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GameProject2.dir/Tools/GameObjectList.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/murkrow/Repos/GameProject/src/Tools/GameObjectList.cpp -o CMakeFiles/GameProject2.dir/Tools/GameObjectList.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/murkrow/Coding/Repos/GameProject/src/Tools/GameObjectList.cpp -o CMakeFiles/GameProject2.dir/Tools/GameObjectList.cpp.s
 
 CMakeFiles/GameProject2.dir/Tools/utils.cpp.o: CMakeFiles/GameProject2.dir/flags.make
 CMakeFiles/GameProject2.dir/Tools/utils.cpp.o: src/Tools/utils.cpp
 CMakeFiles/GameProject2.dir/Tools/utils.cpp.o: CMakeFiles/GameProject2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/murkrow/Repos/GameProject/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/GameProject2.dir/Tools/utils.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameProject2.dir/Tools/utils.cpp.o -MF CMakeFiles/GameProject2.dir/Tools/utils.cpp.o.d -o CMakeFiles/GameProject2.dir/Tools/utils.cpp.o -c /home/murkrow/Repos/GameProject/src/Tools/utils.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/murkrow/Coding/Repos/GameProject/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/GameProject2.dir/Tools/utils.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameProject2.dir/Tools/utils.cpp.o -MF CMakeFiles/GameProject2.dir/Tools/utils.cpp.o.d -o CMakeFiles/GameProject2.dir/Tools/utils.cpp.o -c /home/murkrow/Coding/Repos/GameProject/src/Tools/utils.cpp
 
 CMakeFiles/GameProject2.dir/Tools/utils.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GameProject2.dir/Tools/utils.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/murkrow/Repos/GameProject/src/Tools/utils.cpp > CMakeFiles/GameProject2.dir/Tools/utils.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/murkrow/Coding/Repos/GameProject/src/Tools/utils.cpp > CMakeFiles/GameProject2.dir/Tools/utils.cpp.i
 
 CMakeFiles/GameProject2.dir/Tools/utils.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GameProject2.dir/Tools/utils.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/murkrow/Repos/GameProject/src/Tools/utils.cpp -o CMakeFiles/GameProject2.dir/Tools/utils.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/murkrow/Coding/Repos/GameProject/src/Tools/utils.cpp -o CMakeFiles/GameProject2.dir/Tools/utils.cpp.s
 
 CMakeFiles/GameProject2.dir/Tools/savedata.cpp.o: CMakeFiles/GameProject2.dir/flags.make
 CMakeFiles/GameProject2.dir/Tools/savedata.cpp.o: src/Tools/savedata.cpp
 CMakeFiles/GameProject2.dir/Tools/savedata.cpp.o: CMakeFiles/GameProject2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/murkrow/Repos/GameProject/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/GameProject2.dir/Tools/savedata.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameProject2.dir/Tools/savedata.cpp.o -MF CMakeFiles/GameProject2.dir/Tools/savedata.cpp.o.d -o CMakeFiles/GameProject2.dir/Tools/savedata.cpp.o -c /home/murkrow/Repos/GameProject/src/Tools/savedata.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/murkrow/Coding/Repos/GameProject/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/GameProject2.dir/Tools/savedata.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameProject2.dir/Tools/savedata.cpp.o -MF CMakeFiles/GameProject2.dir/Tools/savedata.cpp.o.d -o CMakeFiles/GameProject2.dir/Tools/savedata.cpp.o -c /home/murkrow/Coding/Repos/GameProject/src/Tools/savedata.cpp
 
 CMakeFiles/GameProject2.dir/Tools/savedata.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GameProject2.dir/Tools/savedata.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/murkrow/Repos/GameProject/src/Tools/savedata.cpp > CMakeFiles/GameProject2.dir/Tools/savedata.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/murkrow/Coding/Repos/GameProject/src/Tools/savedata.cpp > CMakeFiles/GameProject2.dir/Tools/savedata.cpp.i
 
 CMakeFiles/GameProject2.dir/Tools/savedata.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GameProject2.dir/Tools/savedata.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/murkrow/Repos/GameProject/src/Tools/savedata.cpp -o CMakeFiles/GameProject2.dir/Tools/savedata.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/murkrow/Coding/Repos/GameProject/src/Tools/savedata.cpp -o CMakeFiles/GameProject2.dir/Tools/savedata.cpp.s
 
 CMakeFiles/GameProject2.dir/Entities/weapon.cpp.o: CMakeFiles/GameProject2.dir/flags.make
 CMakeFiles/GameProject2.dir/Entities/weapon.cpp.o: src/Entities/weapon.cpp
 CMakeFiles/GameProject2.dir/Entities/weapon.cpp.o: CMakeFiles/GameProject2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/murkrow/Repos/GameProject/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/GameProject2.dir/Entities/weapon.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameProject2.dir/Entities/weapon.cpp.o -MF CMakeFiles/GameProject2.dir/Entities/weapon.cpp.o.d -o CMakeFiles/GameProject2.dir/Entities/weapon.cpp.o -c /home/murkrow/Repos/GameProject/src/Entities/weapon.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/murkrow/Coding/Repos/GameProject/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/GameProject2.dir/Entities/weapon.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameProject2.dir/Entities/weapon.cpp.o -MF CMakeFiles/GameProject2.dir/Entities/weapon.cpp.o.d -o CMakeFiles/GameProject2.dir/Entities/weapon.cpp.o -c /home/murkrow/Coding/Repos/GameProject/src/Entities/weapon.cpp
 
 CMakeFiles/GameProject2.dir/Entities/weapon.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GameProject2.dir/Entities/weapon.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/murkrow/Repos/GameProject/src/Entities/weapon.cpp > CMakeFiles/GameProject2.dir/Entities/weapon.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/murkrow/Coding/Repos/GameProject/src/Entities/weapon.cpp > CMakeFiles/GameProject2.dir/Entities/weapon.cpp.i
 
 CMakeFiles/GameProject2.dir/Entities/weapon.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GameProject2.dir/Entities/weapon.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/murkrow/Repos/GameProject/src/Entities/weapon.cpp -o CMakeFiles/GameProject2.dir/Entities/weapon.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/murkrow/Coding/Repos/GameProject/src/Entities/weapon.cpp -o CMakeFiles/GameProject2.dir/Entities/weapon.cpp.s
 
 CMakeFiles/GameProject2.dir/Entities/bullet.cpp.o: CMakeFiles/GameProject2.dir/flags.make
 CMakeFiles/GameProject2.dir/Entities/bullet.cpp.o: src/Entities/bullet.cpp
 CMakeFiles/GameProject2.dir/Entities/bullet.cpp.o: CMakeFiles/GameProject2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/murkrow/Repos/GameProject/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/GameProject2.dir/Entities/bullet.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameProject2.dir/Entities/bullet.cpp.o -MF CMakeFiles/GameProject2.dir/Entities/bullet.cpp.o.d -o CMakeFiles/GameProject2.dir/Entities/bullet.cpp.o -c /home/murkrow/Repos/GameProject/src/Entities/bullet.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/murkrow/Coding/Repos/GameProject/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/GameProject2.dir/Entities/bullet.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameProject2.dir/Entities/bullet.cpp.o -MF CMakeFiles/GameProject2.dir/Entities/bullet.cpp.o.d -o CMakeFiles/GameProject2.dir/Entities/bullet.cpp.o -c /home/murkrow/Coding/Repos/GameProject/src/Entities/bullet.cpp
 
 CMakeFiles/GameProject2.dir/Entities/bullet.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GameProject2.dir/Entities/bullet.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/murkrow/Repos/GameProject/src/Entities/bullet.cpp > CMakeFiles/GameProject2.dir/Entities/bullet.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/murkrow/Coding/Repos/GameProject/src/Entities/bullet.cpp > CMakeFiles/GameProject2.dir/Entities/bullet.cpp.i
 
 CMakeFiles/GameProject2.dir/Entities/bullet.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GameProject2.dir/Entities/bullet.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/murkrow/Repos/GameProject/src/Entities/bullet.cpp -o CMakeFiles/GameProject2.dir/Entities/bullet.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/murkrow/Coding/Repos/GameProject/src/Entities/bullet.cpp -o CMakeFiles/GameProject2.dir/Entities/bullet.cpp.s
 
 CMakeFiles/GameProject2.dir/Entities/foe.cpp.o: CMakeFiles/GameProject2.dir/flags.make
 CMakeFiles/GameProject2.dir/Entities/foe.cpp.o: src/Entities/foe.cpp
 CMakeFiles/GameProject2.dir/Entities/foe.cpp.o: CMakeFiles/GameProject2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/murkrow/Repos/GameProject/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/GameProject2.dir/Entities/foe.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameProject2.dir/Entities/foe.cpp.o -MF CMakeFiles/GameProject2.dir/Entities/foe.cpp.o.d -o CMakeFiles/GameProject2.dir/Entities/foe.cpp.o -c /home/murkrow/Repos/GameProject/src/Entities/foe.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/murkrow/Coding/Repos/GameProject/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/GameProject2.dir/Entities/foe.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameProject2.dir/Entities/foe.cpp.o -MF CMakeFiles/GameProject2.dir/Entities/foe.cpp.o.d -o CMakeFiles/GameProject2.dir/Entities/foe.cpp.o -c /home/murkrow/Coding/Repos/GameProject/src/Entities/foe.cpp
 
 CMakeFiles/GameProject2.dir/Entities/foe.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GameProject2.dir/Entities/foe.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/murkrow/Repos/GameProject/src/Entities/foe.cpp > CMakeFiles/GameProject2.dir/Entities/foe.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/murkrow/Coding/Repos/GameProject/src/Entities/foe.cpp > CMakeFiles/GameProject2.dir/Entities/foe.cpp.i
 
 CMakeFiles/GameProject2.dir/Entities/foe.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GameProject2.dir/Entities/foe.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/murkrow/Repos/GameProject/src/Entities/foe.cpp -o CMakeFiles/GameProject2.dir/Entities/foe.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/murkrow/Coding/Repos/GameProject/src/Entities/foe.cpp -o CMakeFiles/GameProject2.dir/Entities/foe.cpp.s
 
 CMakeFiles/GameProject2.dir/Entities/vendor.cpp.o: CMakeFiles/GameProject2.dir/flags.make
 CMakeFiles/GameProject2.dir/Entities/vendor.cpp.o: src/Entities/vendor.cpp
 CMakeFiles/GameProject2.dir/Entities/vendor.cpp.o: CMakeFiles/GameProject2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/murkrow/Repos/GameProject/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/GameProject2.dir/Entities/vendor.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameProject2.dir/Entities/vendor.cpp.o -MF CMakeFiles/GameProject2.dir/Entities/vendor.cpp.o.d -o CMakeFiles/GameProject2.dir/Entities/vendor.cpp.o -c /home/murkrow/Repos/GameProject/src/Entities/vendor.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/murkrow/Coding/Repos/GameProject/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/GameProject2.dir/Entities/vendor.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameProject2.dir/Entities/vendor.cpp.o -MF CMakeFiles/GameProject2.dir/Entities/vendor.cpp.o.d -o CMakeFiles/GameProject2.dir/Entities/vendor.cpp.o -c /home/murkrow/Coding/Repos/GameProject/src/Entities/vendor.cpp
 
 CMakeFiles/GameProject2.dir/Entities/vendor.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GameProject2.dir/Entities/vendor.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/murkrow/Repos/GameProject/src/Entities/vendor.cpp > CMakeFiles/GameProject2.dir/Entities/vendor.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/murkrow/Coding/Repos/GameProject/src/Entities/vendor.cpp > CMakeFiles/GameProject2.dir/Entities/vendor.cpp.i
 
 CMakeFiles/GameProject2.dir/Entities/vendor.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GameProject2.dir/Entities/vendor.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/murkrow/Repos/GameProject/src/Entities/vendor.cpp -o CMakeFiles/GameProject2.dir/Entities/vendor.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/murkrow/Coding/Repos/GameProject/src/Entities/vendor.cpp -o CMakeFiles/GameProject2.dir/Entities/vendor.cpp.s
 
 CMakeFiles/GameProject2.dir/Entities/entity.cpp.o: CMakeFiles/GameProject2.dir/flags.make
 CMakeFiles/GameProject2.dir/Entities/entity.cpp.o: src/Entities/entity.cpp
 CMakeFiles/GameProject2.dir/Entities/entity.cpp.o: CMakeFiles/GameProject2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/murkrow/Repos/GameProject/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/GameProject2.dir/Entities/entity.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameProject2.dir/Entities/entity.cpp.o -MF CMakeFiles/GameProject2.dir/Entities/entity.cpp.o.d -o CMakeFiles/GameProject2.dir/Entities/entity.cpp.o -c /home/murkrow/Repos/GameProject/src/Entities/entity.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/murkrow/Coding/Repos/GameProject/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/GameProject2.dir/Entities/entity.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameProject2.dir/Entities/entity.cpp.o -MF CMakeFiles/GameProject2.dir/Entities/entity.cpp.o.d -o CMakeFiles/GameProject2.dir/Entities/entity.cpp.o -c /home/murkrow/Coding/Repos/GameProject/src/Entities/entity.cpp
 
 CMakeFiles/GameProject2.dir/Entities/entity.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GameProject2.dir/Entities/entity.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/murkrow/Repos/GameProject/src/Entities/entity.cpp > CMakeFiles/GameProject2.dir/Entities/entity.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/murkrow/Coding/Repos/GameProject/src/Entities/entity.cpp > CMakeFiles/GameProject2.dir/Entities/entity.cpp.i
 
 CMakeFiles/GameProject2.dir/Entities/entity.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GameProject2.dir/Entities/entity.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/murkrow/Repos/GameProject/src/Entities/entity.cpp -o CMakeFiles/GameProject2.dir/Entities/entity.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/murkrow/Coding/Repos/GameProject/src/Entities/entity.cpp -o CMakeFiles/GameProject2.dir/Entities/entity.cpp.s
 
 CMakeFiles/GameProject2.dir/Entities/fruit.cpp.o: CMakeFiles/GameProject2.dir/flags.make
 CMakeFiles/GameProject2.dir/Entities/fruit.cpp.o: src/Entities/fruit.cpp
 CMakeFiles/GameProject2.dir/Entities/fruit.cpp.o: CMakeFiles/GameProject2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/murkrow/Repos/GameProject/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/GameProject2.dir/Entities/fruit.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameProject2.dir/Entities/fruit.cpp.o -MF CMakeFiles/GameProject2.dir/Entities/fruit.cpp.o.d -o CMakeFiles/GameProject2.dir/Entities/fruit.cpp.o -c /home/murkrow/Repos/GameProject/src/Entities/fruit.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/murkrow/Coding/Repos/GameProject/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/GameProject2.dir/Entities/fruit.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameProject2.dir/Entities/fruit.cpp.o -MF CMakeFiles/GameProject2.dir/Entities/fruit.cpp.o.d -o CMakeFiles/GameProject2.dir/Entities/fruit.cpp.o -c /home/murkrow/Coding/Repos/GameProject/src/Entities/fruit.cpp
 
 CMakeFiles/GameProject2.dir/Entities/fruit.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GameProject2.dir/Entities/fruit.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/murkrow/Repos/GameProject/src/Entities/fruit.cpp > CMakeFiles/GameProject2.dir/Entities/fruit.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/murkrow/Coding/Repos/GameProject/src/Entities/fruit.cpp > CMakeFiles/GameProject2.dir/Entities/fruit.cpp.i
 
 CMakeFiles/GameProject2.dir/Entities/fruit.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GameProject2.dir/Entities/fruit.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/murkrow/Repos/GameProject/src/Entities/fruit.cpp -o CMakeFiles/GameProject2.dir/Entities/fruit.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/murkrow/Coding/Repos/GameProject/src/Entities/fruit.cpp -o CMakeFiles/GameProject2.dir/Entities/fruit.cpp.s
 
 CMakeFiles/GameProject2.dir/Entities/player.cpp.o: CMakeFiles/GameProject2.dir/flags.make
 CMakeFiles/GameProject2.dir/Entities/player.cpp.o: src/Entities/player.cpp
 CMakeFiles/GameProject2.dir/Entities/player.cpp.o: CMakeFiles/GameProject2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/murkrow/Repos/GameProject/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/GameProject2.dir/Entities/player.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameProject2.dir/Entities/player.cpp.o -MF CMakeFiles/GameProject2.dir/Entities/player.cpp.o.d -o CMakeFiles/GameProject2.dir/Entities/player.cpp.o -c /home/murkrow/Repos/GameProject/src/Entities/player.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/murkrow/Coding/Repos/GameProject/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/GameProject2.dir/Entities/player.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameProject2.dir/Entities/player.cpp.o -MF CMakeFiles/GameProject2.dir/Entities/player.cpp.o.d -o CMakeFiles/GameProject2.dir/Entities/player.cpp.o -c /home/murkrow/Coding/Repos/GameProject/src/Entities/player.cpp
 
 CMakeFiles/GameProject2.dir/Entities/player.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GameProject2.dir/Entities/player.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/murkrow/Repos/GameProject/src/Entities/player.cpp > CMakeFiles/GameProject2.dir/Entities/player.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/murkrow/Coding/Repos/GameProject/src/Entities/player.cpp > CMakeFiles/GameProject2.dir/Entities/player.cpp.i
 
 CMakeFiles/GameProject2.dir/Entities/player.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GameProject2.dir/Entities/player.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/murkrow/Repos/GameProject/src/Entities/player.cpp -o CMakeFiles/GameProject2.dir/Entities/player.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/murkrow/Coding/Repos/GameProject/src/Entities/player.cpp -o CMakeFiles/GameProject2.dir/Entities/player.cpp.s
 
 CMakeFiles/GameProject2.dir/Entities/artifact.cpp.o: CMakeFiles/GameProject2.dir/flags.make
 CMakeFiles/GameProject2.dir/Entities/artifact.cpp.o: src/Entities/artifact.cpp
 CMakeFiles/GameProject2.dir/Entities/artifact.cpp.o: CMakeFiles/GameProject2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/murkrow/Repos/GameProject/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/GameProject2.dir/Entities/artifact.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameProject2.dir/Entities/artifact.cpp.o -MF CMakeFiles/GameProject2.dir/Entities/artifact.cpp.o.d -o CMakeFiles/GameProject2.dir/Entities/artifact.cpp.o -c /home/murkrow/Repos/GameProject/src/Entities/artifact.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/murkrow/Coding/Repos/GameProject/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/GameProject2.dir/Entities/artifact.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameProject2.dir/Entities/artifact.cpp.o -MF CMakeFiles/GameProject2.dir/Entities/artifact.cpp.o.d -o CMakeFiles/GameProject2.dir/Entities/artifact.cpp.o -c /home/murkrow/Coding/Repos/GameProject/src/Entities/artifact.cpp
 
 CMakeFiles/GameProject2.dir/Entities/artifact.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GameProject2.dir/Entities/artifact.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/murkrow/Repos/GameProject/src/Entities/artifact.cpp > CMakeFiles/GameProject2.dir/Entities/artifact.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/murkrow/Coding/Repos/GameProject/src/Entities/artifact.cpp > CMakeFiles/GameProject2.dir/Entities/artifact.cpp.i
 
 CMakeFiles/GameProject2.dir/Entities/artifact.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GameProject2.dir/Entities/artifact.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/murkrow/Repos/GameProject/src/Entities/artifact.cpp -o CMakeFiles/GameProject2.dir/Entities/artifact.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/murkrow/Coding/Repos/GameProject/src/Entities/artifact.cpp -o CMakeFiles/GameProject2.dir/Entities/artifact.cpp.s
 
 CMakeFiles/GameProject2.dir/Entities/food.cpp.o: CMakeFiles/GameProject2.dir/flags.make
 CMakeFiles/GameProject2.dir/Entities/food.cpp.o: src/Entities/food.cpp
 CMakeFiles/GameProject2.dir/Entities/food.cpp.o: CMakeFiles/GameProject2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/murkrow/Repos/GameProject/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/GameProject2.dir/Entities/food.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameProject2.dir/Entities/food.cpp.o -MF CMakeFiles/GameProject2.dir/Entities/food.cpp.o.d -o CMakeFiles/GameProject2.dir/Entities/food.cpp.o -c /home/murkrow/Repos/GameProject/src/Entities/food.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/murkrow/Coding/Repos/GameProject/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/GameProject2.dir/Entities/food.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameProject2.dir/Entities/food.cpp.o -MF CMakeFiles/GameProject2.dir/Entities/food.cpp.o.d -o CMakeFiles/GameProject2.dir/Entities/food.cpp.o -c /home/murkrow/Coding/Repos/GameProject/src/Entities/food.cpp
 
 CMakeFiles/GameProject2.dir/Entities/food.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GameProject2.dir/Entities/food.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/murkrow/Repos/GameProject/src/Entities/food.cpp > CMakeFiles/GameProject2.dir/Entities/food.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/murkrow/Coding/Repos/GameProject/src/Entities/food.cpp > CMakeFiles/GameProject2.dir/Entities/food.cpp.i
 
 CMakeFiles/GameProject2.dir/Entities/food.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GameProject2.dir/Entities/food.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/murkrow/Repos/GameProject/src/Entities/food.cpp -o CMakeFiles/GameProject2.dir/Entities/food.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/murkrow/Coding/Repos/GameProject/src/Entities/food.cpp -o CMakeFiles/GameProject2.dir/Entities/food.cpp.s
 
 CMakeFiles/GameProject2.dir/UI/itemselector.cpp.o: CMakeFiles/GameProject2.dir/flags.make
 CMakeFiles/GameProject2.dir/UI/itemselector.cpp.o: src/UI/itemselector.cpp
 CMakeFiles/GameProject2.dir/UI/itemselector.cpp.o: CMakeFiles/GameProject2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/murkrow/Repos/GameProject/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/GameProject2.dir/UI/itemselector.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameProject2.dir/UI/itemselector.cpp.o -MF CMakeFiles/GameProject2.dir/UI/itemselector.cpp.o.d -o CMakeFiles/GameProject2.dir/UI/itemselector.cpp.o -c /home/murkrow/Repos/GameProject/src/UI/itemselector.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/murkrow/Coding/Repos/GameProject/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/GameProject2.dir/UI/itemselector.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameProject2.dir/UI/itemselector.cpp.o -MF CMakeFiles/GameProject2.dir/UI/itemselector.cpp.o.d -o CMakeFiles/GameProject2.dir/UI/itemselector.cpp.o -c /home/murkrow/Coding/Repos/GameProject/src/UI/itemselector.cpp
 
 CMakeFiles/GameProject2.dir/UI/itemselector.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GameProject2.dir/UI/itemselector.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/murkrow/Repos/GameProject/src/UI/itemselector.cpp > CMakeFiles/GameProject2.dir/UI/itemselector.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/murkrow/Coding/Repos/GameProject/src/UI/itemselector.cpp > CMakeFiles/GameProject2.dir/UI/itemselector.cpp.i
 
 CMakeFiles/GameProject2.dir/UI/itemselector.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GameProject2.dir/UI/itemselector.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/murkrow/Repos/GameProject/src/UI/itemselector.cpp -o CMakeFiles/GameProject2.dir/UI/itemselector.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/murkrow/Coding/Repos/GameProject/src/UI/itemselector.cpp -o CMakeFiles/GameProject2.dir/UI/itemselector.cpp.s
 
 CMakeFiles/GameProject2.dir/UI/dialog.cpp.o: CMakeFiles/GameProject2.dir/flags.make
 CMakeFiles/GameProject2.dir/UI/dialog.cpp.o: src/UI/dialog.cpp
 CMakeFiles/GameProject2.dir/UI/dialog.cpp.o: CMakeFiles/GameProject2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/murkrow/Repos/GameProject/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/GameProject2.dir/UI/dialog.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameProject2.dir/UI/dialog.cpp.o -MF CMakeFiles/GameProject2.dir/UI/dialog.cpp.o.d -o CMakeFiles/GameProject2.dir/UI/dialog.cpp.o -c /home/murkrow/Repos/GameProject/src/UI/dialog.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/murkrow/Coding/Repos/GameProject/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/GameProject2.dir/UI/dialog.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameProject2.dir/UI/dialog.cpp.o -MF CMakeFiles/GameProject2.dir/UI/dialog.cpp.o.d -o CMakeFiles/GameProject2.dir/UI/dialog.cpp.o -c /home/murkrow/Coding/Repos/GameProject/src/UI/dialog.cpp
 
 CMakeFiles/GameProject2.dir/UI/dialog.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GameProject2.dir/UI/dialog.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/murkrow/Repos/GameProject/src/UI/dialog.cpp > CMakeFiles/GameProject2.dir/UI/dialog.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/murkrow/Coding/Repos/GameProject/src/UI/dialog.cpp > CMakeFiles/GameProject2.dir/UI/dialog.cpp.i
 
 CMakeFiles/GameProject2.dir/UI/dialog.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GameProject2.dir/UI/dialog.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/murkrow/Repos/GameProject/src/UI/dialog.cpp -o CMakeFiles/GameProject2.dir/UI/dialog.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/murkrow/Coding/Repos/GameProject/src/UI/dialog.cpp -o CMakeFiles/GameProject2.dir/UI/dialog.cpp.s
 
 CMakeFiles/GameProject2.dir/UI/inventory.cpp.o: CMakeFiles/GameProject2.dir/flags.make
 CMakeFiles/GameProject2.dir/UI/inventory.cpp.o: src/UI/inventory.cpp
 CMakeFiles/GameProject2.dir/UI/inventory.cpp.o: CMakeFiles/GameProject2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/murkrow/Repos/GameProject/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/GameProject2.dir/UI/inventory.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameProject2.dir/UI/inventory.cpp.o -MF CMakeFiles/GameProject2.dir/UI/inventory.cpp.o.d -o CMakeFiles/GameProject2.dir/UI/inventory.cpp.o -c /home/murkrow/Repos/GameProject/src/UI/inventory.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/murkrow/Coding/Repos/GameProject/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/GameProject2.dir/UI/inventory.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameProject2.dir/UI/inventory.cpp.o -MF CMakeFiles/GameProject2.dir/UI/inventory.cpp.o.d -o CMakeFiles/GameProject2.dir/UI/inventory.cpp.o -c /home/murkrow/Coding/Repos/GameProject/src/UI/inventory.cpp
 
 CMakeFiles/GameProject2.dir/UI/inventory.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GameProject2.dir/UI/inventory.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/murkrow/Repos/GameProject/src/UI/inventory.cpp > CMakeFiles/GameProject2.dir/UI/inventory.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/murkrow/Coding/Repos/GameProject/src/UI/inventory.cpp > CMakeFiles/GameProject2.dir/UI/inventory.cpp.i
 
 CMakeFiles/GameProject2.dir/UI/inventory.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GameProject2.dir/UI/inventory.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/murkrow/Repos/GameProject/src/UI/inventory.cpp -o CMakeFiles/GameProject2.dir/UI/inventory.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/murkrow/Coding/Repos/GameProject/src/UI/inventory.cpp -o CMakeFiles/GameProject2.dir/UI/inventory.cpp.s
 
 CMakeFiles/GameProject2.dir/UI/shop.cpp.o: CMakeFiles/GameProject2.dir/flags.make
 CMakeFiles/GameProject2.dir/UI/shop.cpp.o: src/UI/shop.cpp
 CMakeFiles/GameProject2.dir/UI/shop.cpp.o: CMakeFiles/GameProject2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/murkrow/Repos/GameProject/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/GameProject2.dir/UI/shop.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameProject2.dir/UI/shop.cpp.o -MF CMakeFiles/GameProject2.dir/UI/shop.cpp.o.d -o CMakeFiles/GameProject2.dir/UI/shop.cpp.o -c /home/murkrow/Repos/GameProject/src/UI/shop.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/murkrow/Coding/Repos/GameProject/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/GameProject2.dir/UI/shop.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameProject2.dir/UI/shop.cpp.o -MF CMakeFiles/GameProject2.dir/UI/shop.cpp.o.d -o CMakeFiles/GameProject2.dir/UI/shop.cpp.o -c /home/murkrow/Coding/Repos/GameProject/src/UI/shop.cpp
 
 CMakeFiles/GameProject2.dir/UI/shop.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GameProject2.dir/UI/shop.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/murkrow/Repos/GameProject/src/UI/shop.cpp > CMakeFiles/GameProject2.dir/UI/shop.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/murkrow/Coding/Repos/GameProject/src/UI/shop.cpp > CMakeFiles/GameProject2.dir/UI/shop.cpp.i
 
 CMakeFiles/GameProject2.dir/UI/shop.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GameProject2.dir/UI/shop.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/murkrow/Repos/GameProject/src/UI/shop.cpp -o CMakeFiles/GameProject2.dir/UI/shop.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/murkrow/Coding/Repos/GameProject/src/UI/shop.cpp -o CMakeFiles/GameProject2.dir/UI/shop.cpp.s
 
 CMakeFiles/GameProject2.dir/UI/message.cpp.o: CMakeFiles/GameProject2.dir/flags.make
 CMakeFiles/GameProject2.dir/UI/message.cpp.o: src/UI/message.cpp
 CMakeFiles/GameProject2.dir/UI/message.cpp.o: CMakeFiles/GameProject2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/murkrow/Repos/GameProject/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/GameProject2.dir/UI/message.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameProject2.dir/UI/message.cpp.o -MF CMakeFiles/GameProject2.dir/UI/message.cpp.o.d -o CMakeFiles/GameProject2.dir/UI/message.cpp.o -c /home/murkrow/Repos/GameProject/src/UI/message.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/murkrow/Coding/Repos/GameProject/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/GameProject2.dir/UI/message.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameProject2.dir/UI/message.cpp.o -MF CMakeFiles/GameProject2.dir/UI/message.cpp.o.d -o CMakeFiles/GameProject2.dir/UI/message.cpp.o -c /home/murkrow/Coding/Repos/GameProject/src/UI/message.cpp
 
 CMakeFiles/GameProject2.dir/UI/message.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GameProject2.dir/UI/message.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/murkrow/Repos/GameProject/src/UI/message.cpp > CMakeFiles/GameProject2.dir/UI/message.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/murkrow/Coding/Repos/GameProject/src/UI/message.cpp > CMakeFiles/GameProject2.dir/UI/message.cpp.i
 
 CMakeFiles/GameProject2.dir/UI/message.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GameProject2.dir/UI/message.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/murkrow/Repos/GameProject/src/UI/message.cpp -o CMakeFiles/GameProject2.dir/UI/message.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/murkrow/Coding/Repos/GameProject/src/UI/message.cpp -o CMakeFiles/GameProject2.dir/UI/message.cpp.s
 
 CMakeFiles/GameProject2.dir/UI/stats.cpp.o: CMakeFiles/GameProject2.dir/flags.make
 CMakeFiles/GameProject2.dir/UI/stats.cpp.o: src/UI/stats.cpp
 CMakeFiles/GameProject2.dir/UI/stats.cpp.o: CMakeFiles/GameProject2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/murkrow/Repos/GameProject/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/GameProject2.dir/UI/stats.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameProject2.dir/UI/stats.cpp.o -MF CMakeFiles/GameProject2.dir/UI/stats.cpp.o.d -o CMakeFiles/GameProject2.dir/UI/stats.cpp.o -c /home/murkrow/Repos/GameProject/src/UI/stats.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/murkrow/Coding/Repos/GameProject/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/GameProject2.dir/UI/stats.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameProject2.dir/UI/stats.cpp.o -MF CMakeFiles/GameProject2.dir/UI/stats.cpp.o.d -o CMakeFiles/GameProject2.dir/UI/stats.cpp.o -c /home/murkrow/Coding/Repos/GameProject/src/UI/stats.cpp
 
 CMakeFiles/GameProject2.dir/UI/stats.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GameProject2.dir/UI/stats.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/murkrow/Repos/GameProject/src/UI/stats.cpp > CMakeFiles/GameProject2.dir/UI/stats.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/murkrow/Coding/Repos/GameProject/src/UI/stats.cpp > CMakeFiles/GameProject2.dir/UI/stats.cpp.i
 
 CMakeFiles/GameProject2.dir/UI/stats.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GameProject2.dir/UI/stats.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/murkrow/Repos/GameProject/src/UI/stats.cpp -o CMakeFiles/GameProject2.dir/UI/stats.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/murkrow/Coding/Repos/GameProject/src/UI/stats.cpp -o CMakeFiles/GameProject2.dir/UI/stats.cpp.s
 
 CMakeFiles/GameProject2.dir/Engine/main.cpp.o: CMakeFiles/GameProject2.dir/flags.make
 CMakeFiles/GameProject2.dir/Engine/main.cpp.o: src/Engine/main.cpp
 CMakeFiles/GameProject2.dir/Engine/main.cpp.o: CMakeFiles/GameProject2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/murkrow/Repos/GameProject/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/GameProject2.dir/Engine/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameProject2.dir/Engine/main.cpp.o -MF CMakeFiles/GameProject2.dir/Engine/main.cpp.o.d -o CMakeFiles/GameProject2.dir/Engine/main.cpp.o -c /home/murkrow/Repos/GameProject/src/Engine/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/murkrow/Coding/Repos/GameProject/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/GameProject2.dir/Engine/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameProject2.dir/Engine/main.cpp.o -MF CMakeFiles/GameProject2.dir/Engine/main.cpp.o.d -o CMakeFiles/GameProject2.dir/Engine/main.cpp.o -c /home/murkrow/Coding/Repos/GameProject/src/Engine/main.cpp
 
 CMakeFiles/GameProject2.dir/Engine/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GameProject2.dir/Engine/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/murkrow/Repos/GameProject/src/Engine/main.cpp > CMakeFiles/GameProject2.dir/Engine/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/murkrow/Coding/Repos/GameProject/src/Engine/main.cpp > CMakeFiles/GameProject2.dir/Engine/main.cpp.i
 
 CMakeFiles/GameProject2.dir/Engine/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GameProject2.dir/Engine/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/murkrow/Repos/GameProject/src/Engine/main.cpp -o CMakeFiles/GameProject2.dir/Engine/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/murkrow/Coding/Repos/GameProject/src/Engine/main.cpp -o CMakeFiles/GameProject2.dir/Engine/main.cpp.s
 
 CMakeFiles/GameProject2.dir/Engine/map.cpp.o: CMakeFiles/GameProject2.dir/flags.make
 CMakeFiles/GameProject2.dir/Engine/map.cpp.o: src/Engine/map.cpp
 CMakeFiles/GameProject2.dir/Engine/map.cpp.o: CMakeFiles/GameProject2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/murkrow/Repos/GameProject/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/GameProject2.dir/Engine/map.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameProject2.dir/Engine/map.cpp.o -MF CMakeFiles/GameProject2.dir/Engine/map.cpp.o.d -o CMakeFiles/GameProject2.dir/Engine/map.cpp.o -c /home/murkrow/Repos/GameProject/src/Engine/map.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/murkrow/Coding/Repos/GameProject/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/GameProject2.dir/Engine/map.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameProject2.dir/Engine/map.cpp.o -MF CMakeFiles/GameProject2.dir/Engine/map.cpp.o.d -o CMakeFiles/GameProject2.dir/Engine/map.cpp.o -c /home/murkrow/Coding/Repos/GameProject/src/Engine/map.cpp
 
 CMakeFiles/GameProject2.dir/Engine/map.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GameProject2.dir/Engine/map.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/murkrow/Repos/GameProject/src/Engine/map.cpp > CMakeFiles/GameProject2.dir/Engine/map.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/murkrow/Coding/Repos/GameProject/src/Engine/map.cpp > CMakeFiles/GameProject2.dir/Engine/map.cpp.i
 
 CMakeFiles/GameProject2.dir/Engine/map.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GameProject2.dir/Engine/map.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/murkrow/Repos/GameProject/src/Engine/map.cpp -o CMakeFiles/GameProject2.dir/Engine/map.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/murkrow/Coding/Repos/GameProject/src/Engine/map.cpp -o CMakeFiles/GameProject2.dir/Engine/map.cpp.s
 
 CMakeFiles/GameProject2.dir/Engine/minimap.cpp.o: CMakeFiles/GameProject2.dir/flags.make
 CMakeFiles/GameProject2.dir/Engine/minimap.cpp.o: src/Engine/minimap.cpp
 CMakeFiles/GameProject2.dir/Engine/minimap.cpp.o: CMakeFiles/GameProject2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/murkrow/Repos/GameProject/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/GameProject2.dir/Engine/minimap.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameProject2.dir/Engine/minimap.cpp.o -MF CMakeFiles/GameProject2.dir/Engine/minimap.cpp.o.d -o CMakeFiles/GameProject2.dir/Engine/minimap.cpp.o -c /home/murkrow/Repos/GameProject/src/Engine/minimap.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/murkrow/Coding/Repos/GameProject/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/GameProject2.dir/Engine/minimap.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameProject2.dir/Engine/minimap.cpp.o -MF CMakeFiles/GameProject2.dir/Engine/minimap.cpp.o.d -o CMakeFiles/GameProject2.dir/Engine/minimap.cpp.o -c /home/murkrow/Coding/Repos/GameProject/src/Engine/minimap.cpp
 
 CMakeFiles/GameProject2.dir/Engine/minimap.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GameProject2.dir/Engine/minimap.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/murkrow/Repos/GameProject/src/Engine/minimap.cpp > CMakeFiles/GameProject2.dir/Engine/minimap.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/murkrow/Coding/Repos/GameProject/src/Engine/minimap.cpp > CMakeFiles/GameProject2.dir/Engine/minimap.cpp.i
 
 CMakeFiles/GameProject2.dir/Engine/minimap.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GameProject2.dir/Engine/minimap.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/murkrow/Repos/GameProject/src/Engine/minimap.cpp -o CMakeFiles/GameProject2.dir/Engine/minimap.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/murkrow/Coding/Repos/GameProject/src/Engine/minimap.cpp -o CMakeFiles/GameProject2.dir/Engine/minimap.cpp.s
 
 CMakeFiles/GameProject2.dir/Engine/room.cpp.o: CMakeFiles/GameProject2.dir/flags.make
 CMakeFiles/GameProject2.dir/Engine/room.cpp.o: src/Engine/room.cpp
 CMakeFiles/GameProject2.dir/Engine/room.cpp.o: CMakeFiles/GameProject2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/murkrow/Repos/GameProject/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/GameProject2.dir/Engine/room.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameProject2.dir/Engine/room.cpp.o -MF CMakeFiles/GameProject2.dir/Engine/room.cpp.o.d -o CMakeFiles/GameProject2.dir/Engine/room.cpp.o -c /home/murkrow/Repos/GameProject/src/Engine/room.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/murkrow/Coding/Repos/GameProject/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/GameProject2.dir/Engine/room.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameProject2.dir/Engine/room.cpp.o -MF CMakeFiles/GameProject2.dir/Engine/room.cpp.o.d -o CMakeFiles/GameProject2.dir/Engine/room.cpp.o -c /home/murkrow/Coding/Repos/GameProject/src/Engine/room.cpp
 
 CMakeFiles/GameProject2.dir/Engine/room.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GameProject2.dir/Engine/room.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/murkrow/Repos/GameProject/src/Engine/room.cpp > CMakeFiles/GameProject2.dir/Engine/room.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/murkrow/Coding/Repos/GameProject/src/Engine/room.cpp > CMakeFiles/GameProject2.dir/Engine/room.cpp.i
 
 CMakeFiles/GameProject2.dir/Engine/room.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GameProject2.dir/Engine/room.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/murkrow/Repos/GameProject/src/Engine/room.cpp -o CMakeFiles/GameProject2.dir/Engine/room.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/murkrow/Coding/Repos/GameProject/src/Engine/room.cpp -o CMakeFiles/GameProject2.dir/Engine/room.cpp.s
 
 # Object files for target GameProject2
 GameProject2_OBJECTS = \
@@ -461,7 +461,7 @@ GameProject2: CMakeFiles/GameProject2.dir/Engine/minimap.cpp.o
 GameProject2: CMakeFiles/GameProject2.dir/Engine/room.cpp.o
 GameProject2: CMakeFiles/GameProject2.dir/build.make
 GameProject2: CMakeFiles/GameProject2.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/murkrow/Repos/GameProject/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Linking CXX executable GameProject2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/murkrow/Coding/Repos/GameProject/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Linking CXX executable GameProject2"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/GameProject2.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -473,6 +473,6 @@ CMakeFiles/GameProject2.dir/clean:
 .PHONY : CMakeFiles/GameProject2.dir/clean
 
 CMakeFiles/GameProject2.dir/depend:
-	cd /home/murkrow/Repos/GameProject && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/murkrow/Repos/GameProject/src /home/murkrow/Repos/GameProject/src /home/murkrow/Repos/GameProject /home/murkrow/Repos/GameProject /home/murkrow/Repos/GameProject/CMakeFiles/GameProject2.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/murkrow/Coding/Repos/GameProject && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/murkrow/Coding/Repos/GameProject/src /home/murkrow/Coding/Repos/GameProject/src /home/murkrow/Coding/Repos/GameProject /home/murkrow/Coding/Repos/GameProject /home/murkrow/Coding/Repos/GameProject/CMakeFiles/GameProject2.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/GameProject2.dir/depend
 
