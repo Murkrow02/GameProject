@@ -27,6 +27,8 @@ void debugInfo(Player player, Map map){
 
 int main(){
 
+    
+
     // SETUP
     int room_width = 80, room_height = 40, room_x, room_y;
 
@@ -48,11 +50,13 @@ int main(){
     gameObjects.gameWindow = game_window;
     gameObjects.gameMap = &map;
     gameObjects.gameMinimap = &minimap;
+    
 
     // map - minimap setup
     vector<vector<int>> floor = map.generateMap(game_window, &gameObjects);
     minimap.drawMinimap(map, 0);
     map.createRoom(0);
+    
 
     // player setup
     Player player((room_height / 2), (room_width / 2), &gameObjects); // player creation

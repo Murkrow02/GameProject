@@ -21,30 +21,40 @@ Room::Room(int _id, string _roomType, pair<int, int> _coords, int _roomW, int _r
     roomW = _roomW;
     roomH = _roomH;
     gameObjects = game_objects;
+    
 
     //Create filename
-    string fileName = "Layouts/";
-    fileName += std::to_string(id);
-    fileName += ".json";
+    // Random stuff, to be changed
+    string jsonId = "";
+    if (id % 2 == 0)
+        jsonId = "0";
+    else
+        jsonId = "1";
+    string fileName = "../Layouts/" + jsonId + ".json";
+    //fileName += to_string(id);
+    //fileName += ".json";
 
-    //Create entities and objects by reading from json
-    try{
-        std::ifstream f(fileName);
-        json data = json::parse(f);
+    //Create entities and objects by reading from json                  
 
-        for (int i = 0; i < data.size(); i++)
-        {
-            if (data[i]["type"] == "foe")
-                roomObjects.insert(new Dummy(int(data[i]["posY"]), int(data[i]["posX"]), gameObjects));
-            else if(data[i]["type"] == "apple")
-                 roomObjects.insert(new Apple(int(data[i]["posY"]), int(data[i]["posX"]), game_objects));
-            else if(data[i]["type"] == "shop")
-                roomObjects.insert(new Vendor(int(data[i]["posY"]), int(data[i]["posX"]), game_objects));
-        }
+    ifstream f(fileName);
+    json data = json::parse(f);
 
-    }catch(const std::exception& e){
-        //MISSING JSON FOR LEVELS
+    for (int i = 0; i < data.size(); i++)
+    {
+        if (data[i]["type"] == "foe")
+            roomObjects.insert(new Dummy(int(data[i]["posY"]), int(data[i]["posX"]), gameObjects));
+        else if(data[i]["type"] == "apple")
+            roomObjects.insert(new Apple(int(data[i]["posY"]), int(data[i]["posX"]), gameObjects));
+        else if(data[i]["type"] == "shop")
+            roomObjects.insert(new Vendor(int(data[i]["posY"]), int(data[i]["posX"]), gameObjects));
     }
+
+    
+    
+    /*catch(const std::exception& e){
+        roomObjects.insert(new Dummy(1, 1, gameObjects));
+    }
+    */
    
 }
 
@@ -74,13 +84,13 @@ void Room::generate_room(vector<vector<int>> floor){
 void Room::generate_entities(){
 
     //Remove previous entities from game window
-    gameObjects->reset();
     wclear(gameObjects->gameWindow);
+    gameObjects->reset();
+    
 
     //Populate game objects with room objects
-    Node* current = roomObjects.head;
+    Node* current = roomObjects.head; 
     while(current != NULL){
-
         if(current->data != NULL)
             gameObjects->insert(current->data);
         current = current->next;

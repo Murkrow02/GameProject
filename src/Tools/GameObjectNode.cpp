@@ -1,5 +1,9 @@
 #include "GameObjectNode.hpp"
 
+GameObjectNode::GameObjectNode(){
+    head = NULL; // init head as null
+}
+
 void GameObjectNode::insert(GameObject *item)
     {
 

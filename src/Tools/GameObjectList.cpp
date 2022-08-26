@@ -41,3 +41,7 @@ void GameObjectList::draw(){
         current = current->next;
     }
 }
+
+void GameObjectList::reset(){
+        head = NULL;
+}

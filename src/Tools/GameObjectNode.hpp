@@ -16,5 +16,6 @@ public:
     void insert(GameObject *item);
     void remove(GameObject *item);
     void reset();
+    GameObjectNode();
 
 };

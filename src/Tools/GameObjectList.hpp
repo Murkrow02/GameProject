@@ -17,6 +17,7 @@ class GameObjectList : public GameObjectNode{
 
         void doFrames(); // update all objects positions etc
         void draw(); // draw everything
+        void reset();
 
         GameObjectList();
 };
