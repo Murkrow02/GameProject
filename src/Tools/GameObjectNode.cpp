@@ -1,4 +1,6 @@
 #include "GameObjectNode.hpp"
+#include <typeinfo>
+#include "../Entities/dummy.cpp"
 
 GameObjectNode::GameObjectNode(){
     head = NULL; // init head as null
@@ -49,6 +51,20 @@ void GameObjectNode::insert(GameObject *item)
             prev = current;
             current = current->next;
         }
+    }
+
+    int GameObjectNode::numberOfEnemies(GameObjectList *gameObjects){
+        Dummy reference = Dummy(0,0,gameObjects);
+        Node *current = head;
+        int number = 0;
+        while (current != NULL){
+            if(current->data->displayChar == CHAR_DUMMY){
+                number += 1;
+            }
+            current = current->next;
+
+        }
+        return number;
     }
 
     Entity* GameObjectNode::findEntityAtPos(int x, int y, GameObject *excluded)

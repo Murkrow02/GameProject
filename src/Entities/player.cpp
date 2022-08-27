@@ -100,7 +100,7 @@ Player::Player(int _y, int _x, GameObjectList *game_objects) : Entity{ _y,  _x, 
     char collidedChar = mvwinch(gameItems->gameWindow, nextY, nextX);
 
     //Check if entered new room
-    if (collidedChar == '*'){
+    if (collidedChar == '*' && gameItems->numberOfEnemies(gameItems) == 0){
 
       //Get current room
       Room cRoom = gameItems->gameMap->rooms[roomId];

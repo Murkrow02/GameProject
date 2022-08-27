@@ -3394,7 +3394,69 @@ CMakeFiles/GameProject2.dir/Tools/GameObjectNode.cpp.o: Tools/GameObjectNode.cpp
   /usr/include/c++/10/bits/charconv.h \
   /usr/include/c++/10/bits/functional_hash.h \
   /usr/include/c++/10/bits/basic_string.tcc \
-  Engine/gameobject.hpp
+  Engine/gameobject.hpp \
+  Entities/dummy.cpp \
+  Entities/foe.cpp \
+  Entities/player.hpp \
+  Engine/map.h \
+  /usr/include/c++/10/vector \
+  /usr/include/c++/10/bits/stl_uninitialized.h \
+  /usr/include/c++/10/bits/stl_vector.h \
+  /usr/include/c++/10/bits/stl_bvector.h \
+  /usr/include/c++/10/bits/vector.tcc \
+  /usr/include/c++/10/utility \
+  /usr/include/c++/10/bits/stl_relops.h \
+  Engine/room.h \
+  /usr/include/c++/10/iostream \
+  /usr/include/c++/10/ostream \
+  /usr/include/c++/10/ios \
+  /usr/include/c++/10/bits/ios_base.h \
+  /usr/include/c++/10/bits/locale_classes.h \
+  /usr/include/c++/10/bits/locale_classes.tcc \
+  /usr/include/c++/10/system_error \
+  /usr/include/x86_64-linux-gnu/c++/10/bits/error_constants.h \
+  /usr/include/c++/10/stdexcept \
+  /usr/include/c++/10/streambuf \
+  /usr/include/c++/10/bits/streambuf.tcc \
+  /usr/include/c++/10/bits/basic_ios.h \
+  /usr/include/c++/10/bits/locale_facets.h \
+  /usr/include/c++/10/cwctype \
+  /usr/include/wctype.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
+  /usr/include/x86_64-linux-gnu/c++/10/bits/ctype_base.h \
+  /usr/include/c++/10/bits/streambuf_iterator.h \
+  /usr/include/x86_64-linux-gnu/c++/10/bits/ctype_inline.h \
+  /usr/include/c++/10/bits/locale_facets.tcc \
+  /usr/include/c++/10/bits/basic_ios.tcc \
+  /usr/include/c++/10/bits/ostream.tcc \
+  /usr/include/c++/10/istream \
+  /usr/include/c++/10/bits/istream.tcc \
+  /usr/include/c++/10/memory \
+  /usr/include/c++/10/bits/stl_tempbuf.h \
+  /usr/include/c++/10/bits/stl_raw_storage_iter.h \
+  /usr/include/c++/10/bits/ranges_uninitialized.h \
+  /usr/include/c++/10/ext/concurrence.h \
+  /usr/include/c++/10/bits/uses_allocator.h \
+  /usr/include/c++/10/bits/unique_ptr.h \
+  /usr/include/c++/10/tuple \
+  /usr/include/c++/10/array \
+  /usr/include/c++/10/bits/invoke.h \
+  /usr/include/c++/10/bits/shared_ptr.h \
+  /usr/include/c++/10/bits/shared_ptr_base.h \
+  /usr/include/c++/10/bits/allocated_ptr.h \
+  /usr/include/c++/10/bits/refwrap.h \
+  /usr/include/c++/10/ext/aligned_buffer.h \
+  /usr/include/c++/10/bits/shared_ptr_atomic.h \
+  /usr/include/c++/10/bits/atomic_base.h \
+  /usr/include/c++/10/bits/atomic_lockfree_defines.h \
+  /usr/include/c++/10/backward/auto_ptr.h \
+  Entities/weapon.cpp \
+  Tools/ShopItem.hpp \
+  Tools/GameObjectList.hpp \
+  Engine/minimap.h \
+  Tools/utils.hpp \
+  UI/stats.hpp \
+  /usr/include/c++/10/ctime
 
 CMakeFiles/GameProject2.dir/Tools/savedata.cpp.o: Tools/savedata.cpp \
   /usr/include/stdc-predef.h \

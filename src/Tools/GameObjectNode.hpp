@@ -16,6 +16,7 @@ public:
     void insert(GameObject *item);
     void remove(GameObject *item);
     void reset();
+    int numberOfEnemies(GameObjectList *gameObjects);
     GameObjectNode();
 
 };
