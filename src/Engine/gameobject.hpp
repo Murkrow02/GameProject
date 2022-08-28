@@ -30,11 +30,15 @@ class GameObject
 {
 
     public:
-        virtual void DoFrame() = 0;
-        virtual void Draw() = 0;
-        int x;
+    
+        virtual void DoFrame() = 0; // called once per frame
+        virtual void Draw() = 0; // called once per frame, after DoFrame
+
+        // position
+        int x; 
         int y;
-        char displayChar;
-        GameObjectList *gameItems;
+        
+        char displayChar; // the char displayed on screen for this object
+        GameObjectList *gameItems; 
         
 };
