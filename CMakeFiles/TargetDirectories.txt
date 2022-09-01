@@ -1,3 +1,0 @@
-/home/murkrow/Coding/Repos/GameProject/CMakeFiles/GameProject2.dir
-/home/murkrow/Coding/Repos/GameProject/CMakeFiles/edit_cache.dir
-/home/murkrow/Coding/Repos/GameProject/CMakeFiles/rebuild_cache.dir
