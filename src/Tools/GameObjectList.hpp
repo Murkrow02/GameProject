@@ -14,6 +14,7 @@ class GameObjectList : public GameObjectNode{
         WINDOW* gameWindow;
         Map* gameMap;
         Minimap* gameMinimap;
+        bool key;
 
         void doFrames(); // update all objects positions etc
         void draw(); // draw everything

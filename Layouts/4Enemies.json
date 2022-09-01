@@ -1,0 +1,27 @@
+[
+    {
+        "type" : "foe", 
+        "posX" : 10,
+        "posY" : 10
+    },
+    {
+        "type" : "foe",
+        "posX" : 70,
+        "posY" : 10
+    },
+    {
+        "type" : "foe",
+        "posX" : 10,
+        "posY" : 30
+    },
+    {
+        "type" : "foe",
+        "posX" : 70,
+        "posY" : 30
+    },
+    {
+        "type" : "apple",
+        "posX" : 40,
+        "posY" : 38
+    }
+]

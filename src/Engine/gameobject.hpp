@@ -5,10 +5,12 @@
 // CHAR
 #define CHAR_PLAYER 'p'
 #define CHAR_DOOR '*'
+#define CHAR_DOOR_SHOP 'o'
 #define CHAR_DUMMY 'd'
 #define CHAR_BULLET '#'
 #define CHAR_SHOP '@'
 #define CHAR_APPLE 'A'
+#define CHAR_KEY 'K'
 
 // LIFE
 #define LIFE_PLAYER 5

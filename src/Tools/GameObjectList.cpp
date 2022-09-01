@@ -4,6 +4,7 @@
 
 GameObjectList::GameObjectList(){
     head = NULL; // init head as null
+    key = false;
 }
 
 void GameObjectList::doFrames(){

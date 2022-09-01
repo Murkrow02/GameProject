@@ -1,0 +1,12 @@
+[
+    {
+        "type" : "foe", 
+        "posX" : 40,
+        "posY" : 5
+    },
+    {
+        "type" : "foe",
+        "posX" : 40,
+        "posY" : 35
+    }
+]
