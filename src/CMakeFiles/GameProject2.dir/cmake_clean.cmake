@@ -13,6 +13,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/GameProject2.dir/Entities/artifact.cpp.o.d"
   "CMakeFiles/GameProject2.dir/Entities/bullet.cpp.o"
   "CMakeFiles/GameProject2.dir/Entities/bullet.cpp.o.d"
+  "CMakeFiles/GameProject2.dir/Entities/crossShooter.cpp.o"
+  "CMakeFiles/GameProject2.dir/Entities/crossShooter.cpp.o.d"
   "CMakeFiles/GameProject2.dir/Entities/entity.cpp.o"
   "CMakeFiles/GameProject2.dir/Entities/entity.cpp.o.d"
   "CMakeFiles/GameProject2.dir/Entities/foe.cpp.o"

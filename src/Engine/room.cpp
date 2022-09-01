@@ -4,6 +4,7 @@
 #include "room.h"
 #include "gameobject.hpp"
 #include "../Entities/dummy.cpp"
+#include "../Entities/crossShooter.cpp"
 #include "../Entities/fruit.cpp"
 #include "../Entities/vendor.cpp"
 #include "../Entities/key.cpp"
@@ -48,6 +49,8 @@ Room::Room(int _id, string _roomType, pair<int, int> _coords, int _roomW, int _r
     {
         if (data[i]["type"] == "foe")
             roomObjects.insert(new Dummy(int(data[i]["posY"]), int(data[i]["posX"]), gameObjects));
+        if (data[i]["type"] == "crossShooter")
+            roomObjects.insert(new CrossShooter (int(data[i]["posY"]), int(data[i]["posX"]), gameObjects));
         else if(data[i]["type"] == "apple")
             roomObjects.insert(new Apple(int(data[i]["posY"]), int(data[i]["posX"]), gameObjects));
         else if(data[i]["type"] == "shop")

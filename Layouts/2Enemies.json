@@ -1,12 +1,12 @@
 [
     {
-        "type" : "foe", 
-        "posX" : 40,
+        "type" : "crossShooter", 
+        "posX" : 20,
         "posY" : 5
     },
     {
-        "type" : "foe",
-        "posX" : 40,
-        "posY" : 35
+        "type" : "crossShooter", 
+        "posX" : 10,
+        "posY" : 20
     }
 ]

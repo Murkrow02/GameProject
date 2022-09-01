@@ -7,6 +7,7 @@
 #define CHAR_DOOR '*'
 #define CHAR_DOOR_SHOP 'o'
 #define CHAR_DUMMY 'd'
+#define CHAR_CROSS_SHOOTER '+'
 #define CHAR_BULLET '#'
 #define CHAR_SHOP '@'
 #define CHAR_APPLE 'A'
@@ -15,6 +16,15 @@
 // LIFE
 #define LIFE_PLAYER 5
 #define LIFE_DUMMY 3
+#define LIFE_DEFAULT 3
+
+//SPEED
+#define SPEED_BULLET_SLOW 90
+#define SPEED_SLOWER 35
+#define SPEED_SLOW 30
+#define SPEED_NORMAL 18
+#define SPEED_FAST 10
+#define SPEED_FASTER 5
 
 // STUFF in frames
 #define DURATION_INVINCIBILITY 120 // in frames, how much to wait before player can take more damage
@@ -22,9 +32,12 @@
 
 // POINTS
 #define POINTS_DUMMY 100
+#define POINTS_DEFAULT 100
 
 // VIEW RANGE
 #define VIEWRANGE_DUMMY 20
+#define VIEWRANGE_DEFAULT 20
+
 
 class GameObjectList;
 
@@ -39,6 +52,7 @@ class GameObject
         // position
         int x; 
         int y;
+        int xMax,yMax; // player's window size
         
         char displayChar; // the char displayed on screen for this object
         GameObjectList *gameItems; 

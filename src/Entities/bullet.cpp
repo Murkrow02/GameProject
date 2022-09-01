@@ -1,3 +1,4 @@
+#pragma once
 #include "../Engine/gameobject.hpp"
 #include "entity.hpp"
 #include "foe.cpp"
@@ -18,7 +19,7 @@ class Bullet : public Foe
             // clear old position
             mvwaddch(gameItems->gameWindow, y, x, ' ');
             
-            // check if reached end of life
+            // check if reached end of life or bord of map
             if(travelledDistance >= range)
             {
                 Destroy();
@@ -28,7 +29,7 @@ class Bullet : public Foe
             else if(!damageFoe)
             {
                 // check contact with player or passed through player
-                if((gameItems->player->x == x && gameItems->player->y == y) || EntityPassedThroughBullet(gameItems->player))
+                if((gameItems->player->x == x && gameItems->player->y == y) || (gameItems->player->x == oldX && gameItems->player->y == oldY && EntityPassedThroughBullet(gameItems->player)))
                 {
                     // damage player
                     gameItems->player->Damage();
@@ -63,7 +64,7 @@ class Bullet : public Foe
             }
 
             // check if bullet reached room walls
-            if(nextX == 0 || nextX >= xMax || nextY == 0 || nextY == yMax)
+            if(nextX == 0 || nextX >= xMax-1 || nextY == 0 || nextY >= yMax-1)
             {
                 Destroy();
                 return;
@@ -86,7 +87,7 @@ class Bullet : public Foe
 
             
         
-        Bullet(bool damage_foe, int inc_x, int inc_y, int _range, int _y, int _x, GameObjectList *game_objects) : Foe{ _y,  _x, CHAR_BULLET, SPEED_FASTER, 1, 0, 0, game_objects} 
+        Bullet(bool damage_foe, int inc_x, int inc_y, int _range, int _y, int _x, GameObjectList *game_objects) : Foe{ _y,  _x, CHAR_BULLET, SPEED_FASTER, SPEED_FAST, 1, 0, 0, game_objects} 
         {
             range = _range;
             incX = inc_x;

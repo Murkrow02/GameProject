@@ -8,6 +8,9 @@ GameObjectNode::GameObjectNode(){
 
 void GameObjectNode::insert(GameObject *item)
     {
+        //Check if spawned in room walls
+        if(item->x <= 0 || item->y <= 0 || item->x >= item->xMax-1 || item->y >= item->yMax-1)
+            return; //Cannot 
 
         // create new list item
         Node *newNode = new Node;

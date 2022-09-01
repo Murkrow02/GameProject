@@ -1,3 +1,4 @@
+#pragma once
 #include "entity.hpp"
 #include "player.hpp"
 #include "../Tools/GameObjectList.hpp"
@@ -9,19 +10,23 @@ class Foe : public Entity
 
   private:
 
-    int FrameSkipped = 0;
+    int FrameSkippedSpeed = 0;
+    int FrameSkippedShoot = 0;
     int Speed;
+    int ShootingSpeed;
     int DamageBlinkLeft = 0;
     int PointsValue;
     int ViewRange = 0;
 
   protected:
+
+    virtual void Shoot(){}
     
     bool CanMove(bool ignorePlayer = false){
 
       // foe can move only if FrameSkipped == 0 (speed purposes)
-      if(FrameSkipped == 0){
-        FrameSkipped++;
+      if(FrameSkippedSpeed == 0){
+        FrameSkippedSpeed++;
 
       // check if landed on player
       if(!ignorePlayer && is_in_range(x,y, gameItems->player->x, gameItems->player->y, 2))
@@ -35,23 +40,46 @@ class Foe : public Entity
 
         return true;
       }
-      else if(FrameSkipped >= Speed)
-        FrameSkipped = 0; // reset, reached speed value
+      else if(FrameSkippedSpeed >= Speed)
+        FrameSkippedSpeed = 0; // reset, reached speed value
       else
-        FrameSkipped++;
+        FrameSkippedSpeed++;
         
       // foe cannot move
       return false;
     }
 
+    bool CanShoot()
+    {
+
+      // foe can shoot only if FrameSkipped == 0 (speed purposes)
+      if (FrameSkippedShoot == 0)
+      {
+        FrameSkippedShoot++;
+        return true;
+      }
+      //Reached max value, return to 0
+      else if (FrameSkippedShoot >= ShootingSpeed)
+      {
+        FrameSkippedShoot = 0;
+        return false;
+      }
+      //Simply increase
+      else
+      {
+        FrameSkippedShoot++;
+        return false;
+      }
+    }
 
   public:
 
-    Foe(int _y, int _x, char display_char, int speed, int life, int points_value, int view_range, GameObjectList* game_items) : Entity{_y, _x, display_char, life, game_items}
+    Foe(int _y, int _x, char display_char, int speed, int shooting_speed, int life, int points_value, int view_range, GameObjectList* game_items) : Entity{_y, _x, display_char, life, game_items}
     {
       Speed = speed;
       PointsValue = points_value;
       ViewRange = view_range;
+      ShootingSpeed = shooting_speed;
     }
 
     // override damage
@@ -101,6 +129,11 @@ class Foe : public Entity
     // foe movement
     virtual void DoFrame()
     {
+
+      // detect if able to shoot
+      if(Foe::CanShoot())
+        Shoot();
+
       // used to detect if can update frame
       if (!Foe::CanMove())
         return;
@@ -154,7 +187,6 @@ class Foe : public Entity
     //override draw
     virtual void Draw()
     {
-
       // blink by hiding entity each x frames
       int skipFrames = 2; // higher value = slower blink speed
       if (DamageBlinkLeft > 0 && DamageBlinkLeft % skipFrames != 0)

@@ -393,6 +393,30 @@ Entities/fruit.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/Entities/fruit.cpp.s
 .PHONY : Entities/fruit.cpp.s
 
+Entities/key.o: Entities/key.cpp.o
+.PHONY : Entities/key.o
+
+# target to build an object file
+Entities/key.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/Entities/key.cpp.o
+.PHONY : Entities/key.cpp.o
+
+Entities/key.i: Entities/key.cpp.i
+.PHONY : Entities/key.i
+
+# target to preprocess a source file
+Entities/key.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/Entities/key.cpp.i
+.PHONY : Entities/key.cpp.i
+
+Entities/key.s: Entities/key.cpp.s
+.PHONY : Entities/key.s
+
+# target to generate assembly for a file
+Entities/key.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/Entities/key.cpp.s
+.PHONY : Entities/key.cpp.s
+
 Entities/player.o: Entities/player.cpp.o
 .PHONY : Entities/player.o
 
@@ -747,6 +771,9 @@ help:
 	@echo "... Entities/fruit.o"
 	@echo "... Entities/fruit.i"
 	@echo "... Entities/fruit.s"
+	@echo "... Entities/key.o"
+	@echo "... Entities/key.i"
+	@echo "... Entities/key.s"
 	@echo "... Entities/player.o"
 	@echo "... Entities/player.i"
 	@echo "... Entities/player.s"

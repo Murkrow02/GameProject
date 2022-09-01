@@ -21,7 +21,8 @@ Entity::Entity(int _y, int _x, char display_char,  int _life, GameObjectList *_g
 
 void Entity::Draw()
 {
-    mvwaddch(gameItems->gameWindow, y, x, displayChar);
+    if (x > 0 || x < xMax || y > 0 || y < yMax)
+        mvwaddch(gameItems->gameWindow, y, x, displayChar);
 }
 
 void Entity::DoFrame(){

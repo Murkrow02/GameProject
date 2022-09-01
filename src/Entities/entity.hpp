@@ -17,9 +17,7 @@ class Entity : public GameObject
 
 
     protected:
-
-        int xMax,yMax; // player position and player's window size
-
+    
         // movement
         void mvup();
         void mvdown();
