@@ -129,30 +129,6 @@ GameProject2/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/build
 .PHONY : GameProject2/fast
 
-Engine/gameobject.o: Engine/gameobject.cpp.o
-.PHONY : Engine/gameobject.o
-
-# target to build an object file
-Engine/gameobject.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/Engine/gameobject.cpp.o
-.PHONY : Engine/gameobject.cpp.o
-
-Engine/gameobject.i: Engine/gameobject.cpp.i
-.PHONY : Engine/gameobject.i
-
-# target to preprocess a source file
-Engine/gameobject.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/Engine/gameobject.cpp.i
-.PHONY : Engine/gameobject.cpp.i
-
-Engine/gameobject.s: Engine/gameobject.cpp.s
-.PHONY : Engine/gameobject.s
-
-# target to generate assembly for a file
-Engine/gameobject.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/Engine/gameobject.cpp.s
-.PHONY : Engine/gameobject.cpp.s
-
 Engine/main.o: Engine/main.cpp.o
 .PHONY : Engine/main.o
 
@@ -513,6 +489,54 @@ Entities/weapon.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/Entities/weapon.cpp.s
 .PHONY : Entities/weapon.cpp.s
 
+Entities/xCrossShooter.o: Entities/xCrossShooter.cpp.o
+.PHONY : Entities/xCrossShooter.o
+
+# target to build an object file
+Entities/xCrossShooter.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/Entities/xCrossShooter.cpp.o
+.PHONY : Entities/xCrossShooter.cpp.o
+
+Entities/xCrossShooter.i: Entities/xCrossShooter.cpp.i
+.PHONY : Entities/xCrossShooter.i
+
+# target to preprocess a source file
+Entities/xCrossShooter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/Entities/xCrossShooter.cpp.i
+.PHONY : Entities/xCrossShooter.cpp.i
+
+Entities/xCrossShooter.s: Entities/xCrossShooter.cpp.s
+.PHONY : Entities/xCrossShooter.s
+
+# target to generate assembly for a file
+Entities/xCrossShooter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/Entities/xCrossShooter.cpp.s
+.PHONY : Entities/xCrossShooter.cpp.s
+
+Entities/xShooter.o: Entities/xShooter.cpp.o
+.PHONY : Entities/xShooter.o
+
+# target to build an object file
+Entities/xShooter.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/Entities/xShooter.cpp.o
+.PHONY : Entities/xShooter.cpp.o
+
+Entities/xShooter.i: Entities/xShooter.cpp.i
+.PHONY : Entities/xShooter.i
+
+# target to preprocess a source file
+Entities/xShooter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/Entities/xShooter.cpp.i
+.PHONY : Entities/xShooter.cpp.i
+
+Entities/xShooter.s: Entities/xShooter.cpp.s
+.PHONY : Entities/xShooter.s
+
+# target to generate assembly for a file
+Entities/xShooter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameProject2.dir/build.make CMakeFiles/GameProject2.dir/Entities/xShooter.cpp.s
+.PHONY : Entities/xShooter.cpp.s
+
 Tools/GameObjectList.o: Tools/GameObjectList.cpp.o
 .PHONY : Tools/GameObjectList.o
 
@@ -762,9 +786,6 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... GameProject2"
-	@echo "... Engine/gameobject.o"
-	@echo "... Engine/gameobject.i"
-	@echo "... Engine/gameobject.s"
 	@echo "... Engine/main.o"
 	@echo "... Engine/main.i"
 	@echo "... Engine/main.s"
@@ -810,6 +831,12 @@ help:
 	@echo "... Entities/weapon.o"
 	@echo "... Entities/weapon.i"
 	@echo "... Entities/weapon.s"
+	@echo "... Entities/xCrossShooter.o"
+	@echo "... Entities/xCrossShooter.i"
+	@echo "... Entities/xCrossShooter.s"
+	@echo "... Entities/xShooter.o"
+	@echo "... Entities/xShooter.i"
+	@echo "... Entities/xShooter.s"
 	@echo "... Tools/GameObjectList.o"
 	@echo "... Tools/GameObjectList.i"
 	@echo "... Tools/GameObjectList.s"

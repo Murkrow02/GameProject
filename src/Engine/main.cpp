@@ -26,9 +26,7 @@ void debugInfo(Player player, Map map){
 }
 
 int main(){
-
     
-
     // SETUP
     int room_width = 80, room_height = 40, room_x, room_y;
 

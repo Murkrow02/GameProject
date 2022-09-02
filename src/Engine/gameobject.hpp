@@ -8,6 +8,9 @@
 #define CHAR_DOOR_SHOP 'o'
 #define CHAR_DUMMY 'd'
 #define CHAR_CROSS_SHOOTER '+'
+#define CHAR_X_SHOOTER 'x'
+#define CHAR_X_CROSS_SHOOTER '*'
+#define CHAR_SMART_SHOOTER 's'
 #define CHAR_BULLET '#'
 #define CHAR_SHOP '@'
 #define CHAR_APPLE 'A'
@@ -20,6 +23,7 @@
 
 //SPEED
 #define SPEED_BULLET_SLOW 90
+#define SPEED_BULLET_FAST 40
 #define SPEED_SLOWER 35
 #define SPEED_SLOW 30
 #define SPEED_NORMAL 18

@@ -1,6 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/GameProject2.dir/Engine/gameobject.cpp.o"
-  "CMakeFiles/GameProject2.dir/Engine/gameobject.cpp.o.d"
   "CMakeFiles/GameProject2.dir/Engine/main.cpp.o"
   "CMakeFiles/GameProject2.dir/Engine/main.cpp.o.d"
   "CMakeFiles/GameProject2.dir/Engine/map.cpp.o"
@@ -31,6 +29,10 @@ file(REMOVE_RECURSE
   "CMakeFiles/GameProject2.dir/Entities/vendor.cpp.o.d"
   "CMakeFiles/GameProject2.dir/Entities/weapon.cpp.o"
   "CMakeFiles/GameProject2.dir/Entities/weapon.cpp.o.d"
+  "CMakeFiles/GameProject2.dir/Entities/xCrossShooter.cpp.o"
+  "CMakeFiles/GameProject2.dir/Entities/xCrossShooter.cpp.o.d"
+  "CMakeFiles/GameProject2.dir/Entities/xShooter.cpp.o"
+  "CMakeFiles/GameProject2.dir/Entities/xShooter.cpp.o.d"
   "CMakeFiles/GameProject2.dir/Tools/GameObjectList.cpp.o"
   "CMakeFiles/GameProject2.dir/Tools/GameObjectList.cpp.o.d"
   "CMakeFiles/GameProject2.dir/Tools/GameObjectNode.cpp.o"

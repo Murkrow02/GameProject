@@ -5,6 +5,7 @@
 #include "../Engine/gameobject.hpp"
 #include "../UI/stats.hpp"
 #include "weapon.cpp"
+#include "../UI/message.hpp"
 
 using namespace std;
 
@@ -28,6 +29,8 @@ class Player : public Entity
         vector<Weapon> weapons;
         
     private:
+
+        message *gameOverMessage;
     
         int invincibilityLeft = 0;
 

@@ -3,13 +3,6 @@
 #include <thread>
 #include "string.h"
 
-/*
-    TODO
-    - metti velocità ai dialoghi
-    - metti che quando ci sta spazio si ferma un attimo
-
-*/
-
 message::message(string title, string message, bool autoClose):dialog(title){
 
 

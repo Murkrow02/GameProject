@@ -6,7 +6,7 @@
 #include "../Entities/bullet.cpp"
 #include "weapon.cpp"
 #include "../UI/inventory.hpp"
-
+#include "../UI/message.hpp"
 
 using namespace std;
 
@@ -14,7 +14,7 @@ Player::Player(int _y, int _x, GameObjectList *game_objects) : Entity{ _y,  _x, 
 {
 
   // set default weapon
-  Weapon testWeapon("ARMA SCARSA", 10, 4, 60, 30, 0);
+  Weapon testWeapon("NOOB WEAPON", 10, 4, 60, 30, 0);
   weapons.push_back(testWeapon);
   setWeapon(&weapons.back());
 
@@ -52,10 +52,11 @@ Player::Player(int _y, int _x, GameObjectList *game_objects) : Entity{ _y,  _x, 
       next_bullet_delay--;
   }
 
-  void Player::Damage(){
+  void Player::Damage()
+  {
 
-    //check if is invincible
-    if(invincibilityLeft == 0)
+    // check if is invincible
+    if (invincibilityLeft == 0)
     {
       // set player as invincible for a short period of time
       invincibilityLeft = DURATION_INVINCIBILITY;
@@ -67,14 +68,20 @@ Player::Player(int _y, int _x, GameObjectList *game_objects) : Entity{ _y,  _x, 
       Entity::Damage();
 
       // check game over
-      if(life <= 0)
-        /// TODO: change
+      if (life <= 0)
+      {
+        // Show game over message
+        gameOverMessage = new message("GAME OVER","Sei morto :(");
+        gameOverMessage->wait_close.wait();
+
+        // Close game
         initscr();
         refresh();
         endwin();
+        exit(0);
+      }
     }
   }
-
 
   // override draw function
   void Player::Draw(){

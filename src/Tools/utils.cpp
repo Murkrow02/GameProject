@@ -54,6 +54,7 @@ void initial_setup(int room_width, int room_height, int *room_x, int *room_y){
     init_pair(1, COLOR_RED, COLOR_BLACK); // red
     init_pair(2, COLOR_GREEN, COLOR_BLACK); // green
 	init_pair(3, COLOR_BLUE, COLOR_BLACK); // blue
+    init_pair(4, COLOR_MAGENTA, COLOR_BLACK); // blue
 
 
     //Check if terminal size is acceptable, guide the user to correct if not

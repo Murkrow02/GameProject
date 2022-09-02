@@ -78,7 +78,10 @@ class Bullet : public Foe
 
         virtual void Draw(){
 
-            Foe::Draw();
+            // red color
+            wattron(gameItems->gameWindow, COLOR_PAIR(1));
+            mvwaddch(gameItems->gameWindow, y, x, displayChar);
+            wattroff(gameItems->gameWindow, COLOR_PAIR(1));
 
             // new position next frame
             nextY = y + incY; 

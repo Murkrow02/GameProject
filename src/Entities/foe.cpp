@@ -195,10 +195,10 @@ class Foe : public Entity
       }
       else
       {
-        // red color
-        wattron(gameItems->gameWindow, COLOR_PAIR(1));
+        // magenta color
+        wattron(gameItems->gameWindow, COLOR_PAIR(4));
         mvwaddch(gameItems->gameWindow, y, x, displayChar);
-        wattroff(gameItems->gameWindow, COLOR_PAIR(1));
+        wattroff(gameItems->gameWindow, COLOR_PAIR(4));
       }
 
       if(DamageBlinkLeft > 0)

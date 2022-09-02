@@ -23,10 +23,10 @@ class CrossShooter : public Foe
         void Shoot() {
 
             // spawn bullets
-            Bullet *bullet1 = new Bullet(false, 0, 1, fireRange, y+2, x, gameItems);
-            Bullet *bullet2 = new Bullet(false, 0, -1, fireRange, y-2, x, gameItems);
-            Bullet *bullet3 = new Bullet(false, -1, 0, fireRange, y, x-2, gameItems);
-            Bullet *bullet4 = new Bullet(false, 1, 0, fireRange, y, x+2, gameItems);
+            Bullet *bullet1 = new Bullet(false, 0, 1, fireRange, y+1, x, gameItems);
+            Bullet *bullet2 = new Bullet(false, 0, -1, fireRange, y-1, x, gameItems);
+            Bullet *bullet3 = new Bullet(false, -1, 0, fireRange, y, x-1, gameItems);
+            Bullet *bullet4 = new Bullet(false, 1, 0, fireRange, y, x+1, gameItems);
             gameItems->insert(bullet1);
             gameItems->insert(bullet2);
             gameItems->insert(bullet3);
