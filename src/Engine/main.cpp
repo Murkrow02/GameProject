@@ -69,7 +69,6 @@ int main(){
 
     // main loop
     while (true){
-
         // https://cplusplus.com/forum/general/65250/
 
         // debug purposes
@@ -83,7 +82,6 @@ int main(){
 
         // loop again to draw everything
         gameObjects.draw();
-
         // refresh game window
         wrefresh(game_window);
 

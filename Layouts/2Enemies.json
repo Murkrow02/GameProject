@@ -11,12 +11,12 @@
         "posY" : 5
     },
     {
-        "type" : "xShooter", 
+        "type" : "foe", 
         "posX" : 10,
         "posY" : 20
     },
     {
-        "type" : "xCrossShooter", 
+        "type" : "foe", 
         "posX" : 30,
         "posY" : 30
     }

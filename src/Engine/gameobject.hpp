@@ -4,7 +4,9 @@
 
 // CHAR
 #define CHAR_PLAYER 'p'
-#define CHAR_DOOR '*'
+#define CHAR_DOOR_OPEN '*'
+#define CHAR_DOOR_CLOSED_VERTICAL '|'
+#define CHAR_DOOR_CLOSED_HORIZONTAL '-'
 #define CHAR_DOOR_SHOP 'o'
 #define CHAR_DUMMY 'd'
 #define CHAR_CROSS_SHOOTER '+'

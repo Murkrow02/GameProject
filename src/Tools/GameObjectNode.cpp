@@ -57,7 +57,6 @@ void GameObjectNode::insert(GameObject *item)
     }
 
     int GameObjectNode::numberOfEnemies(GameObjectList *gameObjects){
-        Dummy reference = Dummy(0,0,gameObjects);
         Node *current = head;
         int number = 0;
         while (current != NULL){

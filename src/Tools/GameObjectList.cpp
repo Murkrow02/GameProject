@@ -41,6 +41,7 @@ void GameObjectList::draw(){
         // next one
         current = current->next;
     }
+    gameMap->rooms[player->roomId].draw_room();
 }
 
 void GameObjectList::reset(){

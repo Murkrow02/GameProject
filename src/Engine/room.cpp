@@ -31,7 +31,9 @@ Room::Room(int _id, string _roomType, pair<int, int> _coords, int _roomW, int _r
     //Create filename
     // Random stuff, to be changed
     string jsonName = "";
-    if (id == 9)
+    if (id == 0)
+        jsonName = "Debug";
+    else if (id == 9)
         jsonName = "Key";
     else if (id % 3 == 0 && id >= 3)
         jsonName = "4Enemies";
@@ -123,7 +125,7 @@ void Room::generate_doors(vector<vector<int>> floor){
         if (floor[coords.first-1][coords.second] == 5)
             temp = CHAR_DOOR_SHOP;
         else
-            temp = CHAR_DOOR;
+            temp = CHAR_DOOR_OPEN;
         room[0][roomW/2 - 1] = temp;
         room[0][roomW/2] = temp;
     }
@@ -131,7 +133,7 @@ void Room::generate_doors(vector<vector<int>> floor){
         if (floor[coords.first+1][coords.second] == 5)
             temp = CHAR_DOOR_SHOP;
         else
-            temp = CHAR_DOOR;
+            temp = CHAR_DOOR_OPEN;
         room[roomH - 1][roomW/2 - 1] = temp;
         room[roomH - 1][roomW/2] = temp;
     }
@@ -139,7 +141,7 @@ void Room::generate_doors(vector<vector<int>> floor){
         if (floor[coords.first][coords.second-1] == 5)
             temp = CHAR_DOOR_SHOP;
         else
-            temp = CHAR_DOOR;
+            temp = CHAR_DOOR_OPEN;
         room[roomH/2 - 1][0] = temp;
         room[roomH/2][0] = temp;
     }
@@ -147,7 +149,7 @@ void Room::generate_doors(vector<vector<int>> floor){
         if (floor[coords.first][coords.second+1] == 5)
             temp = CHAR_DOOR_SHOP;
         else
-            temp = CHAR_DOOR;
+            temp = CHAR_DOOR_OPEN;
         room[roomH/2 - 1][roomW - 1] = temp;
         room[roomH/2][roomW - 1] = temp;
     }
@@ -161,25 +163,35 @@ void Room::draw_room(){
 
 void Room::draw_doors(WINDOW * playerwindow){
 
+    char doorCharVertical, doorCharHorizontal;
+    if (gameObjects->numberOfEnemies(gameObjects) == 0){
+        doorCharVertical = CHAR_DOOR_OPEN;
+        doorCharHorizontal = CHAR_DOOR_OPEN;
+    }
+    else{
+        doorCharVertical = CHAR_DOOR_CLOSED_VERTICAL;
+        doorCharHorizontal = CHAR_DOOR_CLOSED_HORIZONTAL;
+    }
+
     // draws door based on their position in the two dimensional array
-    if (room[0][roomW/2] == CHAR_DOOR){ // top
+    if (room[0][roomW/2] == CHAR_DOOR_OPEN){ // top
         for (int i = (roomW/2) - 1; i < (roomW/2) + 1; i++){
-            mvwaddch(playerwindow, 0, i, CHAR_DOOR);
+            mvwaddch(playerwindow, 0, i, doorCharHorizontal);
         }
     }
-    if (room[roomH - 1][roomW/2] == CHAR_DOOR){ // bottom
+    if (room[roomH - 1][roomW/2] == CHAR_DOOR_OPEN){ // bottom
         for (int i = (roomW/2) - 1; i < (roomW/2) + 1; i++){
-            mvwaddch(playerwindow, roomH - 1, i, CHAR_DOOR);
+            mvwaddch(playerwindow, roomH - 1, i, doorCharHorizontal);
         }
     }
-    if (room[roomH / 2][0] == CHAR_DOOR){ // left
+    if (room[roomH / 2][0] == CHAR_DOOR_OPEN){ // left
         for (int i = (roomH/2) - 1; i < (roomH/2) + 1; i++){
-            mvwaddch(playerwindow, i, 0, CHAR_DOOR);
+            mvwaddch(playerwindow, i, 0, doorCharVertical);
         }
     }
-    if (room[roomH / 2][roomW - 1] == CHAR_DOOR){ //right
+    if (room[roomH / 2][roomW - 1] == CHAR_DOOR_OPEN){ //right
         for (int i = (roomH/2) - 1; i < (roomH/2) + 1; i++){
-            mvwaddch(playerwindow, i, roomW - 1, CHAR_DOOR);
+            mvwaddch(playerwindow, i, roomW - 1, doorCharVertical);
         }
     }
 

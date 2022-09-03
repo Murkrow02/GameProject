@@ -1,0 +1,4 @@
+Different chars for locked / open doors
+Text message for shop closed doors
+Concept of floor ( whenever first floor is ended player can spawn 2nd floor )
+Rogue-like upgrades at the end of each floor
