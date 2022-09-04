@@ -246,7 +246,7 @@ void Player::Shoot(int dirX, int dirY, int spawnX, int spawnY){
   if(gameItems->gameStats->ammo > 0 && reload_delay == 0 && next_bullet_delay == 0){
 
     // spawn bullet
-    Bullet *bullet = new Bullet(true, dirX, dirY, weapon->Range, spawnY, spawnX, gameItems);
+    Bullet *bullet = new Bullet(true, dirX, dirY, weapon->Range, spawnY, spawnX, gameItems, 2);
     gameItems->insert(bullet);
 
     // remove bullet from stats

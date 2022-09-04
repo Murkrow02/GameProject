@@ -11,6 +11,7 @@
 #include "../Entities/fruit.cpp"
 #include "../Entities/vendor.cpp"
 #include "../Entities/key.cpp"
+#include "../Entities/ladder.cpp"
 #include "../Tools/GameObjectNode.hpp"
 #include "../libraries/json.hpp"
 #include <fstream>
@@ -26,22 +27,28 @@ Room::Room(int _id, string _roomType, pair<int, int> _coords, int _roomW, int _r
     roomW = _roomW;
     roomH = _roomH;
     gameObjects = game_objects;
+    cleared = false;
     
 
     //Create filename
     // Random stuff, to be changed
-    string jsonName = "";
+    string jsonName = "Empty";
+    
     if (id == 0)
-        jsonName = "Debug";
+    {
+        jsonName = "FirstRoom";
+    }
     else if (id == 9)
-        jsonName = "Key";
+        jsonName = "Shop";
     else if (id % 3 == 0 && id >= 3)
         jsonName = "4Enemies";
     else if (id == 5)
-        jsonName = "Shop";
+        jsonName = "Key";
     else
         jsonName = "2Enemies";
-    string fileName = "Layouts/" + jsonName + ".json";
+        
+    string fileName = "../Layouts/" + jsonName + ".json";
+    
     //fileName += to_string(id);
     //fileName += ".json";
 
@@ -68,6 +75,8 @@ Room::Room(int _id, string _roomType, pair<int, int> _coords, int _roomW, int _r
             roomObjects.insert(new Vendor(int(data[i]["posY"]), int(data[i]["posX"]), gameObjects));
         else if(data[i]["type"] == "key")
             roomObjects.insert(new Key(int(data[i]["posY"]), int(data[i]["posX"]), CHAR_KEY, gameObjects));
+        else if(data[i]["type"] == "ladder")
+            roomObjects.insert(new Ladder(int(data[i]["posY"]), int(data[i]["posX"]), CHAR_LADDER, gameObjects));
     }
 
     
@@ -92,6 +101,10 @@ void Room::freeze_room(){
         if(current->data != NULL)
             roomObjects.insert(current->data);
         current = current->next;
+    }
+    if (roomObjects.numberOfEnemies(gameObjects) == 0 && !cleared){
+        gameObjects->roomsToClear--;
+        cleared = true;
     }
     
 }
@@ -122,7 +135,7 @@ void Room::generate_entities(){
 void Room::generate_doors(vector<vector<int>> floor){
     char temp;
     if (floor[coords.first-1][coords.second] != -1){ // top
-        if (floor[coords.first-1][coords.second] == 5)
+        if (floor[coords.first-1][coords.second] == 9)
             temp = CHAR_DOOR_SHOP;
         else
             temp = CHAR_DOOR_OPEN;
@@ -130,7 +143,7 @@ void Room::generate_doors(vector<vector<int>> floor){
         room[0][roomW/2] = temp;
     }
     if (floor[coords.first+1][coords.second] != -1){ // bottom
-        if (floor[coords.first+1][coords.second] == 5)
+        if (floor[coords.first+1][coords.second] == 9)
             temp = CHAR_DOOR_SHOP;
         else
             temp = CHAR_DOOR_OPEN;
@@ -138,7 +151,7 @@ void Room::generate_doors(vector<vector<int>> floor){
         room[roomH - 1][roomW/2] = temp;
     }
     if (floor[coords.first][coords.second-1] != -1){ // left
-        if (floor[coords.first][coords.second-1] == 5)
+        if (floor[coords.first][coords.second-1] == 9)
             temp = CHAR_DOOR_SHOP;
         else
             temp = CHAR_DOOR_OPEN;
@@ -146,7 +159,7 @@ void Room::generate_doors(vector<vector<int>> floor){
         room[roomH/2][0] = temp;
     }
     if (floor[coords.first][coords.second+1] != -1){ // right
-        if (floor[coords.first][coords.second+1] == 5)
+        if (floor[coords.first][coords.second+1] == 9)
             temp = CHAR_DOOR_SHOP;
         else
             temp = CHAR_DOOR_OPEN;

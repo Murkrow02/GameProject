@@ -79,9 +79,9 @@ class Bullet : public Foe
         virtual void Draw(){
 
             // red color
-            wattron(gameItems->gameWindow, COLOR_PAIR(1));
+            wattron(gameItems->gameWindow, COLOR_PAIR(color));
             mvwaddch(gameItems->gameWindow, y, x, displayChar);
-            wattroff(gameItems->gameWindow, COLOR_PAIR(1));
+            wattroff(gameItems->gameWindow, COLOR_PAIR(color));
 
             // new position next frame
             nextY = y + incY; 
@@ -90,13 +90,14 @@ class Bullet : public Foe
 
             
         
-        Bullet(bool damage_foe, int inc_x, int inc_y, int _range, int _y, int _x, GameObjectList *game_objects) : Foe{ _y,  _x, CHAR_BULLET, SPEED_FASTER, SPEED_FAST, 1, 0, 0, game_objects} 
+        Bullet(bool damage_foe, int inc_x, int inc_y, int _range, int _y, int _x, GameObjectList *game_objects, int _color) : Foe{ _y,  _x, CHAR_BULLET, SPEED_FASTER, SPEED_FAST, 1, 0, 0, game_objects} 
         {
             range = _range;
             incX = inc_x;
             incY = inc_y;
             damageFoe = damage_foe;
             nextX = x; nextY = y;
+            color = _color;
 
             // detect bullet hit direction
             if(inc_x>0 && inc_y==0)
@@ -123,6 +124,7 @@ class Bullet : public Foe
         int incX, incY;
         int nextX, nextY;
         int travelledDistance = 0;
+        int color;
         bool damageFoe = false;
 
 };

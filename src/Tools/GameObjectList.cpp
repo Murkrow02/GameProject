@@ -5,6 +5,7 @@
 GameObjectList::GameObjectList(){
     head = NULL; // init head as null
     key = false;
+    roomsToClear = 9;
 }
 
 void GameObjectList::doFrames(){

@@ -52,7 +52,7 @@ int main(){
     
 
     // map - minimap setup
-    vector<vector<int>> floor = map.generateMap(game_window, &gameObjects);
+    map.generateMap(game_window, &gameObjects);
     minimap.drawMinimap(map, 0);
     map.createRoom(0);
     
