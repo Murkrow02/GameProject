@@ -74,12 +74,12 @@ class Foe : public Entity
 
   public:
 
-    Foe(int _y, int _x, char display_char, int speed, int shooting_speed, int life, int points_value, int view_range, GameObjectList* game_items) : Entity{_y, _x, display_char, life, game_items}
+    Foe(int _y, int _x, char display_char, int speed, int shooting_speed, int life, int points_value, int view_range, GameObjectList* game_items, double level = 1) : Entity{_y, _x, display_char, life, game_items}
     {
-      Speed = speed;
-      PointsValue = points_value;
-      ViewRange = view_range;
-      ShootingSpeed = shooting_speed;
+      Speed = speed/level;
+      PointsValue = points_value*level;
+      ViewRange = view_range*level;
+      ShootingSpeed = shooting_speed/level;
     }
 
     // override damage
@@ -184,27 +184,45 @@ class Foe : public Entity
       }
     }
 
-    //override draw
+    // override draw function
+    int stopBlinkRedAtFrame = 0;
+    int skipFrames = 10; // higher value = slower blink speed
     virtual void Draw()
     {
-      // blink by hiding entity each x frames
-      int skipFrames = 2; // higher value = slower blink speed
-      if (DamageBlinkLeft > 0 && DamageBlinkLeft % skipFrames != 0)
+
+      // blink by hiding player each x frames
+      if (DamageBlinkLeft > 0)
       {
-        mvwaddch(gameItems->gameWindow, y, x, ' '); // blink off
+        DamageBlinkLeft--;
+        if (DamageBlinkLeft >= stopBlinkRedAtFrame)
+        {
+          // Draw player red color
+          wattron(gameItems->gameWindow, COLOR_PAIR(1));
+          mvwaddch(gameItems->gameWindow, y, x, displayChar);
+          wattroff(gameItems->gameWindow, COLOR_PAIR(1));
+        }
+        else
+        {
+          wattron(gameItems->gameWindow, COLOR_PAIR(4));
+          mvwaddch(gameItems->gameWindow, y, x, displayChar);
+          wattroff(gameItems->gameWindow, COLOR_PAIR(4));
+          if (stopBlinkRedAtFrame - skipFrames > DamageBlinkLeft)
+          {
+            stopBlinkRedAtFrame = DamageBlinkLeft - skipFrames;
+          }
+        }
       }
       else
       {
-        // magenta color
+
+        // no invincibility, draw normally
+        stopBlinkRedAtFrame = DURATION_INVINCIBILITY - skipFrames;
         wattron(gameItems->gameWindow, COLOR_PAIR(4));
         mvwaddch(gameItems->gameWindow, y, x, displayChar);
         wattroff(gameItems->gameWindow, COLOR_PAIR(4));
       }
-
-      if(DamageBlinkLeft > 0)
-        DamageBlinkLeft--;
-      
     }
+
 
 
 };

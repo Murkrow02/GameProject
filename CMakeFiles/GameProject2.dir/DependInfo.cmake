@@ -8,13 +8,13 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/murkrow/Coding/Repos/GameProject/src/Engine/gameobject.cpp" "CMakeFiles/GameProject2.dir/Engine/gameobject.cpp.o" "gcc" "CMakeFiles/GameProject2.dir/Engine/gameobject.cpp.o.d"
   "/home/murkrow/Coding/Repos/GameProject/src/Engine/main.cpp" "CMakeFiles/GameProject2.dir/Engine/main.cpp.o" "gcc" "CMakeFiles/GameProject2.dir/Engine/main.cpp.o.d"
   "/home/murkrow/Coding/Repos/GameProject/src/Engine/map.cpp" "CMakeFiles/GameProject2.dir/Engine/map.cpp.o" "gcc" "CMakeFiles/GameProject2.dir/Engine/map.cpp.o.d"
   "/home/murkrow/Coding/Repos/GameProject/src/Engine/minimap.cpp" "CMakeFiles/GameProject2.dir/Engine/minimap.cpp.o" "gcc" "CMakeFiles/GameProject2.dir/Engine/minimap.cpp.o.d"
   "/home/murkrow/Coding/Repos/GameProject/src/Engine/room.cpp" "CMakeFiles/GameProject2.dir/Engine/room.cpp.o" "gcc" "CMakeFiles/GameProject2.dir/Engine/room.cpp.o.d"
   "/home/murkrow/Coding/Repos/GameProject/src/Entities/artifact.cpp" "CMakeFiles/GameProject2.dir/Entities/artifact.cpp.o" "gcc" "CMakeFiles/GameProject2.dir/Entities/artifact.cpp.o.d"
   "/home/murkrow/Coding/Repos/GameProject/src/Entities/bullet.cpp" "CMakeFiles/GameProject2.dir/Entities/bullet.cpp.o" "gcc" "CMakeFiles/GameProject2.dir/Entities/bullet.cpp.o.d"
+  "/home/murkrow/Coding/Repos/GameProject/src/Entities/crossShooter.cpp" "CMakeFiles/GameProject2.dir/Entities/crossShooter.cpp.o" "gcc" "CMakeFiles/GameProject2.dir/Entities/crossShooter.cpp.o.d"
   "/home/murkrow/Coding/Repos/GameProject/src/Entities/entity.cpp" "CMakeFiles/GameProject2.dir/Entities/entity.cpp.o" "gcc" "CMakeFiles/GameProject2.dir/Entities/entity.cpp.o.d"
   "/home/murkrow/Coding/Repos/GameProject/src/Entities/foe.cpp" "CMakeFiles/GameProject2.dir/Entities/foe.cpp.o" "gcc" "CMakeFiles/GameProject2.dir/Entities/foe.cpp.o.d"
   "/home/murkrow/Coding/Repos/GameProject/src/Entities/food.cpp" "CMakeFiles/GameProject2.dir/Entities/food.cpp.o" "gcc" "CMakeFiles/GameProject2.dir/Entities/food.cpp.o.d"
@@ -23,6 +23,8 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/murkrow/Coding/Repos/GameProject/src/Entities/player.cpp" "CMakeFiles/GameProject2.dir/Entities/player.cpp.o" "gcc" "CMakeFiles/GameProject2.dir/Entities/player.cpp.o.d"
   "/home/murkrow/Coding/Repos/GameProject/src/Entities/vendor.cpp" "CMakeFiles/GameProject2.dir/Entities/vendor.cpp.o" "gcc" "CMakeFiles/GameProject2.dir/Entities/vendor.cpp.o.d"
   "/home/murkrow/Coding/Repos/GameProject/src/Entities/weapon.cpp" "CMakeFiles/GameProject2.dir/Entities/weapon.cpp.o" "gcc" "CMakeFiles/GameProject2.dir/Entities/weapon.cpp.o.d"
+  "/home/murkrow/Coding/Repos/GameProject/src/Entities/xCrossShooter.cpp" "CMakeFiles/GameProject2.dir/Entities/xCrossShooter.cpp.o" "gcc" "CMakeFiles/GameProject2.dir/Entities/xCrossShooter.cpp.o.d"
+  "/home/murkrow/Coding/Repos/GameProject/src/Entities/xShooter.cpp" "CMakeFiles/GameProject2.dir/Entities/xShooter.cpp.o" "gcc" "CMakeFiles/GameProject2.dir/Entities/xShooter.cpp.o.d"
   "/home/murkrow/Coding/Repos/GameProject/src/Tools/GameObjectList.cpp" "CMakeFiles/GameProject2.dir/Tools/GameObjectList.cpp.o" "gcc" "CMakeFiles/GameProject2.dir/Tools/GameObjectList.cpp.o.d"
   "/home/murkrow/Coding/Repos/GameProject/src/Tools/GameObjectNode.cpp" "CMakeFiles/GameProject2.dir/Tools/GameObjectNode.cpp.o" "gcc" "CMakeFiles/GameProject2.dir/Tools/GameObjectNode.cpp.o.d"
   "/home/murkrow/Coding/Repos/GameProject/src/Tools/savedata.cpp" "CMakeFiles/GameProject2.dir/Tools/savedata.cpp.o" "gcc" "CMakeFiles/GameProject2.dir/Tools/savedata.cpp.o.d"

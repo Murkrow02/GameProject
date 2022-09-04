@@ -41,7 +41,7 @@ Room::Room(int _id, string _roomType, pair<int, int> _coords, int _roomW, int _r
         jsonName = "Shop";
     else
         jsonName = "2Enemies";
-    string fileName = "../Layouts/" + jsonName + ".json";
+    string fileName = "Layouts/" + jsonName + ".json";
     //fileName += to_string(id);
     //fileName += ".json";
 

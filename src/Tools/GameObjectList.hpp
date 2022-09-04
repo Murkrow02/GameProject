@@ -15,6 +15,7 @@ class GameObjectList : public GameObjectNode{
         Map* gameMap;
         Minimap* gameMinimap;
         bool key;
+        double difficultyLevel;
 
         void doFrames(); // update all objects positions etc
         void draw(); // draw everything

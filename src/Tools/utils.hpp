@@ -10,6 +10,8 @@ using namespace std;
 #define COLOR_DAMAGE 1
 #define COLOR_POINTS 2
 
+#define MINIMAP_SPACE_X 25
+
 enum custom_keys: unsigned int { Enter = 10 }; //Save custom keys here for easier access
 
  //Save game stuff for easier access from other classes

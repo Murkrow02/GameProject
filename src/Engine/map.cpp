@@ -54,6 +54,7 @@ vector<vector<int>> Map::generateMap(WINDOW * playerwindow, GameObjectList* game
     vector<pair<int, int>> possibleCoords;
 
     while(nRooms < 10){
+        
         // resets variables
         options = 0;
         possibleCoords.clear();

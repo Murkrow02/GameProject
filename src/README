@@ -1,0 +1,9 @@
+È possibile compilare e far partire il gioco automaticamente lanciando il comando ./run.sh nella cartella GameProject (assicurarsi di aver prima lanciato chmod +x run.sh)
+
+Alternativamente è possibile generare il makefile e far partire manualmente il gioco con i seguenti comandi:
+    -cmake src
+    -make 
+    -./GameProject2
+
+Assicurarsi di aver installato CMake sul proprio sistema!
+NON far partire il comando cmake all'interno della cartella src

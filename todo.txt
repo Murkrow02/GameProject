@@ -1,4 +1,4 @@
-Different chars for locked / open doors
-Text message for shop closed doors
 Concept of floor ( whenever first floor is ended player can spawn 2nd floor )
 Rogue-like upgrades at the end of each floor
+When generating map rooms prevent more then 4 on the same side (minimap could be too large on screen)
+Fix README

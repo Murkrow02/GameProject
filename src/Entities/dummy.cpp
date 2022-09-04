@@ -13,7 +13,7 @@ class Dummy : public Foe
 
     public:
 
-        Dummy(int _y, int _x, GameObjectList *game_objects) : Foe{_y, _x, CHAR_DUMMY, SPEED_FAST, SPEED_BULLET_SLOW, LIFE_DUMMY, POINTS_DUMMY, VIEWRANGE_DUMMY, game_objects}
+        Dummy(int _y, int _x, GameObjectList *game_objects) : Foe{_y, _x, CHAR_DUMMY, SPEED_FAST, SPEED_BULLET_SLOW, LIFE_DUMMY, POINTS_DUMMY, VIEWRANGE_DUMMY, game_objects, game_objects->difficultyLevel}
         {
         }
         

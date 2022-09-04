@@ -84,19 +84,32 @@ Player::Player(int _y, int _x, GameObjectList *game_objects) : Entity{ _y,  _x, 
   }
 
   // override draw function
+  int stopBlinkRedAtFrame = 0;
+  int skipFrames = 10; //higher value = slower blink speed
   void Player::Draw(){
 
     // blink by hiding player each x frames
     if(invincibilityLeft > 0){
-      int skipFrames = 2; //higher value = slower blink speed
 
-      if(invincibilityLeft%skipFrames == 0)
-        mvwaddch(gameItems->gameWindow, y, x, displayChar); //blink on
+
+      if(invincibilityLeft >= stopBlinkRedAtFrame)
+      {
+        //Draw player red color
+        wattron(gameItems->gameWindow, COLOR_PAIR(1));
+        mvwaddch(gameItems->gameWindow, y, x, displayChar);
+        wattroff(gameItems->gameWindow, COLOR_PAIR(1));
+      }
       else
-        mvwaddch(gameItems->gameWindow, y, x, ' '); //blink off
+      {
+        mvwaddch(gameItems->gameWindow, y, x, displayChar);
+        if(stopBlinkRedAtFrame-skipFrames > invincibilityLeft){
+          stopBlinkRedAtFrame = invincibilityLeft-skipFrames;
+        }
+      }
     }else{
 
       // no invincibility, draw normally
+      stopBlinkRedAtFrame = DURATION_INVINCIBILITY-skipFrames;
       mvwaddch(gameItems->gameWindow, y, x, displayChar);
     }
   }
@@ -161,7 +174,17 @@ Player::Player(int _y, int _x, GameObjectList *game_objects) : Entity{ _y,  _x, 
       gameItems->gameMinimap->drawMinimap(*(gameItems->gameMap), roomId);
     }
 
-    else if (collidedChar == 'o' && gameItems->key == true){
+    else if (collidedChar == 'o'){
+
+      //Player does not have a key
+      if(gameItems->key == false)
+      {
+        message cannotEnter = message("ATTENZIONE!","Hai bisogno di una chiave per accedere a questa stanza");
+        cannotEnter.wait_close.wait();
+        return collidedChar;
+      }
+
+      //Player can access Shop
 
       //Get current room
       Room cRoom = gameItems->gameMap->rooms[roomId];

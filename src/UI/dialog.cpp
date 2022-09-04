@@ -43,10 +43,11 @@ void dialog::draw(){
     
     //Update text content
     wrefresh(dialog_window);  
+
 }
 
 void dialog::set_close_key(int new_key){
-        close_key = new_key;
+    close_key = new_key;
 }
 
 void dialog::show_close_message(){
@@ -60,5 +61,8 @@ void dialog::show_close_message(){
 }
 
 void dialog::Destroy(){
-    del_panel(dialog_panel);
+    wborder(dialog_window, ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '); // Erase frame around the window
+    wclear(dialog_window);
+    doupdate();
+    //del_panel(dialog_panel);
 }

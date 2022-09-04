@@ -15,7 +15,7 @@ class xCrossShooter : public Foe
 
     public:
 
-        xCrossShooter(int _y, int _x, GameObjectList *game_objects) : Foe{_y, _x, CHAR_X_CROSS_SHOOTER, SPEED_FAST, SPEED_BULLET_SLOW, LIFE_DEFAULT, POINTS_DEFAULT, VIEWRANGE_DEFAULT, game_objects}
+        xCrossShooter(int _y, int _x, GameObjectList *game_objects) : Foe{_y, _x, CHAR_X_CROSS_SHOOTER, SPEED_NORMAL, SPEED_BULLET_SLOW, LIFE_DEFAULT, POINTS_DEFAULT, VIEWRANGE_DEFAULT, game_objects, game_objects->difficultyLevel}
         {
 
         }

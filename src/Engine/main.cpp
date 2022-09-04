@@ -35,6 +35,7 @@ int main(){
 
     // main list of all gameobjects
     GameObjectList gameObjects = GameObjectList();
+    gameObjects.difficultyLevel = 1;
 
     // stats setup
     int x_stat = room_x + room_width + 2;
@@ -43,7 +44,7 @@ int main(){
     
     // fill all game stuff
     Map map; 
-    Minimap minimap(4, 2,(room_width - 40), 5);
+    Minimap minimap(4, 2, room_x/2, (room_y+room_height)/2);
     gameObjects.gameStats = &game_stats;
     gameObjects.gameWindow = game_window;
     gameObjects.gameMap = &map;
@@ -61,8 +62,8 @@ int main(){
     gameObjects.player = &player;
 
     // welcome message
-    //message test = message("BENVENUTO!","Puoi muoverti usando i tasti WASD e sparare usando le frecce, premi R per ricaricare, il tasto M per aprire l'inventario e premi E vicino ad un oggetto di colore verde per interagire");
-    //test.wait_close.wait();
+    //message welcome = message("BENVENUTO!","Puoi muoverti usando i tasti WASD e sparare usando le frecce, premi R per ricaricare, il tasto M per aprire l'inventario e premi E vicino ad un oggetto di colore verde per interagire");
+    //welcome.wait_close.wait();
 
     // do not wait for getch() (otherwhise the following loop will stop)
     nodelay(stdscr, TRUE);

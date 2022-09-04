@@ -59,8 +59,9 @@ void initial_setup(int room_width, int room_height, int *room_x, int *room_y){
 
     //Check if terminal size is acceptable, guide the user to correct if not
     pair<int,int> dimensions;
+
     //some padding
-    int offset_x = 35; 
+    int offset_x = 65 + MINIMAP_SPACE_X; 
     int offset_y = 5;
     int ended_resizing = 0;
     do{
