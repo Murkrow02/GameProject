@@ -17,7 +17,7 @@ class Stats {
         int win_x, win_y;
 
         //Refresh stats window with updated params
-        void update_stats();
+        
 
     public:
         WINDOW* stats_window;
@@ -42,6 +42,9 @@ class Stats {
         void set_max_ammo(int max);
         void reloading(bool status);
         int ammo;
+
+        // window
+        void update_stats();
 
 };
 

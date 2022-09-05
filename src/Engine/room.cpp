@@ -32,11 +32,11 @@ Room::Room(int _id, string _roomType, pair<int, int> _coords, int _roomW, int _r
 
     //Create filename
     // Random stuff, to be changed
-    string jsonName = "Empty";
+    string jsonName = "";
     
     if (id == 0)
     {
-        jsonName = "FirstRoom";
+        jsonName = "Empty";
     }
     else if (id == 9)
         jsonName = "Shop";
@@ -105,6 +105,8 @@ void Room::freeze_room(){
     if (roomObjects.numberOfEnemies(gameObjects) == 0 && !cleared){
         gameObjects->roomsToClear--;
         cleared = true;
+        if (gameObjects->roomsToClear == 0)
+            gameObjects->gameMap->rooms[0].roomObjects.insert(new Ladder(20, 40, CHAR_LADDER, gameObjects));
     }
     
 }

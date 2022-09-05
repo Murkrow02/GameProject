@@ -23,7 +23,7 @@ void Minimap::drawRoom(int startX, int startY, int character){
     WINDOW * tempRoom = newwin(roomH, roomW, (startY - (roomH / 2)), (startX - (roomW / 2)));
     refresh();
     wborder(tempRoom, character, character, character, character, character, character, character,character); // uses wborder instead of box in order to draw a box of '*' for the highlighted room
-    wrefresh(tempRoom);
+    wrefresh(tempRoom);    
 }
 
 void Minimap::highRoom(int id, Map map){
@@ -37,7 +37,7 @@ void Minimap::highRoom(int id, Map map){
     drawRoom((posX + ((x - 4) * roomW)), (posY + ((y - 4) * roomH)), 42); 
 }
 
-void Minimap::drawMinimap(Map map, int highId){
+void Minimap::drawMinimap(GameObjectList *gameObjects, int highId){
     
     // central room
     drawRoom(posX, posY, 0); 
@@ -51,7 +51,7 @@ void Minimap::drawMinimap(Map map, int highId){
     // draws randomly generated rooms
     for (int i = 4; i < 10; i++){
 
-        pair<int, int> coords = map.getCoords(i);
+        pair<int, int> coords = gameObjects->gameMap->getCoords(i);
         int x = coords.second;
         int y = coords.first;
 
@@ -59,6 +59,6 @@ void Minimap::drawMinimap(Map map, int highId){
     }
 
     // highlights room
-    highRoom(highId, map);
+    highRoom(highId, *(gameObjects->gameMap));
     
 }

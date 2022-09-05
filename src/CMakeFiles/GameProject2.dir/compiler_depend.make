@@ -712,7 +712,29 @@ CMakeFiles/GameProject2.dir/Engine/minimap.cpp.o: Engine/minimap.cpp \
   Entities/entity.hpp \
   /usr/include/c++/10/stdlib.h \
   UI/stats.hpp \
-  Engine/map.h
+  Engine/map.h \
+  Tools/GameObjectList.hpp \
+  Entities/player.hpp \
+  Entities/weapon.cpp \
+  Tools/ShopItem.hpp \
+  UI/message.hpp \
+  UI/dialog.hpp \
+  /usr/include/c++/10/future \
+  /usr/include/c++/10/mutex \
+  /usr/include/c++/10/chrono \
+  /usr/include/c++/10/ratio \
+  /usr/include/c++/10/limits \
+  /usr/include/c++/10/bits/parse_numbers.h \
+  /usr/include/c++/10/bits/std_mutex.h \
+  /usr/include/c++/10/bits/unique_lock.h \
+  /usr/include/c++/10/thread \
+  /usr/include/c++/10/condition_variable \
+  /usr/include/c++/10/atomic \
+  /usr/include/c++/10/bits/atomic_futex.h \
+  /usr/include/c++/10/bits/std_function.h \
+  Tools/utils.hpp \
+  UI/stats.hpp \
+  /usr/include/panel.h
 
 CMakeFiles/GameProject2.dir/Engine/room.cpp.o: Engine/room.cpp \
   /usr/include/stdc-predef.h \
@@ -968,6 +990,7 @@ CMakeFiles/GameProject2.dir/Engine/room.cpp.o: Engine/room.cpp \
   Entities/vendor.cpp \
   Entities/key.cpp \
   Entities/ladder.cpp \
+  UI/dialog.hpp \
   libraries/json.hpp \
   /usr/include/c++/10/algorithm \
   /usr/include/c++/10/bits/stl_algo.h \
@@ -3195,7 +3218,8 @@ CMakeFiles/GameProject2.dir/Entities/ladder.cpp.o: Entities/ladder.cpp \
   Tools/utils.hpp \
   UI/stats.hpp \
   /usr/include/panel.h \
-  Engine/minimap.h
+  Engine/minimap.h \
+  UI/dialog.hpp
 
 CMakeFiles/GameProject2.dir/Entities/player.cpp.o: Entities/player.cpp \
   /usr/include/stdc-predef.h \

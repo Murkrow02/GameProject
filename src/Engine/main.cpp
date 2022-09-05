@@ -53,7 +53,7 @@ int main(){
 
     // map - minimap setup
     map.generateMap(game_window, &gameObjects);
-    minimap.drawMinimap(map, 0);
+    minimap.drawMinimap(&gameObjects, 0);
     map.createRoom(0);
     
 

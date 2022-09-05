@@ -171,7 +171,7 @@ Player::Player(int _y, int _x, GameObjectList *game_objects) : Entity{ _y,  _x, 
 
       // create new room
       gameItems->gameMap->createRoom(roomId);
-      gameItems->gameMinimap->drawMinimap(*(gameItems->gameMap), roomId);
+      gameItems->gameMinimap->drawMinimap(gameItems, roomId);
     }
 
     else if (collidedChar == 'o'){
@@ -235,7 +235,7 @@ Player::Player(int _y, int _x, GameObjectList *game_objects) : Entity{ _y,  _x, 
 
       // create new room
       gameItems->gameMap->createRoom(roomId);
-      gameItems->gameMinimap->drawMinimap(*(gameItems->gameMap), roomId);
+      gameItems->gameMinimap->drawMinimap(gameItems, roomId);
     }
     
     return collidedChar;
@@ -243,7 +243,13 @@ Player::Player(int _y, int _x, GameObjectList *game_objects) : Entity{ _y,  _x, 
 
 void Player::Shoot(int dirX, int dirY, int spawnX, int spawnY){
 
-  if(gameItems->gameStats->ammo > 0 && reload_delay == 0 && next_bullet_delay == 0){
+  if (gameItems->gameStats->ammo == 0){
+    gameItems->gameStats->reloading(true);
+    reload_delay = weapon->ReloadTime;
+    gameItems->gameStats->reset_ammo();
+  }
+
+  else if(gameItems->gameStats->ammo > 0 && reload_delay == 0 && next_bullet_delay == 0){
 
     // spawn bullet
     Bullet *bullet = new Bullet(true, dirX, dirY, weapon->Range, spawnY, spawnX, gameItems, 2);

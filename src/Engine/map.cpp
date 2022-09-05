@@ -11,8 +11,7 @@ using namespace std;
 
 
 Map::Map(){
-    vector<vector<int>> floorTemp(9, vector<int> (9, -1));
-    floor = floorTemp;
+    
 }
 
 pair<int, int> Map::getCoords(int roomId){
@@ -23,6 +22,9 @@ void Map::generateMap(WINDOW * playerwindow, GameObjectList* game_objects){
 
     int width,height;
     getmaxyx(playerwindow, height, width);
+    rooms.clear();
+    vector<vector<int>> floorTemp(9, vector<int> (9, -1));
+    floor = floorTemp;
 
     // creates default cross
 

@@ -3,6 +3,7 @@
 #include "../Engine/minimap.h"
 #include "GameObjectNode.hpp"
 
+class Minimap;
 class GameObject;
 class GameObjectList : public GameObjectNode{
          
