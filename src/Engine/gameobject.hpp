@@ -17,6 +17,7 @@
 #define CHAR_SHOP '@'
 #define CHAR_APPLE 'A'
 #define CHAR_KEY 'K'
+#define CHAR_LADDER 'H'
 
 // LIFE
 #define LIFE_PLAYER 5

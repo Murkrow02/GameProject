@@ -70,7 +70,7 @@ class smartShooter : public Foe
             }
 
             // spawn bullet
-            Bullet *smartBullet = new Bullet(false, xDir, yDir, fireRange, spawnY, spawnX, gameItems);
+            Bullet *smartBullet = new Bullet(false, xDir, yDir, fireRange, spawnY, spawnX, gameItems, 1);
             gameItems->insert(smartBullet);
         }
         

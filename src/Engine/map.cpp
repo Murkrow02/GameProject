@@ -19,7 +19,7 @@ pair<int, int> Map::getCoords(int roomId){
     return(rooms[roomId].coords);
 }
 
-vector<vector<int>> Map::generateMap(WINDOW * playerwindow, GameObjectList* game_objects){
+void Map::generateMap(WINDOW * playerwindow, GameObjectList* game_objects){
 
     int width,height;
     getmaxyx(playerwindow, height, width);
@@ -96,8 +96,7 @@ vector<vector<int>> Map::generateMap(WINDOW * playerwindow, GameObjectList* game
             rooms.push_back(Room(nRooms, "default", possibleCoords[x], width, height, game_objects));
             nRooms++; 
             }
-        }
-    return floor;        
+        }      
     
 }
 

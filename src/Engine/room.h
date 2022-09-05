@@ -27,6 +27,7 @@ class Room{
         int roomW, roomH;
         GameObjectList* gameObjects;
         GameObjectNode roomObjects;
+        bool cleared;
         
         void draw_doors(WINDOW * playerwindow);
         void generate_doors(vector<vector<int>> floor);
