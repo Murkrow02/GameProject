@@ -1,6 +1,6 @@
 #pragma once
 #include "../Entities/player.hpp"
-#include "../Engine/minimap.h"
+#include "../Engine/minimap.hpp"
 #include "GameObjectNode.hpp"
 
 class Minimap;

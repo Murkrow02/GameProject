@@ -1,7 +1,7 @@
 #pragma once
 #include <ncurses.h>
 #include <stdlib.h>
-#include "../Engine/map.h"
+#include "../Engine/map.hpp"
 #include "../UI/stats.hpp"
 #include "../Engine/gameobject.hpp"
 #include "../Tools/GameObjectList.hpp"

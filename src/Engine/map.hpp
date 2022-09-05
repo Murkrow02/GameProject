@@ -1,7 +1,7 @@
 #pragma once
 #include <vector>
 #include <utility>
-#include "room.h"
+#include "room.hpp"
 
 using namespace std;
 

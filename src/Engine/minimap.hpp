@@ -1,8 +1,8 @@
 #pragma once
 #include <vector>
 #include <utility>
-#include "room.h"
-#include "map.h"
+#include "room.hpp"
+#include "map.hpp"
 #include "../Tools/GameObjectList.hpp"
 
 using namespace std;

@@ -1,5 +1,5 @@
 #pragma once
-#include "../Engine/map.h"
+#include "../Engine/map.hpp"
 #include <ncurses.h>
 #include "entity.hpp"
 #include "../Engine/gameobject.hpp"
@@ -12,7 +12,7 @@ using namespace std;
 class Player : public Entity
 {
     public:
-        Player(int _y, int _x, GameObjectList *game_objects);
+        Player(int _y, int _x, GameObjectList *game_objects, bool infiniteLife = false);
 
         // convert user input into player move
         void getmv();
@@ -33,6 +33,7 @@ class Player : public Entity
         message *gameOverMessage;
     
         int invincibilityLeft = 0;
+        bool infiniteLife = false;
 
         // player weapon
         Weapon *weapon;

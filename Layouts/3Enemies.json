@@ -1,0 +1,27 @@
+[
+    {
+        "type" : "smartShooter", 
+        "posX" : 10,
+        "posY" : 10
+    },
+    {
+        "type" : "smartShooter",
+        "posX" : 70,
+        "posY" : 10
+    },
+    {
+        "type" : "smartShooter",
+        "posX" : 10,
+        "posY" : 30
+    },
+    {
+        "type" : "smartShooter",
+        "posX" : 70,
+        "posY" : 30
+    },
+    {
+        "type" : "banana",
+        "posX" : 40,
+        "posY" : 38
+    }
+]

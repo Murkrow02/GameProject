@@ -10,13 +10,15 @@
 
 using namespace std;
 
-Player::Player(int _y, int _x, GameObjectList *game_objects) : Entity{ _y,  _x, CHAR_PLAYER, LIFE_PLAYER , game_objects} 
+Player::Player(int _y, int _x, GameObjectList *game_objects, bool _infiniteLife) : Entity{ _y,  _x, CHAR_PLAYER, LIFE_PLAYER , game_objects} 
 {
 
   // set default weapon
   Weapon testWeapon("NOOB WEAPON", 10, 4, 60, 30, 0);
   weapons.push_back(testWeapon);
   setWeapon(&weapons.back());
+
+  infiniteLife = _infiniteLife;
 
   Draw();
 }
@@ -54,6 +56,8 @@ Player::Player(int _y, int _x, GameObjectList *game_objects) : Entity{ _y,  _x, 
 
   void Player::Damage()
   {
+    if(infiniteLife)
+      return;
 
     // check if is invincible
     if (invincibilityLeft == 0)

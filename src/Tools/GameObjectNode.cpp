@@ -1,6 +1,9 @@
 #include "GameObjectNode.hpp"
 #include <typeinfo>
 #include "../Entities/dummy.cpp"
+#include "../Entities/foe.cpp"
+#include <vector>
+#include <algorithm>
 
 GameObjectNode::GameObjectNode(){
     head = NULL; // init head as null
@@ -57,15 +60,21 @@ void GameObjectNode::insert(GameObject *item)
     }
 
     int GameObjectNode::numberOfEnemies(GameObjectList *gameObjects){
+
         Node *current = head;
         int number = 0;
         while (current != NULL){
-            if(current->data->displayChar == CHAR_DUMMY){
-                number += 1;
-            }
-            current = current->next;
 
+            std::vector<char> included{CHAR_DUMMY, CHAR_CROSS_SHOOTER, CHAR_SMART_SHOOTER, CHAR_X_CROSS_SHOOTER, CHAR_X_SHOOTER};
+            char toFind = current->data->displayChar;
+            if (std::find(included.begin(), included.end(), toFind) != included.end())
+            {
+                number++;
+            }
+
+            current = current->next;
         }
+
         return number;
     }
 

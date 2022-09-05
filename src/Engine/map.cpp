@@ -4,7 +4,7 @@
 #include <cstdlib>
 #include <cstring>
 #include <vector>
-#include "map.h"
+#include "map.hpp"
 #include "../Tools/GameObjectList.hpp"
 
 using namespace std;

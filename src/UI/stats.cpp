@@ -3,13 +3,14 @@
 #include <string> 
 #include "../Engine/gameobject.hpp"
 
-Stats::Stats(int x, int y){
+Stats::Stats(int x, int y, bool _infiniteLife){
 
     //Create window for informations
     stats_window = newwin(20, 20, y, x);
 
     //Set configuration attributes
     life = LIFE_PLAYER;
+    infiniteLife = _infiniteLife;
     points = 0;
     win_x = x;
     win_y = y;
@@ -20,6 +21,9 @@ Stats::Stats(int x, int y){
 }
 
 void Stats::lost_life(){
+
+    if(infiniteLife)
+        return;
 
     if(life == 0){
         //GAMEOVER

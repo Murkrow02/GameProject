@@ -2,7 +2,7 @@
 #include <string>
 #include "../Entities/artifact.hpp"
 #include "../Tools/GameObjectList.hpp"
-#include "../Engine/map.h"
+#include "../Engine/map.hpp"
 #include "../UI/dialog.hpp"
 
 using namespace std;
@@ -34,6 +34,7 @@ protected:
         gameItems->player->x = 40;
         gameItems->player->y = 20;
         gameItems->roomsToClear = 9;
+        gameItems->difficultyLevel = gameItems->difficultyLevel*1.5;
         
         gameItems->gameStats->update_stats();
         mvwaddch(gameItems->gameWindow, y, x, ' ');

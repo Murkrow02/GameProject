@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 #include <ncurses.h>
-#include "room.h"
+#include "room.hpp"
 #include "gameobject.hpp"
 #include "../Entities/dummy.cpp"
 #include "../Entities/crossShooter.cpp"
@@ -38,6 +38,9 @@ Room::Room(int _id, string _roomType, pair<int, int> _coords, int _roomW, int _r
     {
         jsonName = "Empty";
     }
+    else if(id == 1){
+        jsonName = "3Enemies";
+    }
     else if (id == 9)
         jsonName = "Shop";
     else if (id % 3 == 0 && id >= 3)
@@ -47,7 +50,7 @@ Room::Room(int _id, string _roomType, pair<int, int> _coords, int _roomW, int _r
     else
         jsonName = "2Enemies";
         
-    string fileName = "../Layouts/" + jsonName + ".json";
+    string fileName = "Layouts/" + jsonName + ".json";
     
     //fileName += to_string(id);
     //fileName += ".json";
@@ -71,6 +74,8 @@ Room::Room(int _id, string _roomType, pair<int, int> _coords, int _roomW, int _r
             roomObjects.insert(new smartShooter (int(data[i]["posY"]), int(data[i]["posX"]), gameObjects));
         else if(data[i]["type"] == "apple")
             roomObjects.insert(new Apple(gameObjects, int(data[i]["posY"]), int(data[i]["posX"])));
+        else if(data[i]["type"] == "banana")
+            roomObjects.insert(new Banana(gameObjects, int(data[i]["posY"]), int(data[i]["posX"])));
         else if(data[i]["type"] == "shop")
             roomObjects.insert(new Vendor(int(data[i]["posY"]), int(data[i]["posX"]), gameObjects));
         else if(data[i]["type"] == "key")
@@ -106,7 +111,12 @@ void Room::freeze_room(){
         gameObjects->roomsToClear--;
         cleared = true;
         if (gameObjects->roomsToClear == 0)
+        {
             gameObjects->gameMap->rooms[0].roomObjects.insert(new Ladder(20, 40, CHAR_LADDER, gameObjects));
+            message welcome = message("Complimenti!","Hai completato questo piano, ritorna alla stanza centrale per proseguire");
+            welcome.wait_close.wait();
+        }
+            
     }
     
 }

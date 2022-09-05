@@ -14,3 +14,13 @@ public:
     {
     }
 };
+
+class Banana : public Food
+{
+
+public:
+
+    Banana(GameObjectList *game_objects = NULL, int _y = 0, int _x = 0) : Food(3, "Banana", 50, "Ripristina 3 punti vita", CHAR_BANANA, game_objects, _x, _y)
+    {
+    }
+};

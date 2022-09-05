@@ -11,6 +11,7 @@ class Stats {
         //Params
         int maxAmmo , room;
         bool isReloading;
+        bool infiniteLife;
         string weapon_name;
         
         //Stats window coordinates
@@ -21,7 +22,7 @@ class Stats {
 
     public:
         WINDOW* stats_window;
-        Stats (int x, int y);
+        Stats (int x, int y, bool infiniteLife = false);
 
         // life 
         int life;

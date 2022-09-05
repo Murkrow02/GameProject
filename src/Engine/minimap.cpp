@@ -4,7 +4,7 @@
 #include <cstdlib>
 #include <cstring>
 #include <vector>
-#include "minimap.h"
+#include "minimap.hpp"
 
 using namespace std;
 

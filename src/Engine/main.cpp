@@ -4,8 +4,8 @@
 #include <ncurses.h>
 #include "../Entities/player.hpp"
 #include "../Entities/dummy.cpp"
-#include "map.h"
-#include "minimap.h"
+#include "map.hpp"
+#include "minimap.hpp"
 #include "../UI/stats.hpp"
 #include "../UI/message.hpp"
 #include "../UI/shop.hpp"
@@ -26,6 +26,8 @@ void debugInfo(Player player, Map map){
 }
 
 int main(){
+
+    int infiniteLife = false;
     
     // SETUP
     int room_width = 80, room_height = 40, room_x, room_y;
@@ -40,7 +42,7 @@ int main(){
     // stats setup
     int x_stat = room_x + room_width + 2;
     int y_stat = room_y + 1;
-    Stats game_stats(x_stat, y_stat);
+    Stats game_stats(x_stat, y_stat, infiniteLife);
     
     // fill all game stuff
     Map map; 
@@ -58,12 +60,12 @@ int main(){
     
 
     // player setup
-    Player player((room_height / 2), (room_width / 2), &gameObjects); // player creation
+    Player player((room_height / 2), (room_width / 2), &gameObjects, infiniteLife); // player creation
     gameObjects.player = &player;
 
     // welcome message
-    //message welcome = message("BENVENUTO!","Puoi muoverti usando i tasti WASD e sparare usando le frecce, premi R per ricaricare, il tasto M per aprire l'inventario e premi E vicino ad un oggetto di colore verde per interagire");
-    //welcome.wait_close.wait();
+    message welcome = message("BENVENUTO!","Puoi muoverti usando i tasti WASD e sparare usando le frecce, premi R per ricaricare, il tasto M per aprire l'inventario e premi E vicino ad un oggetto di colore verde per interagire");
+    welcome.wait_close.wait();
 
     // do not wait for getch() (otherwhise the following loop will stop)
     nodelay(stdscr, TRUE);

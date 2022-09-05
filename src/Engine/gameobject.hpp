@@ -16,6 +16,7 @@
 #define CHAR_BULLET '#'
 #define CHAR_SHOP '@'
 #define CHAR_APPLE 'A'
+#define CHAR_BANANA 'B'
 #define CHAR_KEY 'K'
 #define CHAR_LADDER 'H'
 

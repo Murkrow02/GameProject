@@ -16,11 +16,11 @@ shop::shop(GameObjectList *game_items) : itemselector("SHOP", true, game_items)
 {
 
     // WEAPONS
-    weapons.push_back(Weapon("Arma forte", 10, 10, 5, 10, 0, "Molto forte"));
-    weapons.push_back(Weapon("Arma forte 2", 20, 10, 2, 1, 300, "Moltissimo forte"));
-    weapons.push_back(Weapon("Arma forte 3", 20, 10, 2, 1, 300, "Moltissimo forte"));
-    weapons.push_back(Weapon("Arma forte 4", 20, 10, 2, 1, 100, "Moltissimo forte"));
-    weapons.push_back(Weapon("Arma forte 5", 20, 10, 2, 1, 300, "Moltissimo forte"));
+    weapons.push_back(Weapon("Arma forte 1", 10, 6, 30, 30, 1000, "Molto forte"));
+    weapons.push_back(Weapon("Arma forte 2", 12, 7, 20, 30, 1500, "Più forte della 1"));
+    weapons.push_back(Weapon("Arma forte 3", 15, 8, 20, 25, 2000, "Più forte della 2"));
+    weapons.push_back(Weapon("Arma forte 4", 20, 9, 20, 20, 2500, "Più forte della 3"));
+    weapons.push_back(Weapon("Arma forte 5", 25, 10, 15, 19, 3000, "Più forte della 4"));
 
     // REMOVE WEAPONS THAT USER ALREADY HAVE
     for (int i = 0; i < weapons.size(); i++) 
@@ -35,6 +35,7 @@ shop::shop(GameObjectList *game_items) : itemselector("SHOP", true, game_items)
 
     // HEALING STUFF
     food.push_back(Apple(gameItems));
+    food.push_back(Banana(gameItems));
 
     // PUT ALL TOGETHER
     copy(weapons.begin(), weapons.end(), back_inserter(shopItems)); // copy weapons in shopitems
