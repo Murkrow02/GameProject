@@ -3,11 +3,6 @@
     "type" : "shop",
     "posX" : 10,
     "posY" : 10
-},
-{
-    "type" : "foe",
-    "posX" : 20,
-    "posY" : 20
 }
 ]
 

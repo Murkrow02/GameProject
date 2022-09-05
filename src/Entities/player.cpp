@@ -183,59 +183,61 @@ Player::Player(int _y, int _x, GameObjectList *game_objects) : Entity{ _y,  _x, 
         cannotEnter.wait_close.wait();
         return collidedChar;
       }
+      else if (gameItems->numberOfEnemies(gameItems) == 0){
 
       //Player can access Shop
 
       //Get current room
-      Room cRoom = gameItems->gameMap->rooms[roomId];
-      pair<int, int> roomCords = cRoom.coords;
+        Room cRoom = gameItems->gameMap->rooms[roomId];
+        pair<int, int> roomCords = cRoom.coords;
 
-      //Save current room state
-      gameItems->gameMap->freezeRoom(roomId);
+        //Save current room state
+        gameItems->gameMap->freezeRoom(roomId);
 
-      // clear player old position
-      mvwaddch(gameItems->gameWindow, y, x, ' ');
+        // clear player old position
+        mvwaddch(gameItems->gameWindow, y, x, ' ');
 
-      // left
-      if (x <= 1)
-      {
-        roomId = gameItems->gameMap->floor[roomCords.first][roomCords.second - 1];
+        // left
+        if (x <= 1)
+        {
+          roomId = gameItems->gameMap->floor[roomCords.first][roomCords.second - 1];
 
-        // spawn right
-        x = xMax - 2;
-        y = yMax / 2;
+          // spawn right
+          x = xMax - 2;
+          y = yMax / 2;
+        }
+        // right
+        else if (x >= xMax - 2)
+        {
+          roomId = gameItems->gameMap->floor[roomCords.first][roomCords.second + 1];
+
+          // spawn left
+          x = 2;
+          y = yMax / 2;
+        }
+        // up
+        else if (y <= 1)
+        {
+          roomId = gameItems->gameMap->floor[roomCords.first - 1][roomCords.second];
+
+          // spawn down
+          x = xMax / 2;
+          y = yMax - 2;
+        }
+        // down
+        else if (y >= yMax - 2)
+        {
+          roomId = gameItems->gameMap->floor[roomCords.first + 1][roomCords.second];
+
+          // spawn up
+          x = xMax / 2;
+          y = 2;
+        }
+
+        // create new room
+        gameItems->gameMap->createRoom(roomId);
+        gameItems->gameMinimap->drawMinimap(gameItems, roomId);
       }
-      // right
-      else if (x >= xMax - 2)
-      {
-        roomId = gameItems->gameMap->floor[roomCords.first][roomCords.second + 1];
-
-        // spawn left
-        x = 2;
-        y = yMax / 2;
-      }
-      // up
-      else if (y <= 1)
-      {
-        roomId = gameItems->gameMap->floor[roomCords.first - 1][roomCords.second];
-
-        // spawn down
-        x = xMax / 2;
-        y = yMax - 2;
-      }
-      // down
-      else if (y >= yMax - 2)
-      {
-        roomId = gameItems->gameMap->floor[roomCords.first + 1][roomCords.second];
-
-        // spawn up
-        x = xMax / 2;
-        y = 2;
-      }
-
-      // create new room
-      gameItems->gameMap->createRoom(roomId);
-      gameItems->gameMinimap->drawMinimap(gameItems, roomId);
     }
     
     return collidedChar;
