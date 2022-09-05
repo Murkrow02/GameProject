@@ -10,7 +10,7 @@ class Apple : public Food
 
 public:
 
-    Apple(int _y = 0, int _x = 0, GameObjectList *game_objects = NULL) : Food(1, "Mela", 25, "Ripristina un punto vita", CHAR_APPLE, game_objects, _x, _y)
+    Apple(GameObjectList *game_objects = NULL, int _y = 0, int _x = 0) : Food(1, "Mela", 25, "Ripristina un punto vita", CHAR_APPLE, game_objects, _x, _y)
     {
     }
 };

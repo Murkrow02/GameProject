@@ -34,7 +34,7 @@ shop::shop(GameObjectList *game_items) : itemselector("SHOP", true, game_items)
     }
 
     // HEALING STUFF
-    food.push_back(Apple());
+    food.push_back(Apple(gameItems));
 
     // PUT ALL TOGETHER
     copy(weapons.begin(), weapons.end(), back_inserter(shopItems)); // copy weapons in shopitems
@@ -57,9 +57,6 @@ void shop::itemSelected(int index)
     // detect if weapon or healing
     int weaponLastIndex = static_cast<int>(weapons.size()) - 1;
     int foodLastIndex = static_cast<int>(food.size()) - 1;
-
-    // subtract points
-    gameItems->gameStats->add_points(-(shopItems[index].Price));
     
     // user selected a weapon
     if (index <= weaponLastIndex)
@@ -69,10 +66,6 @@ void shop::itemSelected(int index)
 
         // equip weapon
         gameItems->player->setWeapon(&gameItems->player->weapons.back());
-
-        // remove from shop
-        weapons.erase(weapons.begin() + index);
-        shopItems.erase(shopItems.begin() + index);
     }
     // user selected food
     else
@@ -90,5 +83,14 @@ void shop::itemSelected(int index)
 
         // add life to user
         gameItems->gameStats->add_life(food[foodIndex].HealingAmount);
+    }
+
+     // subtract points
+    gameItems->gameStats->add_points(-(shopItems[index].Price));
+
+    // remove from shop if weapon
+    if(index <= weaponLastIndex){
+        weapons.erase(weapons.begin() + index);
+        shopItems.erase(shopItems.begin() + index);
     }
 }

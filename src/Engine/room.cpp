@@ -63,7 +63,7 @@ Room::Room(int _id, string _roomType, pair<int, int> _coords, int _roomW, int _r
         else if (data[i]["type"] == "smartShooter")
             roomObjects.insert(new smartShooter (int(data[i]["posY"]), int(data[i]["posX"]), gameObjects));
         else if(data[i]["type"] == "apple")
-            roomObjects.insert(new Apple(int(data[i]["posY"]), int(data[i]["posX"]), gameObjects));
+            roomObjects.insert(new Apple(gameObjects, int(data[i]["posY"]), int(data[i]["posX"])));
         else if(data[i]["type"] == "shop")
             roomObjects.insert(new Vendor(int(data[i]["posY"]), int(data[i]["posX"]), gameObjects));
         else if(data[i]["type"] == "key")
@@ -107,7 +107,6 @@ void Room::generate_entities(){
     //Remove previous entities from game window
     wclear(gameObjects->gameWindow);
     gameObjects->reset();
-    
 
     //Populate game objects with room objects
     Node* current = roomObjects.head; 

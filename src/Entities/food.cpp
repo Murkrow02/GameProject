@@ -27,12 +27,17 @@ protected:
     {
         // add life and destroy element only if player has not full life
         if(!gameItems->gameStats->maxed_life()){
+
             // add life
             gameItems->gameStats->add_life(HealingAmount);
 
             // remove object from play
             mvwaddch(gameItems->gameWindow, y, x, ' ');
             gameItems->remove(this);
+
+            string msg = "Hai guadagnato " + to_string(HealingAmount) + " punti vita!";
+            message recovered_life = message("", msg);
+            recovered_life.wait_close.wait();
         }
         
     }

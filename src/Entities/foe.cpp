@@ -129,7 +129,6 @@ class Foe : public Entity
     // foe movement
     virtual void DoFrame()
     {
-
       // detect if able to shoot
       if(Foe::CanShoot())
         Shoot();

@@ -4,13 +4,14 @@
 #include "../Tools/utils.hpp"
 #include "../UI/shop.hpp"
 
-Artifact::Artifact(int _y, int _x, char display_char, GameObjectList *_gameItems){
-
+Artifact::Artifact(int _y, int _x, char display_char, GameObjectList *_gameItems)
+{
     // set attributes
     y = _y;
     x = _x;
     displayChar = display_char;
     gameItems = _gameItems;
+    getmaxyx(gameItems->gameWindow, yMax, xMax);
 }
 
 void Artifact::DoFrame(){
