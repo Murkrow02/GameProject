@@ -54,6 +54,14 @@ Player::Player(int _y, int _x, GameObjectList *game_objects, bool _infiniteLife)
       next_bullet_delay--;
   }
 
+  void Player::AddLife(int amount)
+  {
+    life+=amount;
+    if(life > LIFE_PLAYER)
+      life = LIFE_PLAYER;
+    gameItems->gameStats->add_life(amount);
+  }
+
   void Player::Damage()
   {
     if(infiniteLife)

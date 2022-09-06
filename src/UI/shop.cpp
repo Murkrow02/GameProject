@@ -83,7 +83,7 @@ void shop::itemSelected(int index)
         int foodIndex = index-weaponLastIndex-1;
 
         // add life to user
-        gameItems->gameStats->add_life(food[foodIndex].HealingAmount);
+        gameItems->player->AddLife(food[foodIndex].HealingAmount);
     }
 
      // subtract points

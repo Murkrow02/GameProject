@@ -1,23 +1,28 @@
+
 [
-    
-    {
-        "type" : "smartShooter", 
-        "posX" : 3,
-        "posY" : 3
-    },
-    {
-        "type" : "crossShooter", 
-        "posX" : 30,
-        "posY" : 5
-    },
     {
         "type" : "foe", 
         "posX" : 10,
-        "posY" : 20
+        "posY" : 10
     },
     {
-        "type" : "foe", 
-        "posX" : 30,
+        "type" : "foe",
+        "posX" : 70,
+        "posY" : 10
+    },
+    {
+        "type" : "foe",
+        "posX" : 10,
         "posY" : 30
+    },
+    {
+        "type" : "foe",
+        "posX" : 70,
+        "posY" : 30
+    },
+    {
+        "type" : "apple",
+        "posX" : 40,
+        "posY" : 38
     }
 ]

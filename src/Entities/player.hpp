@@ -21,6 +21,7 @@ class Player : public Entity
         virtual void DoFrame();
         virtual void Draw();
         void Damage();
+        void AddLife(int amount);
 
         int keyPressed = 0; // last key pressed by user
         

@@ -33,22 +33,35 @@ Room::Room(int _id, string _roomType, pair<int, int> _coords, int _roomW, int _r
     //Create filename
     // Random stuff, to be changed
     string jsonName = "";
-    
-    if (id == 0)
+
+    switch (id)
     {
-        jsonName = "Empty";
+    case 0:
+    jsonName = "Empty";
+        break;
+    case 1:
+    jsonName = "1Enemies";
+        break;
+    case 2:
+    jsonName = "2Enemies";
+        break;
+    case 3:
+    jsonName = "3Enemies";
+        break;
+    case 4:
+    jsonName = "4Enemies";
+        break;
+    case 5:
+    jsonName = "Key";
+        break;
+    case 9:
+    jsonName = "Shop";
+        break;
+    
+    default:
+    jsonName = "Enemies";
+        break;
     }
-    else if(id == 1){
-        jsonName = "3Enemies";
-    }
-    else if (id == 9)
-        jsonName = "Shop";
-    else if (id % 3 == 0 && id >= 3)
-        jsonName = "4Enemies";
-    else if (id == 5)
-        jsonName = "Key";
-    else
-        jsonName = "2Enemies";
         
     string fileName = "Layouts/" + jsonName + ".json";
     

@@ -1,0 +1,22 @@
+[
+    {
+        "type" : "xCrossShooter", 
+        "posX" : 10,
+        "posY" : 10
+    },
+    {
+        "type" : "xShooter",
+        "posX" : 70,
+        "posY" : 10
+    },
+    {
+        "type" : "apple",
+        "posX" : 48,
+        "posY" : 38
+    },
+    {
+        "type" : "apple",
+        "posX" : 32,
+        "posY" : 38
+    }
+]

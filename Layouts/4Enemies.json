@@ -1,27 +1,17 @@
 [
     {
-        "type" : "foe", 
-        "posX" : 10,
-        "posY" : 10
-    },
-    {
-        "type" : "foe",
-        "posX" : 70,
-        "posY" : 10
-    },
-    {
-        "type" : "foe",
-        "posX" : 10,
-        "posY" : 30
-    },
-    {
-        "type" : "foe",
-        "posX" : 70,
-        "posY" : 30
-    },
-    {
-        "type" : "apple",
+        "type" : "xCrossShooter", 
         "posX" : 40,
+        "posY" : 10
+    },
+    {
+        "type" : "xCrossShooter",
+        "posX" : 70,
+        "posY" : 10
+    },
+    {
+        "type" : "banana",
+        "posX" : 48,
         "posY" : 38
     }
 ]

@@ -1,0 +1,23 @@
+[
+    
+    {
+        "type" : "smartShooter", 
+        "posX" : 3,
+        "posY" : 3
+    },
+    {
+        "type" : "crossShooter", 
+        "posX" : 30,
+        "posY" : 5
+    },
+    {
+        "type" : "foe", 
+        "posX" : 10,
+        "posY" : 20
+    },
+    {
+        "type" : "foe", 
+        "posX" : 30,
+        "posY" : 30
+    }
+]

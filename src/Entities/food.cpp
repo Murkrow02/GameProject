@@ -29,7 +29,7 @@ protected:
         if(!gameItems->gameStats->maxed_life()){
 
             // add life
-            gameItems->gameStats->add_life(HealingAmount);
+            gameItems->player->AddLife(HealingAmount);
 
             // remove object from play
             mvwaddch(gameItems->gameWindow, y, x, ' ');
@@ -38,6 +38,11 @@ protected:
             string msg = "Hai guadagnato " + to_string(HealingAmount) + " punti vita!";
             message recovered_life = message("", msg);
             recovered_life.wait_close.wait();
+        }else{
+            // life is maxed
+            string msg = ("La tua vita e' gia' al massimo");
+            message test = message("ATTENZIONE!", msg, true);
+            return;
         }
         
     }
