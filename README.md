@@ -1,4 +1,6 @@
-# Istruzioni per la compilazione
+# Simple 2D roguelike game made in C++ with ncurses
+
+## Istruzioni per la compilazione
 
 È possibile compilare e far partire il gioco automaticamente lanciando il comando
 ```sh
